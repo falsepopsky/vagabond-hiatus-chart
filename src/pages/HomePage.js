@@ -1,12 +1,10 @@
 import React from 'react';
-import HiatusChart from '../components/HiatusChart';
-import HiatusChartTwo from '../components/HiatusChartTwo';
+import HiatusChart from '../components/chapters-per-year/PubsPerYear';
 
 const HomePage = () => {
   return (
     <>
       <HiatusChart />
-      <HiatusChartTwo />
     </>
   );
 };
