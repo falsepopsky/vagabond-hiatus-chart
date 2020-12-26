@@ -1,5 +1,5 @@
 import React from 'react';
-import HiatusChart from '../components/chapters-per-year/PubsPerYear';
+import HiatusChart from '../components/hiatus-heatmap/hiatus';
 
 const HomePage = () => {
   return (

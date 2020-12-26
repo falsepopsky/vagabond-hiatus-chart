@@ -2,72 +2,48 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { ResponsiveBar } from '@nivo/bar';
-import chaptersPerYearData from './cpyData';
+import Data from './cpaData';
 
 const Pubs = () => {
   const keys = [
-    '1998',
-    '1999',
-    '2000',
-    '2001',
-    '2002',
-    '2003',
-    '2004',
-    '2005',
-    '2006',
-    '2007',
-    '2008',
-    '2009',
-    '2010',
-    '2011',
-    '2012',
-    '2013',
-    '2014',
-    '2015',
-    '2016',
-    '2017',
-    '2018',
-    '2019',
-    '2020',
-    '2021',
+    '1 arc',
+    '2 arc',
+    '3 arc',
+    '4 arc',
+    '5 arc',
+    '6 arc',
+    '7 arc',
+    '8 arc',
+    '9 arc',
+    '10 arc',
+    '11 arc',
   ];
   const colorBars = [
+    'hsl(167.8, 74.68%, 69.02%)',
     'hsl(44.13, 83.78%, 63.73%)',
     'hsl(112.2, 73.53%, 73.33%)',
+    'hsl(167.8, 74.68%, 69.02%)',
+    'hsl(167.8, 74.68%, 69.02%)',
     'hsl(112.2, 73.53%, 73.33%)',
     'hsl(112.2, 73.53%, 73.33%)',
     'hsl(167.8, 74.68%, 69.02%)',
-    'hsl(44.13, 83.78%, 63.73%)',
-    'hsl(44.13, 83.78%, 63.73%)',
-    'hsl(44.13, 83.78%, 63.73%)',
     'hsl(167.8, 74.68%, 69.02%)',
     'hsl(167.8, 74.68%, 69.02%)',
     'hsl(44.13, 83.78%, 63.73%)',
-    'hsl(167.8, 74.68%, 69.02%)',
     'hsl(44.13, 83.78%, 63.73%)',
-    'hsl(0, 0, 0)',
-    'hsl(1.13, 83.25%, 62.55%)',
-    'hsl(44.13, 83.78%, 63.73%)',
-    'hsl(1.13, 83.25%, 62.55%)',
-    'hsl(1.13, 83.25%, 62.55%)',
-    'hsl(0, 0, 0)',
-    'hsl(0, 0, 0)',
-    'hsl(0, 0, 0)',
-    'hsl(0, 0, 0)',
-    'hsl(0, 0, 0)',
-    'hsl(0, 0, 0)',
   ];
 
   return (
     <>
       <Row className="text-center">
         <Col style={{ width: '100%', height: '500px' }}>
+          <h2 className="mt-5">CHAPTERS RELEASED BY ARC</h2>
           <ResponsiveBar
-            data={chaptersPerYearData}
+            data={Data}
             keys={keys}
-            indexBy="year"
-            margin={{ top: 50, right: 60, bottom: 60, left: 60 }}
-            padding={0.3}
+            indexBy="arc"
+            margin={{ top: 50, right: 60, bottom: 110, left: 60 }}
+            padding={0.2}
             valueScale={{ type: 'linear' }}
             indexScale={{ type: 'band', round: true }}
             colors={colorBars}
@@ -78,9 +54,9 @@ const Pubs = () => {
               tickSize: 8,
               tickPadding: 8,
               tickRotation: -65,
-              legend: 'Year',
+              legend: '',
               legendPosition: 'middle',
-              legendOffset: 52,
+              legendOffset: 100,
             }}
             axisLeft={{
               tickSize: 0,
@@ -97,6 +73,7 @@ const Pubs = () => {
             motionStiffness={90}
             motionDamping={15}
           />
+          <p>Arc</p>
         </Col>
       </Row>
     </>
