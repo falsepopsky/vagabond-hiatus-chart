@@ -1,10 +1,12 @@
 import React from 'react';
-import HiatusChart from '../components/hiatus-heatmap/hiatus';
+import HiatusHeatmap from '../components/hiatus-heatmap/hiatus';
+import ChaptersPerArc from '../components/chapters-per-arc/ChaptersPerArc';
+import ChaptersPerYear from '../components/chapters-per-year/ChaptersPerYear';
 
 const HomePage = () => {
   return (
     <>
-      <HiatusChart />
+      <HiatusHeatmap />
     </>
   );
 };

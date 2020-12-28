@@ -9,7 +9,7 @@ const Footer = () => {
       <Container fluid as="footer" className="m-0 p-0 mt-auto">
         <Row as="section" className="m-0" style={{ backgroundColor: 'black' }}>
           <Col className="text-center mt-5 my-3">
-            <p style={{ color: 'white' }}>
+            <p className="first-font" style={{ color: 'white' }}>
               The website of Vagabond Hiatus Chart © 2020
             </p>
           </Col>

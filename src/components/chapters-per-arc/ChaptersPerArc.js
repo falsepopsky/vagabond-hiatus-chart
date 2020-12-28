@@ -35,7 +35,7 @@ const Pubs = () => {
 
   return (
     <>
-      <Row className="text-center">
+      <Row as="section" className="text-center m-0">
         <Col style={{ width: '100%', height: '500px' }}>
           <h2 className="mt-5">CHAPTERS RELEASED BY ARC</h2>
           <ResponsiveBar
