@@ -10,7 +10,7 @@ function App() {
       <Container fluid as="main" className="m-0 p-0">
         <Switch>
           <Route exact path="/" children={<HomePage />} />
-          <Route exact path="/about" children={<About />} />
+          <Route path="/about" children={<About />} />
         </Switch>
       </Container>
       <Footer />
