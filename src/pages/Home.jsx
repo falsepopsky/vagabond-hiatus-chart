@@ -1,12 +1,14 @@
 import React from 'react';
 import HeroSection from '../components/hero/Hero';
+import HiatusHeatmap from '../components/hiatus-heatmap/Hiatus';
 
-const HomePage = () => {
+const Home = () => {
   return (
     <>
       <HeroSection />
+      <HiatusHeatmap />
     </>
   );
 };
 
-export default HomePage;
+export default Home;

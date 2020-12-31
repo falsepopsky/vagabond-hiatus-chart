@@ -5,9 +5,6 @@ export const Styles = styled.div`
     margin: 0;
     text-align: center;
   }
-  .pepege {
-    color: orange;
-  }
 `;
 
 export const TableResponsive = styled.div`

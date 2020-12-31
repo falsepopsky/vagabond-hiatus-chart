@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/Home';
 import About from './pages/About';
 import Footer from './components/footer/Footer';
 

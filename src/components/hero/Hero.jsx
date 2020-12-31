@@ -8,12 +8,12 @@ import ArrowDown from '../../assets/arrow-down.svg';
 const HeroSection = () => {
   return (
     <HeroStyles>
-      <Row as="section" className="vagabond-background">
-        <Col className="full-heigth">
-          <h1 className="hero-text-main">Vagabond Hiatus Chart</h1>
+      <Row as="section" className="hero-section">
+        <Col className="hero-section-col">
+          <h1 className="hero-section-main">Vagabond Hiatus Chart</h1>
           <figure>
             <img
-              className="arrow-down-freepik"
+              className="hero-section-arrow"
               src={ArrowDown}
               alt="arrow down by Freepik"
             />
@@ -22,11 +22,15 @@ const HeroSection = () => {
       </Row>
       <Row as="section">
         <Col>
-          <img className="vagabond-logo" src={VagabondLogo} alt="logo" />
-          <h1 className="hero-text-sub">
+          <img className="hero-section-logo" src={VagabondLogo} alt="logo" />
+          <h1 className="hero-section-author">
             Takehiko Inoue
-            <span>(井上 雄彦)</span>
+            <span>&#40;井上 雄彦&#41;</span>
           </h1>
+
+          <p>
+            A simple way to visualize the actual state of Vagabond with charts.
+          </p>
         </Col>
       </Row>
     </HeroStyles>

@@ -103,6 +103,10 @@ const HeatmapHiatus = () => {
     <>
       <Styles>
         <Row as="section">
+          <Col md={12}>
+            <h2>Hello </h2>
+          </Col>
+
           <Col>
             <Table responsive>
               <TableResponsive>
@@ -159,7 +163,7 @@ const HeatmapHiatus = () => {
                 />
               </TableResponsive>
             </Table>
-            <p className="pepege">Weeks</p>
+            <p>Weeks</p>
           </Col>
         </Row>
       </Styles>
