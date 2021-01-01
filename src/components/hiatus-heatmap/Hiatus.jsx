@@ -104,7 +104,7 @@ const HeatmapHiatus = () => {
       <Styles>
         <Row as="section">
           <Col md={12}>
-            <h2>Hello </h2>
+            <h2>Hiatus</h2>
           </Col>
 
           <Col>

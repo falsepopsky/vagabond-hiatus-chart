@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { ResponsiveBar } from '@nivo/bar';
 import Data from './cpaData';
+import { ThemeCPA } from './theme';
 
 const Pubs = () => {
   const keys = [
@@ -36,13 +37,16 @@ const Pubs = () => {
   return (
     <>
       <Row as="section" className="text-center m-0">
-        <Col style={{ width: '100%', height: '500px' }}>
+        <Col md={12}>
           <h2 className="mt-5">CHAPTERS RELEASED BY ARC</h2>
+        </Col>
+        <Col className="p-0 mb-5" style={{ width: '100%', height: '460px' }}>
           <ResponsiveBar
             data={Data}
             keys={keys}
             indexBy="arc"
-            margin={{ top: 50, right: 60, bottom: 110, left: 60 }}
+            theme={ThemeCPA}
+            margin={{ top: 50, right: 40, bottom: 160, left: 70 }}
             padding={0.2}
             valueScale={{ type: 'linear' }}
             indexScale={{ type: 'band', round: true }}
@@ -51,20 +55,20 @@ const Pubs = () => {
             axisTop={null}
             axisRight={null}
             axisBottom={{
-              tickSize: 8,
+              tickSize: 3,
               tickPadding: 8,
               tickRotation: -65,
-              legend: '',
+              legend: 'Arcs',
               legendPosition: 'middle',
-              legendOffset: 100,
+              legendOffset: 150,
             }}
             axisLeft={{
-              tickSize: 0,
+              tickSize: 3,
               tickPadding: 5,
               tickRotation: 0,
               legend: 'Chapters',
               legendPosition: 'middle',
-              legendOffset: -40,
+              legendOffset: -50,
             }}
             labelSkipWidth={12}
             labelSkipHeight={12}
@@ -73,7 +77,7 @@ const Pubs = () => {
             motionStiffness={90}
             motionDamping={15}
           />
-          <p>Arc</p>
+          <p>content</p>
         </Col>
       </Row>
     </>
