@@ -1,4 +1,4 @@
-const chaptersPerYearData = [
+export const chaptersPerYearData = [
   {
     year: 1998,
     1998: 13,
@@ -39,5 +39,3 @@ const chaptersPerYearData = [
   { year: 2020, 2020: 0 },
   { year: 2021, 2021: 0 },
 ];
-
-export default chaptersPerYearData;
