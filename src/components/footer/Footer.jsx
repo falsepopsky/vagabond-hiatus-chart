@@ -28,7 +28,7 @@ const Footer = () => {
             <Row>
               <Col className="text-center">
                 <p className="footer-text-content">
-                  The website of Vagabond Hiatus Chart © 2020
+                  The website of Vagabond Hiatus Chart © 2021
                 </p>
               </Col>
             </Row>

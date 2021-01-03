@@ -7,9 +7,9 @@ const About = () => {
     <>
       <Row as="section" className="m-0" style={{ backgroundColor: 'black' }}>
         <Col className="text-center mt-5 my-3">
-          <h3 style={{ color: 'white' }}>Special Thanks</h3>
+          <h3 className="text-white">Special Thanks</h3>
 
-          <p>
+          <p className="text-white">
             Thanks to Kawasaki#3316 for the whole data without this the project
             will not exist
           </p>
@@ -19,7 +19,20 @@ const About = () => {
         <Col className="text-center mt-5 my-3">
           <h3 style={{ color: 'white' }}>More info</h3>
 
-          <p>
+          <p className="text-white mx-5">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
+            dolorem harum saepe. Reiciendis asperiores magnam id illum at
+            perspiciatis aliquam natus iste! Ipsa distinctio ullam iste officia
+            perferendis. Id, accusamus?
+          </p>
+        </Col>
+      </Row>
+
+      <Row as="section" className="m-0" style={{ backgroundColor: 'black' }}>
+        <Col className="text-center mt-5">
+          <h3 className="text-white">Contact</h3>
+
+          <p className="text-white mx-5">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
             dolorem harum saepe. Reiciendis asperiores magnam id illum at
             perspiciatis aliquam natus iste! Ipsa distinctio ullam iste officia

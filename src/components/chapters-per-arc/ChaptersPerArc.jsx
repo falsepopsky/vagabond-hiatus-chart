@@ -5,42 +5,46 @@ import { ResponsiveBar } from '@nivo/bar';
 import Data from './cpaData';
 import { ThemeCPA } from './theme';
 
-const Pubs = () => {
-  const keys = [
-    '1 arc',
-    '2 arc',
-    '3 arc',
-    '4 arc',
-    '5 arc',
-    '6 arc',
-    '7 arc',
-    '8 arc',
-    '9 arc',
-    '10 arc',
-    '11 arc',
-  ];
-  const colorBars = [
-    'hsl(167.8, 74.68%, 69.02%)',
-    'hsl(44.13, 83.78%, 63.73%)',
-    'hsl(112.2, 73.53%, 73.33%)',
-    'hsl(167.8, 74.68%, 69.02%)',
-    'hsl(167.8, 74.68%, 69.02%)',
-    'hsl(112.2, 73.53%, 73.33%)',
-    'hsl(112.2, 73.53%, 73.33%)',
-    'hsl(167.8, 74.68%, 69.02%)',
-    'hsl(167.8, 74.68%, 69.02%)',
-    'hsl(167.8, 74.68%, 69.02%)',
-    'hsl(44.13, 83.78%, 63.73%)',
-    'hsl(44.13, 83.78%, 63.73%)',
-  ];
+const keys = [
+  '1 arc',
+  '2 arc',
+  '3 arc',
+  '4 arc',
+  '5 arc',
+  '6 arc',
+  '7 arc',
+  '8 arc',
+  '9 arc',
+  '10 arc',
+  '11 arc',
+];
+const colorBars = [
+  'hsl(167.8, 74.68%, 69.02%)',
+  'hsl(44.13, 83.78%, 63.73%)',
+  'hsl(112.2, 73.53%, 73.33%)',
+  'hsl(167.8, 74.68%, 69.02%)',
+  'hsl(167.8, 74.68%, 69.02%)',
+  'hsl(112.2, 73.53%, 73.33%)',
+  'hsl(112.2, 73.53%, 73.33%)',
+  'hsl(167.8, 74.68%, 69.02%)',
+  'hsl(167.8, 74.68%, 69.02%)',
+  'hsl(167.8, 74.68%, 69.02%)',
+  'hsl(44.13, 83.78%, 63.73%)',
+  'hsl(44.13, 83.78%, 63.73%)',
+];
 
+const Pubs = () => {
   return (
     <>
       <Row as="section" className="text-center m-0">
         <Col md={12}>
           <h2 className="mt-5">CHAPTERS RELEASED BY ARC</h2>
         </Col>
-        <Col className="p-0 mb-5" style={{ width: '100%', height: '460px' }}>
+        <Col
+          md={12}
+          className="p-0 mb-5"
+          style={{ width: '100%', height: '460px' }}
+        >
           <ResponsiveBar
             data={Data}
             keys={keys}
@@ -73,11 +77,9 @@ const Pubs = () => {
             labelSkipWidth={12}
             labelSkipHeight={12}
             labelTextColor={'#000000'}
-            animate={true}
-            motionStiffness={90}
-            motionDamping={15}
+            animate={false}
           />
-          <p>content</p>
+          <p className="easter-egg">what do you want?</p>
         </Col>
       </Row>
     </>

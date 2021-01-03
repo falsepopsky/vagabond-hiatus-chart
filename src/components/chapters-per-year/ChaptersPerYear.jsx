@@ -58,11 +58,9 @@ const Pubs = () => {
             labelSkipWidth={12}
             labelSkipHeight={12}
             labelTextColor={'#000000'}
-            animate={true}
-            motionStiffness={90}
-            motionDamping={15}
+            animate={false}
           />
-          <p>&#32;</p>
+          <p>&#32; hey</p>
         </Col>
       </Row>
     </>

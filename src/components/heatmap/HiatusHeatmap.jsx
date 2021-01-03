@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { ResponsiveHeatMapCanvas } from '@nivo/heatmap';
 import { ThemeCPA } from '../chapters-per-arc/theme';
-import hiatusDatabase from './hiatusHeatmapDatase';
+import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import { configHeatmap } from './hiatusHeatmapConfig';
+import Button from 'react-bootstrap/Button';
 
 const keysHeatmap = [
   '1',
@@ -63,17 +64,60 @@ const keysHeatmap = [
   '53',
 ];
 
+let toolTipHeatmap = ({ color, xKey, yKey }) => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+  >
+    <div
+      style={{
+        height: '20px',
+        width: '20px',
+        marginRight: '4px',
+        backgroundColor: color,
+        borderRadius: '50%',
+      }}
+    ></div>
+    <strong>
+      Year {yKey} / #{xKey}
+    </strong>
+  </div>
+);
+
 const Heatmap = () => {
+  const [database, setDatabase] = useState(publicationsDatabase);
+  const [colors, setColors] = useState(configHeatmap.colorsPublications);
+
+  const changeToPubs = function () {
+    setDatabase(publicationsDatabase);
+    setColors(configHeatmap.colorsPublications);
+  };
+
+  const changeToArc = function () {
+    setDatabase(arcsDatabase);
+    setColors(configHeatmap.colorsArcs);
+  };
+
   return (
     <>
       <Row as="section" className="text-center m-0">
         <Col md={12}>
           <h2 className="mt-5">HIATUS THING</h2>
+          <Button variant="primary" onClick={changeToPubs}>
+            Change to Publications
+          </Button>
+          <Button variant="secondary" onClick={changeToArc}>
+            Change to Arc Heatmap
+          </Button>
         </Col>
 
         <Col md={12} className="p-0" style={{ width: '100%', height: '460px' }}>
           <ResponsiveHeatMapCanvas
-            data={hiatusDatabase}
+            data={database}
             keys={keysHeatmap}
             indexBy="year"
             margin={configHeatmap.margin}
@@ -81,10 +125,11 @@ const Heatmap = () => {
             pixelRatio={1}
             minValue="auto"
             maxValue="auto"
+            tooltip={toolTipHeatmap}
             forceSquare={false}
             sizeVariation={0.01}
             padding={1}
-            colors={configHeatmap.colors}
+            colors={colors}
             axisTop={null}
             axisRight={null}
             axisBottom={configHeatmap.axisBottom}

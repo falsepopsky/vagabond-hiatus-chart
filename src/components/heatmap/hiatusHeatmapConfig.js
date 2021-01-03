@@ -18,11 +18,27 @@ export const configHeatmap = {
     legendOffset: 0,
   },
   margin: { top: 20, right: 60, bottom: 60, left: 80 },
-  colors: [
+  colorsPublications: [
     'hsl(0, 2%, 100%, 0)',
     '#f4f7f3',
     '#70DDC6',
     '#F95D5A',
     'hsl(0, 0%, 100%, 0)',
+  ],
+  colorsArcs: [
+    'hsl(0, 2%, 100%, 0)',
+    '#f4f7f3',
+    '#F95D5A',
+    '#FFF875',
+    '#393094',
+    '#3c4694',
+    '#423f89',
+    '#4d4a8f',
+    '#7db659',
+    '#90c171',
+    '#a2cb89',
+    '#b5d5a0',
+    '#234c09',
+    '#1c3c07',
   ],
 };

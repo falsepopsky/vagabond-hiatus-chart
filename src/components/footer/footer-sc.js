@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const FooterStyles = styled.div`
+  margin-top: auto;
+
   .row {
     background-color: #000000;
     font-family: 'VarelaRound';
