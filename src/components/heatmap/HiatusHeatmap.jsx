@@ -1,68 +1,13 @@
 import React, { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import { ResponsiveHeatMapCanvas } from '@nivo/heatmap';
-import { ThemeCPA } from '../chapters-per-arc/theme';
+import { themeNivo } from '../theme/themeNivo';
 import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import { configHeatmap } from './hiatusHeatmapConfig';
-import Button from 'react-bootstrap/Button';
-
-const keysHeatmap = [
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9',
-  '10',
-  '11',
-  '12',
-  '13',
-  '14',
-  '15',
-  '16',
-  '17',
-  '18',
-  '19',
-  '20',
-  '21',
-  '22',
-  '23',
-  '24',
-  '25',
-  '26',
-  '27',
-  '28',
-  '29',
-  '30',
-  '31',
-  '32',
-  '33',
-  '34',
-  '35',
-  '36',
-  '37',
-  '38',
-  '39',
-  '40',
-  '41',
-  '42',
-  '42',
-  '43',
-  '44',
-  '45',
-  '46',
-  '47',
-  '48',
-  '49',
-  '50',
-  '51',
-  '52',
-  '53',
-];
+import { HeatmapStyles } from './hiatusHeatmapSC';
+import Legend from '../../assets/legend.svg';
 
 let toolTipHeatmap = ({ color, xKey, yKey }) => (
   <div
@@ -104,57 +49,64 @@ const Heatmap = () => {
 
   return (
     <>
-      <Row as="section" className="text-center m-0">
-        <Col md={12}>
-          <h2 className="mt-5">HIATUS THING</h2>
-          <Button variant="primary" onClick={changeToPubs}>
-            Change to Publications
-          </Button>
-          <Button variant="secondary" onClick={changeToArc}>
-            Change to Arc Heatmap
-          </Button>
-        </Col>
+      <HeatmapStyles>
+        <Row as="section" className="text-center m-0">
+          <Col md={12} className="p-0">
+            <h2 className="mt-5">HIATUS THING</h2>
+            <Button className="ligma" onClick={changeToPubs}>
+              RESUME
+            </Button>
+            <Button className="arc" onClick={changeToArc}>
+              Arc
+            </Button>
+          </Col>
 
-        <Col md={12} className="p-0" style={{ width: '100%', height: '460px' }}>
-          <ResponsiveHeatMapCanvas
-            data={database}
-            keys={keysHeatmap}
-            indexBy="year"
-            margin={configHeatmap.margin}
-            theme={ThemeCPA}
-            pixelRatio={1}
-            minValue="auto"
-            maxValue="auto"
-            tooltip={toolTipHeatmap}
-            forceSquare={false}
-            sizeVariation={0.01}
-            padding={1}
-            colors={colors}
-            axisTop={null}
-            axisRight={null}
-            axisBottom={configHeatmap.axisBottom}
-            axisLeft={configHeatmap.axisLeft}
-            enableGridX={false}
-            enableGridY={true}
-            cellShape="rect"
-            cellOpacity={1}
-            cellBorderWidth={0}
-            cellBorderColor={{ from: 'color', modifiers: [['darker', 0.4]] }}
-            enableLabels={false}
-            labelTextColor={{ from: 'color', modifiers: [['darker', 1.4]] }}
-            animate={false}
-            isInteractive={true}
-            hoverTarget="rowColumn"
-            cellHoverOpacity={1}
-            cellHoverOthersOpacity={0.5}
-          />
-          <p>&#32;</p>
-        </Col>
+          <Col md={12} className="heatmap-section">
+            <ResponsiveHeatMapCanvas
+              data={database}
+              keys={configHeatmap.keysHeatmap}
+              indexBy="year"
+              margin={configHeatmap.margin}
+              theme={themeNivo}
+              pixelRatio={1}
+              minValue="auto"
+              maxValue="auto"
+              tooltip={toolTipHeatmap}
+              forceSquare={false}
+              sizeVariation={0.01}
+              padding={1}
+              colors={colors}
+              axisTop={null}
+              axisRight={null}
+              axisBottom={configHeatmap.axisBottom}
+              axisLeft={configHeatmap.axisLeft}
+              enableGridX={false}
+              enableGridY={true}
+              cellShape="rect"
+              cellOpacity={1}
+              cellBorderWidth={0}
+              cellBorderColor="#000"
+              enableLabels={false}
+              animate={false}
+              isInteractive={true}
+              hoverTarget="rowColumn"
+              cellHoverOpacity={1}
+              cellHoverOthersOpacity={0.5}
+            />
+            <p>&#32;</p>
+          </Col>
 
-        <Col md={12}>
-          <p>explaning all this with legends</p>
-        </Col>
-      </Row>
+          <Col md={12} className="legend-section">
+            <div className="legend-card-one">
+              <img src={Legend} alt="Legends" className="legend-img" />
+            </div>
+            <div className="legend-card-two">
+              <p>$ 6451.50</p>
+              <p>Balance</p>
+            </div>
+          </Col>
+        </Row>
+      </HeatmapStyles>
     </>
   );
 };

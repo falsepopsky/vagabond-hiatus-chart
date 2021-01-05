@@ -1,7 +1,8 @@
-export const ThemeCPA = {
-  background: '#13132b',
+export const themeNivo = {
+  background: '#000000',
+  fontFamily: 'Lato',
   textColor: '#ffffff',
-  fontSize: 14,
+  fontSize: 12,
   axis: {
     domain: {
       line: {

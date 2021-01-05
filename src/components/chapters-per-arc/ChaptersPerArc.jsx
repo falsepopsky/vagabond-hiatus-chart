@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { ResponsiveBar } from '@nivo/bar';
 import Data from './cpaData';
-import { ThemeCPA } from './theme';
+import { themeNivo } from '../theme/themeNivo';
 
 const keys = [
   '1 arc',
@@ -49,7 +49,7 @@ const Pubs = () => {
             data={Data}
             keys={keys}
             indexBy="arc"
-            theme={ThemeCPA}
+            theme={themeNivo}
             margin={{ top: 50, right: 40, bottom: 160, left: 70 }}
             padding={0.2}
             valueScale={{ type: 'linear' }}

@@ -2,7 +2,7 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { HeroStyles } from './hero-styled';
-import VagabondLogo from '../../assets/vagabond-logo.svg';
+import VagabondLogo from '../../assets/vagabond-jp.svg';
 import ArrowDown from '../../assets/arrow-down.svg';
 
 const HeroSection = () => {
