@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import { ResponsiveHeatMapCanvas } from '@nivo/heatmap';
 import { themeNivo } from '../theme/themeNivo';
 import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import { configHeatmap } from './hiatusHeatmapConfig';
-import { HeatmapStyles } from './hiatusHeatmapSC';
+import { HeatmapStyles, ButtonSC } from './hiatusHeatmapSC';
 import Legend from '../../assets/legend.svg';
 
 let toolTipHeatmap = ({ color, xKey, yKey }) => (
@@ -50,18 +49,12 @@ const Heatmap = () => {
   return (
     <>
       <HeatmapStyles>
-        <Row as="section" className="text-center m-0">
-          <Col md={12} className="p-0">
-            <h2 className="mt-5">HIATUS THING</h2>
-            <Button className="ligma" onClick={changeToPubs}>
-              RESUME
-            </Button>
-            <Button className="arc" onClick={changeToArc}>
-              Arc
-            </Button>
+        <Row as="section" className="heatmap-section text-center">
+          <Col md={12} className="heatmap-main">
+            <h2 className="heatmap-main-title">HIATUS THING</h2>
           </Col>
 
-          <Col md={12} className="heatmap-section">
+          <Col md={12} className="heatmap-render">
             <ResponsiveHeatMapCanvas
               data={database}
               keys={configHeatmap.keysHeatmap}
@@ -93,7 +86,16 @@ const Heatmap = () => {
               cellHoverOpacity={1}
               cellHoverOthersOpacity={0.5}
             />
-            <p>&#32;</p>
+            <p className="heatmap-render-text">
+              invincible... it's merely a word.
+            </p>
+          </Col>
+
+          <Col md={12} className="heatmap-database-legend">
+            <ButtonSC onClick={changeToPubs}>CHAPTERS</ButtonSC>
+            <ButtonSC arc onClick={changeToArc}>
+              ARC
+            </ButtonSC>
           </Col>
 
           <Col md={12} className="legend-section">
@@ -101,8 +103,15 @@ const Heatmap = () => {
               <img src={Legend} alt="Legends" className="legend-img" />
             </div>
             <div className="legend-card-two">
-              <p>$ 6451.50</p>
-              <p>Balance</p>
+              <div className="item texto-blanco">
+                <div className="cuadrado blanco"></div>Double Weekly Issue
+              </div>
+              <div className="item texto-verde">
+                <div className="cuadrado verde"></div>New Chapter
+              </div>
+              <div className="item texto-rojo">
+                <div className="cuadrado rojo"></div>Doesn’t appear in MW
+              </div>
             </div>
           </Col>
         </Row>

@@ -66,8 +66,8 @@ export const HeroStyles = styled.div`
 
     &-logo {
       margin: 50px 0 0 0;
-      width: 70%;
-      height: 30%;
+      width: 50%;
+      height: auto;
       pointer-events: none;
     }
 
