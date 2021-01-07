@@ -21,14 +21,14 @@ const HeroSection = () => {
         </Col>
       </Row>
       <Row as="section">
-        <Col>
+        <Col className="hero-section-col-two">
           <img className="hero-section-logo" src={VagabondLogo} alt="logo" />
           <h1 className="hero-section-author">
             Takehiko Inoue
             <span>&#40;井上 雄彦&#41;</span>
           </h1>
 
-          <p>
+          <p className="hero-section-description">
             A simple way to visualize the actual state of Vagabond with charts.
           </p>
         </Col>

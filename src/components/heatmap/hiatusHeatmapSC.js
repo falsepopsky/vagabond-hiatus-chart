@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const ButtonSC = styled.button`
   width: 120px;
-  height: 42px;
+  height: 40px;
   border: none;
   font-size: 16px;
   background-color: #0bcf65;
@@ -15,13 +15,12 @@ export const ButtonSC = styled.button`
   }
 
   &:active {
-    color: #023218;
-    background-color: #0bcf65;
-    border-color: #023218;
+    outline: none;
+    border: none;
   }
 
-  &:focus: {
-    box-shadow: 0 0 0 0.2rem #023218;
+  &:focus {
+    outline: 0;
   }
 
   ${(props) =>
@@ -34,11 +33,7 @@ export const ButtonSC = styled.button`
       &:hover {
         background-color: #084fb4;
       }
-
-      &:active {
-        background-color: #084fb4;
-      }
-    `};
+    `}
 `;
 
 export const HeatmapStyles = styled.div`
@@ -112,7 +107,6 @@ export const HeatmapStyles = styled.div`
     display: flex;
     flex-flow: column wrap;
     border-radius: 10px;
-    justify-content: center;
     justify-content: space-around;
     align-content: space-around;
   }

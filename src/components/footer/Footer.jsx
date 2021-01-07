@@ -9,7 +9,7 @@ const Footer = () => {
     <>
       <FooterStyles>
         <Row as="footer" className="m-0 p-0 mt-auto">
-          <Col>
+          <Col className="content-footer">
             <Row>
               <Col className="text-center">
                 <Link to="/" className="nav-link p-0" rel="noopener noreferrer">

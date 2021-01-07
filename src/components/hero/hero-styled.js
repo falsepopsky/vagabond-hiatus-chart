@@ -20,6 +20,7 @@ export const HeroStyles = styled.div`
   .row {
     margin: 0;
     text-align: center;
+    font-family: 'Teko';
   }
 
   .hero-section {
@@ -28,6 +29,7 @@ export const HeroStyles = styled.div`
       url(${vagabond}) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
+    font-family: 'Teko';
 
     &-col {
       display: flex;
@@ -38,7 +40,6 @@ export const HeroStyles = styled.div`
     }
 
     &-main {
-      font-family: 'Teko';
       color: white;
       font-size: 3.1rem;
       letter-spacing: 0.14em;
@@ -72,24 +73,36 @@ export const HeroStyles = styled.div`
     }
 
     &-author {
-      font-family: 'Teko';
-      color: black;
-      font-size: 2rem;
+      font-size: 3rem;
       letter-spacing: 0.14em;
       margin-top: 1em;
 
       &::selection {
         text-shadow: none;
         color: white;
-        background: #2ecc71;
       }
 
       span {
-        color: black;
         font-size: 0.6rem;
         user-select: none;
       }
     }
+
+    &-description {
+      font-family: HelveticaNowDisplayRegular;
+      font-size: 22px;
+      margin-bottom: 2em;
+
+      &::selection {
+        text-shadow: none;
+        color: white;
+      }
+    }
+  }
+
+  .hero-section-col-two {
+    background-color: #d91a32;
+    color: black;
   }
 
   @media (max-width: 576px) {
@@ -104,6 +117,7 @@ export const HeroStyles = styled.div`
 
       span {
         font-size: 0.6rem;
+        display: block;
       }
     }
   }
