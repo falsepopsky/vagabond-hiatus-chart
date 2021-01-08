@@ -47,12 +47,14 @@ export const HeatmapStyles = styled.div`
     padding: 0;
 
     &-title {
-      margin-top: 5em;
+      margin-top: 3.5em;
+      color: #f4f7f3;
+      font-family: 'HelveticaNowDisplayRegular';
     }
   }
 
   .heatmap-render {
-    padding: 0;
+    padding: 0 5vw;
     width: 100%;
     height: 460px;
 
@@ -65,86 +67,205 @@ export const HeatmapStyles = styled.div`
     padding: 0;
     width: 100%;
     height: auto;
-    background-color: #000000;
   }
 
-  .legend-section {
-    padding: 0;
+  .heatmap-title {
+    display: flex;
+    flex-flow: column wrap;
+    width: auto;
+    height: auto;
+    background-color: black;
+    align-items: baseline;
+    margin: 0;
+    padding: 2vw 5vw;
+
+    &-box {
+      color: white;
+      width: auto;
+    }
+  }
+
+  .title-database-legend {
+    font-size: 24px;
+    font-family: HelveticaNowDisplayRegular;
+
+    &::before {
+      content: '';
+      width: 4px;
+      height: 50px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 10px;
+      background-color: #d91a32;
+    }
+  }
+
+  .heatmap-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vw 0 1vw;
+  }
+
+  .legend-card {
+    padding: 1vw 5vw 3vw;
     width: 100%;
     height: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-  }
 
-  .legend-card-one {
-    margin: 10px 6px 10px 6px;
-    width: 502px;
-    height: 194px;
-    background-color: #8cfbde;
-    border-radius: 10px;
-    color: #103900;
-    font-family: Lato;
-    display: flex;
-    justify-content: center;
+    &-one {
+      margin: 10px 0 10px 0;
+      width: 460px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
 
-    &:hover {
-      box-shadow: 1px 2px 25px 3px #8b94a3;
+      &-img {
+        width: 80%;
+        height: auto;
+        pointer-events: none;
+      }
+    }
+
+    &-two {
+      display: flex;
+      flex-flow: column wrap;
+      width: 400px;
+      height: auto;
+      align-items: baseline;
+      justify-content: space-around;
+      align-content: space-around;
+
+      &-item {
+        width: auto;
+      }
     }
   }
 
-  .legend-img {
-    width: 80%;
-    height: auto;
-    pointer-events: none;
+  .legend-weekly {
+    color: #f4f7f3;
+
+    &:before {
+      background-color: #f4f7f3;
+    }
   }
 
-  .legend-card-two {
-    margin: 10px 6px 10px 0;
-    width: 300px;
-    height: 150px;
+  .legend-chapter {
+    color: #70ddc6;
+
+    &:before {
+      background-color: #70ddc6;
+    }
+  }
+
+  .legend-dont {
+    color: #f95d5a;
+
+    &:before {
+      background-color: #f95d5a;
+    }
+  }
+
+  .legend-arc {
     display: flex;
-    flex-flow: column wrap;
-    border-radius: 10px;
-    justify-content: space-around;
-    align-content: space-around;
+    flex-flow: row wrap;
+    width: 400px;
+    height: auto;
+    align-items: center;
+
+    &-box {
+      color: white;
+      width: 200px;
+      height: 32px;
+      text-align: justify;
+    }
   }
 
-  .item {
-    width: auto;
-    height: 20px;
-    display: inline-flex;
-  }
-
-  .cuadrado {
+  .legend-before::before {
+    content: '';
     width: 20px;
     height: 20px;
     border-radius: 4px;
-    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
   }
 
-  .blanco {
+  .legend-one::before {
+    background-color: #bce784;
+  }
+
+  .legend-two::before {
+    background-color: #fff875;
+  }
+
+  .legend-three::before {
+    background-color: #28666e;
+  }
+
+  .legend-four::before {
+    background-color: #06ba63;
+  }
+
+  .legend-five::before {
+    background-color: #508991;
+  }
+
+  .legend-six::before {
+    background-color: #7d80da;
+  }
+
+  .legend-seven::before {
+    background-color: #ffe156;
+  }
+
+  .legend-eight::before {
+    background-color: #a42cd6;
+  }
+
+  .legend-nine::before {
+    background-color: #3777ff;
+  }
+
+  .legend-ten::before {
+    background-color: #4059ad;
+  }
+
+  .legend-eleven::before {
+    background-color: #ff6663;
+  }
+
+  .legend-twelve::before {
+    background-color: #e3bfc9;
+  }
+
+  .legend-thirteen::before {
     background-color: #f4f7f3;
   }
 
-  .texto-blanco {
-    color: #f4f7f3;
-  }
+  @media (max-width: 576px) {
+    .heatmap-main-title {
+      font-size: x-large;
+    }
 
-  .verde {
-    background-color: #70ddc6;
-  }
+    .legend-card-one {
+      display: none;
+    }
 
-  .texto-verde {
-    color: #70ddc6;
-  }
+    .legend-card-two {
+      font-size: small;
+    }
 
-  .rojo {
-    background-color: #f95d5a;
-  }
+    .legend-arc {
+      margin: 20px 0;
+      justify-content: center;
+    }
 
-  .texto-rojo {
-    color: #f95d5a;
+    .legend-arc-box {
+      width: 180px;
+      font-size: small;
+    }
   }
 `;

@@ -7,6 +7,8 @@ import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import { configHeatmap } from './hiatusHeatmapConfig';
 import { HeatmapStyles, ButtonSC } from './hiatusHeatmapSC';
 import Legend from '../../assets/legend.svg';
+import HiatusLegendArc from './HiatusLegendArc';
+import HiatusLegendChapter from './HiatusLegendChapter';
 
 let toolTipHeatmap = ({ color, xKey, yKey }) => (
   <div
@@ -35,15 +37,18 @@ let toolTipHeatmap = ({ color, xKey, yKey }) => (
 const Heatmap = () => {
   const [database, setDatabase] = useState(publicationsDatabase);
   const [colors, setColors] = useState(configHeatmap.colorsPublications);
+  const [cardTwo, setCardTwo] = useState(true);
 
   const changeToPubs = function () {
     setDatabase(publicationsDatabase);
     setColors(configHeatmap.colorsPublications);
+    setCardTwo(true);
   };
 
   const changeToArc = function () {
     setDatabase(arcsDatabase);
     setColors(configHeatmap.colorsArcs);
+    setCardTwo(false);
   };
 
   return (
@@ -51,7 +56,7 @@ const Heatmap = () => {
       <HeatmapStyles>
         <Row as="section" className="heatmap-section text-center">
           <Col md={12} className="heatmap-main">
-            <h2 className="heatmap-main-title">HIATUS THING</h2>
+            <h2 className="heatmap-main-title">VAGABOND HIATUS HEATMAP</h2>
           </Col>
 
           <Col md={12} className="heatmap-render">
@@ -92,27 +97,40 @@ const Heatmap = () => {
           </Col>
 
           <Col md={12} className="heatmap-database-legend">
-            <ButtonSC onClick={changeToPubs}>CHAPTERS</ButtonSC>
-            <ButtonSC arc onClick={changeToArc}>
-              ARC
-            </ButtonSC>
+            <div className="heatmap-title">
+              <div className="heatmap-title-box">
+                <h2 className="title-database-legend">CHANGE DATABASE</h2>
+              </div>
+            </div>
+
+            <div className="heatmap-buttons">
+              <ButtonSC onClick={changeToPubs}>CHAPTERS</ButtonSC>
+              <ButtonSC arc onClick={changeToArc}>
+                ARC
+              </ButtonSC>
+            </div>
+
+            <div className="heatmap-title">
+              <div className="heatmap-title-box">
+                <h2 className="title-database-legend">LEGEND</h2>
+              </div>
+            </div>
           </Col>
 
-          <Col md={12} className="legend-section">
-            <div className="legend-card-one">
-              <img src={Legend} alt="Legends" className="legend-img" />
-            </div>
-            <div className="legend-card-two">
-              <div className="item texto-blanco">
-                <div className="cuadrado blanco"></div>Double Weekly Issue
-              </div>
-              <div className="item texto-verde">
-                <div className="cuadrado verde"></div>New Chapter
-              </div>
-              <div className="item texto-rojo">
-                <div className="cuadrado rojo"></div>Doesn’t appear in MW
-              </div>
-            </div>
+          <Col md={12} className="legend-card">
+            <article className="legend-card-one">
+              <img src={Legend} alt="Legends" className="legend-card-one-img" />
+            </article>
+
+            {cardTwo === true ? (
+              <>
+                <HiatusLegendChapter />
+              </>
+            ) : (
+              <>
+                <HiatusLegendArc />
+              </>
+            )}
           </Col>
         </Row>
       </HeatmapStyles>
