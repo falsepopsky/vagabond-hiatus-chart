@@ -2,33 +2,69 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FooterStyles } from './footerSC';
+import { FooterStyles, TitleFooter, ExtraLinks, BoxFooter } from './footerSC';
 
 const Footer = () => {
   return (
     <>
       <FooterStyles>
-        <Row as="footer" className="m-0 p-0 mt-auto">
+        <Row className="m-0 p-0 mt-auto">
           <Col className="content-footer">
-            <Row>
-              <Col className="text-center">
-                <Link to="/" className="nav-link p-0" rel="noopener noreferrer">
-                  home
+            <Row className="content-footer-row">
+              <BoxFooter>
+                <TitleFooter>GENERAL</TitleFooter>
+                <p>The website of Vagabond Hiatus Chart.</p>
+                <p>
+                  Some of the images belongs to Takehiko Inoue, Kōdansha &amp;
+                  Shueisha &copy;.
+                </p>
+              </BoxFooter>
+
+              <BoxFooter>
+                <TitleFooter>NAVIGATION</TitleFooter>
+
+                <Link to="/" className="nav-link" rel="noopener noreferrer">
+                  Home
                 </Link>
                 <Link
                   to="/about"
-                  className="nav-link p-0 ml-2"
+                  className="nav-link"
                   rel="noopener noreferrer"
                 >
-                  about
+                  About
                 </Link>
-              </Col>
-            </Row>
+              </BoxFooter>
 
-            <Row>
-              <Col className="text-center">
+              <BoxFooter>
+                <TitleFooter>EXTRA LINKS</TitleFooter>
+
+                <ExtraLinks>
+                  <li>
+                    <a
+                      className="extra-links"
+                      href="https://itplanning.co.jp/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Takehiko Inoue
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="extra-links"
+                      href="https://morning.kodansha.co.jp/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Morning Kodansha
+                    </a>
+                  </li>
+                </ExtraLinks>
+              </BoxFooter>
+
+              <Col md={12}>
                 <p className="footer-text-content">
-                  The website of Vagabond Hiatus Chart © 2021
+                  Vagabond Hiatus Chart © 2021
                 </p>
               </Col>
             </Row>
