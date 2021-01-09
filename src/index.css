@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'VarelaRound';
+  src: local('VarelaRound'),
+    url('./fonts/VarelaRound-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Teko';
+  src: local('Teko'), url('./fonts/Teko-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Bold'), url('./fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplayHairline';
+  src: local('HelveticaNowDisplayHairline'),
+    url('./fonts/HelveticaNowDisplay-Hairline.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'HelveticaNowDisplayRegular';
+  src: local('HelveticaNowDisplayRegular'),
+    url('./fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.first-font {
+  font-family: 'VarelaRound';
+}
