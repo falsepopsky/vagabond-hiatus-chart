@@ -15,8 +15,7 @@ const Footer = () => {
                 <TitleFooter>GENERAL</TitleFooter>
                 <p>The website of Vagabond Hiatus Chart.</p>
                 <p>
-                  Some of the images belongs to Takehiko Inoue, Kōdansha &amp;
-                  Shueisha &copy;.
+                  Some of the images belongs to Takehiko Inoue &amp; Kōdansha.
                 </p>
               </BoxFooter>
 

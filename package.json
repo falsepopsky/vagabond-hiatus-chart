@@ -1,4 +1,5 @@
 {
+  "homepage": "https://falsepopsky.github.io/vagabond-hiatus-chart",
   "name": "vagabond-hiatus-chart",
   "version": "0.1.0",
   "private": true,
@@ -10,7 +11,6 @@
   "license": "MIT",
   "dependencies": {
     "@nivo/bar": "^0.67.0",
-    "@nivo/bump": "^0.67.0",
     "@nivo/core": "^0.67.0",
     "@nivo/heatmap": "^0.67.0",
     "@nivo/line": "^0.67.0",
@@ -22,6 +22,7 @@
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
+    "react-router-scroll-top": "^0.2.1",
     "react-scripts": "4.0.1",
     "serve": "^11.3.2",
     "styled-components": "^5.2.1",
