@@ -1,76 +1,74 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { FooterStyles, TitleFooter, ExtraLinks, BoxFooter } from './footerSC';
+
+import { FooterMain, FooterSection, FooterTitle, ExtraLinks } from './footerSC';
 
 const Footer = () => {
   return (
-    <>
-      <FooterStyles>
-        <Row className="m-0 p-0 mt-auto">
-          <Col className="content-footer">
-            <Row className="content-footer-row">
-              <BoxFooter>
-                <TitleFooter>GENERAL</TitleFooter>
-                <p>The website of Vagabond Hiatus Chart.</p>
-                <p>
-                  Some of the images belongs to Takehiko Inoue &amp; Kōdansha.
-                </p>
-              </BoxFooter>
+    <FooterMain>
+      <div className="footer-line"></div>
+      <FooterSection className="section-one">
+        <FooterTitle>GENERAL</FooterTitle>
 
-              <BoxFooter>
-                <TitleFooter>NAVIGATION</TitleFooter>
+        <p className="about-text">The website of Vagabond Hiatus Chart.</p>
+        <p className="about-text">
+          Some of the images belongs to Takehiko Inoue &amp; Kōdansha.
+        </p>
 
-                <Link to="/" className="nav-link" rel="noopener noreferrer">
-                  Home
-                </Link>
-                <Link
-                  to="/about"
-                  className="nav-link"
-                  rel="noopener noreferrer"
-                >
-                  About
-                </Link>
-              </BoxFooter>
+        <p className="about-text">
+          For a better experience use firefox and visit the site on desktop
+          mode.
+        </p>
+      </FooterSection>
 
-              <BoxFooter>
-                <TitleFooter>EXTRA LINKS</TitleFooter>
+      <FooterSection className="section-two">
+        <FooterTitle>NAVIGATION</FooterTitle>
 
-                <ExtraLinks>
-                  <li>
-                    <a
-                      className="extra-links"
-                      href="https://itplanning.co.jp/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Takehiko Inoue
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="extra-links"
-                      href="https://morning.kodansha.co.jp/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Morning Kodansha
-                    </a>
-                  </li>
-                </ExtraLinks>
-              </BoxFooter>
+        <Link
+          to={process.env.PUBLIC_URL + '/'}
+          className="nav-link"
+          rel="noopener noreferrer"
+        >
+          Home
+        </Link>
 
-              <Col md={12}>
-                <p className="footer-text-content">
-                  Vagabond Hiatus Chart © 2021
-                </p>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </FooterStyles>
-    </>
+        <Link
+          to={process.env.PUBLIC_URL + '/about'}
+          className="nav-link"
+          rel="noopener noreferrer"
+        >
+          About
+        </Link>
+      </FooterSection>
+
+      <FooterSection className="section-three">
+        <FooterTitle>EXTRA LINKS</FooterTitle>
+        <ExtraLinks>
+          <li>
+            <a
+              href="https://itplanning.co.jp/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Takehiko Inoue
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://morning.kodansha.co.jp/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Morning Kodansha
+            </a>
+          </li>
+        </ExtraLinks>
+      </FooterSection>
+
+      <FooterSection className="section-four">
+        <p className="footer-text-copyrigth">Vagabond Hiatus Chart © 2021</p>
+      </FooterSection>
+    </FooterMain>
   );
 };
 

@@ -32,7 +32,7 @@ export const AboutMain = styled.main`
   }
 
   .email-pop:after {
-    content: 'falsepopsky@protonmail.com ';
+    content: ' falsepopsky@protonmail.com ';
     color: #ffd779;
   }
 

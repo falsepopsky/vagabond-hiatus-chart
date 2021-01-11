@@ -5,7 +5,7 @@ import { ResponsiveHeatMapCanvas } from '@nivo/heatmap';
 import { themeNivo } from '../theme/themeNivo';
 import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import { configHeatmap } from './hiatusHeatmapConfig';
-import { HeatmapStyles, ButtonSC } from './hiatusHeatmapSC';
+import { HeatmapStyles, HeatmapBox, ButtonSC } from './hiatusHeatmapSC';
 import Legend from '../../assets/legend.svg';
 import HiatusLegendArc from './HiatusLegendArc';
 import HiatusLegendChapter from './HiatusLegendChapter';
@@ -58,8 +58,7 @@ const Heatmap = () => {
           <Col md={12} className="heatmap-main">
             <h2 className="heatmap-main-title">VAGABOND HIATUS HEATMAP</h2>
           </Col>
-
-          <Col md={12} className="heatmap-render">
+          <HeatmapBox>
             <ResponsiveHeatMapCanvas
               data={database}
               keys={configHeatmap.keysHeatmap}
@@ -94,7 +93,7 @@ const Heatmap = () => {
             <p className="heatmap-render-text">
               invincible... it's merely a word.
             </p>
-          </Col>
+          </HeatmapBox>
 
           <Col md={12} className="heatmap-database-legend">
             <div className="heatmap-title">

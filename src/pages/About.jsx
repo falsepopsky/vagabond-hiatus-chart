@@ -59,7 +59,7 @@ const About = () => {
         <AboutSection>
           <TitleAbout>CONTACT</TitleAbout>
           <p className="about-text">
-            For business inquires only at{' '}
+            For business inquires only at
             <strong className="email-pop"></strong>
             with the subject <strong className="email-subject"></strong>, any
             other message without the subject will be deleted.

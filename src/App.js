@@ -11,8 +11,12 @@ function App() {
       <ScrollToTop>
         <Container fluid as="main" className="m-0 p-0">
           <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/about" component={About} />
+            <Route
+              exact
+              path={process.env.PUBLIC_URL + '/'}
+              component={HomePage}
+            />
+            <Route path={process.env.PUBLIC_URL + '/about'} component={About} />
             <Route path="*" component={NoMatch} />
           </Switch>
         </Container>

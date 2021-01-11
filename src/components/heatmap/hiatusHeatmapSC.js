@@ -36,6 +36,16 @@ export const ButtonSC = styled.button`
     `}
 `;
 
+export const HeatmapBox = styled.section`
+  padding: 0 5vw;
+  width: 100%;
+  height: 460px;
+
+  .heatmap-render-text {
+    color: transparent;
+  }
+`;
+
 export const HeatmapStyles = styled.div`
   .heatmap-section {
     background-color: #000000;
@@ -50,16 +60,6 @@ export const HeatmapStyles = styled.div`
       margin-top: 3.5em;
       color: #f4f7f3;
       font-family: 'HelveticaNowDisplayRegular';
-    }
-  }
-
-  .heatmap-render {
-    padding: 0 5vw;
-    width: 100%;
-    height: 460px;
-
-    &-text {
-      color: transparent;
     }
   }
 
