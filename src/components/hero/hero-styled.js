@@ -20,7 +20,7 @@ export const HeroStyles = styled.div`
   .row {
     margin: 0;
     text-align: center;
-    font-family: 'Teko';
+    font-family: var(--font-family-hero);
   }
 
   .hero-section {
@@ -29,7 +29,6 @@ export const HeroStyles = styled.div`
       url(${vagabond}) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
-    font-family: 'Teko';
 
     &-col {
       display: flex;
@@ -41,7 +40,7 @@ export const HeroStyles = styled.div`
 
     &-main {
       color: white;
-      font-size: 3.1rem;
+      font-size: var(--text-size-primary);
       letter-spacing: 0.14em;
       margin-top: 20px;
 
@@ -73,7 +72,7 @@ export const HeroStyles = styled.div`
     }
 
     &-author {
-      font-size: 3rem;
+      font-size: var(--text-size-primary);
       letter-spacing: 0.14em;
       margin-top: 1em;
 
@@ -89,9 +88,10 @@ export const HeroStyles = styled.div`
     }
 
     &-description {
-      font-family: HelveticaNowDisplayRegular;
-      font-size: 22px;
-      margin-bottom: 2em;
+      font-family: var(--font-family-primary);
+      font-size: var(--text-size-secondary);
+      max-width: 560px;
+      margin: 0 auto 2em auto;
 
       &::selection {
         text-shadow: none;

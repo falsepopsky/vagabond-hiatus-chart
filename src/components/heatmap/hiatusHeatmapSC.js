@@ -1,17 +1,40 @@
 import styled, { css } from 'styled-components';
+import Katana from '../../assets/katana.svg';
+import Fuji from '../../assets/monte-fuji.svg';
+
+export const Emoji = styled.i`
+  width: 40px;
+  height: 40px;
+  background-image: url(${Katana});
+  background-repeat: no-repeat;
+  background-size: 40px auto;
+  display: inline-block;
+  position: relative;
+
+  ${(props) =>
+    props.fuji &&
+    css`
+      right: 20px;
+      background-image: url(${Fuji});
+    `}
+`;
 
 export const ButtonSC = styled.button`
-  width: 120px;
-  height: 40px;
+  width: 140px;
+  height: 48px;
   border: none;
   font-size: 16px;
-  background-color: #0bcf65;
-  color: #023218;
-  padding: 0.3rem 1rem;
+  background-color: #ffffff;
+  color: #061651;
+  padding: 0;
   border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
-    background-color: #11b55c;
+    background-color: #f7f7f7;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
   &:active {
@@ -22,18 +45,6 @@ export const ButtonSC = styled.button`
   &:focus {
     outline: 0;
   }
-
-  ${(props) =>
-    props.arc &&
-    css`
-      background-color: #0b54cf;
-      color: #001333;
-      padding: 0.3rem 1rem;
-
-      &:hover {
-        background-color: #084fb4;
-      }
-    `}
 `;
 
 export const HeatmapBox = styled.section`
@@ -104,6 +115,17 @@ export const HeatmapStyles = styled.div`
     display: flex;
     justify-content: space-evenly;
     padding: 2vw 0 1vw;
+
+    .katana {
+      width: 40px;
+      height: 40px;
+      background-image: url(${Katana});
+      background-repeat: no-repeat;
+      background-size: 40px 40px;
+      display: inline-block;
+      position: relative;
+      left: 0px;
+    }
   }
 
   .legend-card {

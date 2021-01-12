@@ -30,6 +30,34 @@
   font-weight: normal;
 }
 
+:root {
+  scrollbar-color: #006daa #b9d6f2;
+  scrollbar-width: thin;
+  --text-size-primary: 48px;
+  --text-size-secondary: 26px;
+  --text-size-third: 13px;
+  --font-family-primary: 'HelveticaNowDisplayRegular';
+  --font-family-secondary: 'VarelaRound';
+  --font-family-hero: 'Teko';
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #b9d6f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #006daa;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #061a40;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -43,8 +71,4 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.first-font {
-  font-family: 'VarelaRound';
 }

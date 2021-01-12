@@ -5,7 +5,7 @@ import { ResponsiveHeatMapCanvas } from '@nivo/heatmap';
 import { themeNivo } from '../theme/themeNivo';
 import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import { configHeatmap } from './hiatusHeatmapConfig';
-import { HeatmapStyles, HeatmapBox, ButtonSC } from './hiatusHeatmapSC';
+import { HeatmapStyles, HeatmapBox, ButtonSC, Emoji } from './hiatusHeatmapSC';
 import Legend from '../../assets/legend.svg';
 import HiatusLegendArc from './HiatusLegendArc';
 import HiatusLegendChapter from './HiatusLegendChapter';
@@ -103,8 +103,12 @@ const Heatmap = () => {
             </div>
 
             <div className="heatmap-buttons">
-              <ButtonSC onClick={changeToPubs}>CHAPTERS</ButtonSC>
-              <ButtonSC arc onClick={changeToArc}>
+              <ButtonSC onClick={changeToPubs}>
+                <Emoji />
+                CHAPTERS
+              </ButtonSC>
+              <ButtonSC onClick={changeToArc}>
+                <Emoji fuji />
                 ARC
               </ButtonSC>
             </div>
