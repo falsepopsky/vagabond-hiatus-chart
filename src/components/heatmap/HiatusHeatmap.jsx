@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { ResponsiveHeatMapCanvas } from '@nivo/heatmap';
 import { themeNivo } from '../theme/themeNivo';
 import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import { configHeatmap } from './hiatusHeatmapConfig';
-import { HeatmapStyles, HeatmapBox, ButtonSC, Emoji } from './hiatusHeatmapSC';
+import {
+  HeatmapContainer,
+  HeatmapBox,
+  HeatmapBar,
+  ButtonSC,
+  Emoji,
+} from './hiatusHeatmapSC';
 import Legend from '../../assets/legend.svg';
 import HiatusLegendArc from './HiatusLegendArc';
 import HiatusLegendChapter from './HiatusLegendChapter';
@@ -17,8 +22,7 @@ let toolTipHeatmap = ({ color, xKey, yKey }) => (
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-    }}
-  >
+    }}>
     <div
       style={{
         height: '20px',
@@ -26,8 +30,7 @@ let toolTipHeatmap = ({ color, xKey, yKey }) => (
         marginRight: '4px',
         backgroundColor: color,
         borderRadius: '50%',
-      }}
-    ></div>
+      }}></div>
     <strong>
       Year {yKey} / #{xKey}
     </strong>
@@ -53,90 +56,91 @@ const Heatmap = () => {
 
   return (
     <>
-      <HeatmapStyles>
-        <Row as="section" className="heatmap-section text-center">
-          <Col md={12} className="heatmap-main">
-            <h2 className="heatmap-main-title">VAGABOND HIATUS HEATMAP</h2>
-          </Col>
-          <HeatmapBox>
-            <ResponsiveHeatMapCanvas
-              data={database}
-              keys={configHeatmap.keysHeatmap}
-              indexBy="year"
-              margin={configHeatmap.margin}
-              theme={themeNivo}
-              pixelRatio={1}
-              minValue="auto"
-              maxValue="auto"
-              tooltip={toolTipHeatmap}
-              forceSquare={false}
-              sizeVariation={0.01}
-              padding={1}
-              colors={colors}
-              axisTop={null}
-              axisRight={null}
-              axisBottom={configHeatmap.axisBottom}
-              axisLeft={configHeatmap.axisLeft}
-              enableGridX={false}
-              enableGridY={true}
-              cellShape="rect"
-              cellOpacity={1}
-              cellBorderWidth={0}
-              cellBorderColor="#000"
-              enableLabels={false}
-              animate={false}
-              isInteractive={true}
-              hoverTarget="rowColumn"
-              cellHoverOpacity={1}
-              cellHoverOthersOpacity={0.5}
-            />
-            <p className="heatmap-render-text">
-              invincible... it's merely a word.
-            </p>
-          </HeatmapBox>
+      <HeatmapContainer>
+        <Col md={12} className="heatmap-main">
+          <h2 className="heatmap-main-title">VAGABOND HIATUS HEATMAP</h2>
+        </Col>
+        <HeatmapBar>
+          <div className="navigation-heatmap">hey</div>
+        </HeatmapBar>
+        <HeatmapBox>
+          <ResponsiveHeatMapCanvas
+            data={database}
+            keys={configHeatmap.keysHeatmap}
+            indexBy="year"
+            margin={configHeatmap.margin}
+            theme={themeNivo}
+            pixelRatio={1}
+            minValue="auto"
+            maxValue="auto"
+            tooltip={toolTipHeatmap}
+            forceSquare={false}
+            sizeVariation={0.01}
+            padding={1}
+            colors={colors}
+            axisTop={null}
+            axisRight={null}
+            axisBottom={configHeatmap.axisBottom}
+            axisLeft={configHeatmap.axisLeft}
+            enableGridX={false}
+            enableGridY={true}
+            cellShape="rect"
+            cellOpacity={1}
+            cellBorderWidth={0}
+            cellBorderColor="#000"
+            enableLabels={false}
+            animate={false}
+            isInteractive={true}
+            hoverTarget="rowColumn"
+            cellHoverOpacity={1}
+            cellHoverOthersOpacity={0.5}
+          />
+          <p className="heatmap-render-text">
+            invincible... it's merely a word.
+          </p>
+        </HeatmapBox>
 
-          <Col md={12} className="heatmap-database-legend">
-            <div className="heatmap-title">
-              <div className="heatmap-title-box">
-                <h2 className="title-database-legend">CHANGE DATABASE</h2>
-              </div>
+        <Col md={12} className="heatmap-database-legend">
+          <div className="heatmap-title">
+            <div className="heatmap-title-box">
+              <h2 className="title-database-legend">CHANGE DATABASE</h2>
             </div>
+          </div>
 
-            <div className="heatmap-buttons">
-              <ButtonSC onClick={changeToPubs}>
-                <Emoji />
-                CHAPTERS
-              </ButtonSC>
-              <ButtonSC onClick={changeToArc}>
-                <Emoji fuji />
-                ARC
-              </ButtonSC>
+          <div className="heatmap-buttons">
+            <ButtonSC onClick={changeToPubs}>
+              <Emoji />
+              CHAPTERS
+            </ButtonSC>
+            <ButtonSC onClick={changeToArc}>
+              <Emoji fuji />
+              ARC
+            </ButtonSC>
+          </div>
+
+          <div className="heatmap-title">
+            <div className="heatmap-title-box">
+              <h2 className="title-database-legend">LEGEND</h2>
             </div>
+          </div>
+        </Col>
 
-            <div className="heatmap-title">
-              <div className="heatmap-title-box">
-                <h2 className="title-database-legend">LEGEND</h2>
-              </div>
-            </div>
-          </Col>
+        <Col md={12} className="legend-card">
+          <article className="legend-card-one">
+            <img src={Legend} alt="Legends" className="legend-card-one-img" />
+          </article>
 
-          <Col md={12} className="legend-card">
-            <article className="legend-card-one">
-              <img src={Legend} alt="Legends" className="legend-card-one-img" />
-            </article>
-
-            {cardTwo === true ? (
-              <>
-                <HiatusLegendChapter />
-              </>
-            ) : (
-              <>
-                <HiatusLegendArc />
-              </>
-            )}
-          </Col>
-        </Row>
-      </HeatmapStyles>
+          {cardTwo === true ? (
+            <>
+              <HiatusLegendChapter />
+            </>
+          ) : (
+            <>
+              <HiatusLegendArc />
+            </>
+          )}
+        </Col>
+      </HeatmapContainer>
     </>
   );
 };

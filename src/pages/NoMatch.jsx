@@ -9,8 +9,7 @@ const NoMatch = () => {
       <Link
         to={process.env.PUBLIC_URL + '/'}
         className="back-home"
-        rel="noopener noreferrer"
-      >
+        rel="noopener noreferrer">
         Return to Home Site
       </Link>
     </NoMatchMain>

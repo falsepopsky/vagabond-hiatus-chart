@@ -27,16 +27,14 @@ const Footer = () => {
         <Link
           to={process.env.PUBLIC_URL + '/'}
           className="nav-link"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Home
         </Link>
 
         <Link
           to={process.env.PUBLIC_URL + '/about'}
           className="nav-link"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           About
         </Link>
       </FooterSection>
@@ -48,8 +46,7 @@ const Footer = () => {
             <a
               href="https://itplanning.co.jp/"
               rel="noopener noreferrer"
-              target="_blank"
-            >
+              target="_blank">
               Takehiko Inoue
             </a>
           </li>
@@ -57,8 +54,7 @@ const Footer = () => {
             <a
               href="https://morning.kodansha.co.jp/"
               rel="noopener noreferrer"
-              target="_blank"
-            >
+              target="_blank">
               Morning Kodansha
             </a>
           </li>

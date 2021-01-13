@@ -31,13 +31,16 @@ export const AboutMain = styled.main`
     color: #ff7b7b;
   }
 
-  .email-pop:after {
-    content: ' falsepopsky@protonmail.com ';
+  .email-pop {
+    direction: rtl;
+    unicode-bidi: bidi-override;
     color: #ffd779;
+    padding: 0 2px;
   }
 
-  .email-subject:after {
-    content: 'business dev';
+  .email-subject {
+    direction: rtl;
+    unicode-bidi: bidi-override;
     color: #ffd779;
   }
 

@@ -1,48 +1,48 @@
 import styled, { css, keyframes } from 'styled-components';
+
 import vagabond from '../../assets/vagabond-min.png';
 
 const bounce = keyframes`
 0% {
-  bottom: 40px;
+  top: 0;
 }
 50% {
-  bottom: 50px;
+  top: -10px;
 }
 100% {
-  bottom: 40px;
+  top: 0;
 }`;
 
 const animationRule = css`
   ${bounce} 1s infinite;
 `;
 
-export const HeroStyles = styled.div`
-  .row {
-    margin: 0;
-    text-align: center;
-    font-family: var(--font-family-hero);
-  }
+export const HeroStyles = styled.section`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  font-family: var(--font-family-hero);
+  color: white;
+  letter-spacing: 0.14em;
+  text-align: center;
+`;
 
-  .hero-section {
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-      url(${vagabond}) no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
+export const HeroSectionHeader = styled.article`
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(${vagabond}) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 
-    &-col {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    &-main {
-      color: white;
+  .hero {
+    &-title {
       font-size: var(--text-size-primary);
-      letter-spacing: 0.14em;
-      margin-top: 20px;
+      margin-top: auto;
 
       &::selection {
         text-shadow: none;
@@ -51,30 +51,59 @@ export const HeroStyles = styled.div`
       }
     }
 
+    &-figure {
+      margin-top: auto;
+    }
+
+    &-scroll-down {
+      pointer-events: none;
+      user-select: none;
+    }
+
     &-arrow {
       width: 30px;
       height: 30px;
-      position: absolute;
+      position: relative;
       top: 0;
-      bottom: 40px;
-      left: calc(100% - 50%);
+      bottom: 0;
+      left: 0;
       right: 0;
-      margin-top: auto;
       animation: ${animationRule};
       pointer-events: none;
+      user-select: none;
     }
+  }
 
+  @media (max-width: 576px) {
+    .hero-title {
+      opacity: 0.7;
+    }
+  }
+`;
+
+export const HeroSectionSub = styled.article`
+  background-color: #d91a32;
+  color: black;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  .hero {
     &-logo {
       margin: 50px 0 0 0;
       width: 50%;
       height: auto;
       pointer-events: none;
+      user-select: none;
     }
 
     &-author {
-      font-size: var(--text-size-primary);
-      letter-spacing: 0.14em;
       margin-top: 1em;
+      padding-bottom: 24px;
+      font-size: var(--text-size-primary);
 
       &::selection {
         text-shadow: none;
@@ -84,14 +113,16 @@ export const HeroStyles = styled.div`
       span {
         font-size: 0.6rem;
         user-select: none;
+        letter-spacing: 3px;
       }
     }
 
     &-description {
       font-family: var(--font-family-primary);
       font-size: var(--text-size-secondary);
+      letter-spacing: 3px;
       max-width: 560px;
-      margin: 0 auto 2em auto;
+      padding-bottom: 24px;
 
       &::selection {
         text-shadow: none;
@@ -100,24 +131,26 @@ export const HeroStyles = styled.div`
     }
   }
 
-  .hero-section-col-two {
-    background-color: #d91a32;
-    color: black;
-  }
-
   @media (max-width: 576px) {
-    .hero-section-logo {
-      width: 100%;
-      height: auto;
-    }
+    .hero {
+      &-logo {
+        width: 90%;
+        height: auto;
+      }
 
-    .hero-section-author {
-      margin-top: 1em;
-      font-size: 2.7rem;
+      &-author {
+        margin-top: 1em;
+        font-size: 2.7rem;
 
-      span {
-        font-size: 0.6rem;
-        display: block;
+        span {
+          font-size: 0.6rem;
+          display: block;
+        }
+      }
+
+      &-description {
+        font-size: var(--text-size-third);
+        max-width: 320px;
       }
     }
   }

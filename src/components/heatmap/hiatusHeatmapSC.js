@@ -57,12 +57,26 @@ export const HeatmapBox = styled.section`
   }
 `;
 
-export const HeatmapStyles = styled.div`
-  .heatmap-section {
-    background-color: #000000;
-    margin: 0;
-    font-family: 'VarelaRound';
+export const HeatmapBar = styled.section`
+  width: 100%;
+  height: auto;
+
+  .navigation-heatmap {
+    height: 55px;
+    margin: 0 5vw;
+    border-radius: 10px;
+    background-color: #f6f7fb;
   }
+`;
+
+export const HeatmapContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: 'VarelaRound';
+  text-align: center;
 
   .heatmap-main {
     padding: 0;
