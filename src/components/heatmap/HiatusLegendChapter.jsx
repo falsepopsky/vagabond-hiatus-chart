@@ -12,7 +12,9 @@ const HiatusLegendChapter = () => {
       </div>
 
       <div className="legend-card-two-item">
-        <p className="legend-dont legend-before">Doesn’t appear in MW</p>
+        <p className="legend-dont legend-before">
+          Doesn’t appear in Morning Issue
+        </p>
       </div>
     </article>
   );

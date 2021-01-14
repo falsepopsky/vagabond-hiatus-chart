@@ -10,11 +10,12 @@ export const Emoji = styled.i`
   background-size: 40px auto;
   display: inline-block;
   position: relative;
+  pointer-events: none;
+  user-select: none;
 
   ${(props) =>
     props.fuji &&
     css`
-      right: 20px;
       background-image: url(${Fuji});
     `}
 `;
@@ -31,6 +32,7 @@ export const ButtonSC = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 8px;
 
   &:hover {
     background-color: #f7f7f7;
@@ -45,6 +47,89 @@ export const ButtonSC = styled.button`
   &:focus {
     outline: 0;
   }
+
+  @media (max-width: 720px) {
+    width: 48px;
+    height: 48px;
+    margin: 0 8px;
+  }
+`;
+
+export const HeatmapBar = styled.section`
+  width: 90%;
+  height: 60px;
+  align-self: center;
+
+  .navigation-heatmap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-evenly;
+    height: 55px;
+    margin: 0 5vw;
+    border-radius: 10px;
+    background-color: #e5e8f4;
+  }
+
+  .database {
+    &-section {
+      display: flex;
+      flex-flow: row wrap;
+      order: 1;
+      align-content: center;
+      align-items: center;
+    }
+    &-img {
+      width: 40px;
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    &-title {
+      margin: 0 0 0 8px;
+      font-size: 20px;
+      display: inline;
+    }
+  }
+
+  .shuffle {
+    &-section {
+      order: 2;
+      display: flex;
+    }
+
+    &-change {
+      margin: 0 4px;
+      width: 40px;
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+
+  .buttons-section {
+    display: flex;
+    flex-flow: row wrap;
+    order: 3;
+    width: auto;
+  }
+
+  .button-arc {
+    margin-left: 6px;
+  }
+
+  @media (max-width: 774px) {
+    .database-title {
+      display: none;
+    }
+
+    .button-chapter,
+    .button-arc {
+      display: none;
+    }
+  }
 `;
 
 export const HeatmapBox = styled.section`
@@ -57,19 +142,7 @@ export const HeatmapBox = styled.section`
   }
 `;
 
-export const HeatmapBar = styled.section`
-  width: 100%;
-  height: auto;
-
-  .navigation-heatmap {
-    height: 55px;
-    margin: 0 5vw;
-    border-radius: 10px;
-    background-color: #f6f7fb;
-  }
-`;
-
-export const HeatmapContainer = styled.div`
+export const HeatmapContainer = styled.section`
   display: flex;
   flex-direction: column;
   background-color: #000000;
@@ -82,14 +155,16 @@ export const HeatmapContainer = styled.div`
     padding: 0;
 
     &-title {
-      margin-top: 3.5em;
+      padding: 0 0 40px;
+      margin-top: 3em;
       color: #f4f7f3;
       font-family: 'HelveticaNowDisplayRegular';
+      font-size: var(--text-size-primary);
     }
   }
 
   .heatmap-database-legend {
-    padding: 0;
+    padding: 0 5vw;
     width: 100%;
     height: auto;
   }
@@ -99,19 +174,14 @@ export const HeatmapContainer = styled.div`
     flex-flow: column wrap;
     width: auto;
     height: auto;
-    background-color: black;
     align-items: baseline;
     margin: 0;
-    padding: 2vw 5vw;
-
-    &-box {
-      color: white;
-      width: auto;
-    }
+    padding: 0;
+    color: white;
   }
 
   .title-database-legend {
-    font-size: 24px;
+    font-size: var(--text-size-secondary);
     font-family: HelveticaNowDisplayRegular;
 
     &::before {
@@ -125,30 +195,13 @@ export const HeatmapContainer = styled.div`
     }
   }
 
-  .heatmap-buttons {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2vw 0 1vw;
-
-    .katana {
-      width: 40px;
-      height: 40px;
-      background-image: url(${Katana});
-      background-repeat: no-repeat;
-      background-size: 40px 40px;
-      display: inline-block;
-      position: relative;
-      left: 0px;
-    }
-  }
-
   .legend-card {
-    padding: 1vw 5vw 3vw;
+    padding: 0 5vw 3vw;
     width: 100%;
     height: auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 
     &-one {
@@ -162,6 +215,7 @@ export const HeatmapContainer = styled.div`
         width: 80%;
         height: auto;
         pointer-events: none;
+        user-select: none;
       }
     }
 

@@ -8,7 +8,12 @@ const About = () => {
     <>
       <AboutMain>
         <AboutSection>
-          <img className="about-image" src={VagabondAbout} alt="vagabond" />
+          <img
+            loading="lazy"
+            className="about-image"
+            src={VagabondAbout}
+            alt="vagabond"
+          />
         </AboutSection>
 
         <AboutSection>
