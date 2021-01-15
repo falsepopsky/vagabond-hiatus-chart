@@ -5,7 +5,9 @@
   "private": true,
   "keywords": [
     "React",
-    "@nivo"
+    "@nivo",
+    "twitter",
+    "disqus"
   ],
   "author": "Rodrigo Toledo",
   "license": "GPL-3.0 license",
