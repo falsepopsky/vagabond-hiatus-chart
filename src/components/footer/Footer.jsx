@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { FooterMain, FooterSection, FooterTitle, ExtraLinks } from './footerSC';
+import {
+  FooterMain,
+  FooterLine,
+  FooterSection,
+  FooterTitle,
+  ExtraLinks,
+} from './footerSC';
 
 const Footer = () => {
   return (
     <FooterMain>
-      <div className="footer-line"></div>
+      <FooterLine></FooterLine>
       <FooterSection className="section-one">
         <FooterTitle>GENERAL</FooterTitle>
 

@@ -1,6 +1,6 @@
 export const testDatabase = [
   {
-    id: 'released',
+    id: 'Released',
     data: [
       {
         x: 1998,
@@ -44,7 +44,7 @@ export const testDatabase = [
     ],
   },
   {
-    id: 'not released',
+    id: 'Not released',
     data: [
       {
         x: 1998,
@@ -84,7 +84,7 @@ export const testDatabase = [
       { x: 2018, y: 48 },
       { x: 2019, y: 48 },
       { x: 2020, y: 48 },
-      { x: 2021, y: 4 },
+      { x: 2021, y: 5 },
     ],
   },
 ];

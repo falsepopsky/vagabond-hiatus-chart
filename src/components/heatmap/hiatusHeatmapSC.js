@@ -160,6 +160,12 @@ export const HeatmapContainer = styled.section`
       color: #f4f7f3;
       font-family: 'HelveticaNowDisplayRegular';
       font-size: var(--text-size-primary);
+
+      &::selection {
+        text-shadow: none;
+        color: white;
+        background: blue;
+      }
     }
   }
 

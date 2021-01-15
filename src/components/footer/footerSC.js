@@ -11,12 +11,6 @@ export const FooterMain = styled.footer`
   padding: 3vw 5vw;
   font-family: 'HelveticaNowDisplayRegular';
 
-  .footer-line {
-    border-top: 1px solid rgb(240, 240, 243, 0.9);
-    flex: 1 1 100%;
-    padding: 0 0 20px 0;
-  }
-
   .nav-link {
     color: #c4bebe;
     margin-left: 24px;
@@ -74,6 +68,12 @@ export const FooterMain = styled.footer`
       padding: 30px 0;
       flex: 1 1 100%;
     }
+`;
+
+export const FooterLine = styled.div`
+  border-top: 1px solid rgb(240, 240, 243, 0.9);
+  flex: 1 1 100%;
+  padding: 0 0 20px 0;
 `;
 
 export const FooterSection = styled.section`

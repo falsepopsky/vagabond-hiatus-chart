@@ -12,12 +12,6 @@
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: local('Lato Bold'), url('./fonts/Lato-Bold.ttf') format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
   font-family: 'HelveticaNowDisplayRegular';
   src: local('HelveticaNowDisplayRegular'),
     url('./fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
