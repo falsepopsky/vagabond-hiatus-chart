@@ -14,7 +14,11 @@ function App() {
             path={process.env.PUBLIC_URL + '/'}
             component={HomePage}
           />
-          <Route path={process.env.PUBLIC_URL + '/about'} component={About} />
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + '/about'}
+            component={About}
+          />
           <Route path="*" component={NoMatch} />
         </Switch>
       </ScrollToTop>
