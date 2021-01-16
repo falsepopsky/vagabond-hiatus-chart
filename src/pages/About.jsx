@@ -8,7 +8,12 @@ const About = () => {
     <>
       <AboutMain>
         <AboutSection>
-          <img className="about-image" src={VagabondAbout} alt="vagabond" />
+          <img
+            loading="lazy"
+            className="about-image"
+            src={VagabondAbout}
+            alt="vagabond"
+          />
         </AboutSection>
 
         <AboutSection>
@@ -35,8 +40,7 @@ const About = () => {
               className="about-links"
               href="https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/"
               rel="noopener noreferrer"
-              target="_blank"
-            >
+              target="_blank">
               data
             </a>
             without this project would be very inaccurate.
@@ -49,8 +53,7 @@ const About = () => {
               className="about-links"
               href="https://hiatus-hiatus.github.io/"
               rel="noopener noreferrer"
-              target="_blank"
-            >
+              target="_blank">
               Hunter X Hunter
             </a>
             .
@@ -59,10 +62,10 @@ const About = () => {
         <AboutSection>
           <TitleAbout>CONTACT</TitleAbout>
           <p className="about-text">
-            For business inquires only at{' '}
-            <strong className="email-pop"></strong>
-            with the subject <strong className="email-subject"></strong>, any
-            other message without the subject will be deleted.
+            For business inquires only at
+            <b className="email-pop">moc.liamnotorp@ykspopeslaf</b> with the
+            subject <b className="email-subject">ved ssenisub</b>, any other
+            message without the subject will be deleted.
           </p>
 
           <p className="about-text">
@@ -72,8 +75,7 @@ const About = () => {
               className="about-links"
               href="https://forms.gle/QjtffknkRddEy4TaA"
               rel="noopener noreferrer"
-              target="_blank"
-            >
+              target="_blank">
               form
             </a>
             .

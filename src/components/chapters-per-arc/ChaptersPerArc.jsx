@@ -43,8 +43,7 @@ const Pubs = () => {
         <Col
           md={12}
           className="p-0 mb-5"
-          style={{ width: '100%', height: '460px' }}
-        >
+          style={{ width: '100%', height: '460px' }}>
           <ResponsiveBar
             data={Data}
             keys={keys}

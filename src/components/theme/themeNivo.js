@@ -1,6 +1,6 @@
 export const themeNivo = {
   background: '#000000',
-  fontFamily: 'Lato',
+  fontFamily: 'VarelaRound',
   textColor: '#ffffff',
   fontSize: 12,
   axis: {

@@ -1,43 +1,55 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { ResponsiveBar } from '@nivo/bar';
-import { chaptersPerYearData } from './cpyDatabase';
-import { configCPY } from './cpyConfig';
+import { ResponsiveLine } from '@nivo/line';
+import { testDatabase } from './ChaptersPerYearDatabase';
+import { configCPY } from './cpyNivoConfig';
+import { themeNivo } from '../theme/themeNivo';
+import {
+  CPYContainer,
+  CPYLineContainer,
+  TitleContainer,
+  NivoLineContainer,
+} from './cpySC';
 
-const Pubs = () => {
+const ChaptersLine = () => {
   return (
     <>
-      <Row as="section" className="text-center m-0">
-        <Col md={12}>
-          <h2 className="mt-5">CHAPTERS RELEASED BY YEAR</h2>
-        </Col>
-
-        <Col md={12} className="p-0" style={{ width: '100%', height: '500px' }}>
-          <ResponsiveBar
-            data={chaptersPerYearData}
-            keys={configCPY.keysCPY}
-            indexBy="year"
-            margin={{ top: 50, right: 60, bottom: 60, left: 60 }}
-            padding={0.3}
-            valueScale={{ type: 'linear' }}
-            indexScale={{ type: 'band', round: true }}
-            colors={configCPY.colorBars}
-            borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+      <CPYContainer>
+        <CPYLineContainer></CPYLineContainer>
+        <TitleContainer>
+          <h2 className="line-main-title">CHAPTERS PER YEAR</h2>
+        </TitleContainer>
+        <NivoLineContainer>
+          <ResponsiveLine
+            data={testDatabase}
+            theme={themeNivo}
+            colors={configCPY.colors}
+            margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+            xScale={{ type: 'point' }}
+            yScale={configCPY.yScale}
             axisTop={null}
             axisRight={null}
             axisBottom={configCPY.axisBottom}
             axisLeft={configCPY.axisLeft}
-            labelSkipWidth={12}
-            labelSkipHeight={12}
-            labelTextColor={'#000000'}
-            animate={false}
+            enableGridX={false}
+            pointSize={10}
+            pointColor={{ from: 'color', modifiers: [] }}
+            pointBorderWidth={1}
+            pointBorderColor="#ffffff"
+            pointLabelYOffset={-12}
+            enableArea={true}
+            areaBlendMode="normal"
+            areaOpacity={0.9}
+            enableSlices="x"
+            enableCrosshair={false}
+            legends={configCPY.legends}
+            defs={configCPY.defs}
+            fill={configCPY.fill}
           />
-          <p>&#32; hey</p>
-        </Col>
-      </Row>
+          <p className="line-hidden-render">slamn dunk</p>
+        </NivoLineContainer>
+      </CPYContainer>
     </>
   );
 };
 
-export default Pubs;
+export default ChaptersLine;

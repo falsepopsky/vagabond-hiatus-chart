@@ -12,22 +12,38 @@
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: local('Lato Bold'), url('./fonts/Lato-Bold.ttf') format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'HelveticaNowDisplayHairline';
-  src: local('HelveticaNowDisplayHairline'),
-    url('./fonts/HelveticaNowDisplay-Hairline.ttf') format('truetype');
-  font-weight: normal;
-}
-@font-face {
   font-family: 'HelveticaNowDisplayRegular';
   src: local('HelveticaNowDisplayRegular'),
     url('./fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
   font-weight: normal;
+}
+
+:root {
+  scrollbar-color: #006daa #b9d6f2;
+  scrollbar-width: thin;
+  --text-size-primary: 48px;
+  --text-size-secondary: 26px;
+  --text-size-third: 13px;
+  --font-family-primary: 'HelveticaNowDisplayRegular';
+  --font-family-secondary: 'VarelaRound';
+  --font-family-hero: 'Teko';
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #b9d6f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #006daa;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #061a40;
 }
 
 body {
@@ -39,11 +55,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.first-font {
-  font-family: 'VarelaRound';
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

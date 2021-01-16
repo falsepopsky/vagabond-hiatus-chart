@@ -1,17 +1,42 @@
 import styled, { css } from 'styled-components';
+import Katana from '../../assets/katana.svg';
+import Fuji from '../../assets/monte-fuji.svg';
+
+export const Emoji = styled.i`
+  width: 40px;
+  height: 40px;
+  background-image: url(${Katana});
+  background-repeat: no-repeat;
+  background-size: 40px auto;
+  display: inline-block;
+  position: relative;
+  pointer-events: none;
+  user-select: none;
+
+  ${(props) =>
+    props.fuji &&
+    css`
+      background-image: url(${Fuji});
+    `}
+`;
 
 export const ButtonSC = styled.button`
-  width: 120px;
-  height: 40px;
+  width: 140px;
+  height: 48px;
   border: none;
   font-size: 16px;
-  background-color: #0bcf65;
-  color: #023218;
-  padding: 0.3rem 1rem;
+  background-color: #ffffff;
+  color: #061651;
+  padding: 0;
   border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
 
   &:hover {
-    background-color: #11b55c;
+    background-color: #f7f7f7;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
   &:active {
@@ -23,48 +48,129 @@ export const ButtonSC = styled.button`
     outline: 0;
   }
 
-  ${(props) =>
-    props.arc &&
-    css`
-      background-color: #0b54cf;
-      color: #001333;
-      padding: 0.3rem 1rem;
-
-      &:hover {
-        background-color: #084fb4;
-      }
-    `}
+  @media (max-width: 720px) {
+    width: 48px;
+    height: 48px;
+    margin: 0 8px;
+  }
 `;
 
-export const HeatmapStyles = styled.div`
-  .heatmap-section {
-    background-color: #000000;
-    margin: 0;
-    font-family: 'VarelaRound';
+export const HeatmapBar = styled.section`
+  width: 90%;
+  height: 60px;
+  align-self: center;
+
+  .navigation-heatmap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-evenly;
+    height: 55px;
+    margin: 0 5vw;
+    border-radius: 10px;
+    background-color: #e5e8f4;
   }
+
+  .database {
+    &-section {
+      display: flex;
+      flex-flow: row wrap;
+      order: 1;
+      align-content: center;
+      align-items: center;
+    }
+    &-img {
+      width: 40px;
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    &-title {
+      margin: 0 0 0 8px;
+      font-size: 20px;
+      display: inline;
+    }
+  }
+
+  .shuffle {
+    &-section {
+      order: 2;
+      display: flex;
+    }
+
+    &-change {
+      margin: 0 4px;
+      width: 40px;
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+
+  .buttons-section {
+    display: flex;
+    flex-flow: row wrap;
+    order: 3;
+    width: auto;
+  }
+
+  .button-arc {
+    margin-left: 6px;
+  }
+
+  @media (max-width: 774px) {
+    .database-title {
+      display: none;
+    }
+
+    .button-chapter,
+    .button-arc {
+      display: none;
+    }
+  }
+`;
+
+export const HeatmapBox = styled.section`
+  padding: 0 5vw;
+  width: 100%;
+  height: 460px;
+
+  .heatmap-render-text {
+    color: transparent;
+  }
+`;
+
+export const HeatmapContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: 'VarelaRound';
+  text-align: center;
 
   .heatmap-main {
     padding: 0;
 
     &-title {
-      margin-top: 3.5em;
+      padding: 0 0 40px;
+      margin-top: 3em;
       color: #f4f7f3;
       font-family: 'HelveticaNowDisplayRegular';
-    }
-  }
+      font-size: var(--text-size-primary);
 
-  .heatmap-render {
-    padding: 0 5vw;
-    width: 100%;
-    height: 460px;
-
-    &-text {
-      color: transparent;
+      &::selection {
+        text-shadow: none;
+        color: white;
+        background: blue;
+      }
     }
   }
 
   .heatmap-database-legend {
-    padding: 0;
+    padding: 0 5vw;
     width: 100%;
     height: auto;
   }
@@ -74,19 +180,14 @@ export const HeatmapStyles = styled.div`
     flex-flow: column wrap;
     width: auto;
     height: auto;
-    background-color: black;
     align-items: baseline;
     margin: 0;
-    padding: 2vw 5vw;
-
-    &-box {
-      color: white;
-      width: auto;
-    }
+    padding: 0;
+    color: white;
   }
 
   .title-database-legend {
-    font-size: 24px;
+    font-size: var(--text-size-secondary);
     font-family: HelveticaNowDisplayRegular;
 
     &::before {
@@ -100,19 +201,13 @@ export const HeatmapStyles = styled.div`
     }
   }
 
-  .heatmap-buttons {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2vw 0 1vw;
-  }
-
   .legend-card {
-    padding: 1vw 5vw 3vw;
+    padding: 0 5vw 3vw;
     width: 100%;
     height: auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 
     &-one {
@@ -126,6 +221,7 @@ export const HeatmapStyles = styled.div`
         width: 80%;
         height: auto;
         pointer-events: none;
+        user-select: none;
       }
     }
 
