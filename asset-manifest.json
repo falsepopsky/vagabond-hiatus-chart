@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vagabond-hiatus-chart/static/css/main.c6437a07.chunk.css",
-    "main.js": "/vagabond-hiatus-chart/static/js/main.bac0d195.chunk.js",
-    "main.js.map": "/vagabond-hiatus-chart/static/js/main.bac0d195.chunk.js.map",
+    "main.js": "/vagabond-hiatus-chart/static/js/main.5f284510.chunk.js",
+    "main.js.map": "/vagabond-hiatus-chart/static/js/main.5f284510.chunk.js.map",
     "runtime-main.js": "/vagabond-hiatus-chart/static/js/runtime-main.45a47317.js",
     "runtime-main.js.map": "/vagabond-hiatus-chart/static/js/runtime-main.45a47317.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/vagabond-hiatus-chart/static/css/2.20aa2d7b.chunk.css",
@@ -33,6 +33,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.a27171be.chunk.js",
     "static/css/main.c6437a07.chunk.css",
-    "static/js/main.bac0d195.chunk.js"
+    "static/js/main.5f284510.chunk.js"
   ]
 }
