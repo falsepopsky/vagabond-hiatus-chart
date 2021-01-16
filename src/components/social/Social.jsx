@@ -1,6 +1,11 @@
 import React from 'react';
-import { SocialContainer, TwitterBox, DisqusBox } from './SocialSC';
-import Spinner from 'react-bootstrap/Spinner';
+import {
+  SocialContainer,
+  SocialLine,
+  SocialTitleBox,
+  TwitterBox,
+  DisqusBox,
+} from './SocialSC';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import { DiscussionEmbed } from 'disqus-react';
 
@@ -8,6 +13,10 @@ const SocialMedia = () => {
   return (
     <>
       <SocialContainer>
+        <SocialLine></SocialLine>
+        <SocialTitleBox>
+          <h2 className="social-title">SOCIAL MEDIA</h2>
+        </SocialTitleBox>
         <TwitterBox>
           <TwitterTimelineEmbed
             sourceType="profile"
@@ -16,17 +25,17 @@ const SocialMedia = () => {
             noHeader
             noFooter
             noScrollbar
-            options={{ width: 400, maxWidth: 500, height: 400 }}
-            placeholder={<Spinner animation="border" />}
+            options={{ width: 400, maxWidth: 500, height: 460 }}
           />
         </TwitterBox>
+
         <DisqusBox>
           <DiscussionEmbed
             shortname="vhchart"
             config={{
-              url: 'https://falsepopsky.github.io/vagabond-hiatus-chart',
-              width: 400,
-              height: 200,
+              url: 'https://falsepopsky.github.io/vagabond-hiatus-chart/',
+              identifier: 'Vagabond Chart Chat',
+              title: 'Vagabond Chart Chat',
             }}
           />
         </DisqusBox>

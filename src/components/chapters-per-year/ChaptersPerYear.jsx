@@ -40,8 +40,7 @@ const ChaptersLine = () => {
             areaBlendMode="normal"
             areaOpacity={0.9}
             enableSlices="x"
-            enableCrosshair={true}
-            crosshairType="top-left"
+            enableCrosshair={false}
             legends={configCPY.legends}
             defs={configCPY.defs}
             fill={configCPY.fill}
