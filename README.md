@@ -10,9 +10,9 @@ React, @nivo, styled-components, etc.
 
 ## Special Thanks
 
-- Kawasaki#3316 for providing the whole data without this project would be very inaccurate.
+- Kawasaki#3316 for providing the whole [data](https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/). without this project would be very inaccurate.
 
-- rentzhx3 for the inspiration with his project based on Hunter X Hunter.
+- [rentzhx3](https://github.com/rentzhx3/). for the inspiration with his project based on Hunter X Hunter.
 
 - spa-github-pages.
 
