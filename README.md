@@ -1,14 +1,20 @@
-# Vagabond Hiatus Chart
+# VAGABOND HIATUS CHART
 
-A simple way to visualize the actual state of Vagabond by Inoue Takehiko with charts.
+<p align="center">
+  	<img style="padding: 10px 20px;" src="docs/images/vagabond-banner.jpg" alt="vagabond banner" />
+</p>
 
-## Build with
+**A simple way to visualize the actual state of Vagabond by Inoue Takehiko with charts.**
+
+---
+
+### Build with
 
 ```
 React, @nivo, styled-components, etc.
 ```
 
-## Special Thanks
+### Special Thanks
 
 - Kawasaki#3316 for providing the whole [data](https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/). without this project would be very inaccurate.
 
@@ -16,9 +22,9 @@ React, @nivo, styled-components, etc.
 
 - spa-github-pages.
 
-## Folder Structure
+#### Folder Structure
 
-</div>
+<div style="margin: 20px 0;">
 
     .
     ├── public
@@ -33,4 +39,8 @@ React, @nivo, styled-components, etc.
     │   └── index.css
     └── LICENSE
 
-<div style="margin: 4em 0 2em 0">
+</div>
+
+### License
+
+[GPL-3.0 License](https://github.com/falsepopsky/vagabond-hiatus-chart/blob/main/LICENSE)
