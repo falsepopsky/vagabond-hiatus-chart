@@ -6,7 +6,7 @@ export const themeNivo = {
   axis: {
     domain: {
       line: {
-        stroke: '#01f1e4',
+        stroke: '#ffffff',
         strokeWidth: 1,
       },
     },

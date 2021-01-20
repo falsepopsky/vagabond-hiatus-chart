@@ -88,7 +88,7 @@ const Heatmap = () => {
             </ButtonSC>
             <ButtonSC onClick={changeToArc}>
               <Emoji fuji />
-              <span className="button-arc">ARC</span>
+              <span className="button-arc">ARCS</span>
             </ButtonSC>
           </article>
         </div>

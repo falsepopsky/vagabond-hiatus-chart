@@ -25,8 +25,8 @@ export const ButtonSC = styled.button`
   height: 48px;
   border: none;
   font-size: 16px;
-  background-color: #ffffff;
-  color: #061651;
+  background-color: #000000;
+  color: #ffffff;
   padding: 0;
   border-radius: 0.25rem;
   display: flex;
@@ -35,7 +35,7 @@ export const ButtonSC = styled.button`
   margin: 0 8px;
 
   &:hover {
-    background-color: #f7f7f7;
+    background-color: #222;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
@@ -65,11 +65,11 @@ export const HeatmapBar = styled.section`
     flex-flow: row wrap;
     align-items: stretch;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 55px;
     margin: 0 5vw;
     border-radius: 10px;
-    background-color: #e5e8f4;
+    background-color: #f9f9f9;
   }
 
   .database {
@@ -88,6 +88,7 @@ export const HeatmapBar = styled.section`
     }
 
     &-title {
+      color: black;
       margin: 0 0 0 8px;
       font-size: 20px;
       display: inline;
@@ -98,11 +99,12 @@ export const HeatmapBar = styled.section`
     &-section {
       order: 2;
       display: flex;
+      margin: 0 10px 0 12px;
     }
 
     &-change {
-      margin: 0 4px;
-      width: 40px;
+      margin: 0;
+      width: 24px;
       height: auto;
       pointer-events: none;
       user-select: none;
