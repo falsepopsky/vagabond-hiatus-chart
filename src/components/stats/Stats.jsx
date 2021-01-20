@@ -7,26 +7,28 @@ const Stats = () => {
     <StatsContent>
       <StatsWrapper>
         <TableBox>
-          <h2 className="title-stats">STATS</h2>
+          <h2 className="title-stats">INFO</h2>
 
-          <div className="table-box-row">
-            <p>CHAPTERS</p>
-            <p>323</p>
-          </div>
+          <div className="table-box-content">
+            <div className="table-box-row">
+              <p className="table-main-title">CHAPTERS</p>
+              <p className="table-main-data">323</p>
+            </div>
 
-          <div className="table-box-row">
-            <p>TANKŌBON</p>
-            <p>37</p>
-          </div>
+            <div className="table-box-row">
+              <p className="table-main-title">TANKŌBON</p>
+              <p className="table-main-data">37</p>
+            </div>
 
-          <div className="table-box-row">
-            <p>LAST CHAPTER</p>
-            <p>MAY 15</p>
-          </div>
+            <div className="table-box-row">
+              <p className="table-main-title">LAST CHAPTER</p>
+              <p className="table-main-data">MAY 15</p>
+            </div>
 
-          <div className="table-box-row">
-            <p>CURRENT STATUS</p>
-            <p>HIATUS</p>
+            <div className="table-box-row">
+              <p className="table-main-title">CURRENT STATUS</p>
+              <p className="table-main-data">HIATUS</p>
+            </div>
           </div>
         </TableBox>
         <MusashiBox>
