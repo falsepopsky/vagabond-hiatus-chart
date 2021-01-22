@@ -45,7 +45,7 @@ const ChaptersLine = () => {
             defs={configCPY.defs}
             fill={configCPY.fill}
           />
-          <p className="line-hidden-render">slamn dunk</p>
+          <p className="line-hidden-render">slam dunk</p>
         </NivoLineContainer>
       </CPYContainer>
     </>

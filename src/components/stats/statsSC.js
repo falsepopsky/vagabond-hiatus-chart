@@ -26,6 +26,12 @@ export const TableBox = styled.article`
 
   .title-stats {
     font-size: 80px;
+
+    &::selection {
+      text-shadow: none;
+      color: white;
+      background: blue;
+    }
   }
 
   .table-box-row {
@@ -82,6 +88,8 @@ export const MusashiBox = styled.article`
   .musashi-picture {
     width: 360px;
     height: auto;
+    pointer-events: none;
+    user-select: none;
   }
 
   @media (max-width: 576px) {
