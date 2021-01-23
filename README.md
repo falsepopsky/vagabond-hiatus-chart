@@ -8,13 +8,17 @@
 
 ---
 
-### Build with
+### Check the site :rocket:
+
+[Vagabond Hiatus Chart](https://falsepopsky.github.io/vagabond-hiatus-chart/)
+
+### Build with :pushpin:
 
 ```
 React, @nivo, styled-components, etc.
 ```
 
-### Special Thanks
+### Special Thanks :clap:
 
 - Kawasaki#3316 for providing the whole [data](https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/). without this project would be very inaccurate.
 
@@ -22,7 +26,7 @@ React, @nivo, styled-components, etc.
 
 - spa-github-pages.
 
-#### Folder Structure
+#### Folder Structure :open_file_folder:
 
 <div style="margin: 20px 0;">
 
@@ -41,6 +45,6 @@ React, @nivo, styled-components, etc.
 
 </div>
 
-### License
+### License :scroll:
 
 [GPL-3.0 License](https://github.com/falsepopsky/vagabond-hiatus-chart/blob/main/LICENSE)
