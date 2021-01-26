@@ -1,9 +1,8 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { ResponsiveBar } from '@nivo/bar';
-import Data from './cpaData';
-import { themeNivo } from '../theme/themeNivo';
+import { ResponsiveTreeMap } from '@nivo/treemap';
+import { datita } from './cpaData';
 
 const keys = [
   '1 arc',
@@ -44,39 +43,16 @@ const Pubs = () => {
           md={12}
           className="p-0 mb-5"
           style={{ width: '100%', height: '460px' }}>
-          <ResponsiveBar
-            data={Data}
-            keys={keys}
-            indexBy="arc"
-            theme={themeNivo}
-            margin={{ top: 50, right: 40, bottom: 160, left: 70 }}
-            padding={0.2}
-            valueScale={{ type: 'linear' }}
-            indexScale={{ type: 'band', round: true }}
-            colors={colorBars}
-            borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
-            axisTop={null}
-            axisRight={null}
-            axisBottom={{
-              tickSize: 3,
-              tickPadding: 8,
-              tickRotation: -65,
-              legend: 'Arcs',
-              legendPosition: 'middle',
-              legendOffset: 150,
-            }}
-            axisLeft={{
-              tickSize: 3,
-              tickPadding: 5,
-              tickRotation: 0,
-              legend: 'Chapters',
-              legendPosition: 'middle',
-              legendOffset: -50,
-            }}
-            labelSkipWidth={12}
-            labelSkipHeight={12}
-            labelTextColor={'#000000'}
-            animate={false}
+          <ResponsiveTreeMap
+            data={datita.root}
+            identity="name"
+            value="loc"
+            valueFormat=".02s"
+            margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
+            labelSkipSize={12}
+            labelTextColor={{ from: 'color', modifiers: [['darker', 1.2]] }}
+            parentLabelTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
+            borderColor={{ from: 'color', modifiers: [['darker', 0.1]] }}
           />
           <p className="easter-egg">what do you want?</p>
         </Col>

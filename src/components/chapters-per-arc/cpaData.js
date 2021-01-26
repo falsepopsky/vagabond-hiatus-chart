@@ -46,3 +46,50 @@ const chaptersPerYearData = [
 ];
 
 export default chaptersPerYearData;
+
+export let datita = {
+  root: {
+    name: 'Chapters per Arc',
+    color: 'hsl(172, 70%, 50%)',
+    children: [
+      {
+        name: 'Arcs',
+        color: 'hsl(128, 70%, 50%)',
+        children: [
+          {
+            name: 'Takezō',
+            color: 'hsl(234, 70%, 50%)',
+            children: [
+              {
+                name: 'Year 1998',
+                color: 'hsl(181, 70%, 50%)',
+                loc: 12,
+              },
+              {
+                name: '1999',
+                color: 'hsl(37, 70%, 50%)',
+                loc: 13,
+              },
+            ],
+          },
+          {
+            name: 'First Yoshioka',
+            color: 'hsl(234, 70%, 50%)',
+            children: [
+              {
+                name: 'Year 1999',
+                color: 'hsl(181, 70%, 50%)',
+                loc: 23,
+              },
+              {
+                name: 'Year 2000',
+                color: 'hsl(37, 70%, 50%)',
+                loc: 1,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+};
