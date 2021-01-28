@@ -367,3 +367,9 @@ export const HeatmapContainer = styled.section`
     }
   }
 `;
+
+export const HeatmapLineContainer = styled.div`
+  border-top: 1px solid rgb(255, 255, 255);
+  flex: 1 1 100%;
+  margin: 100px 5vw 0;
+`;

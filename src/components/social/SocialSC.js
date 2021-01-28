@@ -14,7 +14,7 @@ export const SocialContainer = styled.section`
   font-family: 'HelveticaNowDisplayRegular';
 
   .social-title {
-    margin: 2em;
+    margin: 2em 0;
     font-size: var(--text-size-primary);
 
     &::selection {
@@ -35,7 +35,7 @@ export const SocialLine = styled.div`
   order: 1;
   border-top: 1px solid rgb(77, 213, 167, 0.9);
   flex: 1 1 100%;
-  margin: 2vw 5vw;
+  margin: 100px 5vw 0;
   padding: 0 0 20px 0;
 `;
 
