@@ -6,6 +6,7 @@ import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import { configHeatmap } from './hiatusHeatmapConfig';
 import {
   HeatmapContainer,
+  HeatmapLineContainer,
   HeatmapBox,
   HeatmapBar,
   ButtonSC,
@@ -58,6 +59,7 @@ const Heatmap = () => {
 
   return (
     <HeatmapContainer>
+      <HeatmapLineContainer></HeatmapLineContainer>
       <Col md={12} className="heatmap-main">
         <h2 className="heatmap-main-title">HIATUS HEATMAP</h2>
       </Col>

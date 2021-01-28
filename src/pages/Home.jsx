@@ -3,6 +3,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import HeroSection from '../components/hero/Hero';
 import Heatmap from '../components/heatmap/HiatusHeatmap';
 import ChaptersPerYear from '../components/chapters-per-year/ChaptersPerYear';
+import ChaptersPerArc from '../components/chapters-per-arc/ChaptersPerArc';
 import Stats from '../components/stats/Stats';
 import Footer from '../components/footer/Footer';
 
@@ -15,6 +16,7 @@ const Home = () => {
       <Stats />
       <Heatmap />
       <ChaptersPerYear />
+      <ChaptersPerArc />
       <Suspense
         fallback={<Spinner animation="border" variant="light" size="sm" />}>
         <SocialMedia />

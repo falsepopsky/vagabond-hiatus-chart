@@ -12,7 +12,7 @@ const Stats = () => {
           <div className="table-box-content">
             <div className="table-box-row">
               <p className="table-main-title">CHAPTERS</p>
-              <p className="table-main-data">323</p>
+              <p className="table-main-data">327</p>
             </div>
 
             <div className="table-box-row">
