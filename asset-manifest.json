@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/vagabond-hiatus-chart/static/css/main.c6437a07.chunk.css",
-    "main.js": "/vagabond-hiatus-chart/static/js/main.4dfd7f66.chunk.js",
-    "main.js.map": "/vagabond-hiatus-chart/static/js/main.4dfd7f66.chunk.js.map",
+    "main.css": "/vagabond-hiatus-chart/static/css/main.faab1006.chunk.css",
+    "main.js": "/vagabond-hiatus-chart/static/js/main.7ac15ed2.chunk.js",
+    "main.js.map": "/vagabond-hiatus-chart/static/js/main.7ac15ed2.chunk.js.map",
     "runtime-main.js": "/vagabond-hiatus-chart/static/js/runtime-main.22b71728.js",
     "runtime-main.js.map": "/vagabond-hiatus-chart/static/js/runtime-main.22b71728.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/vagabond-hiatus-chart/static/css/2.20aa2d7b.chunk.css",
@@ -14,7 +14,7 @@
     "static/js/4.17f36492.chunk.js.map": "/vagabond-hiatus-chart/static/js/4.17f36492.chunk.js.map",
     "index.html": "/vagabond-hiatus-chart/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/vagabond-hiatus-chart/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.c6437a07.chunk.css.map": "/vagabond-hiatus-chart/static/css/main.c6437a07.chunk.css.map",
+    "static/css/main.faab1006.chunk.css.map": "/vagabond-hiatus-chart/static/css/main.faab1006.chunk.css.map",
     "static/js/2.0fd74393.chunk.js.LICENSE.txt": "/vagabond-hiatus-chart/static/js/2.0fd74393.chunk.js.LICENSE.txt",
     "static/js/3.90bf9600.chunk.js.LICENSE.txt": "/vagabond-hiatus-chart/static/js/3.90bf9600.chunk.js.LICENSE.txt",
     "static/media/index.css": "/vagabond-hiatus-chart/static/media/VarelaRound-Regular.3b7ffe17.ttf",
@@ -27,13 +27,13 @@
     "static/media/shuffle.68519304.svg": "/vagabond-hiatus-chart/static/media/shuffle.68519304.svg",
     "static/media/vagabond-about.d21de587.jpg": "/vagabond-hiatus-chart/static/media/vagabond-about.d21de587.jpg",
     "static/media/vagabond-jp.a656e274.svg": "/vagabond-hiatus-chart/static/media/vagabond-jp.a656e274.svg",
-    "static/media/vagabond-min.2cf5d85b.png": "/vagabond-hiatus-chart/static/media/vagabond-min.2cf5d85b.png"
+    "static/media/vagabond-min.cbfa9532.webp": "/vagabond-hiatus-chart/static/media/vagabond-min.cbfa9532.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.22b71728.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.0fd74393.chunk.js",
-    "static/css/main.c6437a07.chunk.css",
-    "static/js/main.4dfd7f66.chunk.js"
+    "static/css/main.faab1006.chunk.css",
+    "static/js/main.7ac15ed2.chunk.js"
   ]
 }
