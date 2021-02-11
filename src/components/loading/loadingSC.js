@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const LoadingContainer = styled.section`
-  font-family: 'HelveticaNowDisplayRegular';
+  font-family: var(--font-family-primary);
   color: white;
   margin: 0;
   padding: 0;

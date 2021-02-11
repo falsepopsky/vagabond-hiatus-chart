@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: 
+Allow: /
+Sitemap: https://https://falsepopsky.github.io/vagabond-hiatus-chart/sitemap.txt

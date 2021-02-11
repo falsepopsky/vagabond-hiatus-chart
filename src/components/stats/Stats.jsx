@@ -37,6 +37,8 @@ const Stats = () => {
             className="musashi-picture"
             src={MusashiPic}
             alt="Miyamoto Musashi"
+            width="360"
+            height="514"
           />
         </MusashiBox>
       </StatsWrapper>
