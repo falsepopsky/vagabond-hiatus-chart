@@ -14,11 +14,19 @@ const HeroSection = () => {
             className="hero-arrow"
             src={ArrowDown}
             alt="arrow down by Freepik"
+            width="30"
+            height="30"
           />
         </figure>
       </HeroSectionHeader>
       <HeroSectionSub>
-        <img className="hero-logo" src={VagabondLogo} alt="logo" />
+        <img
+          className="hero-logo"
+          src={VagabondLogo}
+          alt="logo"
+          width="681"
+          height="280"
+        />
         <h1 className="hero-author">
           Takehiko Inoue
           <span>&#40;井上 雄彦&#41;</span>

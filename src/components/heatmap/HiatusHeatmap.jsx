@@ -71,6 +71,8 @@ const Heatmap = () => {
               className="database-img"
               src={Database}
               alt="database-svgrepo"
+              width="40"
+              height="40"
             />
             <h2 className="database-title">CHANGE DATABASE</h2>
           </article>
@@ -80,6 +82,8 @@ const Heatmap = () => {
               className="shuffle-change"
               src={Change}
               alt="shuffle-svgrepo"
+              width="24"
+              height="24"
             />
           </article>
 

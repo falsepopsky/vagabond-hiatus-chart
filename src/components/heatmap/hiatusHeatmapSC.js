@@ -92,6 +92,12 @@ export const HeatmapBar = styled.section`
       margin: 0 0 0 8px;
       font-size: 20px;
       display: inline;
+
+      &::selection {
+        text-shadow: none;
+        color: white;
+        background: black;
+      }
     }
   }
 
