@@ -2,7 +2,7 @@
   "homepage": "https://falsepopsky.github.io/vagabond-hiatus-chart",
   "name": "vagabond-hiatus-chart",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "keywords": [
     "React",
     "@nivo",
