@@ -2,7 +2,7 @@
   "homepage": "https://falsepopsky.github.io/vagabond-hiatus-chart",
   "name": "vagabond-hiatus-chart",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "keywords": [
     "React",
     "@nivo",
@@ -28,15 +28,13 @@
     "react-router-scroll-top": "^0.2.1",
     "react-scripts": "4.0.1",
     "react-twitter-embed": "^3.0.3",
-    "styled-components": "^5.2.1",
-    "web-vitals": "^0.2.4"
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject",
     "prettier-format": "prettier --write ."
   },
   "eslintConfig": {

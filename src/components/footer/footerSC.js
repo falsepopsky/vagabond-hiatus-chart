@@ -11,6 +11,12 @@ export const FooterMain = styled.footer`
   padding: 3vw 5vw;
   font-family: 'HelveticaNowDisplayRegular';
 
+  &::selection {
+    text-shadow: none;
+    color: black;
+    background: white;
+  }
+
   .nav-link {
     color: #c4bebe;
     margin-left: 24px;
@@ -21,11 +27,23 @@ export const FooterMain = styled.footer`
     &:hover {
       color: #01f1e3;
     }
+
+    &::selection {
+      text-shadow: none;
+      color: black;
+      background: #01f1e3;
+    }
   }
 
   .footer-text-copyrigth {
     color: white;
     text-align: center;
+
+    &::selection {
+      text-shadow: none;
+      color: black;
+      background: white;
+    }
   }
 
   .section-one {
@@ -55,6 +73,12 @@ export const FooterMain = styled.footer`
     width: 100%;
     max-width: 400px;
     padding: 0 0 0 26px;
+
+    &::selection {
+      text-shadow: none;
+      color: black;
+      background: white;
+    }
   }
 
   @media (max-width: 750px) {
@@ -86,6 +110,12 @@ export const FooterTitle = styled.h3`
   font-size: 18px;
   color: white;
 
+  &::selection {
+    text-shadow: none;
+    color: black;
+    background: white;
+  }
+
   &::before {
     content: '';
     width: 4px;
@@ -105,6 +135,12 @@ export const ExtraLinks = styled.ul`
     color: #c4bebe;
     text-decoration: none;
     padding-left: 24px;
+
+    &::selection {
+      text-shadow: none;
+      color: black;
+      background: #01f1e3;
+    }
 
     &:hover {
       color: #01f1e3;

@@ -1,6 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-
-import vagabond from '../../assets/vagabond-min.png';
+import vagabond from '../../assets/vagabond-min.webp';
 
 const bounce = keyframes`
 0% {

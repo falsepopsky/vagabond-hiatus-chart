@@ -19,7 +19,7 @@ function App() {
             path={process.env.PUBLIC_URL + '/about'}
             component={About}
           />
-          <Route path="*" component={NoMatch} />
+          <Route component={NoMatch} />
         </Switch>
       </ScrollToTop>
     </Router>

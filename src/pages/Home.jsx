@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from 'react';
-import Spinner from 'react-bootstrap/Spinner';
 import HeroSection from '../components/hero/Hero';
 import Heatmap from '../components/heatmap/HiatusHeatmap';
 import ChaptersPerYear from '../components/chapters-per-year/ChaptersPerYear';
 import ChaptersPerArc from '../components/chapters-per-arc/ChaptersPerArc';
+import Loading from '../components/loading/Loading';
 import Stats from '../components/stats/Stats';
 import Footer from '../components/footer/Footer';
 
@@ -17,10 +17,10 @@ const Home = () => {
       <Heatmap />
       <ChaptersPerYear />
       <ChaptersPerArc />
-      <Suspense
-        fallback={<Spinner animation="border" variant="light" size="sm" />}>
+      <Suspense fallback={<Loading />}>
         <SocialMedia />
       </Suspense>
+
       <Footer />
     </>
   );

@@ -50,12 +50,24 @@ export const TableBox = styled.article`
     margin: 0;
     padding: 0;
     font-size: 24px;
+
+    &::selection {
+      text-shadow: none;
+      color: black;
+      background: white;
+    }
   }
 
   .table-main-data {
     margin: 0;
     padding: 0;
     font-size: 36px;
+
+    &::selection {
+      text-shadow: none;
+      color: black;
+      background: white;
+    }
   }
 
   @media (max-width: 576px) {
