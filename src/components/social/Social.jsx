@@ -4,10 +4,8 @@ import {
   SocialLine,
   SocialTitleBox,
   TwitterBox,
-  DisqusBox,
 } from './SocialSC';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import { DiscussionEmbed } from 'disqus-react';
 
 const SocialMedia = () => {
   return (
@@ -28,17 +26,6 @@ const SocialMedia = () => {
             options={{ width: 400, maxWidth: 500, height: 460 }}
           />
         </TwitterBox>
-
-        <DisqusBox>
-          <DiscussionEmbed
-            shortname="vhchart"
-            config={{
-              url: 'https://falsepopsky.github.io/vagabond-hiatus-chart/',
-              identifier: 'Vagabond Chart Chat',
-              title: 'Vagabond Chart Chat',
-            }}
-          />
-        </DisqusBox>
       </SocialContainer>
     </>
   );

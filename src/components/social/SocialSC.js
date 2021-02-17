@@ -9,7 +9,7 @@ export const SocialContainer = styled.section`
   flex-flow: row wrap;
   background-color: #000000;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
   color: white;
   font-family: 'HelveticaNowDisplayRegular';
 
@@ -49,14 +49,4 @@ export const SocialTitleBox = styled.div`
 export const TwitterBox = styled.article`
   order: 3;
   height: 480px;
-`;
-
-export const DisqusBox = styled.article`
-  order: 4;
-  width: 420px;
-  height: 480px;
-  padding: 0 6px;
-  overflow: hidden scroll;
-  transition: '1.5s ease-in-out all';
-  scrollbar-width: thin;
 `;
