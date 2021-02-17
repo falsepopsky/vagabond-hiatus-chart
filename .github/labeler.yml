@@ -1,0 +1,5 @@
+'new morning issue':
+  - [
+      'src/components/chapter-per-year/ChaptersPerYearDatabase.js',
+      'src/components/heatmap/hiatusHeatmapDatabase.js',
+    ]
