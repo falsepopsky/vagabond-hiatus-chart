@@ -6,7 +6,7 @@ export const LoadingContainer = styled.section`
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 500px;
+  min-height: 100vh;
   display: flex;
   flex-flow: column wrap;
   background-color: #000000;
