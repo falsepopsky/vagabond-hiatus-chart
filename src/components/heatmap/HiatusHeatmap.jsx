@@ -6,8 +6,6 @@ import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import { configHeatmap } from './hiatusHeatmapConfig';
 import {
   HeatmapContainer,
-  HeatmapLineContainer,
-  HeatmapBox,
   HeatmapBar,
   ButtonSC,
   Emoji,
@@ -17,6 +15,12 @@ import Database from '../../assets/database.svg';
 import Change from '../../assets/shuffle.svg';
 import HiatusLegendArc from './HiatusLegendArc';
 import HiatusLegendChapter from './HiatusLegendChapter';
+import {
+  Title,
+  TitleContainer,
+  NivoContainer,
+  LineContainer,
+} from '../styled-components/globalUI';
 
 let toolTipHeatmap = ({ color, xKey, yKey }) => (
   <div
@@ -59,10 +63,10 @@ const Heatmap = () => {
 
   return (
     <HeatmapContainer>
-      <HeatmapLineContainer></HeatmapLineContainer>
-      <Col md={12} className="heatmap-main">
-        <h2 className="heatmap-main-title">HIATUS HEATMAP</h2>
-      </Col>
+      <LineContainer borderColor="rgb(249, 63, 63)" />
+      <TitleContainer>
+        <Title>HIATUS HEATMAP</Title>
+      </TitleContainer>
 
       <HeatmapBar>
         <div className="navigation-heatmap">
@@ -100,7 +104,7 @@ const Heatmap = () => {
         </div>
       </HeatmapBar>
 
-      <HeatmapBox>
+      <NivoContainer>
         <ResponsiveHeatMapCanvas
           data={database}
           keys={configHeatmap.keysHeatmap}
@@ -132,8 +136,8 @@ const Heatmap = () => {
           cellHoverOpacity={1}
           cellHoverOthersOpacity={0.5}
         />
-        <p className="heatmap-render-text">invincible... it's merely a word.</p>
-      </HeatmapBox>
+        <p className="text-hidden">invincible... it's merely a word.</p>
+      </NivoContainer>
 
       <Col md={12} className="heatmap-database-legend">
         <div className="heatmap-title">

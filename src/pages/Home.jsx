@@ -1,11 +1,13 @@
 import React, { lazy, Suspense } from 'react';
 import HeroSection from '../components/hero/Hero';
 import Heatmap from '../components/heatmap/HiatusHeatmap';
-import ChaptersPerYear from '../components/chapters-per-year/ChaptersPerYear';
 import Loading from '../components/loading/Loading';
 import Stats from '../components/stats/Stats';
 import Footer from '../components/footer/Footer';
 
+const ChaptersPerYear = lazy(() =>
+  import('../components/chapters-per-year/ChaptersPerYear')
+);
 const ChaptersPerArc = lazy(() =>
   import('../components/chapters-per-arc/ChaptersPerArc')
 );
@@ -17,8 +19,8 @@ const Home = () => {
       <HeroSection />
       <Stats />
       <Heatmap />
-      <ChaptersPerYear />
       <Suspense fallback={<Loading />}>
+        <ChaptersPerYear />
         <ChaptersPerArc />
         <SocialMedia />
       </Suspense>

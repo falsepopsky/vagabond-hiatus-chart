@@ -1,4 +1,4 @@
-export const testDatabase = [
+export const cpyDatabase = [
   {
     id: 'Released',
     data: [

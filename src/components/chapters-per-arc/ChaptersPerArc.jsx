@@ -1,21 +1,22 @@
 import React from 'react';
-import {
-  CPAContainer,
-  CPALineContainer,
-  TitleContainer,
-  NivoTreeMapContainer,
-} from './cpaSC';
+import { CPAContainer } from './cpaSC';
 import { ResponsiveTreeMap } from '@nivo/treemap';
 import { chaptersPerYearData } from './cpaData';
+import {
+  Title,
+  TitleContainer,
+  NivoContainer,
+  LineContainer,
+} from '../styled-components/globalUI';
 
 const ChaptersTreeMap = () => {
   return (
     <CPAContainer>
-      <CPALineContainer></CPALineContainer>
+      <LineContainer />
       <TitleContainer>
-        <h2 className="cpa-main-title">CHAPTERS PER ARC</h2>
+        <Title>CHAPTERS PER ARC</Title>
       </TitleContainer>
-      <NivoTreeMapContainer>
+      <NivoContainer>
         <ResponsiveTreeMap
           data={chaptersPerYearData}
           identity="name"
@@ -33,8 +34,8 @@ const ChaptersTreeMap = () => {
           borderColor={{ from: 'color', modifiers: [['brighter', '1.8']] }}
           animate={false}
         />
-        <p className="secret-line">what do you want?</p>
-      </NivoTreeMapContainer>
+        <p className="text-hidden">what do you want?</p>
+      </NivoContainer>
     </CPAContainer>
   );
 };

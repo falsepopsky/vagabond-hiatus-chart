@@ -140,16 +140,6 @@ export const HeatmapBar = styled.section`
   }
 `;
 
-export const HeatmapBox = styled.section`
-  padding: 0 5vw;
-  width: 100%;
-  height: 460px;
-
-  .heatmap-render-text {
-    color: transparent;
-  }
-`;
-
 export const HeatmapContainer = styled.section`
   display: flex;
   flex-direction: column;
@@ -158,24 +148,6 @@ export const HeatmapContainer = styled.section`
   padding: 0;
   font-family: 'VarelaRound';
   text-align: center;
-
-  .heatmap-main {
-    padding: 0;
-
-    &-title {
-      padding: 0 0 40px;
-      margin-top: 3em;
-      color: #f4f7f3;
-      font-family: 'HelveticaNowDisplayRegular';
-      font-size: var(--text-size-primary);
-
-      &::selection {
-        text-shadow: none;
-        color: white;
-        background: blue;
-      }
-    }
-  }
 
   .heatmap-database-legend {
     padding: 0 5vw;
@@ -350,10 +322,6 @@ export const HeatmapContainer = styled.section`
   }
 
   @media (max-width: 576px) {
-    .heatmap-main-title {
-      font-size: x-large;
-    }
-
     .legend-card-one {
       display: none;
     }
@@ -372,10 +340,4 @@ export const HeatmapContainer = styled.section`
       font-size: small;
     }
   }
-`;
-
-export const HeatmapLineContainer = styled.div`
-  border-top: 1px solid rgb(255, 255, 255);
-  flex: 1 1 100%;
-  margin: 100px 5vw 0;
 `;

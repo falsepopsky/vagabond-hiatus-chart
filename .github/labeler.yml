@@ -1,5 +1,3 @@
 'new morning issue':
-  - [
-      'src/components/chapter-per-year/ChaptersPerYearDatabase.js',
-      'src/components/heatmap/hiatusHeatmapDatabase.js',
-    ]
+  - 'src/components/chapters-per-year/ChaptersPerYearDatabase.js'
+  - 'src/components/heatmap/hiatusHeatmapDatabase.js'

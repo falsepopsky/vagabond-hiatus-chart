@@ -1,26 +1,27 @@
 import React from 'react';
 import { ResponsiveLine } from '@nivo/line';
-import { testDatabase } from './ChaptersPerYearDatabase';
+import { cpyDatabase } from './ChaptersPerYearDatabase';
 import { configCPY } from './cpyNivoConfig';
 import { themeNivo } from '../theme/themeNivo';
+import { CPYContainer } from './cpySC';
 import {
-  CPYContainer,
-  CPYLineContainer,
+  Title,
+  NivoContainer,
   TitleContainer,
-  NivoLineContainer,
-} from './cpySC';
+  LineContainer,
+} from '../styled-components/globalUI';
 
 const ChaptersLine = () => {
   return (
     <>
       <CPYContainer>
-        <CPYLineContainer></CPYLineContainer>
+        <LineContainer borderColor="rgb(249, 160, 63)" />
         <TitleContainer>
-          <h2 className="line-main-title">CHAPTERS PER YEAR</h2>
+          <Title>CHAPTERS PER YEAR</Title>
         </TitleContainer>
-        <NivoLineContainer>
+        <NivoContainer>
           <ResponsiveLine
-            data={testDatabase}
+            data={cpyDatabase}
             theme={themeNivo}
             colors={configCPY.colors}
             margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
@@ -45,8 +46,8 @@ const ChaptersLine = () => {
             defs={configCPY.defs}
             fill={configCPY.fill}
           />
-          <p className="line-hidden-render">slam dunk</p>
-        </NivoLineContainer>
+          <p className="text-hidden">slam dunk</p>
+        </NivoContainer>
       </CPYContainer>
     </>
   );
