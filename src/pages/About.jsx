@@ -25,8 +25,10 @@ const About = () => {
             masterpiece it's the same who made SD!
           </p>
           <p className="about-text">
-            So my little contribution to this wonderfull community brings me to
-            actually build this, hope you guys enjoy it.
+            So this is my little contribution, i'm planning to build the same
+            project with more titles, when the project it's ready i will make an
+            announcement in the home site, so stay stuned, and hope you guys
+            like it!.
           </p>
         </AboutSection>
 
