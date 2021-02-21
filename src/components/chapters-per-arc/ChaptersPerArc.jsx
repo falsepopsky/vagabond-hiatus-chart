@@ -1,5 +1,4 @@
 import React from 'react';
-import { CPAContainer } from './cpaSC';
 import { ResponsiveTreeMap } from '@nivo/treemap';
 import { chaptersPerYearData } from './cpaData';
 import {
@@ -7,11 +6,12 @@ import {
   TitleContainer,
   NivoContainer,
   LineContainer,
+  SectionContainer,
 } from '../styled-components/globalUI';
 
 const ChaptersTreeMap = () => {
   return (
-    <CPAContainer>
+    <SectionContainer>
       <LineContainer />
       <TitleContainer>
         <Title>CHAPTERS PER ARC</Title>
@@ -36,7 +36,7 @@ const ChaptersTreeMap = () => {
         />
         <p className="text-hidden">what do you want?</p>
       </NivoContainer>
-    </CPAContainer>
+    </SectionContainer>
   );
 };
 

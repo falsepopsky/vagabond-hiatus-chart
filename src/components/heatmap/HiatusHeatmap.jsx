@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Col from 'react-bootstrap/Col';
 import { ResponsiveHeatMapCanvas } from '@nivo/heatmap';
 import { themeNivo } from '../theme/themeNivo';
 import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
@@ -103,7 +102,6 @@ const Heatmap = () => {
           </article>
         </div>
       </HeatmapBar>
-
       <NivoContainer>
         <ResponsiveHeatMapCanvas
           data={database}
@@ -138,14 +136,13 @@ const Heatmap = () => {
         />
         <p className="text-hidden">invincible... it's merely a word.</p>
       </NivoContainer>
-
-      <Col md={12} className="heatmap-database-legend">
+      <div className="heatmap-database-legend">
         <div className="heatmap-title">
           <h2 className="title-database-legend">LEGEND</h2>
         </div>
-      </Col>
+      </div>
 
-      <Col md={12} className="legend-card">
+      <div className="legend-card">
         <article className="legend-card-one">
           <img
             loading="lazy"
@@ -164,7 +161,7 @@ const Heatmap = () => {
             <HiatusLegendArc />
           </>
         )}
-      </Col>
+      </div>
     </HeatmapContainer>
   );
 };

@@ -27,6 +27,7 @@ export const TitleContainer = styled.article`
 export const NivoContainer = styled.article`
   width: 100%;
   height: 440px;
+  margin: 0;
   padding: 0 5vw;
   overflow: hidden;
 
@@ -40,4 +41,15 @@ export const LineContainer = styled.div`
     ${(props) => (props.borderColor ? props.borderColor : 'rgb(63, 121, 183)')};
   flex: 1 1 100%;
   margin: 100px 5vw 0;
+`;
+
+export const SectionContainer = styled.section`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #000000;
+  text-align: center;
 `;
