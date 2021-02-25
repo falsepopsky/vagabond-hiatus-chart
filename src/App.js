@@ -1,20 +1,18 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Loadable from 'react-loadable';
+import loadable from '@loadable/component';
+import pMinDelay from 'p-min-delay';
 import ScrollToTop from 'react-router-scroll-top';
 import Loading from './components/loading/Loading';
 
-const Home = Loadable({
-  loader: () => import('./pages/Home'),
-  loading: () => <Loading />,
+const Home = loadable(() => pMinDelay(import('./pages/Home'), 1500), {
+  fallback: <Loading />,
 });
-const About = Loadable({
-  loader: () => import('./pages/About'),
-  loading: () => <Loading />,
+
+const About = loadable(() => pMinDelay(import('./pages/About'), 1000), {
+  fallback: <Loading />,
 });
-const NoMatch = Loadable({
-  loader: () => import('./pages/NoMatch'),
-  loading: () => <Loading />,
-});
+
+const NoMatch = loadable(() => import('./pages/NoMatch'));
 
 function App() {
   return (
