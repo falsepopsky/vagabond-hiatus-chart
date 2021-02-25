@@ -1,3 +1,7 @@
 'new morning issue':
   - 'src/components/chapters-per-year/ChaptersPerYearDatabase.js'
   - 'src/components/heatmap/hiatusHeatmapDatabase.js'
+documentation:
+  - 'docs/*'
+enhancement:
+  - 'src/components/**/*.jsx'
