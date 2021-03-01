@@ -36,7 +36,8 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "prettier-format": "prettier --write ."
+    "prettier-format": "prettier --write .",
+    "fix-nivo-dependencies": "node scripts/nivoLineFix.js"
   },
   "eslintConfig": {
     "extends": [

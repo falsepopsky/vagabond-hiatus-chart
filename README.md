@@ -12,7 +12,7 @@
 
 [Vagabond Hiatus Chart](https://falsepopsky.github.io/vagabond-hiatus-chart/)
 
-### Build with :pushpin:
+### Built with :pushpin:
 
 ```
 React, @nivo, styled-components, etc.
