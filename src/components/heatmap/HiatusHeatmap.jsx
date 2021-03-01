@@ -10,8 +10,6 @@ import {
   Emoji,
 } from './hiatusHeatmapSC';
 import Legend from '../../assets/legend.svg';
-import Database from '../../assets/database.svg';
-import Change from '../../assets/shuffle.svg';
 import HiatusLegendArc from './HiatusLegendArc';
 import HiatusLegendChapter from './HiatusLegendChapter';
 import {
@@ -20,6 +18,8 @@ import {
   NivoContainer,
   LineContainer,
 } from '../styled-components/globalUI';
+import Shuffle from './icons/Shuffle';
+import DatabaseSVG from './icons/Database';
 
 let toolTipHeatmap = ({ color, xKey, yKey }) => (
   <div
@@ -70,24 +70,12 @@ const Heatmap = () => {
       <HeatmapBar>
         <div className="navigation-heatmap">
           <article className="database-section">
-            <img
-              className="database-img"
-              src={Database}
-              alt="database-svgrepo"
-              width="40"
-              height="40"
-            />
+            <DatabaseSVG />
             <h2 className="database-title">CHANGE DATABASE</h2>
           </article>
 
           <article className="shuffle-section">
-            <img
-              className="shuffle-change"
-              src={Change}
-              alt="shuffle-svgrepo"
-              width="24"
-              height="24"
-            />
+            <Shuffle />
           </article>
 
           <article className="buttons-section">
