@@ -1,7 +1,7 @@
 # VAGABOND HIATUS CHART
 
 <p align="center">
-  	<img style="padding: 10px 20px;" src="docs/images/vagabond-banner.jpg" alt="vagabond banner" />
+  	<img style="padding: 10px 20px;" src="docs/images/vagabond_banner.jpg" />
 </p>
 
 **A simple way to visualize the actual state of Vagabond by Inoue Takehiko with charts.**
