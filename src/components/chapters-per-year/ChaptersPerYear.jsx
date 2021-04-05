@@ -38,7 +38,7 @@ const ChaptersLine = () => {
           pointLabelYOffset={-12}
           enableArea={true}
           areaBlendMode="normal"
-          areaOpacity={0.9}
+          areaOpacity={0.75}
           enableSlices="x"
           enableCrosshair={false}
           legends={configCPY.legends}
