@@ -1,8 +1,13 @@
 import styled, { css, keyframes } from 'styled-components';
 
-const spinnerRotate = keyframes`  to {
-  transform: rotate(360deg);
-}`;
+const spinnerRotate = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }  
+  100% {
+    transform: rotate(360deg);
+  }
+`;
 
 const animationSpinner = css`
   ${spinnerRotate} 0.7s ease infinite;

@@ -20,7 +20,7 @@ export const HeroStyles = styled.section`
   margin: 0;
   padding: 0;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   font-family: var(--font-family-hero);
   color: white;
   letter-spacing: 0.14em;
@@ -34,7 +34,7 @@ export const HeroSectionHeader = styled.article`
     url(${vagabond}) no-repeat center center fixed;
   background-size: cover;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 

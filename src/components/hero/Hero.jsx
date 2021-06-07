@@ -1,7 +1,6 @@
 import React from 'react';
 import { HeroStyles, HeroSectionHeader, HeroSectionSub } from './hero-styled';
-import VagabondLogo from '../../assets/vagabond-jp.svg';
-import ArrowSVG from './Arrow';
+import { ArrowSVG, VagabondLogo } from './../svg/Svgs';
 
 const HeroSection = () => {
   return (
@@ -14,13 +13,7 @@ const HeroSection = () => {
         </figure>
       </HeroSectionHeader>
       <HeroSectionSub>
-        <img
-          className="hero-logo"
-          src={VagabondLogo}
-          alt="Vagabond Logo"
-          width="681"
-          height="280"
-        />
+        <VagabondLogo />
         <h1 className="hero-author">
           Takehiko Inoue
           <span>&#40;井上 雄彦&#41;</span>

@@ -4,7 +4,7 @@ export const StatsContent = styled.section`
   margin: 0;
   padding: 0;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   font-family: var(--font-family-primary);
   color: white;
   letter-spacing: 0.14em;
@@ -16,7 +16,7 @@ export const StatsWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  padding: 0 5vw;
+  padding: 0 5vw 5vh;
 `;
 
 export const TableBox = styled.article`
