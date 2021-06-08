@@ -1,90 +1,61 @@
-import styled, { css } from 'styled-components';
-import Katana from '../../assets/katana.svg';
-import Fuji from '../../assets/monte-fuji.svg';
-
-export const Emoji = styled.i`
-  width: 40px;
-  height: 40px;
-  background-image: url(${Katana});
-  background-repeat: no-repeat;
-  background-size: 40px auto;
-  display: inline-block;
-  position: relative;
-  pointer-events: none;
-  user-select: none;
-
-  ${(props) =>
-    props.fuji &&
-    css`
-      background-image: url(${Fuji});
-    `}
-`;
+import styled from 'styled-components';
 
 export const ButtonSC = styled.button`
-  width: 140px;
-  height: 48px;
-  border: none;
-  font-size: 16px;
-  background-color: #000000;
-  color: #ffffff;
-  padding: 0;
-  border-radius: 0.25rem;
+  margin: 0 8px;
+  padding: 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 8px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 16px;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
 
   &:hover {
-    background-color: #222;
+    opacity: 0.8;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
-  &:active {
+  &:active,
+  :focus {
     outline: none;
     border: none;
   }
 
-  &:focus {
-    outline: 0;
-  }
-
-  @media (max-width: 720px) {
-    width: 48px;
+  @media (min-width: 720px) {
+    width: auto;
     height: 48px;
-    margin: 0 8px;
   }
 `;
 
-export const HeatmapBar = styled.section`
-  width: 90%;
+export const HeatmapBar = styled.div`
+  width: auto;
   height: 60px;
   align-self: center;
 
   .navigation-heatmap {
+    padding: 0 20px;
+    height: 55px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     align-items: stretch;
     align-content: center;
     justify-content: center;
-    height: 55px;
-    margin: 0 5vw;
-    border-radius: 10px;
+    border-radius: 4px;
     background-color: #f9f9f9;
   }
 
   .database {
     &-section {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       order: 1;
       align-content: center;
       align-items: center;
-    }
-    &-img {
-      width: 40px;
-      height: auto;
-      pointer-events: none;
-      user-select: none;
     }
 
     &-title {
@@ -101,56 +72,49 @@ export const HeatmapBar = styled.section`
     }
   }
 
-  .shuffle {
-    &-section {
-      order: 2;
-      display: flex;
-      margin: 0 10px 0 12px;
-    }
-
-    &-change {
-      margin: 0;
-      width: 24px;
-      height: auto;
-      pointer-events: none;
-      user-select: none;
-    }
+  .shuffle-section {
+    order: 2;
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0 18px;
   }
 
   .buttons-section {
-    display: flex;
-    flex-flow: row wrap;
     order: 3;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     width: auto;
-  }
-
-  .button-arc {
-    margin-left: 6px;
   }
 
   @media (max-width: 774px) {
     .database-title {
       display: none;
     }
+  }
+`;
 
-    .button-chapter,
-    .button-arc {
-      display: none;
-    }
+export const TextButton = styled.span`
+  display: none;
+
+  @media (min-width: 774px) {
+    display: contents;
+    margin: 0;
+    padding: 0 0 0 6px;
   }
 `;
 
 export const HeatmapContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  background-color: #000000;
   margin: 0;
-  padding: 0;
+  padding: 1.5vh 5vw 0;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #000000;
   font-family: 'VarelaRound';
   text-align: center;
 
   .heatmap-database-legend {
-    padding: 0 5vw;
+    padding: 0;
     width: 100%;
     height: auto;
   }
@@ -182,7 +146,7 @@ export const HeatmapContainer = styled.section`
   }
 
   .legend-card {
-    padding: 0 5vw 3vw;
+    padding: 0 0 3vw 0;
     width: 100%;
     height: auto;
     display: flex;
@@ -223,7 +187,7 @@ export const HeatmapContainer = styled.section`
   .legend-weekly {
     color: #f4f7f3;
 
-    &:before {
+    &::before {
       background-color: #f4f7f3;
     }
   }
@@ -231,7 +195,7 @@ export const HeatmapContainer = styled.section`
   .legend-chapter {
     color: #70ddc6;
 
-    &:before {
+    &::before {
       background-color: #70ddc6;
     }
   }
@@ -239,7 +203,7 @@ export const HeatmapContainer = styled.section`
   .legend-dont {
     color: #f95d5a;
 
-    &:before {
+    &::before {
       background-color: #f95d5a;
     }
   }

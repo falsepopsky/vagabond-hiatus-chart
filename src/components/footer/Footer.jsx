@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import {
   FooterMain,
   FooterLine,
@@ -12,15 +11,13 @@ import {
 const Footer = () => {
   return (
     <FooterMain>
-      <FooterLine></FooterLine>
+      <FooterLine />
       <FooterSection className="section-one">
         <FooterTitle>GENERAL</FooterTitle>
-
         <p className="about-text">The website of Vagabond Hiatus Chart.</p>
         <p className="about-text">
           Some of the images belongs to Takehiko Inoue &amp; Kōdansha.
         </p>
-
         <p className="about-text">
           For a better experience use firefox and visit the site on desktop
           mode.
@@ -29,14 +26,12 @@ const Footer = () => {
 
       <FooterSection className="section-two">
         <FooterTitle>NAVIGATION</FooterTitle>
-
         <Link
           to={process.env.PUBLIC_URL + '/'}
           className="nav-link"
           rel="noopener noreferrer">
           Home
         </Link>
-
         <Link
           to={process.env.PUBLIC_URL + '/about'}
           className="nav-link"

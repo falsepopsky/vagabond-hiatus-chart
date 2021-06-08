@@ -1,11 +1,11 @@
 import React from 'react';
-import { LoadingContainer, Spinner } from './loadingSC';
+import { LoadingContainer, LoaderTitle, Spinner } from './loadingSC';
 
 const Loading = () => {
   return (
     <>
       <LoadingContainer>
-        <h2 className="loading-title">Loading...</h2>
+        <LoaderTitle>Loading...</LoaderTitle>
         <Spinner />
       </LoadingContainer>
     </>

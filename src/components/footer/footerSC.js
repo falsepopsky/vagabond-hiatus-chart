@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const FooterMain = styled.footer`
+  margin: auto 0 0 0;
+  padding: 3vw 5vw 0 5vw;  
   display: flex;
   flex-flow: row wrap;
   width: auto;
   height: auto;
   background-color: black;
   color: #c4bebe;
-  margin: auto 0 0;
-  padding: 3vw 5vw;
   font-family: 'HelveticaNowDisplayRegular';
 
   &::selection {
@@ -18,12 +18,13 @@ export const FooterMain = styled.footer`
   }
 
   .nav-link {
-    color: #c4bebe;
     margin-left: 24px;
     padding: 0;
     width: auto;
     max-width: 48px;
-
+    color: #c4bebe;
+    text-decoration: none;
+    
     &:hover {
       color: #01f1e3;
     }

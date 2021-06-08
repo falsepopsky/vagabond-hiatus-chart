@@ -1,7 +1,12 @@
 import React from 'react';
-import { AboutMain, AboutSection, TitleAbout } from './aboutSC';
+import { AboutMain, AboutSection, StyledLink, TitleAbout } from './aboutSC';
 import Footer from '../components/footer/Footer';
 import VagabondAbout from '../assets/vagabond-about.jpg';
+
+const DataDrive =
+  'https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/';
+const HiatusGH = 'https://hiatus-hiatus.github.io/';
+const Form = 'https://forms.gle/QjtffknkRddEy4TaA';
 
 const About = () => {
   return (
@@ -13,6 +18,8 @@ const About = () => {
             className="about-image"
             src={VagabondAbout}
             alt="vagabond"
+            width={600}
+            height={450}
           />
         </AboutSection>
 
@@ -37,34 +44,32 @@ const About = () => {
 
           <p className="about-text">
             <strong className="about-shotout">Kawasaki#3316</strong> for
-            providing the whole
-            <a
-              className="about-links"
-              href="https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/"
+            providing the whole{' '}
+            <StyledLink
+              href={DataDrive}
               rel="noopener noreferrer"
               target="_blank">
               data
-            </a>
+            </StyledLink>{' '}
             without this project would be very inaccurate.
           </p>
 
           <p className="about-text">
             <strong className="about-shotout">rentzhx3</strong> for the
-            inspiration with his project based on
-            <a
-              className="about-links"
-              href="https://hiatus-hiatus.github.io/"
+            inspiration with his project based on{' '}
+            <StyledLink
+              href={HiatusGH}
               rel="noopener noreferrer"
               target="_blank">
               Hunter X Hunter
-            </a>
+            </StyledLink>
             .
           </p>
         </AboutSection>
         <AboutSection>
           <TitleAbout>CONTACT</TitleAbout>
           <p className="about-text">
-            For business inquires only at
+            For business inquires only at{' '}
             <b className="email-pop">moc.liamnotorp@ykspopeslaf</b> with the
             subject <b className="email-subject">ved ssenisub</b>, any other
             message without the subject will be deleted.
@@ -72,14 +77,10 @@ const About = () => {
 
           <p className="about-text">
             If you just want to write a random message or something else just
-            complete this
-            <a
-              className="about-links"
-              href="https://forms.gle/QjtffknkRddEy4TaA"
-              rel="noopener noreferrer"
-              target="_blank">
+            complete this{' '}
+            <StyledLink href={Form} rel="noopener noreferrer" target="_blank">
               form
-            </a>
+            </StyledLink>
             .
           </p>
         </AboutSection>

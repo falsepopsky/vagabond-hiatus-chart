@@ -4,11 +4,11 @@ export const StatsContent = styled.section`
   margin: 0;
   padding: 0;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   font-family: var(--font-family-primary);
-  color: white;
-  letter-spacing: 0.14em;
   text-align: center;
+  letter-spacing: 0.14em;
+  color: white;
   background-color: black;
 `;
 
@@ -16,7 +16,7 @@ export const StatsWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  padding: 0 5vw;
+  padding: 0 5vw 5vh;
 `;
 
 export const TableBox = styled.article`
@@ -46,30 +46,6 @@ export const TableBox = styled.article`
     margin: 90px 0 0 0;
   }
 
-  .table-main-title {
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
-
-    &::selection {
-      text-shadow: none;
-      color: black;
-      background: white;
-    }
-  }
-
-  .table-main-data {
-    margin: 0;
-    padding: 0;
-    font-size: 36px;
-
-    &::selection {
-      text-shadow: none;
-      color: black;
-      background: white;
-    }
-  }
-
   @media (max-width: 576px) {
     width: 300px;
     margin: 40px 0 0 0;
@@ -81,14 +57,24 @@ export const TableBox = styled.article`
     .table-box-content {
       margin: 40px 0 0 0;
     }
+  }
+`;
 
-    .table-main-title {
-      font-size: 14px;
-    }
+export const TextTable = styled.p`
+  margin: 0;
+  padding: 0;
+  font-size: ${(props) => (props.primary ? '20px' : '14px')};
+  line-height: ${(props) => (props.primary ? '21px' : '30px')};
 
-    .table-main-data {
-      font-size: 20px;
-    }
+  ::selection {
+    text-shadow: none;
+    color: black;
+    background: white;
+  }
+
+  @media (min-width: 576px) {
+    font-size: ${(props) => (props.primary ? '36px' : '24px')};
+    line-height: ${(props) => (props.primary ? '54px' : '36px')};
   }
 `;
 

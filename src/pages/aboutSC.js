@@ -1,30 +1,28 @@
 import styled from 'styled-components';
 
 export const AboutMain = styled.main`
+  margin: 0;
+  padding: 2vw 5vw 3vw;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   width: 100%;
   height: auto;
   background-color: black;
   color: white;
-  margin: 0;
-  padding: 2vw 5vw 3vw;
   font-family: 'HelveticaNowDisplayRegular';
 
   .about-image {
     width: 100%;
     max-width: 600px;
     height: auto;
-    margin: auto;
-    display: block;
-    border-radius: 20px;
+    border-radius: 6px;
   }
 
   .about-text {
-    margin: 0 3rem;
+    margin: 0;
+    padding: 0 3rem 20px;
     max-width: 700px;
     font-size: 26px;
-    padding: 0 0 20px;
   }
 
   .about-shotout {
@@ -35,7 +33,6 @@ export const AboutMain = styled.main`
     direction: rtl;
     unicode-bidi: bidi-override;
     color: #ffd779;
-    padding: 0 2px;
   }
 
   .email-subject {
@@ -43,20 +40,21 @@ export const AboutMain = styled.main`
     unicode-bidi: bidi-override;
     color: #ffd779;
   }
+`;
 
-  .about-links {
-    color: #01f1e3;
+export const StyledLink = styled.a`
+  color: #01f1e3;
+  text-decoration: none;
+
+  :hover {
+    color: #d00;
     text-decoration: none;
-    padding: 0 2px 0 4px;
-
-    &:hover {
-      color: #d00;
-    }
   }
 `;
 
 export const AboutSection = styled.section`
-  margin: 20px 0;
+  padding: 20px 0;
+  margin: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -64,10 +62,11 @@ export const AboutSection = styled.section`
 `;
 
 export const TitleAbout = styled.h3`
+  font-size: 28px;
   text-align: center;
   padding: 0 0 30px;
 
-  &:before {
+  &::before {
     content: '';
     height: 20px;
     width: 20px;
@@ -78,7 +77,7 @@ export const TitleAbout = styled.h3`
     border-width: 2px 0 0 2px;
   }
 
-  &:after {
+  &::after {
     content: '';
     height: 20px;
     width: 20px;

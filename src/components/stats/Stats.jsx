@@ -1,5 +1,11 @@
 import React from 'react';
-import { StatsContent, StatsWrapper, TableBox, MusashiBox } from './statsSC';
+import {
+  StatsContent,
+  StatsWrapper,
+  TableBox,
+  MusashiBox,
+  TextTable,
+} from './statsSC';
 import MusashiPic from '../../assets/musashi.jpeg';
 
 const Stats = () => {
@@ -11,23 +17,23 @@ const Stats = () => {
 
           <div className="table-box-content">
             <div className="table-box-row">
-              <p className="table-main-title">CHAPTERS</p>
-              <p className="table-main-data">327</p>
+              <TextTable>CHAPTERS</TextTable>
+              <TextTable primary>327</TextTable>
             </div>
 
             <div className="table-box-row">
-              <p className="table-main-title">TANKŌBON</p>
-              <p className="table-main-data">37</p>
+              <TextTable>TANKŌBON</TextTable>
+              <TextTable primary>37</TextTable>
             </div>
 
             <div className="table-box-row">
-              <p className="table-main-title">LAST CHAPTER</p>
-              <p className="table-main-data">MAY 15</p>
+              <TextTable>LAST CHAPTER</TextTable>
+              <TextTable primary>MAY 15</TextTable>
             </div>
 
             <div className="table-box-row">
-              <p className="table-main-title">CURRENT STATUS</p>
-              <p className="table-main-data">HIATUS</p>
+              <TextTable>CURRENT STATUS</TextTable>
+              <TextTable primary>HIATUS</TextTable>
             </div>
           </div>
         </TableBox>
@@ -37,8 +43,8 @@ const Stats = () => {
             className="musashi-picture"
             src={MusashiPic}
             alt="Miyamoto Musashi"
-            width="360"
-            height="514"
+            width={360}
+            height={514}
           />
         </MusashiBox>
       </StatsWrapper>

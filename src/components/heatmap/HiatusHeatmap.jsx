@@ -7,9 +7,9 @@ import {
   HeatmapContainer,
   HeatmapBar,
   ButtonSC,
-  Emoji,
+  TextButton,
 } from './hiatusHeatmapSC';
-import Legend from '../../assets/legend.svg';
+import { Katana, Monte, Shuffle, DatabaseSVG, Legend } from './../svg/Svgs';
 import HiatusLegendArc from './HiatusLegendArc';
 import HiatusLegendChapter from './HiatusLegendChapter';
 import {
@@ -18,8 +18,6 @@ import {
   NivoContainer,
   LineContainer,
 } from '../styled-components/globalUI';
-import Shuffle from './icons/Shuffle';
-import DatabaseSVG from './icons/Database';
 
 let toolTipHeatmap = ({ color, xKey, yKey }) => (
   <div
@@ -80,12 +78,12 @@ const Heatmap = () => {
 
           <article className="buttons-section">
             <ButtonSC onClick={changeToPubs}>
-              <Emoji />
-              <span className="button-chapter">CHAPTERS</span>
+              <Katana />
+              <TextButton>CHAPTERS</TextButton>
             </ButtonSC>
             <ButtonSC onClick={changeToArc}>
-              <Emoji fuji />
-              <span className="button-arc">ARCS</span>
+              <Monte />
+              <TextButton>ARCS</TextButton>
             </ButtonSC>
           </article>
         </div>
@@ -132,23 +130,10 @@ const Heatmap = () => {
 
       <div className="legend-card">
         <article className="legend-card-one">
-          <img
-            loading="lazy"
-            src={Legend}
-            alt="Legends"
-            className="legend-card-one-img"
-          />
+          <Legend />
         </article>
 
-        {cardTwo === true ? (
-          <>
-            <HiatusLegendChapter />
-          </>
-        ) : (
-          <>
-            <HiatusLegendArc />
-          </>
-        )}
+        {cardTwo === true ? <HiatusLegendChapter /> : <HiatusLegendArc />}
       </div>
     </HeatmapContainer>
   );

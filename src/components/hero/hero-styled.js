@@ -20,7 +20,7 @@ export const HeroStyles = styled.section`
   margin: 0;
   padding: 0;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   font-family: var(--font-family-hero);
   color: white;
   letter-spacing: 0.14em;
@@ -34,7 +34,7 @@ export const HeroSectionHeader = styled.article`
     url(${vagabond}) no-repeat center center fixed;
   background-size: cover;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 
@@ -81,7 +81,7 @@ export const HeroSectionHeader = styled.article`
 `;
 
 export const HeroSectionSub = styled.article`
-  background-color: #d91a32;
+  background-color: hsl(352, 79%, 48%);
   color: black;
   width: 100%;
   height: auto;
@@ -95,8 +95,6 @@ export const HeroSectionSub = styled.article`
       margin: 50px 0 0 0;
       width: 50%;
       height: auto;
-      pointer-events: none;
-      user-select: none;
     }
 
     &-author {
