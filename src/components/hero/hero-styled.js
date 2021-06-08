@@ -81,7 +81,7 @@ export const HeroSectionHeader = styled.article`
 `;
 
 export const HeroSectionSub = styled.article`
-  background-color: #d91a32;
+  background-color: hsl(352, 79%, 48%);
   color: black;
   width: 100%;
   height: auto;
@@ -95,8 +95,6 @@ export const HeroSectionSub = styled.article`
       margin: 50px 0 0 0;
       width: 50%;
       height: auto;
-      pointer-events: none;
-      user-select: none;
     }
 
     &-author {

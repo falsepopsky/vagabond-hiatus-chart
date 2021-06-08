@@ -62,10 +62,11 @@ export const AboutSection = styled.section`
 `;
 
 export const TitleAbout = styled.h3`
+  font-size: 28px;
   text-align: center;
   padding: 0 0 30px;
 
-  &:before {
+  &::before {
     content: '';
     height: 20px;
     width: 20px;
@@ -76,7 +77,7 @@ export const TitleAbout = styled.h3`
     border-width: 2px 0 0 2px;
   }
 
-  &:after {
+  &::after {
     content: '';
     height: 20px;
     width: 20px;

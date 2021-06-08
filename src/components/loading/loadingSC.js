@@ -27,33 +27,31 @@ export const Spinner = styled.div`
 `;
 
 export const LoadingContainer = styled.section`
-  font-family: var(--font-family-primary);
-  color: white;
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
+  color: white;
   background-color: #000000;
   text-align: center;
   justify-content: center;
   align-items: center;
+`;
 
-  .loading-title {
-    margin: 2em 0;
-    font-size: var(--text-size-primary);
+export const LoaderTitle = styled.h2`
+  margin: 2em 0;
+  font-family: var(--font-family-primary);
+  font-size: x-large;
 
-    &::selection {
-      text-shadow: none;
-      color: white;
-      background: blue;
-    }
+  ::selection {
+    text-shadow: none;
+    color: white;
+    background: blue;
   }
 
-  @media (max-width: 576px) {
-    .loading-title {
-      font-size: x-large;
-    }
+  @media (min-width: 576px) {
+    font-size: var(--text-size-primary);
   }
 `;

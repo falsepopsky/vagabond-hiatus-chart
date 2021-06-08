@@ -175,7 +175,7 @@ export const Glitch = styled.h3`
   text-transform: uppercase;
   user-select: none;
 
-  &:before {
+  &::before {
     padding: 30px;
     color: white;
     content: attr(data-text);

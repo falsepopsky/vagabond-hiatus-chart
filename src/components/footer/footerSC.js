@@ -23,6 +23,7 @@ export const FooterMain = styled.footer`
     width: auto;
     max-width: 48px;
     color: #c4bebe;
+    text-decoration: none;
     
     &:hover {
       color: #01f1e3;

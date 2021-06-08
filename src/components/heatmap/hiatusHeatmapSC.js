@@ -13,6 +13,7 @@ export const ButtonSC = styled.button`
   font-size: 16px;
   background-color: #000000;
   color: #ffffff;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
@@ -186,7 +187,7 @@ export const HeatmapContainer = styled.section`
   .legend-weekly {
     color: #f4f7f3;
 
-    &:before {
+    &::before {
       background-color: #f4f7f3;
     }
   }
@@ -194,7 +195,7 @@ export const HeatmapContainer = styled.section`
   .legend-chapter {
     color: #70ddc6;
 
-    &:before {
+    &::before {
       background-color: #70ddc6;
     }
   }
@@ -202,7 +203,7 @@ export const HeatmapContainer = styled.section`
   .legend-dont {
     color: #f95d5a;
 
-    &:before {
+    &::before {
       background-color: #f95d5a;
     }
   }
