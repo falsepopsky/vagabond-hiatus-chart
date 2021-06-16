@@ -11,17 +11,10 @@ export const FooterMain = styled.footer`
   color: #c4bebe;
   font-family: 'HelveticaNowDisplayRegular';
 
-  &::selection {
-    text-shadow: none;
-    color: black;
-    background: white;
-  }
-
   .nav-link {
-    margin-left: 24px;
+    margin: 6px 0 0 24px;
     padding: 0;
-    width: auto;
-    max-width: 48px;
+    max-width: max-content;
     color: #c4bebe;
     text-decoration: none;
     
@@ -36,17 +29,6 @@ export const FooterMain = styled.footer`
     }
   }
 
-  .footer-text-copyrigth {
-    color: white;
-    text-align: center;
-
-    &::selection {
-      text-shadow: none;
-      color: black;
-      background: white;
-    }
-  }
-
   .section-one {
     order: 1;
     flex-grow: 2;
@@ -54,7 +36,7 @@ export const FooterMain = styled.footer`
 
   .section-two {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     order: 2;
     flex-grow: 1;
   }
@@ -68,18 +50,6 @@ export const FooterMain = styled.footer`
     flex: 1 1 100%;
     order: 4;
     text-align: center;
-  }
-
-  .about-text {
-    width: 100%;
-    max-width: 400px;
-    padding: 0 0 0 26px;
-
-    &::selection {
-      text-shadow: none;
-      color: black;
-      background: white;
-    }
   }
 
   @media (max-width: 750px) {
@@ -102,9 +72,12 @@ export const FooterLine = styled.div`
 `;
 
 export const FooterSection = styled.section`
+  padding: 0;
   width: auto;
   height: auto;
   align-self: stretch;
+  display: flex;
+  flex-flow: column nowrap;
 `;
 
 export const FooterTitle = styled.h3`
@@ -128,23 +101,34 @@ export const FooterTitle = styled.h3`
   }
 `;
 
-export const ExtraLinks = styled.ul`
-  list-style-type: none;
-  padding: 0;
+export const TextFooter = styled.p`
+  margin: 0 0 16px;
+  padding: ${(props) => (props.copyright ? '0' : '0 0 0 26px')};
+  width: 100%;
+  max-width: ${(props) => (props.copyright ? '100%' : '400px;')};
+  text-align: ${(props) => (props.copyright ? 'center' : 'left')};
+  color: ${(props) => (props.copyright ? 'white' : 'inherit')};
 
-  & > li > a {
-    color: #c4bebe;
-    text-decoration: none;
-    padding-left: 24px;
+  &::selection {
+    text-shadow: none;
+    color: black;
+    background: white;
+  }
+`;
 
-    &::selection {
-      text-shadow: none;
-      color: black;
-      background: #01f1e3;
-    }
+export const StyledLink = styled.a`
+  margin: 6px 0 0 24px;
+  text-decoration: none;
+  color: #c4bebe;
+  max-width: max-content;
 
-    &:hover {
-      color: #01f1e3;
-    }
+  &::selection {
+    text-shadow: none;
+    color: black;
+    background: #01f1e3;
+  }
+
+  &:hover {
+    color: #01f1e3;
   }
 `;

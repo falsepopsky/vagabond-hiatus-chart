@@ -3,10 +3,8 @@ import React from 'react';
 const ArrowSVG = () => {
   return (
     <svg
-      x="0px"
-      y="0px"
-      width="30"
-      height="30"
+      width={30}
+      height={30}
       viewBox="0 0 451.847 451.847"
       className="hero-arrow">
       <g>

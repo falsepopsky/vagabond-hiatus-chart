@@ -39,79 +39,38 @@ export const HeroSectionHeader = styled.article`
   align-items: center;
 
   .hero {
-    &-title {
-      font-size: var(--text-size-primary);
-      margin-top: auto;
-
-      &::selection {
-        text-shadow: none;
-        color: white;
-        background: black;
-      }
-    }
-
     &-figure {
       margin-top: auto;
-    }
-
-    &-scroll-down {
       pointer-events: none;
       user-select: none;
     }
 
     &-arrow {
-      width: 30px;
-      height: 30px;
       position: relative;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
       animation: ${animationRule};
-      pointer-events: none;
-      user-select: none;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .hero-title {
-      opacity: 0.7;
     }
   }
 `;
 
 export const HeroSectionSub = styled.article`
-  background-color: hsl(352, 79%, 48%);
-  color: black;
   width: 100%;
   height: auto;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  color: black;
+  background-color: hsl(352, 79%, 48%);
 
   .hero {
     &-logo {
       margin: 50px 0 0 0;
       width: 50%;
       height: auto;
-    }
-
-    &-author {
-      margin-top: 1em;
-      padding-bottom: 24px;
-      font-size: var(--text-size-primary);
-
-      &::selection {
-        text-shadow: none;
-        color: white;
-      }
-
-      span {
-        font-size: 0.6rem;
-        user-select: none;
-        letter-spacing: 3px;
-      }
     }
 
     &-description {
@@ -128,6 +87,12 @@ export const HeroSectionSub = styled.article`
     }
   }
 
+  span {
+    font-size: 0.6rem;
+    user-select: none;
+    letter-spacing: 3px;
+  }
+
   @media (max-width: 576px) {
     .hero {
       &-logo {
@@ -135,20 +100,32 @@ export const HeroSectionSub = styled.article`
         height: auto;
       }
 
-      &-author {
-        margin-top: 1em;
-        font-size: 2.7rem;
-
-        span {
-          font-size: 0.6rem;
-          display: block;
-        }
-      }
-
       &-description {
-        font-size: var(--text-size-third);
+        font-size: 19px;
         max-width: 320px;
       }
     }
+    
+    span {
+      font-size: 0.6rem;
+      display: block;
+    }
+  }
+`;
+
+export const TitleHero = styled.h1`
+  font-size: ${(props) => props.maintitle ? 'var(--text-size-primary)' : 'var(--text-size-secondary)'};
+  margin-top: ${(props) => (props.maintitle ? 'auto' : '1em')};
+  padding-bottom: ${(props) => (props.maintitle ? '0' : '24px')};
+
+  ::selection {
+    text-shadow: none;
+    color: white;
+    background: ${(props) => (props.maintitle ? 'black' : 'transparent')};
+  }
+
+  @media (min-width: 576px) {
+    font-size: var(--text-size-primary);
+    padding: 0;
   }
 `;

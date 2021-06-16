@@ -5,7 +5,8 @@ import {
   FooterLine,
   FooterSection,
   FooterTitle,
-  ExtraLinks,
+  TextFooter,
+  StyledLink,
 } from './footerSC';
 
 const Footer = () => {
@@ -14,14 +15,14 @@ const Footer = () => {
       <FooterLine />
       <FooterSection className="section-one">
         <FooterTitle>GENERAL</FooterTitle>
-        <p className="about-text">The website of Vagabond Hiatus Chart.</p>
-        <p className="about-text">
+        <TextFooter>The website of Vagabond Hiatus Chart.</TextFooter>
+        <TextFooter>
           Some of the images belongs to Takehiko Inoue &amp; Kōdansha.
-        </p>
-        <p className="about-text">
+        </TextFooter>
+        <TextFooter>
           For a better experience use firefox and visit the site on desktop
           mode.
-        </p>
+        </TextFooter>
       </FooterSection>
 
       <FooterSection className="section-two">
@@ -42,28 +43,28 @@ const Footer = () => {
 
       <FooterSection className="section-three">
         <FooterTitle>EXTRA LINKS</FooterTitle>
-        <ExtraLinks>
-          <li>
-            <a
-              href="https://itplanning.co.jp/"
-              rel="noopener noreferrer"
-              target="_blank">
-              Takehiko Inoue
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://morning.kodansha.co.jp/"
-              rel="noopener noreferrer"
-              target="_blank">
-              Morning Kodansha
-            </a>
-          </li>
-        </ExtraLinks>
+          <StyledLink
+            href="https://itplanning.co.jp/"
+            rel="noopener noreferrer"
+            target="_blank">
+            Takehiko Inoue
+          </StyledLink>
+          <StyledLink
+            href="https://morning.kodansha.co.jp/"
+            rel="noopener noreferrer"
+            target="_blank">
+            Morning Kodansha
+          </StyledLink>
+          <StyledLink
+            href="https://www.reddit.com/r/vagabondmanga/"
+            rel="noopener noreferrer"
+            target="_blank">
+            Reddit Vagabond
+          </StyledLink>
       </FooterSection>
 
       <FooterSection className="section-four">
-        <p className="footer-text-copyrigth">Vagabond Hiatus Chart © 2021</p>
+        <TextFooter copyright>Vagabond Hiatus Chart © 2021</TextFooter>
       </FooterSection>
     </FooterMain>
   );
