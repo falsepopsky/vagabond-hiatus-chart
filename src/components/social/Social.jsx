@@ -6,7 +6,21 @@ import {
   LineContainer,
   SectionContainer,
 } from '../styled-components/globalUI';
-import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import { Timeline } from 'react-twitter-widgets';
+
+const twitterOptions = {
+  info: {
+    sourceType: 'profile',
+    screenName: 'inouetake',
+  },
+  styles: {
+    theme: 'dark',
+    chrome: 'noheader nofooter noscrollbar',
+    width: '400',
+    maxWidth: '500',
+    height: '460',
+  },
+};
 
 const SocialMedia = () => {
   return (
@@ -16,14 +30,9 @@ const SocialMedia = () => {
         <Title>SOCIAL MEDIA</Title>
       </TitleContainer>
       <TwitterBox>
-        <TwitterTimelineEmbed
-          sourceType="profile"
-          screenName="inouetake"
-          theme="dark"
-          noHeader
-          noFooter
-          noScrollbar
-          options={{ width: 400, maxWidth: 500, height: 460 }}
+        <Timeline
+          dataSource={twitterOptions.info}
+          options={twitterOptions.styles}
         />
       </TwitterBox>
     </SectionContainer>
