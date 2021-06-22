@@ -23,7 +23,7 @@ let toolTipHeatmap = ({ color, xKey, yKey }) => (
   <div
     style={{
       display: 'flex',
-      flexDirection: 'row',
+      flexFlow: 'row nowrap',
       alignItems: 'center',
       justifyContent: 'center',
     }}>
@@ -46,13 +46,13 @@ const Heatmap = () => {
   const [colors, setColors] = useState(configHeatmap.colorsPublications);
   const [cardTwo, setCardTwo] = useState(true);
 
-  const changeToPubs = function () {
+  const changeToPubs = () => {
     setDatabase(publicationsDatabase);
     setColors(configHeatmap.colorsPublications);
     setCardTwo(true);
   };
 
-  const changeToArc = function () {
+  const changeToArc = () => {
     setDatabase(arcsDatabase);
     setColors(configHeatmap.colorsArcs);
     setCardTwo(false);

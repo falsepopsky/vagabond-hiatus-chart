@@ -28,7 +28,6 @@ export const ButtonSC = styled.button`
 
   @media (min-width: 720px) {
     width: auto;
-    height: 48px;
   }
 `;
 
@@ -152,10 +151,10 @@ export const HeatmapContainer = styled.section`
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 
     &-one {
-      margin: 10px 0 10px 0;
+      margin: 10px 0;
       width: 460px;
       height: 200px;
       display: flex;
@@ -164,144 +163,45 @@ export const HeatmapContainer = styled.section`
       &-img {
         width: 80%;
         height: auto;
-        pointer-events: none;
-        user-select: none;
       }
     }
-
-    &-two {
-      display: flex;
-      flex-flow: column wrap;
-      width: 400px;
-      height: auto;
-      align-items: baseline;
-      justify-content: space-around;
-      align-content: space-around;
-
-      &-item {
-        width: auto;
-      }
-    }
-  }
-
-  .legend-weekly {
-    color: #f4f7f3;
-
-    &::before {
-      background-color: #f4f7f3;
-    }
-  }
-
-  .legend-chapter {
-    color: #70ddc6;
-
-    &::before {
-      background-color: #70ddc6;
-    }
-  }
-
-  .legend-dont {
-    color: #f95d5a;
-
-    &::before {
-      background-color: #f95d5a;
-    }
-  }
-
-  .legend-arc {
-    display: flex;
-    flex-flow: row wrap;
-    width: 400px;
-    height: auto;
-    align-items: center;
-
-    &-box {
-      color: white;
-      width: 200px;
-      height: 32px;
-      text-align: justify;
-    }
-  }
-
-  .legend-before::before {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border-radius: 4px;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 10px;
-  }
-
-  .legend-one::before {
-    background-color: #bce784;
-  }
-
-  .legend-two::before {
-    background-color: #fff875;
-  }
-
-  .legend-three::before {
-    background-color: #28666e;
-  }
-
-  .legend-four::before {
-    background-color: #06ba63;
-  }
-
-  .legend-five::before {
-    background-color: #508991;
-  }
-
-  .legend-six::before {
-    background-color: #7d80da;
-  }
-
-  .legend-seven::before {
-    background-color: #ffe156;
-  }
-
-  .legend-eight::before {
-    background-color: #a42cd6;
-  }
-
-  .legend-nine::before {
-    background-color: #3777ff;
-  }
-
-  .legend-ten::before {
-    background-color: #4059ad;
-  }
-
-  .legend-eleven::before {
-    background-color: #ff6663;
-  }
-
-  .legend-twelve::before {
-    background-color: #e3bfc9;
-  }
-
-  .legend-thirteen::before {
-    background-color: #f4f7f3;
   }
 
   @media (max-width: 576px) {
     .legend-card-one {
       display: none;
     }
+  }
+`;
 
-    .legend-card-two {
-      font-size: small;
-    }
+export const ArticleTwo = styled.article`
+  margin: 20px 0;
+  display: flex;
+  flex-flow: ${({ flow }) => (flow ? flow : 'row wrap')};
+  width: 400px;
+  height: ${({ two }) => (two ? '200px' : 'auto')};
+  justify-content: ${({ two }) => (two ? two : null)};
+  align-items: ${({ two }) => (two ? 'flex-start' : null)};
 
-    .legend-arc {
-      margin: 20px 0;
-      justify-content: center;
-    }
+  @media (min-width: 576px) {
+    height: auto;
+    margin: 0;
+  }
+`;
 
-    .legend-arc-box {
-      width: 180px;
-      font-size: small;
-    }
+export const StyledP = styled.p`
+  margin: 0;
+  color: ${({ color }) => (color ? color : 'inherit')};
+
+  ::before {
+    margin: 0 10px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: ${({ backgroundColor }) =>
+      backgroundColor ? backgroundColor : null};
   }
 `;

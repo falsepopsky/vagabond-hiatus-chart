@@ -43,24 +43,24 @@ const Footer = () => {
 
       <FooterSection className="section-three">
         <FooterTitle>EXTRA LINKS</FooterTitle>
-          <StyledLink
-            href="https://itplanning.co.jp/"
-            rel="noopener noreferrer"
-            target="_blank">
-            Takehiko Inoue
-          </StyledLink>
-          <StyledLink
-            href="https://morning.kodansha.co.jp/"
-            rel="noopener noreferrer"
-            target="_blank">
-            Morning Kodansha
-          </StyledLink>
-          <StyledLink
-            href="https://www.reddit.com/r/vagabondmanga/"
-            rel="noopener noreferrer"
-            target="_blank">
-            Reddit Vagabond
-          </StyledLink>
+        <StyledLink
+          href="https://itplanning.co.jp/"
+          rel="noopener noreferrer"
+          target="_blank">
+          Takehiko Inoue
+        </StyledLink>
+        <StyledLink
+          href="https://morning.kodansha.co.jp/"
+          rel="noopener noreferrer"
+          target="_blank">
+          Morning Kodansha
+        </StyledLink>
+        <StyledLink
+          href="https://www.reddit.com/r/vagabondmanga/"
+          rel="noopener noreferrer"
+          target="_blank">
+          Reddit Vagabond
+        </StyledLink>
       </FooterSection>
 
       <FooterSection className="section-four">
