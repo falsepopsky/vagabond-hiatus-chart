@@ -105,7 +105,7 @@ export const HeroSectionSub = styled.article`
         max-width: 320px;
       }
     }
-    
+
     span {
       font-size: 0.6rem;
       display: block;
@@ -114,14 +114,15 @@ export const HeroSectionSub = styled.article`
 `;
 
 export const TitleHero = styled.h1`
-  font-size: ${(props) => props.maintitle ? 'var(--text-size-primary)' : 'var(--text-size-secondary)'};
-  margin-top: ${(props) => (props.maintitle ? 'auto' : '1em')};
-  padding-bottom: ${(props) => (props.maintitle ? '0' : '24px')};
+  font-size: ${({ maintitle }) =>
+    maintitle ? 'var(--text-size-primary)' : 'var(--text-size-secondary)'};
+  margin-top: ${({ maintitle }) => (maintitle ? 'auto' : '1em')};
+  padding-bottom: ${({ maintitle }) => (maintitle ? '0' : '24px')};
 
   ::selection {
     text-shadow: none;
     color: white;
-    background: ${(props) => (props.maintitle ? 'black' : 'transparent')};
+    background: ${({ maintitle }) => (maintitle ? 'black' : 'transparent')};
   }
 
   @media (min-width: 576px) {
