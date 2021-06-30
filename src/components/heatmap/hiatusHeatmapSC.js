@@ -109,7 +109,7 @@ export const HeatmapContainer = styled.section`
   display: flex;
   flex-flow: column nowrap;
   background-color: #000000;
-  font-family: 'VarelaRound';
+  font-family: ${({ theme }) => theme.familyFont.secondary};
   text-align: center;
 
   .heatmap-database-legend {
@@ -130,8 +130,8 @@ export const HeatmapContainer = styled.section`
   }
 
   .title-database-legend {
-    font-size: var(--text-size-secondary);
-    font-family: HelveticaNowDisplayRegular;
+    font-size: ${({ theme }) => theme.sizeFont.m};
+    font-family: ${({ theme }) => theme.familyFont.primary};
 
     &::before {
       content: '';

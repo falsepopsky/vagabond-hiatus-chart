@@ -13,48 +13,71 @@ const ArcBox = styled.div`
   }
 `;
 
+const Arcs = [
+  {
+    color: '#bce784',
+    arcName: 'Takezō',
+  },
+  {
+    color: '#fff875',
+    arcName: 'First Yoshioka',
+  },
+  {
+    color: '#28666e',
+    arcName: 'Hōzōin',
+  },
+  {
+    color: '#06ba63',
+    arcName: 'Yagyū',
+  },
+  {
+    color: '#508991',
+    arcName: 'Baiken',
+  },
+  {
+    color: '#7d80da',
+    arcName: 'Kojirō',
+  },
+  {
+    color: '#ffe156',
+    arcName: 'Second Yoshioka',
+  },
+  {
+    color: '#a42cd6',
+    arcName: "Ichijōji's aftermath",
+  },
+  {
+    color: '#3777ff',
+    arcName: 'Wandering',
+  },
+  {
+    color: '#4059ad',
+    arcName: 'Farming',
+  },
+  {
+    color: '#ff6663',
+    arcName: 'Hosokawa',
+  },
+  {
+    color: '#e3bfc9',
+    arcName: 'Hiatus Arc',
+  },
+  {
+    color: '#f4f7f3',
+    arcName: 'Double Weekly',
+  },
+];
+
 const HiatusLegendArc = () => {
   return (
     <ArticleTwo>
-      <ArcBox>
-        <StyledP backgroundColor={'#bce784'}>Takezō</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#fff875'}>First Yoshioka</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#28666e'}>Hōzōin</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#06ba63'}>Yagyū</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#508991'}>Baiken</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#7d80da'}>Kojirō</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#ffe156'}>Second Yoshioka</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#a42cd6'}>Ichijōji's aftermath</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#3777ff'}>Wandering</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#4059ad'}>Farming</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#ff6663'}>Hosokawa</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#e3bfc9'}>Hiatus Arc</StyledP>
-      </ArcBox>
-      <ArcBox>
-        <StyledP backgroundColor={'#f4f7f3'}>Double Weekly</StyledP>
-      </ArcBox>
+      {Arcs.map((arc) => {
+        return (
+          <ArcBox key={arc.arcName}>
+            <StyledP backgroundColor={arc.color}>{arc.arcName}</StyledP>
+          </ArcBox>
+        );
+      })}
     </ArticleTwo>
   );
 };

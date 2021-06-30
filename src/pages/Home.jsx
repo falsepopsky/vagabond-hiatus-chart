@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import { StyledMain } from './../components/styled-components/globalUI';
 import HeroSection from '../components/hero/Hero';
 import Heatmap from '../components/heatmap/HiatusHeatmap';
 import Loading from '../components/loading/Loading';
@@ -16,14 +17,16 @@ const SocialMedia = lazy(() => import('../components/social/Social'));
 const Home = () => {
   return (
     <>
-      <HeroSection />
-      <Stats />
-      <Heatmap />
-      <Suspense fallback={<Loading />}>
-        <ChaptersPerYear />
-        <ChaptersPerArc />
-        <SocialMedia />
-      </Suspense>
+      <StyledMain>
+        <HeroSection />
+        <Stats />
+        <Heatmap />
+        <Suspense fallback={<Loading />}>
+          <ChaptersPerYear />
+          <ChaptersPerArc />
+          <SocialMedia />
+        </Suspense>
+      </StyledMain>
       <Footer />
     </>
   );

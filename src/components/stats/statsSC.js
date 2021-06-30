@@ -5,7 +5,7 @@ export const StatsContent = styled.section`
   padding: 0;
   display: flex;
   flex-flow: column nowrap;
-  font-family: var(--font-family-primary);
+  font-family: ${({ theme }) => theme.familyFont.primary};
   text-align: center;
   letter-spacing: 0.14em;
   color: white;

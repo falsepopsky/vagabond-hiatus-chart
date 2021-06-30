@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import vagabond from '../../assets/vagabond-min.webp';
 
 const bounce = keyframes`
@@ -12,16 +12,12 @@ const bounce = keyframes`
   top: 0;
 }`;
 
-const animationRule = css`
-  ${bounce} 1s infinite;
-`;
-
 export const HeroStyles = styled.section`
   margin: 0;
   padding: 0;
   display: flex;
   flex-flow: column nowrap;
-  font-family: var(--font-family-hero);
+  font-family: ${({ theme }) => theme.familyFont.hero};
   color: white;
   letter-spacing: 0.14em;
   text-align: center;
@@ -51,7 +47,7 @@ export const HeroSectionHeader = styled.article`
       bottom: 0;
       left: 0;
       right: 0;
-      animation: ${animationRule};
+      animation: ${bounce} 1s infinite;
     }
   }
 `;
@@ -74,8 +70,8 @@ export const HeroSectionSub = styled.article`
     }
 
     &-description {
-      font-family: var(--font-family-primary);
-      font-size: var(--text-size-secondary);
+      font-family: ${({ theme }) => theme.familyFont.primary};
+      font-size: ${({ theme }) => theme.sizeFont.m};
       letter-spacing: 3px;
       max-width: 560px;
       padding-bottom: 24px;
@@ -114,8 +110,8 @@ export const HeroSectionSub = styled.article`
 `;
 
 export const TitleHero = styled.h1`
-  font-size: ${({ maintitle }) =>
-    maintitle ? 'var(--text-size-primary)' : 'var(--text-size-secondary)'};
+  font-size: ${({ maintitle, theme }) =>
+    maintitle ? theme.sizeFont.l : theme.sizeFont.m};
   margin-top: ${({ maintitle }) => (maintitle ? 'auto' : '1em')};
   padding-bottom: ${({ maintitle }) => (maintitle ? '0' : '24px')};
 
@@ -126,7 +122,7 @@ export const TitleHero = styled.h1`
   }
 
   @media (min-width: 576px) {
-    font-size: var(--text-size-primary);
+    font-size: ${({ theme }) => theme.sizeFont.l};
     padding: 0;
   }
 `;

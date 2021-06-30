@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const glitchOne = keyframes`
   0% {
@@ -132,14 +132,6 @@ const glitchTwo = keyframes`
   }
 `;
 
-const animationGlitchOne = css`
-  ${glitchOne} 2s linear infinite reverse;
-`;
-
-const animationGlitchTwo = css`
-  ${glitchTwo} 2s linear infinite reverse;
-`;
-
 export const NoMatchMain = styled.main`
   margin: 0;
   width: 100%;
@@ -149,7 +141,7 @@ export const NoMatchMain = styled.main`
   background-color: black;
   justify-content: center;
   align-items: center;
-  font-family: 'HelveticaNowDisplayRegular';
+  font-family: ${({ theme }) => theme.familyFont.primary};
 
   .back-home {
     margin: 50px 0 0;
@@ -186,7 +178,7 @@ export const Glitch = styled.h3`
     top: 0;
     left: 3px;
     text-shadow: -2px 0 red;
-    animation: ${animationGlitchOne};
+    animation: ${glitchOne} 2s linear infinite reverse;
   }
 
   ::after {
@@ -201,6 +193,6 @@ export const Glitch = styled.h3`
     top: 0;
     left: -3px;
     text-shadow: -2px 0 blue;
-    animation: ${animationGlitchTwo};
+    animation: ${glitchTwo} 2s linear infinite reverse;
   }
 `;

@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const spinnerRotate = keyframes`
   0% {
@@ -7,10 +7,6 @@ const spinnerRotate = keyframes`
   100% {
     transform: rotate(360deg);
   }
-`;
-
-const animationSpinner = css`
-  ${spinnerRotate} 0.7s ease infinite;
 `;
 
 export const Spinner = styled.div`
@@ -23,7 +19,7 @@ export const Spinner = styled.div`
   border: 2px solid transparent;
   border-top-color: #01f1e3;
   border-bottom-color: #01f1e3;
-  animation: ${animationSpinner};
+  animation: ${spinnerRotate} 0.7s ease infinite;
 `;
 
 export const LoadingContainer = styled.section`
@@ -42,7 +38,7 @@ export const LoadingContainer = styled.section`
 
 export const LoaderTitle = styled.h2`
   margin: 2em 0;
-  font-family: var(--font-family-primary);
+  font-family: ${({ theme }) => theme.familyFont.primary};
   font-size: x-large;
 
   ::selection {
@@ -52,6 +48,6 @@ export const LoaderTitle = styled.h2`
   }
 
   @media (min-width: 576px) {
-    font-size: var(--text-size-primary);
+    font-size: ${({ theme }) => theme.sizeFont.l};
   }
 `;
