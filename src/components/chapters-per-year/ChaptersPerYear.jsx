@@ -2,7 +2,7 @@ import React from 'react';
 import { ResponsiveLine } from '@nivo/line';
 import { cpyDatabase } from './ChaptersPerYearDatabase';
 import { configCPY } from './cpyNivoConfig';
-import { themeNivo } from '../theme/themeNivo';
+import { themeNivo } from '../../themes/nivo';
 import {
   Title,
   NivoContainer,

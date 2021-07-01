@@ -12,18 +12,9 @@ const bounce = keyframes`
   top: 0;
 }`;
 
-export const HeroStyles = styled.section`
+export const SectionHeader = styled.section`
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-flow: column nowrap;
-  font-family: ${({ theme }) => theme.familyFont.hero};
-  color: white;
-  letter-spacing: 0.14em;
-  text-align: center;
-`;
-
-export const HeroSectionHeader = styled.article`
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
@@ -33,6 +24,10 @@ export const HeroSectionHeader = styled.article`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  color: white;
+  letter-spacing: 0.14em;
+  text-align: center;
+  position: relative;
 
   .hero {
     &-figure {
@@ -52,7 +47,9 @@ export const HeroSectionHeader = styled.article`
   }
 `;
 
-export const HeroSectionSub = styled.article`
+export const SectionSub = styled.section`
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: auto;
   display: flex;
@@ -61,6 +58,8 @@ export const HeroSectionSub = styled.article`
   align-items: center;
   color: black;
   background-color: hsl(352, 79%, 48%);
+  text-align: center;
+  position: relative;
 
   .hero {
     &-logo {
@@ -110,6 +109,7 @@ export const HeroSectionSub = styled.article`
 `;
 
 export const TitleHero = styled.h1`
+  font-family: ${({ theme }) => theme.familyFont.hero};
   font-size: ${({ maintitle, theme }) =>
     maintitle ? theme.sizeFont.l : theme.sizeFont.m};
   margin-top: ${({ maintitle }) => (maintitle ? 'auto' : '1em')};

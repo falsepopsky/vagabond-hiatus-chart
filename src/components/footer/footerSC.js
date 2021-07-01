@@ -5,10 +5,10 @@ export const FooterMain = styled.footer`
   padding: 3vw 5vw 0;
   display: flex;
   flex-flow: row wrap;
-  width: auto;
+  width: 100%;
   height: auto;
-  background-color: black;
-  color: #c4bebe;
+  color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.secondary};
   font-family: ${({ theme }) => theme.familyFont.primary};
 
   .nav-link {
@@ -117,22 +117,5 @@ export const TextFooter = styled.p`
     text-shadow: none;
     color: black;
     background: white;
-  }
-`;
-
-export const StyledLink = styled.a`
-  margin: 6px 0 0 24px;
-  text-decoration: none;
-  color: #c4bebe;
-  max-width: max-content;
-
-  &::selection {
-    text-shadow: none;
-    color: black;
-    background: #01f1e3;
-  }
-
-  &:hover {
-    color: #01f1e3;
   }
 `;

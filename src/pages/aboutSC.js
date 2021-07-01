@@ -16,13 +16,3 @@ export const AboutSection = styled.section`
     border-radius: 6px;
   }
 `;
-
-export const StyledLink = styled.a`
-  color: #01f1e3;
-  text-decoration: none;
-
-  &:hover {
-    color: #d00;
-    text-decoration: none;
-  }
-`;

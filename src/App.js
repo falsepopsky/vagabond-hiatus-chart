@@ -1,5 +1,6 @@
 import Router from './pages/index';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { vagabondTheme } from './themes/vagabond';
 
 const GlobalStyle = createGlobalStyle`
   *, ::after, ::before {
@@ -17,23 +18,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   }
 `;
-
-const vagabondTheme = {
-  familyFont: {
-    primary: 'HelveticaNowDisplayRegular',
-    secondary: 'VarelaRound',
-    hero: 'Teko',
-  },
-  sizeFont: {
-    l: '48px',
-    m: '26px',
-    s: '13px',
-  },
-  colors: {
-    primary: '#d6d6d6',
-    secondary: '#0b0b0b',
-  },
-};
 
 function App() {
   return (

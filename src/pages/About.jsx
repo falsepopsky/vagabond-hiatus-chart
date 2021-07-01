@@ -1,8 +1,9 @@
-import { AboutSection, StyledLink } from './aboutSC';
+import { AboutSection } from './aboutSC';
 import {
-  StyledText,
   StyledMain,
   TitleAbout,
+  StyledText,
+  StyledLink,
 } from './../components/styled-components/globalUI';
 import Footer from '../components/footer/Footer';
 import VagabondAbout from '../assets/vagabond-about.jpg';
@@ -39,7 +40,7 @@ const About = () => {
             So this is my little contribution, i'm planning to build the same
             project with more titles, when the project it's ready i will make an
             announcement in the home site, so stay stuned, and hope you guys
-            like it!.
+            like it !
           </StyledText>
         </AboutSection>
 

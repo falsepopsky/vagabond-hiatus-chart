@@ -106,6 +106,7 @@ export const TextButton = styled.span`
 export const HeatmapContainer = styled.section`
   margin: 0;
   padding: 1.5vh 5vw 0;
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   background-color: #000000;

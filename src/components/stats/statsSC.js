@@ -1,22 +1,17 @@
 import styled from 'styled-components';
 
-export const StatsContent = styled.section`
+export const StatsWrapper = styled.section`
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-flow: column nowrap;
-  font-family: ${({ theme }) => theme.familyFont.primary};
-  text-align: center;
-  letter-spacing: 0.14em;
-  color: white;
-  background-color: black;
-`;
-
-export const StatsWrapper = styled.div`
+  padding: 0 5vw 5vh;
+  position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  padding: 0 5vw 5vh;
+  font-family: ${({ theme }) => theme.familyFont.primary};
+  text-align: center;
+  letter-spacing: 0.14em;
+  color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const TableBox = styled.article`
@@ -68,8 +63,8 @@ export const TextTable = styled.p`
 
   ::selection {
     text-shadow: none;
-    color: black;
-    background: white;
+    color: ${({ theme }) => theme.colors.secondary};
+    background: ${({ theme }) => theme.colors.primary};
   }
 
   @media (min-width: 576px) {

@@ -6,8 +6,8 @@ import {
   FooterSection,
   FooterTitle,
   TextFooter,
-  StyledLink,
 } from './footerSC';
+import { StyledLink } from './../styled-components/globalUI';
 
 const Footer = () => {
   return (
@@ -46,19 +46,25 @@ const Footer = () => {
         <StyledLink
           href="https://itplanning.co.jp/"
           rel="noopener noreferrer"
-          target="_blank">
+          target="_blank"
+          footerMar
+          footerLink>
           Takehiko Inoue
         </StyledLink>
         <StyledLink
           href="https://morning.kodansha.co.jp/"
           rel="noopener noreferrer"
-          target="_blank">
+          target="_blank"
+          footerMar
+          footerLink>
           Morning Kodansha
         </StyledLink>
         <StyledLink
           href="https://www.reddit.com/r/vagabondmanga/"
           rel="noopener noreferrer"
-          target="_blank">
+          target="_blank"
+          footerMar
+          footerLink>
           Reddit Vagabond
         </StyledLink>
       </FooterSection>
