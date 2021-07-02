@@ -1,7 +1,6 @@
 export const vagabondTheme = {
   familyFont: {
     primary: 'HelveticaNowDisplayRegular',
-    secondary: 'VarelaRound',
     hero: 'Teko',
   },
   sizeFont: {

@@ -1,12 +1,4 @@
 @font-face {
-  font-family: 'VarelaRound';
-  src: local('VarelaRound'),
-    url('./fonts/VarelaRound-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Teko';
   src: local('Teko'), url('./fonts/Teko-Regular.ttf') format('truetype');
   font-weight: normal;

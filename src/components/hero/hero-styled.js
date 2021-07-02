@@ -28,6 +28,7 @@ export const SectionHeader = styled.section`
   letter-spacing: 0.14em;
   text-align: center;
   position: relative;
+  font-family: ${({ theme }) => theme.familyFont.primary};
 
   .hero {
     &-figure {
@@ -37,6 +38,7 @@ export const SectionHeader = styled.section`
     }
 
     &-arrow {
+      fill: #ffffff;
       position: relative;
       top: 0;
       bottom: 0;

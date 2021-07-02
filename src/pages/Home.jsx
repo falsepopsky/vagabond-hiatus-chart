@@ -21,12 +21,12 @@ const Home = () => {
         <HeroSection />
         <Stats />
         <Heatmap />
-        {/* 
+
         <Suspense fallback={<Loading />}>
           <ChaptersPerYear />
           <ChaptersPerArc />
           <SocialMedia />
-        </Suspense> */}
+        </Suspense>
       </StyledMain>
       <Footer />
     </>

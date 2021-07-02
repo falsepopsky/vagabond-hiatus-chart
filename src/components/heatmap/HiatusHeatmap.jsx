@@ -3,15 +3,20 @@ import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import Heatmap from './Heatmap';
 import { configHeatmap } from './hiatusHeatmapConfig';
 import {
-  HeatmapContainer,
-  HeatmapBar,
+  HeatNav,
+  Navigation,
+  SmallContainer,
+  TitleNav,
   ButtonSC,
   TextButton,
+  LegendTitle,
+  LegendsContainer,
 } from './hiatusHeatmapSC';
 import { Katana, Monte, Shuffle, DatabaseSVG, Legend } from './../svg/Svgs';
 import HiatusLegendArc from './HiatusLegendArc';
 import HiatusLegendChapter from './HiatusLegendChapter';
 import {
+  SectionContainer,
   Title,
   NivoContainer,
   LineContainer,
@@ -35,23 +40,23 @@ const HiatusHeatmap = () => {
   };
 
   return (
-    <HeatmapContainer>
+    <SectionContainer>
       <LineContainer borderColor="rgb(249, 63, 63)" />
 
       <Title>HIATUS HEATMAP</Title>
 
-      <HeatmapBar>
-        <div className="navigation-heatmap">
-          <article className="database-section">
+      <HeatNav>
+        <Navigation>
+          <SmallContainer>
             <DatabaseSVG />
-            <h2 className="database-title">CHANGE DATABASE</h2>
-          </article>
+            <TitleNav>CHANGE DATABASE</TitleNav>
+          </SmallContainer>
 
-          <article className="shuffle-section">
+          <SmallContainer shuffle>
             <Shuffle />
-          </article>
+          </SmallContainer>
 
-          <article className="buttons-section">
+          <SmallContainer>
             <ButtonSC onClick={changeToPubs}>
               <Katana />
               <TextButton>CHAPTERS</TextButton>
@@ -60,32 +65,32 @@ const HiatusHeatmap = () => {
               <Monte />
               <TextButton>ARCS</TextButton>
             </ButtonSC>
-          </article>
-        </div>
-      </HeatmapBar>
-      <div style={{ position: 'relative' }}>
-        <NivoContainer>
-          <Heatmap
-            database={database}
-            colors={colors}
-            configHeatmap={configHeatmap}
-          />
-        </NivoContainer>
-      </div>
-      <div className="heatmap-database-legend">
-        <div className="heatmap-title">
-          <h2 className="title-database-legend">LEGEND</h2>
+          </SmallContainer>
+        </Navigation>
+      </HeatNav>
+
+      <div style={{ width: '100%', height: '440px' }}>
+        <div style={{ position: 'relative', width: '100%', height: '440px' }}>
+          <NivoContainer>
+            <Heatmap
+              database={database}
+              colors={colors}
+              configHeatmap={configHeatmap}
+            />
+          </NivoContainer>
         </div>
       </div>
 
-      <div className="legend-card">
-        <article className="legend-card-one">
+      <LegendTitle>LEGEND</LegendTitle>
+
+      <LegendsContainer>
+        <div className="legend-card-one">
           <Legend />
-        </article>
+        </div>
 
         {cardTwo === true ? <HiatusLegendChapter /> : <HiatusLegendArc />}
-      </div>
-    </HeatmapContainer>
+      </LegendsContainer>
+    </SectionContainer>
   );
 };
 

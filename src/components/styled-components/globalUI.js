@@ -14,13 +14,14 @@ export const StyledMain = styled.main`
 
 export const SectionContainer = styled.section`
   margin: 0;
-  padding: ${({ padStyle }) => (padStyle ? padStyle : '1.5vh 5vw 0')};
+  padding: ${({ pad }) => (pad ? pad : '1.5vh 5vw 0')};
   width: 100%;
   height: auto;
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  background-color: #000000;
+  color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.secondary};
   text-align: center;
 `;
 
@@ -88,14 +89,12 @@ export const NivoContainer = styled.article`
   width: 100%;
   height: 440px;
   position: absolute;
-
-  .text-hidden {
-    display: none;
-  }
 `;
 
 export const LineContainer = styled.div`
+  margin: 0;
   padding: 0;
+  height: 2px;
   border-top: 1px solid
     ${({ borderColor }) => (borderColor ? borderColor : 'rgb(63, 121, 183)')};
   flex: 1 1 100%;

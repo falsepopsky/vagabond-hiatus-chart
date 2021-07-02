@@ -1,5 +1,4 @@
 import React from 'react';
-import { ResponsiveTreeMap } from '@nivo/treemap';
 import { chaptersPerYearData } from './cpaData';
 import {
   Title,
@@ -8,34 +7,23 @@ import {
   LineContainer,
   SectionContainer,
 } from '../styled-components/globalUI';
+import Treemap from './Treemap';
+import { themeNivo } from '../../themes/nivo';
 
 const ChaptersTreeMap = () => {
   return (
-    <SectionContainer>
+    <SectionContainer pad={'1.5vh 5vw 5vh'}>
       <LineContainer />
       <TitleContainer>
         <Title>CHAPTERS PER ARC</Title>
       </TitleContainer>
-      <NivoContainer>
-        <ResponsiveTreeMap
-          data={chaptersPerYearData}
-          identity="name"
-          value="chapter"
-          margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
-          labelSkipSize={12}
-          labelTextColor={{ from: 'color', modifiers: [['darker', 1.2]] }}
-          parentLabelPadding={4}
-          parentLabelTextColor={{
-            from: 'color',
-            modifiers: [['darker', 2]],
-          }}
-          colors={{ scheme: 'pastel2' }}
-          nodeOpacity={0.8}
-          borderColor={{ from: 'color', modifiers: [['brighter', '1.8']] }}
-          animate={false}
-        />
-        <p className="text-hidden">what do you want?</p>
-      </NivoContainer>
+      <div style={{ width: '100%', height: '440px' }}>
+        <div style={{ position: 'relative', width: '100%', height: '440px' }}>
+          <NivoContainer>
+            <Treemap dataCPA={chaptersPerYearData} nivoTheme={themeNivo} />
+          </NivoContainer>
+        </div>
+      </div>
     </SectionContainer>
   );
 };
