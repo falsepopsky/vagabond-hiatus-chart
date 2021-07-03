@@ -1,7 +1,7 @@
 export const themeNivo = {
-  background: '#000000',
-  fontFamily: 'VarelaRound',
-  textColor: '#ffffff',
+  background: '#0b0b0b',
+  fontFamily: 'HelveticaNowDisplayRegular',
+  textColor: '#d6d6d6',
   fontSize: 12,
   axis: {
     domain: {
@@ -26,6 +26,11 @@ export const themeNivo = {
     line: {
       stroke: '#023aff',
       strokeWidth: 1,
+    },
+  },
+  tooltip: {
+    container: {
+      color: 'black',
     },
   },
 };

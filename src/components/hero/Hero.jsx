@@ -1,23 +1,18 @@
 import React from 'react';
-import {
-  HeroStyles,
-  HeroSectionHeader,
-  HeroSectionSub,
-  TitleHero,
-} from './hero-styled';
+import { SectionHeader, SectionSub, TitleHero } from './hero-styled';
 import { ArrowSVG, VagabondLogo } from './../svg/Svgs';
 
 const HeroSection = () => {
   return (
-    <HeroStyles>
-      <HeroSectionHeader>
+    <>
+      <SectionHeader>
         <TitleHero maintitle>Vagabond Hiatus Chart</TitleHero>
         <figure className="hero-figure">
           <p className="hero-scroll-down">scroll down</p>
           <ArrowSVG />
         </figure>
-      </HeroSectionHeader>
-      <HeroSectionSub>
+      </SectionHeader>
+      <SectionSub>
         <VagabondLogo />
         <TitleHero>
           Takehiko Inoue
@@ -27,8 +22,8 @@ const HeroSection = () => {
         <p className="hero-description">
           A simple way to visualize the actual state of Vagabond with charts.
         </p>
-      </HeroSectionSub>
-    </HeroStyles>
+      </SectionSub>
+    </>
   );
 };
 

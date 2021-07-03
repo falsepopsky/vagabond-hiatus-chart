@@ -1,47 +1,28 @@
 import React, { useState } from 'react';
-import { ResponsiveHeatMapCanvas } from '@nivo/heatmap';
-import { themeNivo } from '../theme/themeNivo';
 import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
+import Heatmap from './Heatmap';
 import { configHeatmap } from './hiatusHeatmapConfig';
 import {
-  HeatmapContainer,
-  HeatmapBar,
+  HeatNav,
+  Navigation,
+  SmallContainer,
+  TitleNav,
   ButtonSC,
   TextButton,
+  LegendTitle,
+  LegendsContainer,
 } from './hiatusHeatmapSC';
 import { Katana, Monte, Shuffle, DatabaseSVG, Legend } from './../svg/Svgs';
 import HiatusLegendArc from './HiatusLegendArc';
 import HiatusLegendChapter from './HiatusLegendChapter';
 import {
+  SectionContainer,
   Title,
-  TitleContainer,
   NivoContainer,
   LineContainer,
 } from '../styled-components/globalUI';
 
-let toolTipHeatmap = ({ color, xKey, yKey }) => (
-  <div
-    style={{
-      display: 'flex',
-      flexFlow: 'row nowrap',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
-    <div
-      style={{
-        height: '20px',
-        width: '20px',
-        marginRight: '4px',
-        backgroundColor: color,
-        borderRadius: '50%',
-      }}></div>
-    <strong>
-      Year {yKey} / #{xKey}
-    </strong>
-  </div>
-);
-
-const Heatmap = () => {
+const HiatusHeatmap = () => {
   const [database, setDatabase] = useState(publicationsDatabase);
   const [colors, setColors] = useState(configHeatmap.colorsPublications);
   const [cardTwo, setCardTwo] = useState(true);
@@ -59,24 +40,23 @@ const Heatmap = () => {
   };
 
   return (
-    <HeatmapContainer>
+    <SectionContainer>
       <LineContainer borderColor="rgb(249, 63, 63)" />
-      <TitleContainer>
-        <Title>HIATUS HEATMAP</Title>
-      </TitleContainer>
 
-      <HeatmapBar>
-        <div className="navigation-heatmap">
-          <article className="database-section">
+      <Title>HIATUS HEATMAP</Title>
+
+      <HeatNav>
+        <Navigation>
+          <SmallContainer>
             <DatabaseSVG />
-            <h2 className="database-title">CHANGE DATABASE</h2>
-          </article>
+            <TitleNav>CHANGE DATABASE</TitleNav>
+          </SmallContainer>
 
-          <article className="shuffle-section">
+          <SmallContainer shuffle>
             <Shuffle />
-          </article>
+          </SmallContainer>
 
-          <article className="buttons-section">
+          <SmallContainer>
             <ButtonSC onClick={changeToPubs}>
               <Katana />
               <TextButton>CHAPTERS</TextButton>
@@ -85,58 +65,33 @@ const Heatmap = () => {
               <Monte />
               <TextButton>ARCS</TextButton>
             </ButtonSC>
-          </article>
-        </div>
-      </HeatmapBar>
-      <NivoContainer>
-        <ResponsiveHeatMapCanvas
-          data={database}
-          keys={configHeatmap.keysHeatmap}
-          indexBy="year"
-          margin={configHeatmap.margin}
-          theme={themeNivo}
-          pixelRatio={1}
-          minValue="auto"
-          maxValue="auto"
-          tooltip={toolTipHeatmap}
-          forceSquare={false}
-          sizeVariation={0.01}
-          padding={1}
-          colors={colors}
-          axisTop={null}
-          axisRight={null}
-          axisBottom={configHeatmap.axisBottom}
-          axisLeft={configHeatmap.axisLeft}
-          enableGridX={false}
-          enableGridY={true}
-          cellShape="rect"
-          cellOpacity={1}
-          cellBorderWidth={0}
-          cellBorderColor="#000"
-          enableLabels={false}
-          animate={false}
-          isInteractive={true}
-          hoverTarget="rowColumn"
-          cellHoverOpacity={1}
-          cellHoverOthersOpacity={0.5}
-        />
-        <p className="text-hidden">invincible... it's merely a word.</p>
-      </NivoContainer>
-      <div className="heatmap-database-legend">
-        <div className="heatmap-title">
-          <h2 className="title-database-legend">LEGEND</h2>
+          </SmallContainer>
+        </Navigation>
+      </HeatNav>
+
+      <div style={{ width: '100%', height: '440px' }}>
+        <div style={{ position: 'relative', width: '100%', height: '440px' }}>
+          <NivoContainer>
+            <Heatmap
+              database={database}
+              colors={colors}
+              configHeatmap={configHeatmap}
+            />
+          </NivoContainer>
         </div>
       </div>
 
-      <div className="legend-card">
-        <article className="legend-card-one">
+      <LegendTitle>LEGEND</LegendTitle>
+
+      <LegendsContainer>
+        <div className="legend-card-one">
           <Legend />
-        </article>
+        </div>
 
         {cardTwo === true ? <HiatusLegendChapter /> : <HiatusLegendArc />}
-      </div>
-    </HeatmapContainer>
+      </LegendsContainer>
+    </SectionContainer>
   );
 };
 
-export default Heatmap;
+export default HiatusHeatmap;

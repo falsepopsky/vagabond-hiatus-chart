@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const FooterMain = styled.footer`
-  margin: auto 0 0 0;
-  padding: 3vw 5vw 0 5vw;  
+  margin: auto 0 0;
+  padding: 3vw 5vw 0;
   display: flex;
   flex-flow: row wrap;
-  width: auto;
+  width: 100%;
   height: auto;
-  background-color: black;
-  color: #c4bebe;
-  font-family: 'HelveticaNowDisplayRegular';
+  color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.secondary};
+  font-family: ${({ theme }) => theme.familyFont.primary};
 
   .nav-link {
     margin: 6px 0 0 24px;
@@ -17,7 +17,7 @@ export const FooterMain = styled.footer`
     max-width: max-content;
     color: #c4bebe;
     text-decoration: none;
-    
+
     &:hover {
       color: #01f1e3;
     }
@@ -53,16 +53,20 @@ export const FooterMain = styled.footer`
   }
 
   @media (max-width: 750px) {
-    .section-two, .section-three {
+    .section-two,
+    .section-three {
       padding: 30px 0;
       flex: 1 1 50%;
     }
+  }
 
   @media (max-width: 576px) {
-    .section-two, .section-three {
+    .section-two,
+    .section-three {
       padding: 30px 0;
       flex: 1 1 100%;
     }
+  }
 `;
 
 export const FooterLine = styled.div`
@@ -113,22 +117,5 @@ export const TextFooter = styled.p`
     text-shadow: none;
     color: black;
     background: white;
-  }
-`;
-
-export const StyledLink = styled.a`
-  margin: 6px 0 0 24px;
-  text-decoration: none;
-  color: #c4bebe;
-  max-width: max-content;
-
-  &::selection {
-    text-shadow: none;
-    color: black;
-    background: #01f1e3;
-  }
-
-  &:hover {
-    color: #01f1e3;
   }
 `;

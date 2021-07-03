@@ -1,34 +1,30 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import loadable from '@loadable/component';
-import pMinDelay from 'p-min-delay';
-import ScrollToTop from 'react-router-scroll-top';
-import Loading from './components/loading/Loading';
+import Router from './pages/index';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { vagabondTheme } from './themes/vagabond';
 
-const Home = loadable(() => pMinDelay(import('./pages/Home'), 1500), {
-  fallback: <Loading />,
-});
+const GlobalStyle = createGlobalStyle`
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
 
-const About = loadable(() => pMinDelay(import('./pages/About'), 1000), {
-  fallback: <Loading />,
-});
+  html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+  }
 
-const NoMatch = loadable(() => import('./pages/NoMatch'));
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  }
+`;
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop>
-        <Switch>
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
-          <Route
-            exact
-            path={process.env.PUBLIC_URL + '/about'}
-            component={About}
-          />
-          <Route component={NoMatch} />
-        </Switch>
-      </ScrollToTop>
-    </Router>
+    <ThemeProvider theme={vagabondTheme}>
+      <GlobalStyle />
+      <Router />
+    </ThemeProvider>
   );
 }
 

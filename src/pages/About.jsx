@@ -1,5 +1,10 @@
-import React from 'react';
-import { AboutMain, AboutSection, StyledLink, TitleAbout } from './aboutSC';
+import { AboutSection } from './aboutSC';
+import {
+  StyledMain,
+  TitleAbout,
+  StyledText,
+  StyledLink,
+} from './../components/styled-components/globalUI';
 import Footer from '../components/footer/Footer';
 import VagabondAbout from '../assets/vagabond-about.jpg';
 
@@ -11,7 +16,7 @@ const Form = 'https://forms.gle/QjtffknkRddEy4TaA';
 const About = () => {
   return (
     <>
-      <AboutMain>
+      <StyledMain>
         <AboutSection>
           <img
             loading="lazy"
@@ -26,23 +31,23 @@ const About = () => {
         <AboutSection>
           <TitleAbout>ABOUT</TitleAbout>
 
-          <p className="about-text">
+          <StyledText>
             As a kid I always liked Slam Dunk, then some of my friends told me
             about this manga. I could not believe it that the mangaka of this
             masterpiece it's the same who made SD!
-          </p>
-          <p className="about-text">
+          </StyledText>
+          <StyledText>
             So this is my little contribution, i'm planning to build the same
             project with more titles, when the project it's ready i will make an
             announcement in the home site, so stay stuned, and hope you guys
-            like it!.
-          </p>
+            like it !
+          </StyledText>
         </AboutSection>
 
         <AboutSection>
           <TitleAbout>SPECIAL THANKS</TitleAbout>
 
-          <p className="about-text">
+          <StyledText>
             <strong className="about-shotout">Kawasaki#3316</strong> for
             providing the whole{' '}
             <StyledLink
@@ -52,9 +57,9 @@ const About = () => {
               data
             </StyledLink>{' '}
             without this project would be very inaccurate.
-          </p>
+          </StyledText>
 
-          <p className="about-text">
+          <StyledText>
             <strong className="about-shotout">rentzhx3</strong> for the
             inspiration with his project based on{' '}
             <StyledLink
@@ -64,27 +69,27 @@ const About = () => {
               Hunter X Hunter
             </StyledLink>
             .
-          </p>
+          </StyledText>
         </AboutSection>
         <AboutSection>
           <TitleAbout>CONTACT</TitleAbout>
-          <p className="about-text">
+          <StyledText>
             For business inquires only at{' '}
             <b className="email-pop">moc.liamnotorp@ykspopeslaf</b> with the
             subject <b className="email-subject">ved ssenisub</b>, any other
             message without the subject will be deleted.
-          </p>
+          </StyledText>
 
-          <p className="about-text">
+          <StyledText>
             If you just want to write a random message or something else just
             complete this{' '}
             <StyledLink href={Form} rel="noopener noreferrer" target="_blank">
               form
             </StyledLink>
             .
-          </p>
+          </StyledText>
         </AboutSection>
-      </AboutMain>
+      </StyledMain>
       <Footer />
     </>
   );
