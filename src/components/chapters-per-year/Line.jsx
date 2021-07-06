@@ -18,9 +18,7 @@ const Line = ({ config, dataCPY, themeNivo }) => {
       pointColor={{ from: 'color', modifiers: [] }}
       pointBorderWidth={1}
       pointBorderColor="#ffffff"
-      pointLabelYOffset={-12}
       enableArea={true}
-      areaBlendMode="normal"
       areaOpacity={0.75}
       enableSlices="x"
       enableCrosshair={false}

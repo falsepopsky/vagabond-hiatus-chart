@@ -7,6 +7,7 @@ export const StyledMain = styled.main`
   flex-flow: column nowrap;
   width: 100%;
   height: auto;
+  font-family: ${({ theme }) => theme.familyFont.primary};
   color: ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.secondary};
   overflow: hidden;
@@ -20,17 +21,14 @@ export const SectionContainer = styled.section`
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  color: ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => theme.colors.secondary};
-  text-align: center;
+  align-items: center;
 `;
 
 export const Title = styled.h2`
   margin: 0;
   padding: 2em 0 1.5em;
-  color: ${({ theme }) => theme.colors.primary};
-  font-family: ${({ theme }) => theme.familyFont.primary};
   font-size: 24px;
+  text-align: center;
 
   &::selection {
     text-shadow: none;
@@ -55,7 +53,7 @@ export const TitleAbout = styled.h3`
     width: 20px;
     position: absolute;
     margin: -8px -12px;
-    border-color: #c56464;
+    border-color: #3f47cc;
     border-style: solid;
     border-width: 2px 0 0 2px;
   }
@@ -66,7 +64,7 @@ export const TitleAbout = styled.h3`
     width: 20px;
     position: absolute;
     margin: 18px -6px;
-    border-color: #c56464;
+    border-color: #3f47cc;
     border-style: solid;
     border-width: 0 2px 2px 0;
   }
@@ -78,11 +76,6 @@ export const TitleAbout = styled.h3`
   }
 `;
 
-export const TitleContainer = styled.article`
-  width: 100%;
-  height: auto;
-`;
-
 export const NivoContainer = styled.article`
   margin: 0;
   padding: 0;
@@ -91,10 +84,11 @@ export const NivoContainer = styled.article`
   position: absolute;
 `;
 
-export const LineContainer = styled.div`
+export const LineContainer = styled.hr`
   margin: 0;
   padding: 0;
-  height: 2px;
+  width: 100%;
+  border: none;
   border-top: 1px solid
     ${({ borderColor }) => (borderColor ? borderColor : 'rgb(63, 121, 183)')};
   flex: 1 1 100%;
@@ -106,20 +100,10 @@ export const StyledText = styled.p`
   max-width: 680px;
   font-size: ${({ theme }) => theme.sizeFont.m};
 
-  .about-shotout {
-    color: #ff7b7b;
-  }
-
-  .email-pop {
+  .reverse {
     direction: rtl;
     unicode-bidi: bidi-override;
-    color: #ffd779;
-  }
-
-  .email-subject {
-    direction: rtl;
-    unicode-bidi: bidi-override;
-    color: #ffd779;
+    color: #f9c958;
   }
 
   &::selection {
@@ -145,4 +129,11 @@ export const StyledLink = styled.a`
     opacity: 0.7;
     text-decoration: none;
   }
+`;
+
+export const StyledImage = styled.img`
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 6px;
 `;

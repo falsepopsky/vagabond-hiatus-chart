@@ -35,10 +35,7 @@ const Heatmap = ({ database, colors, configHeatmap }) => {
       margin={configHeatmap.margin}
       theme={themeNivo}
       pixelRatio={1}
-      minValue="auto"
-      maxValue="auto"
       tooltip={toolTipHeatmap}
-      forceSquare={false}
       sizeVariation={0.01}
       padding={1}
       colors={colors}
@@ -46,17 +43,11 @@ const Heatmap = ({ database, colors, configHeatmap }) => {
       axisRight={null}
       axisBottom={configHeatmap.axisBottom}
       axisLeft={configHeatmap.axisLeft}
-      enableGridX={false}
       enableGridY={true}
-      cellShape="rect"
       cellOpacity={1}
-      cellBorderWidth={0}
       cellBorderColor="#000"
       enableLabels={false}
       animate={false}
-      isInteractive={true}
-      hoverTarget="rowColumn"
-      cellHoverOpacity={1}
       cellHoverOthersOpacity={0.5}
     />
   );

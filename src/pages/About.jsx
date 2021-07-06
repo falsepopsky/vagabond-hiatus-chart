@@ -1,9 +1,10 @@
-import { AboutSection } from './aboutSC';
 import {
   StyledMain,
   TitleAbout,
   StyledText,
   StyledLink,
+  SectionContainer,
+  StyledImage,
 } from './../components/styled-components/globalUI';
 import Footer from '../components/footer/Footer';
 import VagabondAbout from '../assets/vagabond-about.jpg';
@@ -17,18 +18,16 @@ const About = () => {
   return (
     <>
       <StyledMain>
-        <AboutSection>
-          <img
+        <SectionContainer pad={'20px 3vw'}>
+          <StyledImage
             loading="lazy"
-            className="about-image"
             src={VagabondAbout}
             alt="vagabond"
             width={600}
             height={450}
           />
-        </AboutSection>
-
-        <AboutSection>
+        </SectionContainer>
+        <SectionContainer pad={'20px 3vw'}>
           <TitleAbout>ABOUT</TitleAbout>
 
           <StyledText>
@@ -42,14 +41,13 @@ const About = () => {
             announcement in the home site, so stay stuned, and hope you guys
             like it !
           </StyledText>
-        </AboutSection>
-
-        <AboutSection>
+        </SectionContainer>
+        <SectionContainer pad={'20px 3vw'}>
           <TitleAbout>SPECIAL THANKS</TitleAbout>
 
           <StyledText>
-            <strong className="about-shotout">Kawasaki#3316</strong> for
-            providing the whole{' '}
+            <b className="about-shotout">Kawasaki#3316</b> for providing the
+            whole{' '}
             <StyledLink
               href={DataDrive}
               rel="noopener noreferrer"
@@ -60,8 +58,8 @@ const About = () => {
           </StyledText>
 
           <StyledText>
-            <strong className="about-shotout">rentzhx3</strong> for the
-            inspiration with his project based on{' '}
+            <b className="about-shotout">rentzhx3</b> for the inspiration with
+            his project based on{' '}
             <StyledLink
               href={HiatusGH}
               rel="noopener noreferrer"
@@ -70,14 +68,14 @@ const About = () => {
             </StyledLink>
             .
           </StyledText>
-        </AboutSection>
-        <AboutSection>
+        </SectionContainer>
+        <SectionContainer pad={'20px 3vw'}>
           <TitleAbout>CONTACT</TitleAbout>
           <StyledText>
             For business inquires only at{' '}
-            <b className="email-pop">moc.liamnotorp@ykspopeslaf</b> with the
-            subject <b className="email-subject">ved ssenisub</b>, any other
-            message without the subject will be deleted.
+            <b className="reverse">moc.liamnotorp@ykspopeslaf</b> with the
+            subject <b className="reverse">ved ssenisub</b>, any other message
+            without the subject will be deleted.
           </StyledText>
 
           <StyledText>
@@ -88,7 +86,7 @@ const About = () => {
             </StyledLink>
             .
           </StyledText>
-        </AboutSection>
+        </SectionContainer>
       </StyledMain>
       <Footer />
     </>
