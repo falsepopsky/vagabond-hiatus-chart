@@ -1,4 +1,3 @@
-import React from 'react';
 import { StatsWrapper, TableBox, MusashiBox, TextTable } from './statsSC';
 import MusashiPic from '../../assets/musashi.jpeg';
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
 import Heatmap from './Heatmap';
 import { configHeatmap } from './hiatusHeatmapConfig';
@@ -88,7 +88,7 @@ const HiatusHeatmap = () => {
           <Legend />
         </div>
 
-        {cardTwo === true ? <HiatusLegendChapter /> : <HiatusLegendArc />}
+        {!cardTwo ? <HiatusLegendArc /> : <HiatusLegendChapter />}
       </LegendsContainer>
     </SectionContainer>
   );

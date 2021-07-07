@@ -1,8 +1,6 @@
-import React from 'react';
 import { chaptersPerYearData } from './cpaData';
 import {
   Title,
-  TitleContainer,
   NivoContainer,
   LineContainer,
   SectionContainer,
@@ -14,9 +12,9 @@ const ChaptersTreeMap = () => {
   return (
     <SectionContainer pad={'1.5vh 5vw 5vh'}>
       <LineContainer />
-      <TitleContainer>
-        <Title>CHAPTERS PER ARC</Title>
-      </TitleContainer>
+
+      <Title>CHAPTERS PER ARC</Title>
+
       <div style={{ width: '100%', height: '440px' }}>
         <div style={{ position: 'relative', width: '100%', height: '440px' }}>
           <NivoContainer>

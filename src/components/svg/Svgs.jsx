@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ArrowSVG = () => {
   return (
     <svg
@@ -18,7 +16,7 @@ const ArrowSVG = () => {
 
 const VagabondLogo = () => {
   return (
-    <svg x="0px" y="0px" viewBox="0 0 744 305.1" className="hero-logo">
+    <svg viewBox="0 0 744 305.1" className="hero-logo">
       <path
         stroke="#000000"
         strokeMiterlimit="10"
@@ -696,23 +694,17 @@ const DatabaseSVG = () => {
 
 const Legend = () => {
   return (
-    <svg
-      x="0px"
-      y="0px"
-      viewBox="0 0 398.3 149.1"
-      className="legend-card-one-img">
+    <svg viewBox="0 0 398.3 149.1" className="legend-card-one-img">
       <g>
         <path
           fill="#C7F9CC"
-          d="M269.1,123.8h-25.7c-1.7,0-3.1-1.4-3.1-3.1V94.9c0-1.7,1.4-3.1,3.1-3.1h25.7c1.7,0,3.1,1.4,3.1,3.1v25.7
-		C272.3,122.4,270.9,123.8,269.1,123.8z"
+          d="M269.1,123.8h-25.7c-1.7,0-3.1-1.4-3.1-3.1V94.9c0-1.7,1.4-3.1,3.1-3.1h25.7c1.7,0,3.1,1.4,3.1,3.1v25.7 C272.3,122.4,270.9,123.8,269.1,123.8z"
         />
       </g>
       <g>
         <path
           fill="#C7F9CC"
-          d="M269.1,49.4h-25.7c-1.7,0-3.1-1.4-3.1-3.1V20.5c0-1.7,1.4-3.1,3.1-3.1h25.7c1.7,0,3.1,1.4,3.1,3.1v25.7
-		C272.3,48,270.9,49.4,269.1,49.4z"
+          d="M269.1,49.4h-25.7c-1.7,0-3.1-1.4-3.1-3.1V20.5c0-1.7,1.4-3.1,3.1-3.1h25.7c1.7,0,3.1,1.4,3.1,3.1v25.7 C272.3,48,270.9,49.4,269.1,49.4z"
         />
       </g>
       <line

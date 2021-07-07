@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { StyledMain } from './../components/styled-components/globalUI';
 import HeroSection from '../components/hero/Hero';
 import Heatmap from '../components/heatmap/HiatusHeatmap';

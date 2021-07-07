@@ -2,133 +2,133 @@ import styled, { keyframes } from 'styled-components';
 
 const glitchOne = keyframes`
   0% {
-    clip: rect(132px, auto, 101px, 30px);
+    clip-path: inset(132px 0 101px);
   }
   5% {
-    clip: rect(17px, auto, 94px, 30px);
+    clip-path: inset(17px 0 94px);
   }
   10% {
-    clip: rect(40px, auto, 66px, 30px);
+    clip-path: inset(40px 0 66px);
   }
   15% {
-    clip: rect(87px, auto, 82px, 30px);
+    clip-path: inset(87px 0 82px);
   }
   20% {
-    clip: rect(137px, auto, 61px, 30px);
+    clip-path: inset(137px 0 61px);
   }
   25% {
-    clip: rect(34px, auto, 14px, 30px);
+    clip-path: inset(34px 0 14px);
   }
   30% {
-    clip: rect(133px, auto, 74px, 30px);
+    clip-path: inset(133px 0 74px);
   }
   35% {
-    clip: rect(76px, auto, 107px, 30px);
+    clip-path: inset(76px 0 107px);
   }
   40% {
-    clip: rect(59px, auto, 130px, 30px);
+    clip-path: inset(59px 0 130px);
   }
   45% {
-    clip: rect(29px, auto, 84px, 30px);
+    clip-path: inset(29px 0 84px);
   }
   50% {
-    clip: rect(22px, auto, 67px, 30px);
+    clip-path: inset(22px 0 67px);
   }
   55% {
-    clip: rect(67px, auto, 62px, 30px);
+    clip-path: inset(67px 0 62px);
   }
   60% {
-    clip: rect(10px, auto, 105px, 30px);
+    clip-path: inset(10px 0 105px);
   }
   65% {
-    clip: rect(78px, auto, 115px, 30px);
+    clip-path: inset(78px 0 115px);
   }
   70% {
-    clip: rect(105px, auto, 13px, 30px);
+    clip-path: inset(105px 0 13px);
   }
   75% {
-    clip: rect(15px, auto, 75px, 30px);
+    clip-path: inset(15px 0 75px);
   }
   80% {
-    clip: rect(66px, auto, 39px, 30px);
+    clip-path: inset(66px 0 39px);
   }
   85% {
-    clip: rect(133px, auto, 73px, 30px);
+    clip-path: inset(133px 0 73px);
   }
   90% {
-    clip: rect(36px, auto, 128px, 30px);
+    clip-path: inset(36px 0 128px);
   }
   95% {
-    clip: rect(68px, auto, 103px, 30px);
+    clip-path: inset(68px 0 103px);
   }
   100% {
-    clip: rect(14px, auto, 100px, 30px);
+    clip-path: inset(14px 0 100px);
   }
 `;
 
 const glitchTwo = keyframes`
   0% {
-    clip: rect(129px, auto, 36px, 30px);
+    clip-path: inset(129px 0 36px);
   }
   5% {
-    clip: rect(36px, auto, 4px, 30px);
+    clip-path: inset(36px 0 4px);
   }
   10% {
-    clip: rect(85px, auto, 66px, 30px);
+    clip-path: inset(85px 0 66px);
   }
   15% {
-    clip: rect(91px, auto, 91px, 30px);
+    clip-path: inset(91px 0 91px);
   }
   20% {
-    clip: rect(148px, auto, 138px, 30px);
+    clip-path: inset(148px 0 138px);
   }
   25% {
-    clip: rect(38px, auto, 122px, 30px);
+    clip-path: inset(38px 0 122px);
   }
   30% {
-    clip: rect(69px, auto, 54px, 30px);
+    clip-path: inset(69px 0 54px);
   }
   35% {
-    clip: rect(98px, auto, 71px, 30px);
+    clip-path: inset(98px 0 71px);
   }
   40% {
-    clip: rect(146px, auto, 34px, 30px);
+    clip-path: inset(146px 0 34px);
   }
   45% {
-    clip: rect(134px, auto, 43px, 30px);
+    clip-path: inset(134px 0 43px);
   }
   50% {
-    clip: rect(102px, auto, 80px, 30px);
+    clip-path: inset(102px 0 80px);
   }
   55% {
-    clip: rect(119px, auto, 44px, 30px);
+    clip-path: inset(119px 0 44px);
   }
   60% {
-    clip: rect(106px, auto, 99px, 30px);
+    clip-path: inset(106px 0 99px);
   }
   65% {
-    clip: rect(141px, auto, 74px, 30px);
+    clip-path: inset(141px 0 74px);
   }
   70% {
-    clip: rect(20px, auto, 78px, 30px);
+    clip-path: inset(20px 0 78px);
   }
   75% {
-    clip: rect(133px, auto, 79px, 30px);
+    clip-path: inset(133px 0 79px);
   }
   80% {
-    clip: rect(78px, auto, 52px, 30px);
+    clip-path: inset(78px 0 52px);
   }
   85% {
-    clip: rect(35px, auto, 39px, 30px);
+    clip-path: inset(35px 0 39px);
   }
   90% {
-    clip: rect(67px, auto, 70px, 30px);
+    clip-path: inset(67px 0 70px);
   }
   95% {
-    clip: rect(71px, auto, 103px, 30px);
+    clip-path: inset(71px 0 103px);
   }
   100% {
-    clip: rect(83px, auto, 40px, 30px);
+    clip-path: inset(83px 0 40px);
   }
 `;
 
@@ -156,7 +156,8 @@ export const NoMatchMain = styled.main`
 `;
 
 export const Glitch = styled.h3`
-  padding: 30px;
+  margin: 0;
+  padding: 20px 0;
   position: relative;
   color: #fff;
   font-weight: 700;
@@ -167,9 +168,9 @@ export const Glitch = styled.h3`
   user-select: none;
 
   ::before {
-    padding: 30px;
+    padding: 20px 0;
     color: white;
-    content: attr(data-text);
+    content: '404';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -182,12 +183,12 @@ export const Glitch = styled.h3`
   }
 
   ::after {
-    padding: 30px;
-    color: white;
+    padding: 20px 0;
     content: '404';
     position: absolute;
     width: 100%;
     height: 100%;
+    color: white;
     background: black;
     overflow: hidden;
     top: 0;

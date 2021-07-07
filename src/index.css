@@ -14,7 +14,7 @@
 }
 
 :root {
-  scrollbar-color: #006daa #b9d6f2;
+  scrollbar-color: #d6d6d6 black;
   scrollbar-width: thin;
 }
 
@@ -23,16 +23,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #b9d6f2;
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #006daa;
-  border-radius: 4px;
+  background: #d6d6d6;
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #061a40;
+  background: #e4e4e4;
 }
 
 hr {

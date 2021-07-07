@@ -1,4 +1,3 @@
-import React from 'react';
 import { SectionHeader, SectionSub, TitleHero } from './hero-styled';
 import { ArrowSVG, VagabondLogo } from './../svg/Svgs';
 

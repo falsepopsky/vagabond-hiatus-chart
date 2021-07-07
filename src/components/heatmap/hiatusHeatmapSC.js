@@ -91,9 +91,8 @@ export const TextButton = styled.span`
 export const LegendTitle = styled.h3`
   margin: 0;
   padding: 26px 0;
-  text-align: initial;
   font-size: ${({ theme }) => theme.sizeFont.m};
-  font-family: ${({ theme }) => theme.familyFont.primary};
+  align-self: normal;
 
   &::before {
     content: '';
@@ -146,7 +145,6 @@ export const ArticleTwo = styled.article`
   align-items: ${({ two }) => (two ? 'flex-start' : null)};
 
   @media (min-width: 576px) {
-    height: auto;
     margin: 0;
   }
 `;

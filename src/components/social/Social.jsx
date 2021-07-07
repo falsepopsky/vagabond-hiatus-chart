@@ -1,7 +1,5 @@
-import React from 'react';
 import { TwitterBox } from './SocialSC';
 import {
-  TitleContainer,
   Title,
   LineContainer,
   SectionContainer,
@@ -26,9 +24,7 @@ const SocialMedia = () => {
   return (
     <SectionContainer>
       <LineContainer borderColor="rgb(77, 213, 167, 0.9)" />
-      <TitleContainer>
-        <Title>SOCIAL MEDIA</Title>
-      </TitleContainer>
+      <Title>SOCIAL MEDIA</Title>
       <TwitterBox>
         <Timeline
           dataSource={twitterOptions.info}
