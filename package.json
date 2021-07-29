@@ -11,7 +11,7 @@
     "manga"
   ],
   "author": "Rodrigo Toledo",
-  "license": "GPL-3.0 license",
+  "license": "GPL-3.0",
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "@nivo/core": "^0.72.0",
