@@ -24,8 +24,6 @@ React, @nivo, styled-components, etc.
 
 - [rentzhx3](https://github.com/rentzhx3/). for the inspiration with his project based on Hunter X Hunter.
 
-- spa-github-pages.
-
 #### Folder Structure :open_file_folder:
 
 <div style="margin: 20px 0;">
