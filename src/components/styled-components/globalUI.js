@@ -81,7 +81,7 @@ export const NivoContainer = styled.article`
   padding: 0;
   width: 100%;
   height: 440px;
-  position: absolute;
+  position: ${({ absolute }) => (absolute ? 'absolute' : 'relative')};
 `;
 
 export const LineContainer = styled.hr`

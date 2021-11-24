@@ -15,13 +15,11 @@ const ChaptersTreeMap = () => {
 
       <Title>CHAPTERS PER ARC</Title>
 
-      <div style={{ width: '100%', height: '440px' }}>
-        <div style={{ position: 'relative', width: '100%', height: '440px' }}>
-          <NivoContainer>
-            <Treemap dataCPA={chaptersPerYearData} nivoTheme={themeNivo} />
-          </NivoContainer>
-        </div>
-      </div>
+      <NivoContainer>
+        <NivoContainer absolute>
+          <Treemap dataCPA={chaptersPerYearData} nivoTheme={themeNivo} />
+        </NivoContainer>
+      </NivoContainer>
     </SectionContainer>
   );
 };
