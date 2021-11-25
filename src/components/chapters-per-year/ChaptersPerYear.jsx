@@ -16,17 +16,15 @@ const ChaptersLine = () => {
 
       <Title>CHAPTERS PER YEAR</Title>
 
-      <div style={{ width: '100%', height: '440px' }}>
-        <div style={{ position: 'relative', width: '100%', height: '440px' }}>
-          <NivoContainer>
-            <Line
-              config={configCPY}
-              dataCPY={cpyDatabase}
-              themeNivo={themeNivo}
-            />
-          </NivoContainer>
-        </div>
-      </div>
+      <NivoContainer>
+        <NivoContainer absolute>
+          <Line
+            config={configCPY}
+            dataCPY={cpyDatabase}
+            themeNivo={themeNivo}
+          />
+        </NivoContainer>
+      </NivoContainer>
     </SectionContainer>
   );
 };

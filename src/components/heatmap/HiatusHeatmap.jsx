@@ -69,17 +69,15 @@ const HiatusHeatmap = () => {
         </Navigation>
       </HeatNav>
 
-      <div style={{ width: '100%', height: '440px' }}>
-        <div style={{ position: 'relative', width: '100%', height: '440px' }}>
-          <NivoContainer>
-            <Heatmap
-              database={database}
-              colors={colors}
-              configHeatmap={configHeatmap}
-            />
-          </NivoContainer>
-        </div>
-      </div>
+      <NivoContainer>
+        <NivoContainer absolute>
+          <Heatmap
+            database={database}
+            colors={colors}
+            configHeatmap={configHeatmap}
+          />
+        </NivoContainer>
+      </NivoContainer>
 
       <LegendTitle>LEGEND</LegendTitle>
 
