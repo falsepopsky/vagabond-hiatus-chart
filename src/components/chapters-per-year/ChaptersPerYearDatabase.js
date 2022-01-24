@@ -41,6 +41,7 @@ export const cpyDatabase = [
       { x: 2019, y: 0 },
       { x: 2020, y: 0 },
       { x: 2021, y: 0 },
+      { x: 2022, y: 0 },
     ],
   },
   {
@@ -85,6 +86,7 @@ export const cpyDatabase = [
       { x: 2019, y: 48 },
       { x: 2020, y: 48 },
       { x: 2021, y: 48 },
+      { x: 2022, y: 6 },
     ],
   },
 ];
