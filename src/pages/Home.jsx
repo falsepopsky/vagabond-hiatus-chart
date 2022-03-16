@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { StyledMain } from './../components/styled-components/globalUI';
-import HeroSection from '../components/hero/Hero';
+import NewH from '../components/new-hero/newh';
 import Heatmap from '../components/heatmap/HiatusHeatmap';
 import Loading from '../components/loading/Loading';
 import Stats from '../components/stats/Stats';
@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
       <StyledMain>
-        <HeroSection />
+        <NewH />
         <Stats />
         <Heatmap />
 

@@ -16,7 +16,7 @@ const ArrowSVG = () => {
 
 const VagabondLogo = () => {
   return (
-    <svg viewBox="0 0 744 305.1" className="hero-logo">
+    <svg width={400} height={164} viewBox="0 0 744 305.1" className="hero-logo">
       <path
         stroke="#000000"
         strokeMiterlimit="10"
@@ -842,4 +842,91 @@ const Legend = () => {
   );
 };
 
-export { ArrowSVG, VagabondLogo, Monte, Katana, Shuffle, DatabaseSVG, Legend };
+const Red = () => {
+  return (
+    <svg width="264" height="289" viewBox="0 0 1000 1000">
+      <defs>
+        <radialGradient id="redGradientId" r="100%" cx="25%" cy="125%">
+          <stop offset="0%" stopColor="#000000" />
+          <stop offset="100%" stopColor="#eb253c" />
+        </radialGradient>
+        <clipPath id="shape">
+          <path
+            fill="currentColor"
+            d="M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z"></path>
+        </clipPath>
+      </defs>
+      <g clipPath="url(#shape)">
+        <path
+          fill="url(#redGradientId)"
+          d="M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z"
+        />
+      </g>
+    </svg>
+  );
+};
+
+const Green = () => {
+  return (
+    <svg width="408" height="280" viewBox="0 0 1000 1000">
+      <defs>
+        <linearGradient
+          id="greenGradientId"
+          gradientTransform="rotate(270 0.5 0.5)">
+          <stop offset="0%" stopColor="#000000" />
+          <stop offset="100%" stopColor="#83f387" />
+        </linearGradient>
+        <clipPath id="greenShape">
+          <path
+            fill="currentColor"
+            d="M805,561.5Q623,623,561.5,807.5Q500,992,401,845Q302,698,285,599Q268,500,324.5,440.5Q381,381,440.5,199Q500,17,620,138.5Q740,260,863.5,380Q987,500,805,561.5Z"></path>
+        </clipPath>
+      </defs>
+      <g clipPath="url(#greenShape)">
+        <path
+          fill="url(#greenGradientId)"
+          d="M805,561.5Q623,623,561.5,807.5Q500,992,401,845Q302,698,285,599Q268,500,324.5,440.5Q381,381,440.5,199Q500,17,620,138.5Q740,260,863.5,380Q987,500,805,561.5Z"
+        />
+      </g>
+    </svg>
+  );
+};
+
+const White = () => {
+  return (
+    <svg width="420" height="420" viewBox="0 0 1000 1000">
+      <defs>
+        <linearGradient
+          id="whiteGradientId"
+          gradientTransform="rotate(180 0.5 0.5)">
+          <stop offset="0%" stopColor="#000000" />
+          <stop offset="100%" stopColor="#858e9b" />
+        </linearGradient>
+        <clipPath id="whiteShape">
+          <path
+            fill="currentColor"
+            d="M612,697.5Q272,895,285,522.5Q298,150,625,325Q952,500,612,697.5Z"></path>
+        </clipPath>
+      </defs>
+      <g clipPath="url(#whiteShape)">
+        <path
+          fill="url(#whiteGradientId)"
+          d="M612,697.5Q272,895,285,522.5Q298,150,625,325Q952,500,612,697.5Z"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export {
+  ArrowSVG,
+  VagabondLogo,
+  Monte,
+  Katana,
+  Shuffle,
+  DatabaseSVG,
+  Legend,
+  Red,
+  White,
+  Green,
+};

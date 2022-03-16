@@ -111,7 +111,8 @@ export const SectionSub = styled.section`
 `;
 
 export const TitleHero = styled.h1`
-  font-family: ${({ theme }) => theme.familyFont.hero};
+  font-family: ${({ theme, maintitle }) =>
+    maintitle ? 'Rajdhani, sans-serif' : theme.familyFont.hero};
   font-size: ${({ maintitle, theme }) =>
     maintitle ? theme.sizeFont.l : theme.sizeFont.m};
   margin-top: ${({ maintitle }) => (maintitle ? 'auto' : '1em')};

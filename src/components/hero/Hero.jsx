@@ -5,7 +5,11 @@ const HeroSection = () => {
   return (
     <>
       <SectionHeader>
-        <TitleHero maintitle>Vagabond Hiatus Chart</TitleHero>
+        <TitleHero maintitle>
+          <p>VAGABOND</p>
+          <p>HIATUS</p>
+          <p>CHART</p>
+        </TitleHero>
         <figure className="hero-figure">
           <p className="hero-scroll-down">scroll down</p>
           <ArrowSVG />
