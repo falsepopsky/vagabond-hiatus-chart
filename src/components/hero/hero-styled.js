@@ -1,130 +1,102 @@
-import styled, { keyframes } from 'styled-components';
-import vagabond from '../../assets/vagabond-min.webp';
+import styled, { css } from 'styled-components';
 
-const bounce = keyframes`
-0% {
-  top: 0;
-}
-50% {
-  top: -10px;
-}
-100% {
-  top: 0;
-}`;
-
-export const SectionHeader = styled.section`
+export const HeaderHero = styled.header`
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    url(${vagabond}) no-repeat center center fixed;
-  background-size: cover;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  color: ${({ theme }) => theme.colors.secondary};
+  background: ${({ theme }) => theme.colors.primary};
+`;
+
+export const SectionHero = styled.section`
+  margin: ${({ logo }) => (logo ? '6vh 0 0' : '0')};
+  display: flex;
+  flex-flow: ${({ logo }) => (logo ? 'column nowrap' : 'row nowrap')};
   align-items: center;
-  color: white;
-  letter-spacing: 0.14em;
-  text-align: center;
+`;
+
+export const MiniBox = styled.div`
+  margin: ${({ blob }) => (blob ? '0 3vw 6vh auto' : '0 0 0 3vw')};
+  width: ${({ blob }) => (blob ? '560px' : null)};
+  height: ${({ blob }) => (blob ? '580px' : null)};
   position: relative;
-  font-family: ${({ theme }) => theme.familyFont.primary};
+  overflow: hidden;
 
-  .hero {
-    &-figure {
-      margin-top: auto;
-      pointer-events: none;
-      user-select: none;
-    }
+  .box {
+    position: absolute;
+  }
 
-    &-arrow {
-      fill: #ffffff;
-      position: relative;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      animation: ${bounce} 1s infinite;
-    }
+  .redbox {
+    top: -20px;
+    right: 116px;
+  }
+
+  .whitebox {
+    top: 131px;
+    left: -46px;
+    transform: rotate(208deg);
+  }
+
+  .greenbox {
+    right: -62px;
+    bottom: 28px;
+  }
+
+  @media (max-width: 972px) {
+    display: ${({ blob }) => (blob ? 'none' : null)};
   }
 `;
 
-export const SectionSub = styled.section`
+export const StyledH1 = styled.h1`
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 86px;
+  letter-spacing: 0em;
+  text-align: left;
   margin: 0;
-  padding: 0;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background-color: hsl(352, 79%, 48%);
-  text-align: center;
-  position: relative;
-
-  .hero {
-    &-logo {
-      margin: 50px 0 0 0;
-      width: 50%;
-      height: auto;
-    }
-
-    &-description {
-      font-family: ${({ theme }) => theme.familyFont.primary};
-      font-size: ${({ theme }) => theme.sizeFont.m};
-      letter-spacing: 3px;
-      max-width: 560px;
-      padding-bottom: 24px;
-
-      &::selection {
-        text-shadow: none;
-        color: white;
-      }
-    }
-  }
-
-  span {
-    font-size: 0.6rem;
-    user-select: none;
-    letter-spacing: 3px;
-  }
 
   @media (max-width: 576px) {
-    .hero {
-      &-logo {
-        width: 90%;
-        height: auto;
-      }
-
-      &-description {
-        font-size: 19px;
-        max-width: 320px;
-      }
-    }
-
-    span {
-      font-size: 0.6rem;
-      display: block;
-    }
+    margin: 6vh 0;
+    font-size: ${({ theme }) => theme.sizeFont.l};
+    line-height: 56px;
   }
 `;
 
-export const TitleHero = styled.h1`
-  font-family: ${({ theme }) => theme.familyFont.hero};
-  font-size: ${({ maintitle, theme }) =>
-    maintitle ? theme.sizeFont.l : theme.sizeFont.m};
-  margin-top: ${({ maintitle }) => (maintitle ? 'auto' : '1em')};
-  padding-bottom: ${({ maintitle }) => (maintitle ? '0' : '24px')};
+export const HeroP = styled.p`
+  ${({ story }) => {
+    switch (story) {
+      case 'first':
+        return css`
+          margin: 10px 0 0;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 23px;
+        `;
+      case 'second':
+        return css`
+          margin-top: 8vh;
+          width: 350px;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 31px;
 
-  ::selection {
-    text-shadow: none;
-    color: white;
-    background: ${({ maintitle }) => (maintitle ? 'black' : 'transparent')};
-  }
+          @media (max-width: 576px) {
+            margin: 8vh 0;
+            font-size: ${({ theme }) => theme.sizeFont.m};
+          }
+        `;
+      default:
+        return css`
+          margin: 0;
+        `;
+    }
+  }}
+`;
 
-  @media (min-width: 576px) {
-    font-size: ${({ theme }) => theme.sizeFont.l};
-    padding: 0;
-  }
+export const SpanHero = styled.span`
+  font-size: 12px;
 `;

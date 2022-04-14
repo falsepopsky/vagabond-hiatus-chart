@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { StyledMain } from './../components/styled-components/globalUI';
-import HeroSection from '../components/hero/Hero';
+import Hero from '../components/hero/Hero';
 import Heatmap from '../components/heatmap/HiatusHeatmap';
 import Loading from '../components/loading/Loading';
 import Stats from '../components/stats/Stats';
@@ -18,10 +18,9 @@ const Home = () => {
   return (
     <>
       <StyledMain>
-        <HeroSection />
+        <Hero />
         <Stats />
         <Heatmap />
-
         <Suspense fallback={<Loading />}>
           <ChaptersPerYear />
           <ChaptersPerArc />

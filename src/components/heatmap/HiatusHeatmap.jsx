@@ -23,18 +23,18 @@ import {
 } from '../styled-components/globalUI';
 
 const HiatusHeatmap = () => {
-  const [database, setDatabase] = useState(publicationsDatabase);
+  const [db, setDb] = useState(publicationsDatabase);
   const [colors, setColors] = useState(configHeatmap.colorsPublications);
   const [cardTwo, setCardTwo] = useState(true);
 
   const changeToPubs = () => {
-    setDatabase(publicationsDatabase);
+    setDb(publicationsDatabase);
     setColors(configHeatmap.colorsPublications);
     setCardTwo(true);
   };
 
   const changeToArc = () => {
-    setDatabase(arcsDatabase);
+    setDb(arcsDatabase);
     setColors(configHeatmap.colorsArcs);
     setCardTwo(false);
   };
@@ -72,7 +72,7 @@ const HiatusHeatmap = () => {
       <NivoContainer>
         <NivoContainer absolute>
           <Heatmap
-            database={database}
+            database={db}
             colors={colors}
             configHeatmap={configHeatmap}
           />
