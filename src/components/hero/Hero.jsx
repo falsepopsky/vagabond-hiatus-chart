@@ -1,31 +1,48 @@
-import { SectionHeader, SectionSub, TitleHero } from './hero-styled';
-import { ArrowSVG, VagabondLogo } from './../svg/Svgs';
+import {
+  HeaderHero,
+  SectionHero,
+  SpanHero,
+  MiniBox,
+  StyledH1,
+  HeroP,
+} from './hero-styled';
+import { VagabondLogo, GreenBlob, RedBlob, WhiteBlob } from './../svg/Svgs';
 
 const HeroSection = () => {
   return (
     <>
-      <SectionHeader>
-        <TitleHero maintitle>
-          <p>VAGABOND</p>
-          <p>HIATUS</p>
-          <p>CHART</p>
-        </TitleHero>
-        <figure className="hero-figure">
-          <p className="hero-scroll-down">scroll down</p>
-          <ArrowSVG />
-        </figure>
-      </SectionHeader>
-      <SectionSub>
-        <VagabondLogo />
-        <TitleHero>
-          Takehiko Inoue
-          <span>&#40;井上 雄彦&#41;</span>
-        </TitleHero>
-
-        <p className="hero-description">
-          A simple way to visualize the actual state of Vagabond with charts.
-        </p>
-      </SectionSub>
+      <HeaderHero>
+        <SectionHero logo>
+          <VagabondLogo />
+          <HeroP story={'first'}>
+            Takehiko Inoue <SpanHero>&#40;井上 雄彦&#41;</SpanHero>
+          </HeroP>
+        </SectionHero>
+        <SectionHero>
+          <MiniBox>
+            <StyledH1>
+              <HeroP>VAGABOND</HeroP>
+              <HeroP>HIATUS</HeroP>
+              <HeroP>CHART</HeroP>
+            </StyledH1>
+            <HeroP story={'second'}>
+              A simple way to visualize the actual state of Vagabond with
+              charts.
+            </HeroP>
+          </MiniBox>
+          <MiniBox blob>
+            <div className="box redbox">
+              <RedBlob />
+            </div>
+            <div className="box whitebox">
+              <WhiteBlob />
+            </div>
+            <div className="box greenbox">
+              <GreenBlob />
+            </div>
+          </MiniBox>
+        </SectionHero>
+      </HeaderHero>
     </>
   );
 };

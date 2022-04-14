@@ -1,6 +1,6 @@
 export const themeNivo = {
   background: '#0b0b0b',
-  fontFamily: 'HelveticaNowDisplayRegular',
+  fontFamily: 'Rajdhani',
   textColor: '#d6d6d6',
   fontSize: 12,
   axis: {
