@@ -19,8 +19,8 @@ export const SectionHero = styled.section`
 
 export const MiniBox = styled.div`
   margin: ${({ blob }) => (blob ? '0 3vw 6vh auto' : '0 0 0 3vw')};
-  width: ${({ blob }) => (blob ? '560px' : null)};
-  height: ${({ blob }) => (blob ? '580px' : null)};
+  width: ${({ blob }) => blob && '560px'};
+  height: ${({ blob }) => blob && '580px'};
   position: relative;
   overflow: hidden;
 
@@ -45,7 +45,7 @@ export const MiniBox = styled.div`
   }
 
   @media (max-width: 972px) {
-    display: ${({ blob }) => (blob ? 'none' : null)};
+    display: ${({ blob }) => blob && 'none'};
   }
 `;
 

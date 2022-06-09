@@ -141,8 +141,8 @@ export const ArticleTwo = styled.article`
   flex-flow: ${({ flow }) => (flow ? flow : 'row wrap')};
   width: 400px;
   height: ${({ two }) => (two ? '200px' : 'auto')};
-  justify-content: ${({ two }) => (two ? two : null)};
-  align-items: ${({ two }) => (two ? 'flex-start' : null)};
+  justify-content: ${({ two }) => two && two};
+  align-items: ${({ two }) => two && 'flex-start'};
 
   @media (min-width: 576px) {
     margin: 0;
@@ -162,6 +162,6 @@ export const StyledP = styled.p`
     display: inline-block;
     vertical-align: middle;
     background-color: ${({ backgroundColor }) =>
-      backgroundColor ? backgroundColor : null};
+      backgroundColor && backgroundColor};
   }
 `;
