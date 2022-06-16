@@ -1,0 +1,9 @@
+{
+  "bracketSameLine": true,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "printWidth": 120,
+  "proseWrap": "preserve",
+  "trailingComma": "es5",
+  "useTabs": true
+}
