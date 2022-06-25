@@ -2,11 +2,11 @@ import Link, { LinkProps } from 'next/link';
 import styled from 'styled-components';
 
 interface LinkStyled extends LinkProps {
-  name: string;
+  content: string;
 }
 
 const StyledLink = styled.a`
-  margin: 0 0 0 1em;
+  margin: 0 0 14px;
   max-width: max-content;
   font-weight: 500;
   color: rgb(196, 190, 190);
@@ -24,12 +24,12 @@ const StyledLink = styled.a`
   }
 `;
 
-function NavLink({ href, name }: LinkStyled) {
+function NavLink({ href, content }: LinkStyled) {
   return (
     <Link href={href} passHref>
-      <StyledLink>{name}</StyledLink>
+      <StyledLink>{content}</StyledLink>
     </Link>
   );
 }
 
-export default NavLink;
+export { NavLink, StyledLink };

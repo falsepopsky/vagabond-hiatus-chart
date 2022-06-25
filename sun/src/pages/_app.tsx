@@ -42,10 +42,10 @@ const GlobalStyle = createGlobalStyle`
   }`;
 
 export default function App({ Component, pageProps }: AppProps) {
-	return (
-		<>
-			<GlobalStyle />
-			<Component {...pageProps} />
-		</>
-	);
+  return (
+    <>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </>
+  );
 }

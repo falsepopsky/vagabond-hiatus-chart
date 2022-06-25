@@ -5,5 +5,5 @@
   "printWidth": 120,
   "proseWrap": "preserve",
   "trailingComma": "es5",
-  "useTabs": true
+  "tabWidth": 2
 }

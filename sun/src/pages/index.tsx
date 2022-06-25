@@ -1,12 +1,14 @@
+import Footer from 'component/footer';
+import Head from 'component/head';
+import Hero from 'component/hero';
 import type { NextPage } from 'next';
-import Hero from '../components/hero/index';
-import Head from '../components/head/index';
 
 const Home: NextPage = () => {
   return (
     <>
       <Head />
       <Hero />
+      <Footer />
     </>
   );
 };

@@ -1,5 +1,5 @@
-import { VagabondLogo, GreenBlob, RedBlob, WhiteBlob } from '../svgs/vectors';
-import { Container, SectionHero, HeroP, SpanHero } from './styles';
+import { Container, HeroP, SectionHero, SpanHero } from './styles';
+import { VagabondLogo } from './svg';
 
 const Hero = () => {
   return (

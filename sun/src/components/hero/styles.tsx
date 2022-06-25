@@ -15,7 +15,7 @@ export const Container = styled.header`
   display: flex;
   flex-flow: column nowrap;
   color: #0b0b0b;
-  background: #d6d6d6;
+  background: #f2f2f2;
 `;
 
 export const SectionHero = styled.section<SectionProps>`
