@@ -33,15 +33,16 @@ const Boxf = styled.div<BoxProps>`
   flex-grow: ${({ general }) => (general ? '2' : '1')};
 `;
 
-const Titlef = styled.h3`
-  color: white;
+const Titlef = styled.h4`
+  margin: 1em 0;
+  color: #ffffff;
   font-size: 1.4rem;
   font-weight: 600;
 
   &::selection {
     text-shadow: none;
-    color: #111;
-    background: #d9d9d9;
+    color: #000000;
+    background: #ffffff;
   }
 `;
 
@@ -51,12 +52,6 @@ const Textf = styled.p<TextProps>`
   width: 100%;
   max-width: 100%;
   text-align: ${({ copyright }) => copyright && 'center'};
-
-  &::selection {
-    text-shadow: none;
-    color: black;
-    background: white;
-  }
 `;
 
 export { Containerf, FooterLine, Boxf, Titlef, Textf };

@@ -1,5 +1,5 @@
 const VagabondLogo: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
-  <svg width={400} height={164} viewBox='0 0 744 305.1'>
+  <svg width={500} viewBox='0 0 744 305.1' style={{ margin: '4vh 0' }}>
     <path
       stroke='#000000'
       strokeMiterlimit='10'

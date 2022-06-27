@@ -5,11 +5,15 @@ interface LinkStyled extends LinkProps {
   content: string;
 }
 
-const StyledLink = styled.a`
+interface LinkProp {
+  text?: boolean;
+}
+
+const StyledLink = styled.a<LinkProp>`
   margin: 0 0 14px;
   max-width: max-content;
   font-weight: 500;
-  color: rgb(196, 190, 190);
+  color: ${({ text }) => (text ? 'rgb(1, 241, 227)' : 'rgb(196, 190, 190)')};
   text-decoration: none;
 
   &:hover {
