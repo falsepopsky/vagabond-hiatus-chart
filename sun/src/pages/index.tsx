@@ -1,12 +1,16 @@
+import Head from 'component/head';
+import Hero from 'component/hero';
 import type { NextPage } from 'next';
-import Hero from '../components/hero/index';
-import Head from '../components/head/index';
+import dynamic from 'next/dynamic';
+
+const DynamicFooter = dynamic(() => import('component/footer'));
 
 const Home: NextPage = () => {
   return (
     <>
       <Head />
       <Hero />
+      <DynamicFooter />
     </>
   );
 };

@@ -15,11 +15,10 @@ export const Container = styled.header`
   display: flex;
   flex-flow: column nowrap;
   color: #0b0b0b;
-  background: #d6d6d6;
+  background: #f2f2f2;
 `;
 
 export const SectionHero = styled.section<SectionProps>`
-  margin: ${({ logo }) => (logo ? '6vh 0 0' : '0')};
   display: flex;
   flex-flow: ${({ logo }) => (logo ? 'column nowrap' : 'row nowrap')};
   align-items: center;
@@ -32,7 +31,7 @@ export const HeroP = styled.p<PHeroProps>`
         return css`
           margin: 10px 0 0;
           font-weight: 600;
-          font-size: 18px;
+          font-size: 1.4rem;
           line-height: 23px;
         `;
       case 'second':
@@ -46,7 +45,6 @@ export const HeroP = styled.p<PHeroProps>`
 
           @media (max-width: 576px) {
             margin: 8vh 0;
-            font-size: ${({ theme }) => theme.sizeFont.m};
           }
         `;
       default:

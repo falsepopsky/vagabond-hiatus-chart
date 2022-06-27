@@ -11,6 +11,12 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   }
 
+  ::selection {
+    text-shadow: none;
+    color: #111;
+    background: #d9d9d9;
+  }
+
   ::-webkit-scrollbar {
     width: 4px;
   }
@@ -34,18 +40,17 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+    background-image: linear-gradient(to top,#0b0b0b 0%,#000 100%);
     color: #d6d6d6;
     font-family: 'Rajdhani', sans-serif, system-ui;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden auto;
   }`;
 
 export default function App({ Component, pageProps }: AppProps) {
-	return (
-		<>
-			<GlobalStyle />
-			<Component {...pageProps} />
-		</>
-	);
+  return (
+    <>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </>
+  );
 }
