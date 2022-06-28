@@ -1,7 +1,7 @@
 {
   "name": "vagabond-next",
   "author": "Rodrigo Toledo",
-  "description": "A Vagabond theme for Next.js",
+  "description": "Vagabond website on Next.js",
   "version": "1.0.0",
   "private": true,
   "license": "GPL-3.0",
