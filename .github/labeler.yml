@@ -4,4 +4,6 @@
 documentation:
   - 'docs/**/*'
 enhancement:
-  - '**/src/components/**/*.{jsx,tsx}'
+  - any: ['**/src/components/**/*.tsx', '!**/src/components/**/styles.tsx']
+styles:
+  - '**/src/components/**/styles.{jsx,tsx}'

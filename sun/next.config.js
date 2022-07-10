@@ -10,6 +10,7 @@ const nextConfig = (phase) => {
       compiler: {
         styledComponents: true,
       },
+      swcMinify: true,
     };
   }
 
@@ -18,6 +19,7 @@ const nextConfig = (phase) => {
     compiler: {
       styledComponents: true,
     },
+    swcMinify: true,
   };
 };
 

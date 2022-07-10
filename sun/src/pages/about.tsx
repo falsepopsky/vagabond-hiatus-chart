@@ -1,11 +1,11 @@
-import Contact from 'component/contact';
 import Head from 'component/head';
 import History from 'component/history';
 import { Main, Wrapper } from 'component/layout';
-import Thanks from 'component/thanks';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
-const DynamicFooter = dynamic(() => import('component/footer'));
+
+const Contact = dynamic(() => import('component/contact'));
+const Thanks = dynamic(() => import('component/thanks'));
 
 const About: NextPage = () => {
   return (
@@ -18,7 +18,6 @@ const About: NextPage = () => {
           <Contact />
         </Wrapper>
       </Main>
-      <DynamicFooter />
     </>
   );
 };

@@ -10,7 +10,7 @@ interface TextProps {
 
 const Containerf = styled.footer`
   margin: auto 0 0;
-  padding: 3vw 3vw 0;
+  padding: 3vh 3vw 2vh;
   display: flex;
   flex-flow: row wrap;
   width: 100%;
@@ -47,7 +47,7 @@ const Titlef = styled.h4`
 `;
 
 const Textf = styled.p<TextProps>`
-  margin: 0 0 14px;
+  margin: ${({ copyright }) => (copyright ? '0' : '0 0 0.6em')};
   padding: 0;
   width: 100%;
   max-width: 100%;

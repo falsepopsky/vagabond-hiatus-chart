@@ -1,14 +1,33 @@
-import { Container, HeroP, SectionHero, SpanHero } from './styles';
-import { VagabondLogo } from './svg';
+import { Container, HeaderOne, HeroP, SectionHero, SpanHero, SVGBox, SVGContainer } from './styles';
+import { GreenBlob, RedBlob, VagabondLogo, WhiteBlob } from './svg';
 
 const Hero = () => {
   return (
     <Container>
-      <SectionHero logo>
-        <VagabondLogo />
-        <HeroP story={'first'}>
-          Takehiko Inoue <SpanHero>&#40;井上 雄彦&#41;</SpanHero>
-        </HeroP>
+      <VagabondLogo />
+      <HeroP story={'first'}>
+        Takehiko Inoue <SpanHero>&#40;井上 雄彦&#41;</SpanHero>
+      </HeroP>
+      <SectionHero>
+        <div>
+          <HeaderOne>
+            <HeroP>VAGABOND</HeroP>
+            <HeroP>HIATUS</HeroP>
+            <HeroP>CHART</HeroP>
+          </HeaderOne>
+          <HeroP story={'second'}>A simple way to visualize the actual state of Vagabond with charts.</HeroP>
+        </div>
+        <SVGContainer>
+          <SVGBox top='-6%' left='25%'>
+            <RedBlob />
+          </SVGBox>
+          <SVGBox top='18%' left='-19%'>
+            <WhiteBlob />
+          </SVGBox>
+          <SVGBox top='45%' left='34%'>
+            <GreenBlob />
+          </SVGBox>
+        </SVGContainer>
       </SectionHero>
     </Container>
   );
