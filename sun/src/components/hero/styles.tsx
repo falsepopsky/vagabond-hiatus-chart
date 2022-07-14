@@ -5,7 +5,12 @@ interface SectionProps {
 }
 
 interface PHeroProps {
-  story: string;
+  story?: string;
+}
+
+interface SVGBoxProps {
+  top: string;
+  left: string;
 }
 
 export const Container = styled.header`
@@ -16,12 +21,25 @@ export const Container = styled.header`
   flex-flow: column nowrap;
   color: #0b0b0b;
   background: #f2f2f2;
+  align-items: center;
+
+  .logo {
+    margin: 4em 0;
+    padding: 0 1em;
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+  }
 `;
 
-export const SectionHero = styled.section<SectionProps>`
+export const SectionHero = styled.div<SectionProps>`
+  padding: 0 3vw;
   display: flex;
-  flex-flow: ${({ logo }) => (logo ? 'column nowrap' : 'row nowrap')};
+  flex-flow: row nowrap;
+  width: 100%;
   align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
 `;
 
 export const HeroP = styled.p<PHeroProps>`
@@ -29,23 +47,15 @@ export const HeroP = styled.p<PHeroProps>`
     switch (story) {
       case 'first':
         return css`
-          margin: 10px 0 0;
-          font-weight: 600;
+          margin: 0;
           font-size: 1.4rem;
-          line-height: 23px;
+          font-weight: 400;
         `;
       case 'second':
         return css`
-          margin-top: 8vh;
+          margin-top: 1.6em;
           width: 350px;
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 31px;
-
-          @media (max-width: 576px) {
-            margin: 8vh 0;
-          }
+          font-size: 1.5rem;
         `;
       default:
         return css`
@@ -56,5 +66,30 @@ export const HeroP = styled.p<PHeroProps>`
 `;
 
 export const SpanHero = styled.span`
-  font-size: 12px;
+  font-size: 1rem;
+`;
+
+export const HeaderOne = styled.h1`
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
+
+  @media (min-width: 576px) {
+    font-size: 4.5rem;
+  }
+`;
+
+export const SVGContainer = styled.div`
+  position: relative;
+  width: 500px;
+  height: 580px;
+  overflow: hidden;
+`;
+
+export const SVGBox = styled.div<SVGBoxProps>`
+  position: absolute;
+  top: ${(props) => props.top && props.top};
+  left: ${(props) => props.left && props.left};
 `;

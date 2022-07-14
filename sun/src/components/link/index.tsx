@@ -10,7 +10,7 @@ interface LinkProp {
 }
 
 const StyledLink = styled.a<LinkProp>`
-  margin: 0 0 14px;
+  margin: 0 0 0.6em;
   max-width: max-content;
   font-weight: 500;
   color: ${({ text }) => (text ? 'rgb(1, 241, 227)' : 'rgb(196, 190, 190)')};

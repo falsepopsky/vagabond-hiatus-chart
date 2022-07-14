@@ -10,14 +10,17 @@ const nextConfig = (phase) => {
       compiler: {
         styledComponents: true,
       },
+      swcMinify: true,
+      reactStrictMode: true,
     };
   }
 
   return {
-    basePath: '/vagabond-hiatus-chart',
+    // basePath: '/vagabond-hiatus-chart',
     compiler: {
       styledComponents: true,
     },
+    swcMinify: true,
   };
 };
 
