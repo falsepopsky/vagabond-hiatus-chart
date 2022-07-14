@@ -1,33 +1,37 @@
 import { ApexOptions } from 'apexcharts';
-import Chart from 'react-apexcharts';
-
-const Data = [
-  {
-    name: 'Released',
-    data: [13, 40, 36, 34, 26, 19, 11, 18, 24, 22, 17, 27, 13, 0, 9, 11, 6, 1, 0, 0, 0, 0, 0, 0, 0],
-  },
-  {
-    name: 'Not released',
-    data: [0, 8, 13, 14, 22, 29, 37, 30, 25, 26, 31, 21, 35, 48, 40, 37, 42, 47, 48, 49, 48, 48, 48, 48, 25],
-  },
-];
+import ChartWrapper from '../apexchart';
 
 const LineChart = () => {
-  const MyOptions: ApexOptions = {
+  const myDB: ApexOptions = {
+    series: [
+      {
+        name: 'Released',
+        data: [13, 40, 36, 34, 26, 19, 11, 18, 24, 22, 17, 27, 13, 0, 9, 11, 6, 1, 0, 0, 0, 0, 0, 0, 0],
+      },
+      {
+        name: 'Not released',
+        data: [0, 8, 13, 14, 22, 29, 37, 30, 25, 26, 31, 21, 35, 48, 40, 37, 42, 47, 48, 49, 48, 48, 48, 48, 25],
+      },
+    ],
     dataLabels: {
       enabled: false,
     },
     chart: {
+      type: 'area',
       toolbar: {
         show: false,
       },
       zoom: {
         enabled: false,
       },
+      height: 300,
     },
     stroke: {
       show: true,
       curve: 'smooth',
+    },
+    yaxis: {
+      labels: { style: { colors: '#d9d9d9' } },
     },
     xaxis: {
       type: 'category',
@@ -58,18 +62,18 @@ const LineChart = () => {
         '2021',
         '2022',
       ],
+      labels: { style: { colors: '#d9d9d9' } },
     },
+    colors: ['#1ee979', '#e91e63'],
+    legend: { labels: { colors: ['#ffffff'] } },
     tooltip: {
-      x: {
-        show: true,
-        format: 'dd/MM/yy HH:mm',
-      },
+      theme: 'dark',
     },
   };
 
   return (
-    <div id='chart'>
-      <Chart type={'area'} options={MyOptions} series={Data} height={350} />
+    <div>
+      <ChartWrapper config={myDB} />
     </div>
   );
 };
