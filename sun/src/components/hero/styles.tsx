@@ -71,7 +71,6 @@ export const SpanHero = styled.span`
 
 export const HeaderOne = styled.h1`
   font-size: 3rem;
-  font-style: normal;
   font-weight: 600;
   text-align: left;
   margin: 0;

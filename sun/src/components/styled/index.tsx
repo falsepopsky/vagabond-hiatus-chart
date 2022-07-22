@@ -21,6 +21,31 @@ const ColumnContainer = styled.div`
   flex-flow: column nowrap;
 `;
 
+const RowContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1em;
+`;
+
+const IconContainer = styled.div`
+  display: flex;
+  background: #f0f0f0;
+  border-radius: 6px;
+  padding: 4px;
+`;
+
+export const HeaderTwo = styled.h2`
+  max-width: max-content;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+
+  @media (min-width: 576px) {
+    font-size: 2rem;
+  }
+`;
+
 const TitleAbout = styled.h3`
   margin: 2em 0;
   font-size: 1.7rem;
@@ -64,4 +89,4 @@ const StyledText = styled.p`
   font-size: 26px;
 `;
 
-export { TitleAbout, StyledText, Main, Wrapper, ColumnContainer };
+export { TitleAbout, StyledText, Main, Wrapper, ColumnContainer, IconContainer, RowContainer };

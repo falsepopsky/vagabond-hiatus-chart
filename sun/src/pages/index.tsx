@@ -1,10 +1,10 @@
-import Head from 'component/head';
-import Hero from 'component/hero';
-import { Main } from 'component/layout';
+import Head from '@comp/head';
+import Hero from '@comp/hero';
+import { Main } from '@comp/styled';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
-const Information = dynamic(() => import('component/information'));
+const Information = dynamic(() => import('@comp/information'));
 
 const Home: NextPage = () => {
   return (

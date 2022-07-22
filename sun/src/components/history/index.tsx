@@ -1,4 +1,4 @@
-import { ColumnContainer, StyledText, TitleAbout } from '../layout';
+import { ColumnContainer, StyledText, TitleAbout } from '../styled';
 
 const History = () => (
   <ColumnContainer>

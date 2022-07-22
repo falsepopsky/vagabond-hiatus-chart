@@ -2,15 +2,14 @@ name: Node.js CI
 
 on:
   pull_request:
-    branches: ['main']
-
-defaults:
-  run:
-    working-directory: sun
+    branches: 'main'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sun
     steps:
       - name: Setup repo
         uses: actions/checkout@v3

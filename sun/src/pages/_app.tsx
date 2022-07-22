@@ -1,5 +1,5 @@
-import Footer from 'component/footer';
-import { GlobalStyle } from 'component/layout/globalStyle';
+import Footer from '@comp/footer';
+import { GlobalStyle } from '@comp/styled/globalStyle';
 
 import type { AppProps } from 'next/app';
 

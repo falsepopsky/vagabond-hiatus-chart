@@ -1,11 +1,11 @@
-import Head from 'component/head';
-import History from 'component/history';
-import { Main, Wrapper } from 'component/layout';
+import Head from '@comp/head';
+import History from '@comp/history';
+import { Main, Wrapper } from '@comp/styled';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
-const Contact = dynamic(() => import('component/contact'));
-const Thanks = dynamic(() => import('component/thanks'));
+const Contact = dynamic(() => import('@comp/contact'));
+const Thanks = dynamic(() => import('@comp/thanks'));
 
 const About: NextPage = () => {
   return (

@@ -1,7 +1,7 @@
 {
   "name": "vagabond-next",
   "author": "Rodrigo Toledo",
-  "description": "Vagabond website on Next.js",
+  "description": "Vagabond hiatus chart website on Next.js",
   "version": "1.0.0",
   "private": true,
   "license": "GPL-3.0",
@@ -10,15 +10,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier-format": "prettier --write .",
-    "export": "next export",
-    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "prettier-format": "prettier --write ."
   },
   "keywords": [
     "react",
     "next",
     "apexcharts",
-    "charts",
+    "chart",
     "twitter",
     "vagabond",
     "manga"
@@ -31,13 +29,20 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "@types/node": "^18.0.3",
+    "@types/node": "^18.0.6",
     "@types/react": "^18.0.15",
     "@types/styled-components": "^5.1.25",
-    "eslint": "^8.19.0",
+    "eslint": "^8.20.0",
     "eslint-config-next": "^12.2.2",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falsepopsky/vagabond-hiatus-chart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/falsepopsky/vagabond-hiatus-chart/issues"
   }
 }

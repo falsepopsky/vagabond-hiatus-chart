@@ -1,4 +1,4 @@
-import { NavLink, StyledLink } from 'component/link';
+import { NavLink, StyledLink } from '@comp/link';
 import { Science } from './science';
 import { Boxf, Containerf, FooterLine, Textf, Titlef } from './styles';
 

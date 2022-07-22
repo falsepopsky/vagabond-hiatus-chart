@@ -508,12 +508,9 @@ const RedBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => 
         <stop offset='0%' stopColor='#000000' />
         <stop offset='100%' stopColor='#eb253c' />
       </radialGradient>
-      <clipPath id='shape'>
-        <path fill='currentColor' d='M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z'></path>
-      </clipPath>
     </defs>
-    <g clipPath='url(#shape)'>
-      <path fill='url(#redGradientId)' d='M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z' />
+    <g fill='url(#redGradientId)'>
+      <path d='M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z' />
     </g>
   </svg>
 );
@@ -525,17 +522,9 @@ const GreenBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () =
         <stop offset='0%' stopColor='#000000' />
         <stop offset='100%' stopColor='#83f387' />
       </linearGradient>
-      <clipPath id='greenShape'>
-        <path
-          fill='currentColor'
-          d='M805,561.5Q623,623,561.5,807.5Q500,992,401,845Q302,698,285,599Q268,500,324.5,440.5Q381,381,440.5,199Q500,17,620,138.5Q740,260,863.5,380Q987,500,805,561.5Z'></path>
-      </clipPath>
     </defs>
-    <g clipPath='url(#greenShape)'>
-      <path
-        fill='url(#greenGradientId)'
-        d='M805,561.5Q623,623,561.5,807.5Q500,992,401,845Q302,698,285,599Q268,500,324.5,440.5Q381,381,440.5,199Q500,17,620,138.5Q740,260,863.5,380Q987,500,805,561.5Z'
-      />
+    <g fill='url(#greenGradientId)'>
+      <path d='M805,561.5Q623,623,561.5,807.5Q500,992,401,845Q302,698,285,599Q268,500,324.5,440.5Q381,381,440.5,199Q500,17,620,138.5Q740,260,863.5,380Q987,500,805,561.5Z' />
     </g>
   </svg>
 );
@@ -547,12 +536,9 @@ const WhiteBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () =
         <stop offset='0%' stopColor='#000000' />
         <stop offset='100%' stopColor='#858e9b' />
       </linearGradient>
-      <clipPath id='whiteShape'>
-        <path fill='currentColor' d='M612,697.5Q272,895,285,522.5Q298,150,625,325Q952,500,612,697.5Z'></path>
-      </clipPath>
     </defs>
-    <g clipPath='url(#whiteShape)'>
-      <path fill='url(#whiteGradientId)' d='M612,697.5Q272,895,285,522.5Q298,150,625,325Q952,500,612,697.5Z' />
+    <g fill='url(#whiteGradientId)'>
+      <path d='M612,697.5Q272,895,285,522.5Q298,150,625,325Q952,500,612,697.5Z' />
     </g>
   </svg>
 );

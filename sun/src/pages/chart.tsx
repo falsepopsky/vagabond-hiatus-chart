@@ -1,8 +1,8 @@
-import Head from 'component/head';
+import Head from '@comp/head';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
-const LineChart = dynamic(() => import('component/chaptersperyear'), {
+const LineChart = dynamic(() => import('@comp/heatmap'), {
   ssr: false,
 });
 
