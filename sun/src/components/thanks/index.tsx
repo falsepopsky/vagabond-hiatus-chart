@@ -1,5 +1,5 @@
-import { ColumnContainer, StyledText, TitleAbout } from '../layout';
 import { StyledLink } from '../link';
+import { ColumnContainer, StyledText, TitleAbout } from '../styled';
 
 const Thanks = () => (
   <ColumnContainer>
