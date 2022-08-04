@@ -1,21 +1,25 @@
 import Head from '@comp/head';
 import Hero from '@comp/hero';
-import { Main } from '@comp/styled';
-import type { NextPage } from 'next';
+import { Wave } from '@comp/information/svg';
+import { Main, Wrapper } from '@comp/styled';
 import dynamic from 'next/dynamic';
 
 const Information = dynamic(() => import('@comp/information'));
+const Cpy = dynamic(() => import('@comp/chaptersperyear'), { ssr: false });
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <>
       <Head />
       <Hero />
       <Main>
-        <Information />
+        <Wave />
+        <Wrapper>
+          <Information />
+          <Cpy />
+          <div style={{ height: '400px' }}>JOE</div>
+        </Wrapper>
       </Main>
     </>
   );
-};
-
-export default Home;
+}

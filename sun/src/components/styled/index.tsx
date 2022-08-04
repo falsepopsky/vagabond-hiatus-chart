@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+interface WrapperProps {
+  isAbout?: boolean;
+}
+
+interface ColProps {
+  isHomeSection?: boolean;
+}
+
 const Main = styled.main`
   margin: 0;
   padding: 0;
@@ -8,17 +16,20 @@ const Main = styled.main`
   flex-flow: column nowrap;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<WrapperProps>`
   padding: 0 3vw;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: ${({ isAbout }) => isAbout && 'center'};
+  gap: 2em 0;
 `;
 
-const ColumnContainer = styled.div`
+const ColumnContainer = styled.div<ColProps>`
   display: flex;
   flex-flow: column nowrap;
+  gap: ${({ isHomeSection }) => (isHomeSection ? '2.5em 0' : '2em')};
 `;
 
 const RowContainer = styled.div`
@@ -37,7 +48,7 @@ const IconContainer = styled.div`
 export const HeaderTwo = styled.h2`
   max-width: max-content;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: left;
   margin: 0;
 
@@ -84,7 +95,7 @@ const TitleAbout = styled.h3`
 
 const StyledText = styled.p`
   margin: 0;
-  padding: 0 0 20px;
+  padding: 0;
   max-width: 680px;
   font-size: 26px;
 `;

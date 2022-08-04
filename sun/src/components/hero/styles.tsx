@@ -1,9 +1,5 @@
 import styled, { css } from 'styled-components';
 
-interface SectionProps {
-  logo?: boolean;
-}
-
 interface PHeroProps {
   story?: string;
 }
@@ -32,7 +28,7 @@ export const Container = styled.header`
   }
 `;
 
-export const SectionHero = styled.div<SectionProps>`
+export const SectionHero = styled.div`
   padding: 0 3vw;
   display: flex;
   flex-flow: row nowrap;

@@ -1,18 +1,17 @@
 import Head from '@comp/head';
 import History from '@comp/history';
 import { Main, Wrapper } from '@comp/styled';
-import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
 const Contact = dynamic(() => import('@comp/contact'));
 const Thanks = dynamic(() => import('@comp/thanks'));
 
-const About: NextPage = () => {
+export default function About() {
   return (
     <>
       <Head title='About' description='Everything about the vagabond hiatus chart project.' />
       <Main>
-        <Wrapper>
+        <Wrapper isAbout>
           <History />
           <Thanks />
           <Contact />
@@ -20,6 +19,4 @@ const About: NextPage = () => {
       </Main>
     </>
   );
-};
-
-export default About;
+}

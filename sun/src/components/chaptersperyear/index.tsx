@@ -1,5 +1,7 @@
 import { ApexOptions } from 'apexcharts';
 import ChartWrapper from '../apexchart';
+import { ColumnContainer, HeaderTwo, IconContainer, RowContainer } from '../styled';
+import { ChartSVG } from './svg';
 
 const LineChart = () => {
   const myDB: ApexOptions = {
@@ -24,7 +26,7 @@ const LineChart = () => {
       zoom: {
         enabled: false,
       },
-      height: 300,
+      height: 380,
     },
     stroke: {
       show: true,
@@ -72,9 +74,15 @@ const LineChart = () => {
   };
 
   return (
-    <div>
+    <ColumnContainer isHomeSection>
+      <RowContainer>
+        <IconContainer>
+          <ChartSVG />
+        </IconContainer>
+        <HeaderTwo>Chapters per year</HeaderTwo>
+      </RowContainer>
       <ChartWrapper config={myDB} />
-    </div>
+    </ColumnContainer>
   );
 };
 

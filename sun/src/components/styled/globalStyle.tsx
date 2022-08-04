@@ -38,8 +38,9 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     display: flex;
     flex-flow: column nowrap;
+    width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(to top,#0b0b0b 0%,#000 100%);
+    background: linear-gradient(to top,#0b0b0b 0%,#000 100%);
     color: #d6d6d6;
     font-family: 'Rajdhani', sans-serif, system-ui;
     overflow: hidden auto;
