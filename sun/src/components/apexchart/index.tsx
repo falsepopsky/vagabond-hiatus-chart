@@ -1,31 +1,17 @@
 import ApexCharts, { ApexOptions } from 'apexcharts';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
-interface ChartWrapperProps {
-  config: ApexOptions;
-}
-
-const ReactApexChart = ({ config }: ChartWrapperProps) => {
+const ReactApexChart = ({ config }: { config: ApexOptions }) => {
   // Ref for the chart instance
   const chartRef = useRef<HTMLDivElement>(null);
 
-  // State
-  const [loading, setLoading] = useState(true);
-
-  // Effect
+  // Run effect
   useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
-
-    if (config && loading) {
-      // config props received, now we can render the chart
-      console.log('config props received, setting loading to false');
-      handleLoad();
-    }
-
-    if (config && loading === false) {
-      console.log('new chart');
+    // If config props received and ref isn't null, render the chart
+    // Maybe use undefined instead of null to check if config is received ?
+    // (typeof config && chartRef.current) !== null || undefined
+    if (typeof config && chartRef.current !== null) {
+      console.log('chart render');
       const Chart = new ApexCharts(chartRef.current, config);
       Chart.render();
       return () => {
@@ -33,19 +19,11 @@ const ReactApexChart = ({ config }: ChartWrapperProps) => {
         Chart.destroy();
       };
     }
-  }, [config, loading]);
+  }, [config]);
 
-  console.count('render chart component');
+  console.count('render ReactApexChart component');
 
-  if (!config) {
-    return <div>You need the config file.</div>;
-  }
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  return <div ref={chartRef}></div>;
+  return <div ref={chartRef} />;
 };
 
 export default ReactApexChart;
