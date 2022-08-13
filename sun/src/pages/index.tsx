@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 
 const Information = dynamic(() => import('@comp/information'));
 const Cpy = dynamic(() => import('@comp/chaptersperyear'), { ssr: false });
+const Tree = dynamic(() => import('@comp/treemap'), { ssr: false });
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
         <Wrapper>
           <Information />
           <Cpy />
-          <div style={{ height: '400px' }}>JOE</div>
+          <Tree />
         </Wrapper>
       </Main>
     </>
