@@ -205,7 +205,7 @@ const Treemap = () => {
         <IconContainer>
           <TreeSVG />
         </IconContainer>
-        <HeaderTwo>Chapters per year</HeaderTwo>
+        <HeaderTwo>Chapters per arc</HeaderTwo>
       </RowContainer>
       <ChartWrapper config={myDB} />
     </ColumnContainer>

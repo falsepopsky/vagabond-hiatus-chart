@@ -1,9 +1,53 @@
 import { ApexOptions } from 'apexcharts';
 import ChartWrapper from '../apexchart';
+import { ColumnContainer, HeaderTwo, IconContainer, RowContainer } from '../styled';
+import { HeatSVG } from './svg';
 
 const Heatmap = () => {
   const myDB: ApexOptions = {
     series: [
+      {
+        name: '2022',
+        data: [
+          3, 3, 2, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2,
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        ],
+      },
+      {
+        name: '2021',
+        data: [
+          3, 3, 2, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2,
+          3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0,
+        ],
+      },
+      {
+        name: '2020',
+        data: [
+          3, 3, 2, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+          3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0,
+        ],
+      },
+      {
+        name: '2019',
+        data: [
+          3, 3, 2, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2,
+          3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0,
+        ],
+      },
+      {
+        name: '2018',
+        data: [
+          3, 3, 2, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2,
+          3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0,
+        ],
+      },
+      {
+        name: '2017',
+        data: [
+          3, 3, 2, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2,
+          3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        ],
+      },
       {
         name: '2016',
         data: [
@@ -142,7 +186,7 @@ const Heatmap = () => {
       enabled: false,
     },
     chart: {
-      height: 380,
+      height: 440,
       type: 'heatmap',
       toolbar: {
         show: false,
@@ -304,9 +348,15 @@ const Heatmap = () => {
   };
 
   return (
-    <div>
+    <ColumnContainer isHomeSection>
+      <RowContainer>
+        <IconContainer>
+          <HeatSVG />
+        </IconContainer>
+        <HeaderTwo>Chapters per year</HeaderTwo>
+      </RowContainer>
       <ChartWrapper config={myDB} />
-    </div>
+    </ColumnContainer>
   );
 };
 
