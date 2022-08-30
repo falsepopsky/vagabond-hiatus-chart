@@ -9,7 +9,6 @@ export const FooterMain = styled.footer`
   height: auto;
   color: ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.secondary};
-  font-family: ${({ theme }) => theme.familyFont.primary};
 
   .nav-link {
     margin: 6px 0 0 24px;

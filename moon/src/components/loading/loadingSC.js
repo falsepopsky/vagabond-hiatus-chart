@@ -34,7 +34,6 @@ export const LoadingContainer = styled.section`
 
 export const LoaderTitle = styled.h2`
   margin: 1em 0;
-  font-family: ${({ theme }) => theme.familyFont.primary};
   font-size: x-large;
 
   ::selection {

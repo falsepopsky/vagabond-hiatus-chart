@@ -41,7 +41,7 @@ const HiatusHeatmap = () => {
 
   return (
     <SectionContainer>
-      <LineContainer borderColor="rgb(249, 63, 63)" />
+      <LineContainer borderColor='rgb(249, 63, 63)' />
 
       <Title>HIATUS HEATMAP</Title>
 
@@ -71,18 +71,14 @@ const HiatusHeatmap = () => {
 
       <NivoContainer>
         <NivoContainer absolute>
-          <Heatmap
-            database={db}
-            colors={colors}
-            configHeatmap={configHeatmap}
-          />
+          <Heatmap database={db} colors={colors} configHeatmap={configHeatmap} />
         </NivoContainer>
       </NivoContainer>
 
       <LegendTitle>LEGEND</LegendTitle>
 
       <LegendsContainer>
-        <div className="legend-card-one">
+        <div className='legend-card-one'>
           <Legend />
         </div>
 

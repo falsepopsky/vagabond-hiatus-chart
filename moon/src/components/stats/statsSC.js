@@ -7,7 +7,6 @@ export const StatsWrapper = styled.section`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  font-family: ${({ theme }) => theme.familyFont.primary};
   text-align: center;
   letter-spacing: 0.14em;
   color: ${({ theme }) => theme.colors.primary};

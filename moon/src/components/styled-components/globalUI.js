@@ -7,7 +7,6 @@ export const StyledMain = styled.main`
   flex-flow: column nowrap;
   width: 100%;
   height: auto;
-  font-family: ${({ theme }) => theme.familyFont.primary};
   color: ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.secondary};
   overflow: hidden;
@@ -89,8 +88,7 @@ export const LineContainer = styled.hr`
   padding: 0;
   width: 100%;
   border: none;
-  border-top: 1px solid
-    ${({ borderColor }) => (borderColor ? borderColor : 'rgb(63, 121, 183)')};
+  border-top: 1px solid ${({ borderColor }) => (borderColor ? borderColor : 'rgb(63, 121, 183)')};
   flex: 1 1 100%;
 `;
 

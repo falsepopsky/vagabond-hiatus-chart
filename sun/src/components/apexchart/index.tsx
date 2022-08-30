@@ -1,7 +1,12 @@
 import ApexCharts, { ApexOptions } from 'apexcharts';
 import { useEffect, useRef } from 'react';
 
-const ReactApexChart = ({ config }: { config: ApexOptions }) => {
+interface PropsApex {
+  config: ApexOptions;
+}
+
+const ReactApexChart = (props: PropsApex) => {
+  const { config } = props;
   // Ref for the chart instance
   const chartRef = useRef<HTMLDivElement>(null);
 

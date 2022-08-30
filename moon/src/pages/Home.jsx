@@ -6,12 +6,8 @@ import Loading from '../components/loading/Loading';
 import Stats from '../components/stats/Stats';
 import Footer from '../components/footer/Footer';
 
-const ChaptersPerYear = lazy(() =>
-  import('../components/chapters-per-year/ChaptersPerYear')
-);
-const ChaptersPerArc = lazy(() =>
-  import('../components/chapters-per-arc/ChaptersPerArc')
-);
+const ChaptersPerYear = lazy(() => import('../components/chapters-per-year/ChaptersPerYear'));
+const ChaptersPerArc = lazy(() => import('../components/chapters-per-arc/ChaptersPerArc'));
 const SocialMedia = lazy(() => import('../components/social/Social'));
 
 const Home = () => {

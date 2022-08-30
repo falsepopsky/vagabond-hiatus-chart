@@ -1,5 +1,5 @@
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Router from './pages/index';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { vagabondTheme } from './themes/vagabond';
 
 const GlobalStyle = createGlobalStyle`
@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    font-family: 'Rajdhani', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   }
 `;
 

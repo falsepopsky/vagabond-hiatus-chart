@@ -12,17 +12,13 @@ import {
 const ChaptersLine = () => {
   return (
     <SectionContainer pad={'1.5vh 5vw 5vh'}>
-      <LineContainer borderColor="rgb(249, 160, 63)" />
+      <LineContainer borderColor='rgb(249, 160, 63)' />
 
       <Title>CHAPTERS PER YEAR</Title>
 
       <NivoContainer>
         <NivoContainer absolute>
-          <Line
-            config={configCPY}
-            dataCPY={cpyDatabase}
-            themeNivo={themeNivo}
-          />
+          <Line config={configCPY} dataCPY={cpyDatabase} themeNivo={themeNivo} />
         </NivoContainer>
       </NivoContainer>
     </SectionContainer>
