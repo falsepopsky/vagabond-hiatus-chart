@@ -1,12 +1,7 @@
-import { chaptersPerYearData } from './cpaData';
-import {
-  Title,
-  NivoContainer,
-  LineContainer,
-  SectionContainer,
-} from '../styled-components/globalUI';
-import Treemap from './Treemap';
 import { themeNivo } from '../../themes/nivo';
+import { LineContainer, NivoContainer, SectionContainer, Title } from '../styled/globalUI';
+import { chaptersPerYearData } from './db';
+import Treemap from './Treemap';
 
 const ChaptersTreeMap = () => {
   return (

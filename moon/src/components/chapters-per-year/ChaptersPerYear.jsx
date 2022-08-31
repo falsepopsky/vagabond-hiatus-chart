@@ -1,13 +1,8 @@
-import Line from './Line';
-import { cpyDatabase } from './ChaptersPerYearDatabase';
-import { configCPY } from './cpyNivoConfig';
 import { themeNivo } from '../../themes/nivo';
-import {
-  Title,
-  NivoContainer,
-  LineContainer,
-  SectionContainer,
-} from '../styled-components/globalUI';
+import { LineContainer, NivoContainer, SectionContainer, Title } from '../styled/globalUI';
+import { configCPY } from './cpyNivoConfig';
+import { cpyDatabase } from './db';
+import Line from './Line';
 
 const ChaptersLine = () => {
   return (

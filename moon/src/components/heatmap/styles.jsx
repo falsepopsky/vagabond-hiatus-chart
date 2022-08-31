@@ -90,7 +90,7 @@ export const TextButton = styled.span`
 export const LegendTitle = styled.h3`
   margin: 0;
   padding: 26px 0;
-  font-size: ${({ theme }) => theme.sizeFont.m};
+  font-size: 26px;
   align-self: normal;
 
   &::before {

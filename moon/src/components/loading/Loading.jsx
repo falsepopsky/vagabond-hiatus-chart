@@ -1,4 +1,4 @@
-import { LoadingContainer, LoaderTitle, Spinner } from './loadingSC';
+import { LoaderTitle, LoadingContainer, Spinner } from './styles';
 
 const Loading = () => {
   return (

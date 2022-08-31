@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { FooterMain, FooterLine, FooterSection, FooterTitle, TextFooter } from './footerSC';
-import { StyledLink } from './../styled-components/globalUI';
+import { StyledLink } from './../styled/globalUI';
+import { FooterLine, FooterMain, FooterSection, FooterTitle, TextFooter } from './styles';
 
 const Footer = () => {
   return (

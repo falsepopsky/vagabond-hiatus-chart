@@ -9,8 +9,8 @@ export const StatsWrapper = styled.section`
   justify-content: space-evenly;
   text-align: center;
   letter-spacing: 0.14em;
-  color: ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => theme.colors.secondary};
+  color: #d6d6d6;
+  background-color: #0b0b0b;
 `;
 
 export const TableBox = styled.article`
@@ -62,8 +62,8 @@ export const TextTable = styled.p`
 
   ::selection {
     text-shadow: none;
-    color: ${({ theme }) => theme.colors.secondary};
-    background: ${({ theme }) => theme.colors.primary};
+    color: #0b0b0b;
+    background: #d6d6d6;
   }
 
   @media (min-width: 576px) {

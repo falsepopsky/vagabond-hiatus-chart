@@ -1,26 +1,21 @@
 import { useState } from 'react';
-import { publicationsDatabase, arcsDatabase } from './hiatusHeatmapDatabase';
+import { LineContainer, NivoContainer, SectionContainer, Title } from '../styled/globalUI';
+import { DatabaseSVG, Katana, Legend, Monte, Shuffle } from './../svg/Svgs';
+import { arcsDatabase, publicationsDatabase } from './db';
 import Heatmap from './Heatmap';
 import { configHeatmap } from './hiatusHeatmapConfig';
-import {
-  HeatNav,
-  Navigation,
-  SmallContainer,
-  TitleNav,
-  ButtonSC,
-  TextButton,
-  LegendTitle,
-  LegendsContainer,
-} from './hiatusHeatmapSC';
-import { Katana, Monte, Shuffle, DatabaseSVG, Legend } from './../svg/Svgs';
 import HiatusLegendArc from './HiatusLegendArc';
 import HiatusLegendChapter from './HiatusLegendChapter';
 import {
-  SectionContainer,
-  Title,
-  NivoContainer,
-  LineContainer,
-} from '../styled-components/globalUI';
+  ButtonSC,
+  HeatNav,
+  LegendsContainer,
+  LegendTitle,
+  Navigation,
+  SmallContainer,
+  TextButton,
+  TitleNav,
+} from './styles';
 
 const HiatusHeatmap = () => {
   const [db, setDb] = useState(publicationsDatabase);
@@ -57,11 +52,11 @@ const HiatusHeatmap = () => {
           </SmallContainer>
 
           <SmallContainer>
-            <ButtonSC onClick={changeToPubs}>
+            <ButtonSC disabled={cardTwo} onClick={changeToPubs}>
               <Katana />
               <TextButton>CHAPTERS</TextButton>
             </ButtonSC>
-            <ButtonSC onClick={changeToArc}>
+            <ButtonSC disabled={!cardTwo} onClick={changeToArc}>
               <Monte />
               <TextButton>ARCS</TextButton>
             </ButtonSC>

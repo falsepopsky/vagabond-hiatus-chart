@@ -1,5 +1,5 @@
-import { HeaderHero, SectionHero, SpanHero, MiniBox, StyledH1, HeroP } from './hero-styled';
-import { VagabondLogo, GreenBlob, RedBlob, WhiteBlob } from './../svg/Svgs';
+import { GreenBlob, RedBlob, VagabondLogo, WhiteBlob } from './../svg/Svgs';
+import { HeaderHero, HeroP, MiniBox, SectionHero, SpanHero, StyledH1 } from './styles';
 
 const HeroSection = () => {
   return (

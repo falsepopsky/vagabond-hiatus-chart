@@ -6,8 +6,8 @@ export const HeaderHero = styled.header`
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  color: ${({ theme }) => theme.colors.secondary};
-  background: ${({ theme }) => theme.colors.primary};
+  color: #0b0b0b;
+  background: #d6d6d6;
 `;
 
 export const SectionHero = styled.section`
@@ -60,7 +60,7 @@ export const StyledH1 = styled.h1`
 
   @media (max-width: 576px) {
     margin: 6vh 0;
-    font-size: ${({ theme }) => theme.sizeFont.l};
+    font-size: 48px;
     line-height: 56px;
   }
 `;
@@ -86,7 +86,7 @@ export const HeroP = styled.p`
 
           @media (max-width: 576px) {
             margin: 8vh 0;
-            font-size: ${({ theme }) => theme.sizeFont.m};
+            font-size: 26px;
           }
         `;
       default:

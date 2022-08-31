@@ -1,5 +1,5 @@
-import { StatsWrapper, TableBox, MusashiBox, TextTable } from './statsSC';
 import MusashiPic from '../../assets/musashi.jpeg';
+import { MusashiBox, StatsWrapper, TableBox, TextTable } from './styles';
 
 const Stats = () => {
   return (

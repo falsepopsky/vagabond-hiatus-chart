@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ArticleTwo, StyledP } from './hiatusHeatmapSC';
+import { ArticleTwo, StyledP } from './styles';
 
 const ArcBox = styled.div`
   color: white;

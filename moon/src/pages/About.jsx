@@ -1,13 +1,13 @@
+import VagabondAbout from '../assets/vagabond-about.jpg';
+import Footer from '../components/footer/Footer';
 import {
-  StyledMain,
-  TitleAbout,
-  StyledText,
-  StyledLink,
   SectionContainer,
   StyledImage,
-} from './../components/styled-components/globalUI';
-import Footer from '../components/footer/Footer';
-import VagabondAbout from '../assets/vagabond-about.jpg';
+  StyledLink,
+  StyledMain,
+  StyledText,
+  TitleAbout,
+} from './../components/styled/globalUI';
 
 const DataDrive =
   'https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/';
