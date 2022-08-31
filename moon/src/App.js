@@ -1,9 +1,31 @@
+import { createGlobalStyle } from 'styled-components';
 import Router from './pages/index';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import { vagabondTheme } from './themes/vagabond';
 
 const GlobalStyle = createGlobalStyle`
-  *, ::after, ::before {
+  :root {
+    scrollbar-color: #d6d6d6 black;
+    scrollbar-width: thin;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d6d6d6;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e4e4e4;
+  }
+  *,
+  ::after,
+  ::before {
     box-sizing: border-box;
   }
 
@@ -15,16 +37,17 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    font-family: 'Rajdhani', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   }
 `;
 
 function App() {
   return (
-    <ThemeProvider theme={vagabondTheme}>
+    <>
       <GlobalStyle />
       <Router />
-    </ThemeProvider>
+    </>
   );
 }
 

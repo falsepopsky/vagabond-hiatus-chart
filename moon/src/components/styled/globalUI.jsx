@@ -7,9 +7,8 @@ export const StyledMain = styled.main`
   flex-flow: column nowrap;
   width: 100%;
   height: auto;
-  font-family: ${({ theme }) => theme.familyFont.primary};
-  color: ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => theme.colors.secondary};
+  color: #d6d6d6;
+  background-color: #0b0b0b;
   overflow: hidden;
 `;
 
@@ -32,12 +31,12 @@ export const Title = styled.h2`
 
   &::selection {
     text-shadow: none;
-    color: ${({ theme }) => theme.colors.primary};
+    color: #d6d6d6;
     background: blue;
   }
 
   @media (min-width: 576px) {
-    font-size: ${({ theme }) => theme.sizeFont.l};
+    font-size: 48px;
   }
 `;
 
@@ -71,8 +70,8 @@ export const TitleAbout = styled.h3`
 
   &::selection {
     text-shadow: none;
-    color: ${({ theme }) => theme.colors.secondary};
-    background: ${({ theme }) => theme.colors.primary};
+    color: #0b0b0b;
+    background: #d6d6d6;
   }
 `;
 
@@ -89,8 +88,7 @@ export const LineContainer = styled.hr`
   padding: 0;
   width: 100%;
   border: none;
-  border-top: 1px solid
-    ${({ borderColor }) => (borderColor ? borderColor : 'rgb(63, 121, 183)')};
+  border-top: 1px solid ${({ borderColor }) => (borderColor ? borderColor : 'rgb(63, 121, 183)')};
   flex: 1 1 100%;
 `;
 
@@ -98,7 +96,7 @@ export const StyledText = styled.p`
   margin: 0;
   padding: 0 0 20px;
   max-width: 680px;
-  font-size: ${({ theme }) => theme.sizeFont.m};
+  font-size: 26px;
 
   .reverse {
     direction: rtl;
@@ -108,8 +106,8 @@ export const StyledText = styled.p`
 
   &::selection {
     text-shadow: none;
-    color: ${({ theme }) => theme.colors.secondary};
-    background: ${({ theme }) => theme.colors.primary};
+    color: #0b0b0b;
+    background: #d6d6d6;
   }
 `;
 

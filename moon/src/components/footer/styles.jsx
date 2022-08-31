@@ -7,9 +7,8 @@ export const FooterMain = styled.footer`
   flex-flow: row wrap;
   width: 100%;
   height: auto;
-  color: ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => theme.colors.secondary};
-  font-family: ${({ theme }) => theme.familyFont.primary};
+  color: #d6d6d6;
+  background-color: #0b0b0b;
 
   .nav-link {
     margin: 6px 0 0 24px;

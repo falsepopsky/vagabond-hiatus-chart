@@ -8,7 +8,6 @@ export const HeatNav = styled.div`
   max-height: 60px;
   height: 60px;
   align-self: center;
-  font-family: ${({ theme }) => theme.familyFont.primary};
 `;
 
 export const Navigation = styled.nav`
@@ -91,7 +90,7 @@ export const TextButton = styled.span`
 export const LegendTitle = styled.h3`
   margin: 0;
   padding: 26px 0;
-  font-size: ${({ theme }) => theme.sizeFont.m};
+  font-size: 26px;
   align-self: normal;
 
   &::before {
@@ -113,7 +112,6 @@ export const LegendsContainer = styled.article`
   flex-flow: row wrap;
   justify-content: center;
   align-items: stretch;
-  font-family: ${({ theme }) => theme.familyFont.primary};
 
   .legend-card-one {
     margin: 0;
@@ -161,7 +159,6 @@ export const StyledP = styled.p`
     border-radius: 4px;
     display: inline-block;
     vertical-align: middle;
-    background-color: ${({ backgroundColor }) =>
-      backgroundColor && backgroundColor};
+    background-color: ${({ backgroundColor }) => backgroundColor && backgroundColor};
   }
 `;

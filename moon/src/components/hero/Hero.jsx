@@ -1,12 +1,5 @@
-import {
-  HeaderHero,
-  SectionHero,
-  SpanHero,
-  MiniBox,
-  StyledH1,
-  HeroP,
-} from './hero-styled';
-import { VagabondLogo, GreenBlob, RedBlob, WhiteBlob } from './../svg/Svgs';
+import { GreenBlob, RedBlob, VagabondLogo, WhiteBlob } from './../svg/Svgs';
+import { HeaderHero, HeroP, MiniBox, SectionHero, SpanHero, StyledH1 } from './styles';
 
 const HeroSection = () => {
   return (
@@ -26,18 +19,17 @@ const HeroSection = () => {
               <HeroP>CHART</HeroP>
             </StyledH1>
             <HeroP story={'second'}>
-              A simple way to visualize the actual state of Vagabond with
-              charts.
+              A simple way to visualize the actual state of Vagabond with charts.
             </HeroP>
           </MiniBox>
           <MiniBox blob>
-            <div className="box redbox">
+            <div className='box redbox'>
               <RedBlob />
             </div>
-            <div className="box whitebox">
+            <div className='box whitebox'>
               <WhiteBlob />
             </div>
-            <div className="box greenbox">
+            <div className='box greenbox'>
               <GreenBlob />
             </div>
           </MiniBox>

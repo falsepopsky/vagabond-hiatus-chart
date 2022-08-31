@@ -1,4 +1,4 @@
-import { ArticleTwo, StyledP } from './hiatusHeatmapSC';
+import { ArticleTwo, StyledP } from './styles';
 
 const HiatusLegendChapter = () => {
   return (

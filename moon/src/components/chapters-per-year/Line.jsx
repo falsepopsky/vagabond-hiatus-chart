@@ -17,10 +17,10 @@ const Line = ({ config, dataCPY, themeNivo }) => {
       pointSize={10}
       pointColor={{ from: 'color', modifiers: [] }}
       pointBorderWidth={1}
-      pointBorderColor="#ffffff"
+      pointBorderColor='#ffffff'
       enableArea={true}
       areaOpacity={0.75}
-      enableSlices="x"
+      enableSlices='x'
       enableCrosshair={false}
       legends={config.legends}
       defs={config.defs}

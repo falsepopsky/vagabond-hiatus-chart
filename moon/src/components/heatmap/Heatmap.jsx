@@ -31,7 +31,7 @@ const Heatmap = ({ database, colors, configHeatmap }) => {
     <ResponsiveHeatMapCanvas
       data={database}
       keys={configHeatmap.keysHeatmap}
-      indexBy="year"
+      indexBy='year'
       margin={configHeatmap.margin}
       theme={themeNivo}
       pixelRatio={1}
@@ -45,7 +45,7 @@ const Heatmap = ({ database, colors, configHeatmap }) => {
       axisLeft={configHeatmap.axisLeft}
       enableGridY={true}
       cellOpacity={1}
-      cellBorderColor="#000"
+      cellBorderColor='#000'
       enableLabels={false}
       animate={false}
       cellHoverOthersOpacity={0.5}

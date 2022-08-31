@@ -1,74 +1,59 @@
 import { Link } from 'react-router-dom';
-import {
-  FooterMain,
-  FooterLine,
-  FooterSection,
-  FooterTitle,
-  TextFooter,
-} from './footerSC';
-import { StyledLink } from './../styled-components/globalUI';
+import { StyledLink } from './../styled/globalUI';
+import { FooterLine, FooterMain, FooterSection, FooterTitle, TextFooter } from './styles';
 
 const Footer = () => {
   return (
     <FooterMain>
       <FooterLine />
-      <FooterSection className="section-one">
+      <FooterSection className='section-one'>
         <FooterTitle>GENERAL</FooterTitle>
         <TextFooter>The website of Vagabond Hiatus Chart.</TextFooter>
+        <TextFooter>Some of the images belongs to Takehiko Inoue &amp; Kōdansha.</TextFooter>
         <TextFooter>
-          Some of the images belongs to Takehiko Inoue &amp; Kōdansha.
-        </TextFooter>
-        <TextFooter>
-          For a better experience use firefox and visit the site on desktop
-          mode.
+          For a better experience use firefox and visit the site on desktop mode.
         </TextFooter>
       </FooterSection>
 
-      <FooterSection className="section-two">
+      <FooterSection className='section-two'>
         <FooterTitle>NAVIGATION</FooterTitle>
-        <Link
-          to={process.env.PUBLIC_URL + '/'}
-          className="nav-link"
-          rel="noopener noreferrer">
+        <Link to={process.env.PUBLIC_URL + '/'} className='nav-link' rel='noopener noreferrer'>
           Home
         </Link>
-        <Link
-          to={process.env.PUBLIC_URL + '/about'}
-          className="nav-link"
-          rel="noopener noreferrer">
+        <Link to={process.env.PUBLIC_URL + '/about'} className='nav-link' rel='noopener noreferrer'>
           About
         </Link>
       </FooterSection>
 
-      <FooterSection className="section-three">
+      <FooterSection className='section-three'>
         <FooterTitle>EXTRA LINKS</FooterTitle>
         <StyledLink
-          href="https://itplanning.co.jp/"
-          rel="noopener noreferrer"
-          target="_blank"
+          href='https://itplanning.co.jp/'
+          rel='noopener noreferrer'
+          target='_blank'
           footerMar
           footerLink>
           Takehiko Inoue
         </StyledLink>
         <StyledLink
-          href="https://morning.kodansha.co.jp/"
-          rel="noopener noreferrer"
-          target="_blank"
+          href='https://morning.kodansha.co.jp/'
+          rel='noopener noreferrer'
+          target='_blank'
           footerMar
           footerLink>
           Morning Kodansha
         </StyledLink>
         <StyledLink
-          href="https://www.reddit.com/r/vagabondmanga/"
-          rel="noopener noreferrer"
-          target="_blank"
+          href='https://www.reddit.com/r/vagabondmanga/'
+          rel='noopener noreferrer'
+          target='_blank'
           footerMar
           footerLink>
           Reddit Vagabond
         </StyledLink>
       </FooterSection>
 
-      <FooterSection className="section-four">
+      <FooterSection className='section-four'>
         <TextFooter copyright>Vagabond Hiatus Chart © 2021</TextFooter>
       </FooterSection>
     </FooterMain>

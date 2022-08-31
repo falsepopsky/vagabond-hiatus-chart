@@ -141,7 +141,6 @@ export const NoMatchMain = styled.main`
   background-color: black;
   justify-content: center;
   align-items: center;
-  font-family: ${({ theme }) => theme.familyFont.primary};
 
   .back-home {
     margin: 50px 0 0;

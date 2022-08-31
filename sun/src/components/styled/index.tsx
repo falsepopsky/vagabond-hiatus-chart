@@ -23,13 +23,13 @@ const Wrapper = styled.div<WrapperProps>`
   display: flex;
   flex-direction: column;
   align-items: ${({ isAbout }) => isAbout && 'center'};
-  gap: 2em 0;
+  gap: 4em 0;
 `;
 
 const ColumnContainer = styled.div<ColProps>`
   display: flex;
   flex-flow: column nowrap;
-  gap: ${({ isHomeSection }) => (isHomeSection ? '2.5em 0' : '2em')};
+  gap: ${({ isHomeSection }) => (isHomeSection ? '4em 0' : '2em')};
 `;
 
 const RowContainer = styled.div`
