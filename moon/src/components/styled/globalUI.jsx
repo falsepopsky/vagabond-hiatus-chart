@@ -67,12 +67,6 @@ export const TitleAbout = styled.h3`
     border-style: solid;
     border-width: 0 2px 2px 0;
   }
-
-  &::selection {
-    text-shadow: none;
-    color: #0b0b0b;
-    background: #d6d6d6;
-  }
 `;
 
 export const NivoContainer = styled.article`
@@ -102,12 +96,6 @@ export const StyledText = styled.p`
     direction: rtl;
     unicode-bidi: bidi-override;
     color: #f9c958;
-  }
-
-  &::selection {
-    text-shadow: none;
-    color: #0b0b0b;
-    background: #d6d6d6;
   }
 `;
 

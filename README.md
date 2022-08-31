@@ -12,18 +12,16 @@ A simple way to visualize the actual state of Vagabond by Inoue Takehiko with ch
 
 [Vagabond Hiatus Chart](https://falsepopsky.github.io/vagabond-hiatus-chart/)
 
----
-
 ## :scroll: License
 
 [GPL-3.0 License](https://github.com/falsepopsky/vagabond-hiatus-chart/blob/main/LICENSE)
 
 ## :open_file_folder: Structure
 
-| Codebase     | Description      | Status                      |
-| ------------ | ---------------- | --------------------------- |
-| [moon](moon) | Create React App | :x: `deprecated`            |
-| [sun](sun)   | Next.js          | :white_check_mark: `active` |
+| Codebase     | Description      | Status                    |
+| :----------- | :--------------- | :------------------------ |
+| [moon](moon) | Create React App | :x: deprecated            |
+| [sun](sun)   | Next.js          | :white_check_mark: active |
 
 ## :clap: Special Thanks
 
