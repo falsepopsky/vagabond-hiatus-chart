@@ -6,20 +6,20 @@
 ### 🔧 Setup
 
 ```
-1. npm i
+1. npm ci
 2. npm run start
 ```
 
 ### :pushpin: Built with
 
-```
-React, @nivo, styled-components, etc.
-```
+- CRA
+- @nivo
+- styled-components
+- etc...
 
 #### :open_file_folder: Folder Structure
 
-<div style="margin: 20px 0;">
-
+```
     .
     ├── public
     ├── src
@@ -31,5 +31,4 @@ React, @nivo, styled-components, etc.
     │   ├── index.js
     │   └── index.css
     └── LICENSE
-
-</div>
+```

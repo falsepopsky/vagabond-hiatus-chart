@@ -7,6 +7,12 @@ const GlobalStyle = createGlobalStyle`
     scrollbar-width: thin;
   }
 
+  ::selection {
+    text-shadow: none;
+    color: #0b0b0b;
+    background: #d6d6d6;
+  }
+
   ::-webkit-scrollbar {
     width: 4px;
   }
@@ -23,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb:hover {
     background: #e4e4e4;
   }
+  
   *,
   ::after,
   ::before {

@@ -17,7 +17,7 @@ const Main = styled.main`
 `;
 
 const Wrapper = styled.div<WrapperProps>`
-  padding: 0 3vw;
+  padding: ${({ isAbout }) => (isAbout ? '0 3vw 4vh' : '0 3vw')};
   width: 100%;
   position: relative;
   display: flex;
@@ -58,7 +58,7 @@ export const HeaderTwo = styled.h2`
 `;
 
 const TitleAbout = styled.h3`
-  margin: 2em 0;
+  margin: 2em 0 1em;
   font-size: 1.7rem;
   letter-spacing: 0.126em;
   position: relative;
@@ -93,6 +93,13 @@ const TitleAbout = styled.h3`
   }
 `;
 
+const Description = styled.p`
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+`;
+
 const StyledText = styled.p`
   margin: 0;
   padding: 0;
@@ -100,4 +107,4 @@ const StyledText = styled.p`
   font-size: 26px;
 `;
 
-export { TitleAbout, StyledText, Main, Wrapper, ColumnContainer, IconContainer, RowContainer };
+export { TitleAbout, Description, StyledText, Main, Wrapper, ColumnContainer, IconContainer, RowContainer };

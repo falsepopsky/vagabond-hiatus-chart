@@ -6,6 +6,23 @@ const WrapInfo = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 916px) {
+    .musashi {
+      display: none;
+    }
+  }
+`;
+
+const BoxInfo = styled.div`
+  flex-basis: 400px;
+  gap: 1.5em 0;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media (max-width: 916px) {
+    flex-basis: auto;
+  }
 `;
 
 const BoxBorder = styled.div`
@@ -19,4 +36,4 @@ const TextInfo = styled.p`
   margin: 0;
 `;
 
-export { WrapInfo, TextInfo, BoxBorder };
+export { WrapInfo, TextInfo, BoxBorder, BoxInfo };

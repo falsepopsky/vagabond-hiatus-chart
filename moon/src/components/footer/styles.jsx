@@ -111,10 +111,4 @@ export const TextFooter = styled.p`
   max-width: ${(props) => (props.copyright ? '100%' : '400px;')};
   text-align: ${(props) => (props.copyright ? 'center' : 'left')};
   color: ${(props) => (props.copyright ? 'white' : 'inherit')};
-
-  &::selection {
-    text-shadow: none;
-    color: black;
-    background: white;
-  }
 `;
