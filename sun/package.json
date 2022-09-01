@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier-format": "prettier --cache --write ."
+    "prettier-format": "prettier --cache -w ."
   },
   "keywords": [
     "react",
@@ -22,21 +22,21 @@
     "manga"
   ],
   "dependencies": {
-    "apexcharts": "^3.35.4",
+    "apexcharts": "^3.35.5",
     "next": "^12.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "@types/node": "^18.7.2",
-    "@types/react": "^18.0.17",
+    "@types/node": "^18.7.14",
+    "@types/react": "^18.0.18",
     "@types/styled-components": "^5.1.26",
-    "eslint": "^8.21.0",
+    "eslint": "^8.23.0",
     "eslint-config-next": "^12.2.5",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.2"
   },
   "repository": {
     "type": "git",

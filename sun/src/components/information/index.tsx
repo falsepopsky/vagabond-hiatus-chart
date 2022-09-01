@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ColumnContainer, HeaderTwo, IconContainer, RowContainer } from '../styled';
-import { BoxBorder, TextInfo, WrapInfo } from './styles';
+import { BoxBorder, BoxInfo, TextInfo, WrapInfo } from './styles';
 import { Info } from './svg';
 
 const Information = () => {
@@ -13,12 +13,14 @@ const Information = () => {
         <HeaderTwo>Information</HeaderTwo>
       </RowContainer>
       <WrapInfo>
-        <div style={{ flexBasis: '400px', gap: '1em 0', display: 'flex', flexFlow: 'column nowrap' }}>
+        <BoxInfo>
           <TextInfo>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, illo deleniti facilis optio neque quam minima
-            unde aperiam, eos minus ea quae odit nam quas? Distinctio consequuntur necessitatibus explicabo aliquid.
+            Vagabond &#40;バガボンド&#41; is a Japanese epic martial arts manga series written and illustrated by
+            Takehiko Inoue. It portrays a fictionalized account of the life of Japanese swordsman Musashi Miyamoto,
+            based on Eiji Yoshikawa&apos;s novel Musashi. It has been serialized in Kodansha&apos;s seinen manga
+            magazine Morning since September 1998, with its chapters collected into thirty-seven tankōbon volumes as of
+            July 2014. &#40;wikipedia&#41;
           </TextInfo>
-
           <BoxBorder>
             <TextInfo>Chapters</TextInfo> <TextInfo>323</TextInfo>
           </BoxBorder>
@@ -31,9 +33,9 @@ const Information = () => {
           <BoxBorder>
             <TextInfo>Current status</TextInfo> <TextInfo>Hiatus</TextInfo>
           </BoxBorder>
-        </div>
+        </BoxInfo>
 
-        <div>
+        <div className={'musashi'}>
           <Image src='/musashi.jpeg' alt='Musashi' width={360} height={514} />
         </div>
       </WrapInfo>
