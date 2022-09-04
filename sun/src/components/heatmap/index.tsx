@@ -1,6 +1,5 @@
-import { HeatmapDB } from '@db/index';
-import ChartWrapper from '../apexchart';
 import { ColumnContainer, HeaderTwo, IconContainer, RowContainer } from '../styled';
+import HeatmapChart from './chart';
 import { HeatSVG } from './svg';
 
 const Heatmap = () => {
@@ -12,7 +11,7 @@ const Heatmap = () => {
         </IconContainer>
         <HeaderTwo>Chapters per year</HeaderTwo>
       </RowContainer>
-      <ChartWrapper config={HeatmapDB} />
+      <HeatmapChart />
     </ColumnContainer>
   );
 };

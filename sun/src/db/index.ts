@@ -3,24 +3,17 @@ import { ApexOptions } from 'apexcharts';
 const TreemapDB: ApexOptions = {
   chart: {
     type: 'treemap',
+    background: 'transparent',
+    height: 400,
     toolbar: {
       show: false,
     },
     zoom: {
       enabled: false,
     },
-    height: 400,
-  },
-  dataLabels: {
-    enabled: true,
-    style: {
-      fontFamily: 'inherit',
-      fontWeight: 'bold',
-    },
   },
   legend: {
     show: true,
-    labels: { colors: ['#ffffff'] },
     itemMargin: {
       vertical: 20,
     },
@@ -177,7 +170,7 @@ const TreemapDB: ApexOptions = {
       data: [
         {
           x: 'Year 2014',
-          y: 8,
+          y: 4,
         },
         {
           x: 'Year 2015',
@@ -186,12 +179,9 @@ const TreemapDB: ApexOptions = {
       ],
     },
   ],
-  stroke: {
-    show: true,
-    curve: 'smooth',
-  },
-  tooltip: {
-    theme: 'dark',
+  theme: {
+    mode: 'dark',
+    palette: 'palette7',
   },
 };
 
@@ -210,6 +200,7 @@ const AreaDB: ApexOptions = {
     enabled: false,
   },
   chart: {
+    height: 380,
     type: 'area',
     background: 'transparent',
     toolbar: {
@@ -218,14 +209,6 @@ const AreaDB: ApexOptions = {
     zoom: {
       enabled: false,
     },
-    height: 380,
-  },
-  stroke: {
-    show: true,
-    curve: 'smooth',
-  },
-  yaxis: {
-    labels: { style: { colors: '#d9d9d9' } },
   },
   xaxis: {
     type: 'category',
@@ -256,12 +239,13 @@ const AreaDB: ApexOptions = {
       '2021',
       '2022',
     ],
-    labels: { style: { colors: '#d9d9d9' } },
+    tooltip: {
+      enabled: false,
+    },
   },
   colors: ['#1ee979', '#e91e63'],
-  legend: { labels: { colors: ['#ffffff'] } },
-  tooltip: {
-    theme: 'dark',
+  theme: {
+    mode: 'dark',
   },
 };
 
@@ -500,6 +484,8 @@ const ArcDB: ApexOptions = {
   chart: {
     height: 440,
     type: 'heatmap',
+    background: 'transparent',
+    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont',
     animations: {
       enabled: false,
     },
@@ -509,7 +495,6 @@ const ArcDB: ApexOptions = {
     zoom: {
       enabled: false,
     },
-    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont',
   },
   stroke: {
     curve: 'stepline',
@@ -574,11 +559,6 @@ const ArcDB: ApexOptions = {
     axisBorder: {
       show: false,
     },
-    labels: {
-      style: {
-        colors: '#e2e2e2',
-      },
-    },
     crosshairs: {
       show: false,
     },
@@ -587,11 +567,6 @@ const ArcDB: ApexOptions = {
     },
   },
   yaxis: {
-    labels: {
-      style: {
-        colors: '#e2e2e2',
-      },
-    },
     axisTicks: {
       show: false,
     },
@@ -604,16 +579,12 @@ const ArcDB: ApexOptions = {
   },
   legend: {
     showForZeroSeries: false,
-    labels: { colors: '#ffffff' },
     showForNullSeries: false,
     position: 'bottom',
     markers: {
       offsetX: 0,
       offsetY: 0,
     },
-  },
-  tooltip: {
-    theme: 'dark',
   },
   plotOptions: {
     heatmap: {
@@ -712,6 +683,9 @@ const ArcDB: ApexOptions = {
         type: 'none',
       },
     },
+  },
+  theme: {
+    mode: 'dark',
   },
 };
 
@@ -1025,11 +999,6 @@ const HeatmapDB: ApexOptions = {
     axisBorder: {
       show: false,
     },
-    labels: {
-      style: {
-        colors: '#e2e2e2',
-      },
-    },
     crosshairs: {
       show: false,
     },
@@ -1038,11 +1007,6 @@ const HeatmapDB: ApexOptions = {
     },
   },
   yaxis: {
-    labels: {
-      style: {
-        colors: '#e2e2e2',
-      },
-    },
     axisTicks: {
       show: false,
     },
@@ -1057,14 +1021,10 @@ const HeatmapDB: ApexOptions = {
     showForZeroSeries: false,
     showForNullSeries: false,
     position: 'bottom',
-    labels: { colors: '#ffffff' },
     markers: {
       offsetX: 0,
       offsetY: 0,
     },
-  },
-  tooltip: {
-    theme: 'dark',
   },
   plotOptions: {
     heatmap: {
@@ -1103,6 +1063,9 @@ const HeatmapDB: ApexOptions = {
         type: 'none',
       },
     },
+  },
+  theme: {
+    mode: 'dark',
   },
 };
 
