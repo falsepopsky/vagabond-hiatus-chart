@@ -1,5 +1,4 @@
 import { ColumnContainer, HeaderTwo, IconContainer, RowContainer } from '../styled';
-import HeatmapChart from './chart';
 import { HeatSVG } from './svg';
 
 const Heatmap = () => {
@@ -9,9 +8,8 @@ const Heatmap = () => {
         <IconContainer>
           <HeatSVG />
         </IconContainer>
-        <HeaderTwo>Chapters per year</HeaderTwo>
+        <HeaderTwo>Hiatus Heatmap</HeaderTwo>
       </RowContainer>
-      <HeatmapChart />
     </ColumnContainer>
   );
 };

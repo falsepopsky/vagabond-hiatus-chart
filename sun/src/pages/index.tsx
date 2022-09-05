@@ -5,8 +5,9 @@ import { Main, Wrapper } from '@comp/styled';
 import dynamic from 'next/dynamic';
 
 const Information = dynamic(() => import('@comp/information'));
-const Cpy = dynamic(() => import('@comp/chaptersperyear'), { ssr: false });
-const Tree = dynamic(() => import('@comp/treemap'), { ssr: false });
+const Heatmap = dynamic(() => import('@comp/heatmap'));
+const Cpy = dynamic(() => import('@comp/chaptersperyear'));
+const Tree = dynamic(() => import('@comp/treemap'));
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Wave />
         <Wrapper>
           <Information />
+          <Heatmap />
           <Cpy />
           <Tree />
         </Wrapper>

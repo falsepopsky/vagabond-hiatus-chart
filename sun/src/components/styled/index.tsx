@@ -66,13 +66,6 @@ const TitleAbout = styled.h3`
   max-width: max-content;
 `;
 
-const Description = styled.p`
-  margin: 0;
-  padding: 0;
-  font-size: 1.2rem;
-  font-weight: 500;
-`;
-
 const StyledText = styled.p`
   margin: 0;
   padding: 0;
@@ -80,4 +73,4 @@ const StyledText = styled.p`
   font-weight: 300;
 `;
 
-export { TitleAbout, Description, StyledText, Main, Wrapper, ColumnContainer, IconContainer, RowContainer };
+export { TitleAbout, StyledText, Main, Wrapper, ColumnContainer, IconContainer, RowContainer };

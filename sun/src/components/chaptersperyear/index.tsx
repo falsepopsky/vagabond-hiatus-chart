@@ -1,7 +1,9 @@
 import { AreaDB } from '@db/index';
-import ChartWrapper from '../apexchart';
-import { ColumnContainer, Description, HeaderTwo, IconContainer, RowContainer } from '../styled';
+import dynamic from 'next/dynamic';
+import { ColumnContainer, HeaderTwo, IconContainer, RowContainer, StyledText } from '../styled';
 import { ChartSVG } from './svg';
+
+const ChartWrapper = dynamic(() => import('../apexchart'), { ssr: false });
 
 const LineChart = () => {
   return (
@@ -12,10 +14,10 @@ const LineChart = () => {
         </IconContainer>
         <HeaderTwo>Chapters per year</HeaderTwo>
       </RowContainer>
-      <Description>
-        In this section you can see the published chapters released by year also how many where missing because of the
-        hiatus. Remember you can toggle the options from the bottom of the chart.
-      </Description>
+      <StyledText>
+        In the following chart you can see the published and hiatus chapters by year. Toggle the options at the bottom
+        of the chart for invidual visualization.
+      </StyledText>
       <ChartWrapper config={AreaDB} />
     </ColumnContainer>
   );

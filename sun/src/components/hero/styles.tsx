@@ -50,7 +50,7 @@ export const HeroP = styled.p<PHeroProps>`
       case 'second':
         return css`
           margin-top: 1.6em;
-          width: 350px;
+          max-width: 350px;
           font-size: 1.5rem;
           font-weight: 400;
         `;
@@ -78,10 +78,15 @@ export const HeaderOne = styled.h1`
 `;
 
 export const SVGContainer = styled.div`
-  position: relative;
-  width: 500px;
-  height: 580px;
-  overflow: hidden;
+  display: none;
+
+  @media (min-width: 930px) {
+    position: relative;
+    width: 500px;
+    height: 580px;
+    overflow: hidden;
+    display: initial;
+  }
 `;
 
 export const SVGBox = styled.div<SVGBoxProps>`
