@@ -1,5 +1,6 @@
 const VagabondLogo: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
   <svg width={500} viewBox='0 0 744 305.1' className='logo'>
+    <title>Vagabond logo written in Japanese</title>
     <path
       stroke='#000000'
       strokeMiterlimit='10'
@@ -502,7 +503,7 @@ const VagabondLogo: React.FunctionComponent<React.SVGAttributes<SVGElement>> = (
 );
 
 const RedBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
-  <svg width='264' height='289' viewBox='0 0 1000 1000'>
+  <svg width='264' height='289' viewBox='0 0 1000 1000' aria-hidden='true'>
     <defs>
       <radialGradient id='redGradientId' r='100%' cx='25%' cy='125%'>
         <stop offset='0%' stopColor='#000000' />
@@ -516,7 +517,7 @@ const RedBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => 
 );
 
 const GreenBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
-  <svg width='408' height='280' viewBox='0 0 1000 1000'>
+  <svg width='408' height='280' viewBox='0 0 1000 1000' aria-hidden='true'>
     <defs>
       <linearGradient id='greenGradientId' gradientTransform='rotate(270 0.5 0.5)'>
         <stop offset='0%' stopColor='#000000' />
@@ -530,7 +531,7 @@ const GreenBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () =
 );
 
 const WhiteBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
-  <svg width='420' height='420' viewBox='0 0 1000 1000' transform='rotate(208)'>
+  <svg width='420' height='420' viewBox='0 0 1000 1000' transform='rotate(208)' aria-hidden='true'>
     <defs>
       <linearGradient id='whiteGradientId' gradientTransform='rotate(180 0.5 0.5)'>
         <stop offset='0%' stopColor='#000000' />

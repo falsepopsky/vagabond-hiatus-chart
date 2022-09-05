@@ -485,7 +485,6 @@ const ArcDB: ApexOptions = {
     height: 440,
     type: 'heatmap',
     background: 'transparent',
-    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont',
     animations: {
       enabled: false,
     },
@@ -934,7 +933,6 @@ const HeatmapDB: ApexOptions = {
     zoom: {
       enabled: false,
     },
-    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont',
   },
   stroke: {
     curve: 'stepline',

@@ -37,7 +37,7 @@ const Titlef = styled.h4`
   margin: 1em 0;
   color: #ffffff;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 400;
 
   &::selection {
     text-shadow: none;
@@ -51,6 +51,8 @@ const Textf = styled.p<TextProps>`
   padding: 0;
   width: 100%;
   max-width: 100%;
+  font-weight: 300;
+  font-size: 0.9rem;
   text-align: ${({ copyright }) => copyright && 'center'};
 `;
 

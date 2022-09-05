@@ -42,6 +42,6 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     background: linear-gradient(to top,#0b0b0b 0%,#000 100%);
     color: #d6d6d6;
-    font-family: 'Rajdhani', sans-serif, system-ui;
+    font-family: 'IBM Plex Sans', sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
     overflow: hidden auto;
   }`;

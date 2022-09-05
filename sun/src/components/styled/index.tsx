@@ -22,7 +22,6 @@ const Wrapper = styled.div<WrapperProps>`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: ${({ isAbout }) => isAbout && 'center'};
   gap: 4em 0;
 `;
 
@@ -48,7 +47,7 @@ const IconContainer = styled.div`
 export const HeaderTwo = styled.h2`
   max-width: max-content;
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
   text-align: left;
   margin: 0;
 
@@ -59,38 +58,12 @@ export const HeaderTwo = styled.h2`
 
 const TitleAbout = styled.h3`
   margin: 2em 0 1em;
-  font-size: 1.7rem;
+  color: #141414;
+  background: #a4fff4;
   letter-spacing: 0.126em;
-  position: relative;
-  align-self: center;
-
-  &::before,
-  ::after {
-    content: '';
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    border-color: #3f47cc;
-    border-style: solid;
-  }
-
-  &::before {
-    left: -20px;
-    top: -13px;
-    border-width: 2px 0 0 2px;
-  }
-
-  &::after {
-    right: -14px;
-    bottom: -10px;
-    border-width: 0 2px 2px 0;
-  }
-
-  &::selection {
-    text-shadow: none;
-    color: #d6d6d6;
-    background: blue;
-  }
+  font-size: 1.7rem;
+  font-weight: 500;
+  max-width: max-content;
 `;
 
 const Description = styled.p`
@@ -103,8 +76,8 @@ const Description = styled.p`
 const StyledText = styled.p`
   margin: 0;
   padding: 0;
-  max-width: 680px;
-  font-size: 26px;
+  font-size: 1.2rem;
+  font-weight: 300;
 `;
 
 export { TitleAbout, Description, StyledText, Main, Wrapper, ColumnContainer, IconContainer, RowContainer };

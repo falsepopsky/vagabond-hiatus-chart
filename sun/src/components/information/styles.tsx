@@ -34,6 +34,7 @@ const BoxBorder = styled.div`
 
 const TextInfo = styled.p`
   margin: 0;
+  font-weight: 300;
 `;
 
 export { WrapInfo, TextInfo, BoxBorder, BoxInfo };

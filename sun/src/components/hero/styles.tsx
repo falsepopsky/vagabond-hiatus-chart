@@ -52,6 +52,7 @@ export const HeroP = styled.p<PHeroProps>`
           margin-top: 1.6em;
           width: 350px;
           font-size: 1.5rem;
+          font-weight: 400;
         `;
       default:
         return css`
@@ -67,7 +68,7 @@ export const SpanHero = styled.span`
 
 export const HeaderOne = styled.h1`
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
   text-align: left;
   margin: 0;
 
