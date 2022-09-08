@@ -12,17 +12,17 @@ const Containerf = styled.footer`
   margin: auto 0 0;
   padding: 3vh 3vw 2vh;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   width: 100%;
   height: auto;
+  gap: 1.5em 0;
 
-  @media (max-width: 750px) {
-    flex-flow: column nowrap;
+  @media (min-width: 750px) {
+    flex-flow: row wrap;
   }
 `;
 
 const FooterLine = styled.div`
-  padding: 0 0 20px 0;
   border-top: 1px solid rgb(240, 240, 243, 0.9);
   flex: 1 1 100%;
 `;
@@ -48,7 +48,6 @@ const Titlef = styled.h4`
 
 const Textf = styled.p<TextProps>`
   margin: ${({ copyright }) => (copyright ? '0' : '0 0 0.6em')};
-  padding: 0;
   width: 100%;
   max-width: 100%;
   font-weight: 300;

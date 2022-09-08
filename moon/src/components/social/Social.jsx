@@ -20,16 +20,14 @@ const twitterOptions = {
   },
 };
 
-const SocialMedia = () => {
-  return (
-    <SectionContainer>
-      <LineContainer borderColor='rgb(77, 213, 167, 0.9)' />
-      <Title>SOCIAL MEDIA</Title>
-      <TwitterBox>
-        <Timeline dataSource={twitterOptions.info} options={twitterOptions.styles} />
-      </TwitterBox>
-    </SectionContainer>
-  );
-};
+const SocialMedia = () => (
+  <SectionContainer>
+    <LineContainer borderColor='rgb(77, 213, 167, 0.9)' />
+    <Title>SOCIAL MEDIA</Title>
+    <TwitterBox>
+      <Timeline dataSource={twitterOptions.info} options={twitterOptions.styles} />
+    </TwitterBox>
+  </SectionContainer>
+);
 
 export default SocialMedia;

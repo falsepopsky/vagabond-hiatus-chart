@@ -1,6 +1,5 @@
-import { themeNivo } from '../../themes/nivo';
 import { LineContainer, NivoContainer, SectionContainer, Title } from '../styled/globalUI';
-import { chaptersPerYearData } from './db';
+import { chaptersPerArc } from './db';
 import Treemap from './Treemap';
 
 const ChaptersTreeMap = () => {
@@ -12,7 +11,7 @@ const ChaptersTreeMap = () => {
 
       <NivoContainer>
         <NivoContainer absolute>
-          <Treemap dataCPA={chaptersPerYearData} nivoTheme={themeNivo} />
+          <Treemap dataCPA={chaptersPerArc} />
         </NivoContainer>
       </NivoContainer>
     </SectionContainer>

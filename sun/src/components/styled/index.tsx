@@ -9,8 +9,6 @@ interface ColProps {
 }
 
 const Main = styled.main`
-  margin: 0;
-  padding: 0;
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -33,7 +31,8 @@ const ColumnContainer = styled.div<ColProps>`
 
 const RowContainer = styled.div`
   display: flex;
-  align-items: center;
+  flex-flow: row wrap;
+  align-items: stretch;
   gap: 1em;
 `;
 
@@ -49,7 +48,6 @@ export const HeaderTwo = styled.h2`
   font-size: 1.8rem;
   font-weight: 400;
   text-align: left;
-  margin: 0;
 
   @media (min-width: 576px) {
     font-size: 2rem;
@@ -61,15 +59,12 @@ const TitleAbout = styled.h3`
   color: #141414;
   background: #a4fff4;
   letter-spacing: 0.126em;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 500;
   max-width: max-content;
 `;
 
 const StyledText = styled.p`
-  margin: 0;
-  padding: 0;
-  font-size: 1.2rem;
   font-weight: 300;
 `;
 

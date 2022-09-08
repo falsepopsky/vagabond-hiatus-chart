@@ -13,6 +13,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   *, ::after, ::before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   }
 
@@ -34,8 +36,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-flow: column nowrap;
     width: 100%;

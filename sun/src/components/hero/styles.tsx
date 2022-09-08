@@ -10,8 +10,6 @@ interface SVGBoxProps {
 }
 
 export const Container = styled.header`
-  margin: 0;
-  padding: 0;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -43,7 +41,6 @@ export const HeroP = styled.p<PHeroProps>`
     switch (story) {
       case 'first':
         return css`
-          margin: 0;
           font-size: 1.4rem;
           font-weight: 400;
         `;
@@ -70,7 +67,6 @@ export const HeaderOne = styled.h1`
   font-size: 3rem;
   font-weight: 500;
   text-align: left;
-  margin: 0;
 
   @media (min-width: 576px) {
     font-size: 4.5rem;
