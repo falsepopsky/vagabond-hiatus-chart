@@ -10,8 +10,6 @@ interface SVGBoxProps {
 }
 
 export const Container = styled.header`
-  margin: 0;
-  padding: 0;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -43,15 +41,15 @@ export const HeroP = styled.p<PHeroProps>`
     switch (story) {
       case 'first':
         return css`
-          margin: 0;
           font-size: 1.4rem;
           font-weight: 400;
         `;
       case 'second':
         return css`
           margin-top: 1.6em;
-          width: 350px;
+          max-width: 350px;
           font-size: 1.5rem;
+          font-weight: 400;
         `;
       default:
         return css`
@@ -67,9 +65,8 @@ export const SpanHero = styled.span`
 
 export const HeaderOne = styled.h1`
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
   text-align: left;
-  margin: 0;
 
   @media (min-width: 576px) {
     font-size: 4.5rem;
@@ -77,10 +74,15 @@ export const HeaderOne = styled.h1`
 `;
 
 export const SVGContainer = styled.div`
-  position: relative;
-  width: 500px;
-  height: 580px;
-  overflow: hidden;
+  display: none;
+
+  @media (min-width: 930px) {
+    position: relative;
+    width: 500px;
+    height: 580px;
+    overflow: hidden;
+    display: initial;
+  }
 `;
 
 export const SVGBox = styled.div<SVGBoxProps>`

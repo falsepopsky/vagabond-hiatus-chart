@@ -1,4 +1,4 @@
-export const chaptersPerYearData = {
+export const chaptersPerArc = {
   name: 'Chapters per Arc',
   children: [
     {

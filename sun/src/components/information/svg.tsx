@@ -7,7 +7,7 @@ export const Wave: React.FunctionComponent<React.SVGAttributes<SVGElement>> = ()
       height='200'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      version='1.1'>
+      aria-hidden='true'>
       <path
         d='M0 120L21.5 122.2C43 124.3 86 128.7 128.8 126C171.7 123.3 214.3 113.7 257.2 107.8C300 102 343 100 385.8 107.2C428.7 114.3 471.3 130.7 514.2 130C557 129.3 600 111.7 642.8 106.5C685.7 101.3 728.3 108.7 771.2 118.7C814 128.7 857 141.3 878.5 147.7L900 154L900 0L878.5 0C857 0 814 0 771.2 0C728.3 0 685.7 0 642.8 0C600 0 557 0 514.2 0C471.3 0 428.7 0 385.8 0C343 0 300 0 257.2 0C214.3 0 171.7 0 128.8 0C86 0 43 0 21.5 0L0 0Z'
         fill='#0b0b0b'></path>
@@ -25,7 +25,7 @@ export const Wave: React.FunctionComponent<React.SVGAttributes<SVGElement>> = ()
 );
 
 export const Info: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
-  <svg id='icon' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>
+  <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' aria-hidden='true'>
     <defs>
       <linearGradient id='deepBlue' gradientTransform='rotate(45 0.5 0.5)'>
         <stop offset='0%' stopColor='#6a11cb' />
@@ -36,7 +36,6 @@ export const Info: React.FunctionComponent<React.SVGAttributes<SVGElement>> = ()
       <polygon points='17 22 17 14 13 14 13 16 15 16 15 22 12 22 12 24 20 24 20 22 17 22' />
       <path d='M16,8a1.5,1.5,0,1,0,1.5,1.5A1.5,1.5,0,0,0,16,8Z' />
       <path d='M16,30A14,14,0,1,1,30,16,14,14,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12,12,0,0,0,16,4Z' />
-      <rect fill='none' width='32' height='32' />
     </g>
   </svg>
 );

@@ -16,17 +16,13 @@ const ReactApexChart = (props: PropsApex) => {
     // Maybe use undefined instead of null to check if config is received ?
     // (typeof config && chartRef.current) !== null || undefined
     if (typeof config && chartRef.current !== null) {
-      console.log('chart render');
       const Chart = new ApexCharts(chartRef.current, config);
       Chart.render();
       return () => {
-        console.log('chart destroyed');
         Chart.destroy();
       };
     }
   }, [config]);
-
-  console.count('render ReactApexChart component');
 
   return <div ref={chartRef} />;
 };

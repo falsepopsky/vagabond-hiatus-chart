@@ -2,5 +2,13 @@
   "extends": ["next", "next/core-web-vitals", "eslint:recommended", "prettier"],
   "globals": {
     "React": "readonly"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
 }

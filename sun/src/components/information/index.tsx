@@ -22,7 +22,7 @@ const Information = () => {
             July 2014. &#40;wikipedia&#41;
           </TextInfo>
           <BoxBorder>
-            <TextInfo>Chapters</TextInfo> <TextInfo>323</TextInfo>
+            <TextInfo>Chapters</TextInfo> <TextInfo>327</TextInfo>
           </BoxBorder>
           <BoxBorder>
             <TextInfo>Tankobōn</TextInfo> <TextInfo>37</TextInfo>

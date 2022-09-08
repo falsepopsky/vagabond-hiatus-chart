@@ -63,13 +63,18 @@ export const ButtonSC = styled.button`
   cursor: pointer;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   &:active,
   :focus {
     outline: none;
     border: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
   }
 
   @media (min-width: 720px) {

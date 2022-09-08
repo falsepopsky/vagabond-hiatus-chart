@@ -15,7 +15,7 @@ const HiatusLegendChapter = () => {
       </div>
       <div>
         <StyledP color={'#f95d5a'} backgroundColor={'#f95d5a'}>
-          Doesn’t appear in Morning Issue
+          Doesn't appear in Morning Issue
         </StyledP>
       </div>
     </ArticleTwo>

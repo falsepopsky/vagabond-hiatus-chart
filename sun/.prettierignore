@@ -1,5 +1,5 @@
 node_modules
 .next
-package*.json
+*.json
 public
 *.md

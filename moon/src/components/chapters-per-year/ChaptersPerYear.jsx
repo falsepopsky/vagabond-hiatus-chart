@@ -1,8 +1,6 @@
-import { themeNivo } from '../../themes/nivo';
 import { LineContainer, NivoContainer, SectionContainer, Title } from '../styled/globalUI';
-import { configCPY } from './cpyNivoConfig';
 import { cpyDatabase } from './db';
-import Line from './Line';
+import { Line } from './Line';
 
 const ChaptersLine = () => {
   return (
@@ -13,7 +11,7 @@ const ChaptersLine = () => {
 
       <NivoContainer>
         <NivoContainer absolute>
-          <Line config={configCPY} dataCPY={cpyDatabase} themeNivo={themeNivo} />
+          <Line dataCPY={cpyDatabase} />
         </NivoContainer>
       </NivoContainer>
     </SectionContainer>

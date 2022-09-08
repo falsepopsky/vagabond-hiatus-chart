@@ -41,15 +41,11 @@ const LoaderTitle = styled.h2`
   }
 `;
 
-const Loading = () => {
-  return (
-    <>
-      <LoadingContainer>
-        <Spinner />
-        <LoaderTitle>Loading...</LoaderTitle>
-      </LoadingContainer>
-    </>
-  );
-};
+const Loading = () => (
+  <LoadingContainer>
+    <Spinner />
+    <LoaderTitle>Loading...</LoaderTitle>
+  </LoadingContainer>
+);
 
 export default Loading;
