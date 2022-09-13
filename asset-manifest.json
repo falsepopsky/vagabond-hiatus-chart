@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/vagabond-hiatus-chart/static/css/main.bce8331a.css",
-    "main.js": "/vagabond-hiatus-chart/static/js/main.c4f1665a.js",
-    "static/js/16.e6a1a253.chunk.js": "/vagabond-hiatus-chart/static/js/16.e6a1a253.chunk.js",
+    "main.js": "/vagabond-hiatus-chart/static/js/main.73079475.js",
+    "static/js/261.eb9b703d.chunk.js": "/vagabond-hiatus-chart/static/js/261.eb9b703d.chunk.js",
     "static/js/533.62b78670.chunk.js": "/vagabond-hiatus-chart/static/js/533.62b78670.chunk.js",
     "static/js/790.7dd79f7f.chunk.js": "/vagabond-hiatus-chart/static/js/790.7dd79f7f.chunk.js",
-    "static/js/737.f7eaec2f.chunk.js": "/vagabond-hiatus-chart/static/js/737.f7eaec2f.chunk.js",
-    "static/js/5.f4b0c1b0.chunk.js": "/vagabond-hiatus-chart/static/js/5.f4b0c1b0.chunk.js",
+    "static/js/935.f4432c25.chunk.js": "/vagabond-hiatus-chart/static/js/935.f4432c25.chunk.js",
+    "static/js/5.fafacdc4.chunk.js": "/vagabond-hiatus-chart/static/js/5.fafacdc4.chunk.js",
     "static/js/58.f9bbb046.chunk.js": "/vagabond-hiatus-chart/static/js/58.f9bbb046.chunk.js",
     "static/js/118.c36dc335.chunk.js": "/vagabond-hiatus-chart/static/js/118.c36dc335.chunk.js",
     "static/js/44.a311fbc1.chunk.js": "/vagabond-hiatus-chart/static/js/44.a311fbc1.chunk.js",
@@ -15,12 +15,12 @@
     "static/media/musashi.jpeg": "/vagabond-hiatus-chart/static/media/musashi.4d95b0d1fde44a7fdd34.jpeg",
     "index.html": "/vagabond-hiatus-chart/index.html",
     "main.bce8331a.css.map": "/vagabond-hiatus-chart/static/css/main.bce8331a.css.map",
-    "main.c4f1665a.js.map": "/vagabond-hiatus-chart/static/js/main.c4f1665a.js.map",
-    "16.e6a1a253.chunk.js.map": "/vagabond-hiatus-chart/static/js/16.e6a1a253.chunk.js.map",
+    "main.73079475.js.map": "/vagabond-hiatus-chart/static/js/main.73079475.js.map",
+    "261.eb9b703d.chunk.js.map": "/vagabond-hiatus-chart/static/js/261.eb9b703d.chunk.js.map",
     "533.62b78670.chunk.js.map": "/vagabond-hiatus-chart/static/js/533.62b78670.chunk.js.map",
     "790.7dd79f7f.chunk.js.map": "/vagabond-hiatus-chart/static/js/790.7dd79f7f.chunk.js.map",
-    "737.f7eaec2f.chunk.js.map": "/vagabond-hiatus-chart/static/js/737.f7eaec2f.chunk.js.map",
-    "5.f4b0c1b0.chunk.js.map": "/vagabond-hiatus-chart/static/js/5.f4b0c1b0.chunk.js.map",
+    "935.f4432c25.chunk.js.map": "/vagabond-hiatus-chart/static/js/935.f4432c25.chunk.js.map",
+    "5.fafacdc4.chunk.js.map": "/vagabond-hiatus-chart/static/js/5.fafacdc4.chunk.js.map",
     "58.f9bbb046.chunk.js.map": "/vagabond-hiatus-chart/static/js/58.f9bbb046.chunk.js.map",
     "118.c36dc335.chunk.js.map": "/vagabond-hiatus-chart/static/js/118.c36dc335.chunk.js.map",
     "44.a311fbc1.chunk.js.map": "/vagabond-hiatus-chart/static/js/44.a311fbc1.chunk.js.map",
@@ -28,6 +28,6 @@
   },
   "entrypoints": [
     "static/css/main.bce8331a.css",
-    "static/js/main.c4f1665a.js"
+    "static/js/main.73079475.js"
   ]
 }
