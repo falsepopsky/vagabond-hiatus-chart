@@ -73,7 +73,7 @@ export const configHeatmap = {
     legendPosition: 'middle',
     legendOffset: 0,
   },
-  margin: { top: 20, right: 60, bottom: 60, left: 80 },
+  margin: { top: 20, right: 0, bottom: 60, left: 40 },
   colorsPublications: [
     'hsl(0, 2%, 100%, 0)',
     '#f4f7f3',

@@ -54,7 +54,7 @@ export const ButtonSC = styled.button`
   display: flex;
   align-items: center;
   width: 48px;
-  height: 48px;
+  height: 36px;
   border: none;
   border-radius: 0.25rem;
   font-size: 16px;

@@ -23,20 +23,22 @@
   ],
   "dependencies": {
     "apexcharts": "^3.35.5",
-    "next": "^12.2.5",
+    "next": "^12.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "@types/node": "^18.7.14",
-    "@types/react": "^18.0.18",
+    "@nivo/core": "^0.80.0",
+    "@nivo/heatmap": "^0.80.0",
+    "@types/node": "^18.7.18",
+    "@types/react": "^18.0.20",
     "@types/styled-components": "^5.1.26",
-    "eslint": "^8.23.0",
-    "eslint-config-next": "^12.2.5",
+    "eslint": "^8.23.1",
+    "eslint-config-next": "^12.3.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.3"
   },
   "repository": {
     "type": "git",

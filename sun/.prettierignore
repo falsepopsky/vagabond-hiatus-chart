@@ -1,5 +1,5 @@
 node_modules
+public
 .next
 *.json
-public
-*.md
+pnpm-lock.yaml

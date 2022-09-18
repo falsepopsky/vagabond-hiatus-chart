@@ -41,6 +41,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(to top,#0b0b0b 0%,#000 100%);
+    background-color: #0b0b0b;
     color: #d6d6d6;
     font-family: 'IBM Plex Sans', sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
     overflow: hidden auto;
