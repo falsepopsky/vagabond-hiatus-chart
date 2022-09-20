@@ -14,10 +14,10 @@ A simple way to visualize the actual state of Vagabond by Inoue Takehiko with ch
 
 ## :open_file_folder: Structure
 
-| Codebase | Description | Status | Docs |
-| :-- | :-- | :-- | :-- |
-| [moon](moon) | Create React App | :x: deprecated | [Readme](./moon/README.md) |
-| [sun](sun) | Next.js | :white_check_mark: active | In progress... |
+| Codebase     | Description      | Status                    | Docs                       |
+| :----------- | :--------------- | :------------------------ | :------------------------- |
+| [moon](moon) | Create React App | :x: deprecated            | [Readme](./moon/README.md) |
+| [sun](sun)   | Next.js          | :white_check_mark: active | In progress...             |
 
 ## :clap: Special Thanks
 

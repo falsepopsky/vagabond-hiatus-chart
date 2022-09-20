@@ -5,6 +5,10 @@ import { RowContainer } from '../styled';
 import { BorderBox, Button } from './styles';
 import { DBSVG, ShareSVG } from './svg';
 
+type DatumProps = {
+  value: number | null;
+};
+
 const HChart = () => {
   const [showHiatus, SetShowHiatus] = useState(true);
 
@@ -12,7 +16,7 @@ const HChart = () => {
     SetShowHiatus((prevshowHiatus) => !prevshowHiatus);
   };
 
-  const select = (datum) => {
+  function select(datum: DatumProps): string {
     const colors = [
       '#fd514e',
       '#f4f7f3',
@@ -29,8 +33,13 @@ const HChart = () => {
       '#2426a5',
     ];
 
-    return colors[datum.value];
-  };
+    if (typeof datum.value === 'number') {
+      return colors[datum.value];
+    }
+
+    return '#00ffff0';
+  }
+
   return (
     <>
       <RowContainer>
@@ -50,15 +59,14 @@ const HChart = () => {
             textColor: '#f8f8f8',
             fontSize: 9,
           }}
-          margin={{ top: 0, right: 0, bottom: 70, left: 50 }}
-          valueFormat='>-.2s'
+          margin={{ top: 0, right: 0, bottom: 40, left: 50 }}
           axisBottom={{
             tickSize: 2,
             tickPadding: 4,
             tickRotation: 0,
             legend: 'Weekly Issue',
             legendPosition: 'middle',
-            legendOffset: 36,
+            legendOffset: 30,
           }}
           axisTop={null}
           axisRight={null}
