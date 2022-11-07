@@ -24,7 +24,7 @@ const StyledLink = styled.a<LinkProp>`
 
 function NavLink({ href, content }: LinkStyled) {
   return (
-    <Link href={href} passHref>
+    <Link href={href} passHref legacyBehavior>
       <StyledLink>{content}</StyledLink>
     </Link>
   );

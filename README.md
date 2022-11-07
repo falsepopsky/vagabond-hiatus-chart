@@ -10,14 +10,14 @@ A simple way to visualize the actual state of Vagabond by Inoue Takehiko with ch
 
 ## :rocket: Check the site
 
-[Vagabond Hiatus Chart](https://falsepopsky.github.io/vagabond-hiatus-chart/)
+[Vagabond Hiatus Chart](https://vagabond-hiatus-chart.vercel.app/)
 
 ## :open_file_folder: Structure
 
-| Codebase     | Description      | Status                    | Docs                       |
-| :----------- | :--------------- | :------------------------ | :------------------------- |
-| [moon](moon) | Create React App | :x: deprecated            | [Readme](./moon/README.md) |
-| [sun](sun)   | Next.js          | :white_check_mark: active | In progress...             |
+| Codebase     | Description      | Status                    | Docs                     |
+| :----------- | :--------------- | :------------------------ | :----------------------- |
+| [moon](moon) | Create React App | :x: deprecated            | [Readme](./docs/MOON.md) |
+| [sun](sun)   | Next.js          | :white_check_mark: active | [Readme](./docs/SUN.md)  |
 
 ## :clap: Special Thanks
 

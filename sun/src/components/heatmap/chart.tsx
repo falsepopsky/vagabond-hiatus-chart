@@ -1,5 +1,5 @@
 import { ArcDB, HeatmapDB } from '@db/index';
-import { ResponsiveHeatMapCanvas } from '@nivo/heatmap';
+import { HeatMapCanvas } from '@nivo/heatmap';
 import { useState } from 'react';
 import { RowContainer } from '../styled';
 import { BorderBox, Button } from './styles';
@@ -9,6 +9,79 @@ type DatumProps = {
   value: number | null;
 };
 
+const colors = [
+  '#fd514e',
+  '#f4f7f3',
+  '#70DDC6',
+  '#fff875',
+  '#06ba63',
+  '#3777ff',
+  '#7d80da',
+  '#95e784',
+  '#ffe156',
+  '#c94bff',
+  '#4059ad',
+  '#03c887',
+  '#2426a5',
+];
+
+const legends = [
+  'Hiatus',
+  'Double weekly issue',
+  'Takezō',
+  'First Yoshioka',
+  'Hōzōin',
+  'Yagyū',
+  'Baiken',
+  'Kojirō',
+  'Second Yoshioka',
+  "Ichijōji's aftermath",
+  'Wandering',
+  'Farming',
+  'Hosokawa',
+];
+
+const legend = ['Hiatus', 'Double weekly issue', 'Published'];
+
+function createObj(a?: boolean): { name: string; color: string }[] {
+  const newObj = [];
+
+  if (a) {
+    for (let start = 0; start < 3; start++) {
+      newObj.push({ name: legend[start], color: colors[start] });
+    }
+    return newObj;
+  }
+  for (let start = 0; start < colors.length; start++) {
+    newObj.push({ name: legends[start], color: colors[start] });
+  }
+  return newObj;
+}
+
+function Write({ a }: { a: boolean }) {
+  const Legends = a ? createObj(a) : createObj();
+
+  return (
+    <ol
+      style={{
+        width: '100%',
+        display: 'flex',
+        flexFlow: 'row wrap',
+        justifyContent: 'center',
+        gap: '2em',
+        listStyleType: 'disc',
+      }}>
+      {Legends.map((legend, index) => {
+        return (
+          <li style={{ fontSize: '0.8rem', color: `${legend.color}` }} key={index}>
+            {legend.name}
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
 const HChart = () => {
   const [showHiatus, SetShowHiatus] = useState(true);
 
@@ -17,22 +90,6 @@ const HChart = () => {
   };
 
   function select(datum: DatumProps): string {
-    const colors = [
-      '#fd514e',
-      '#f4f7f3',
-      '#70DDC6',
-      '#fff875',
-      '#06ba63',
-      '#3777ff',
-      '#7d80da',
-      '#95e784',
-      '#ffe156',
-      '#c94bff',
-      '#4059ad',
-      '#03c887',
-      '#2426a5',
-    ];
-
     if (typeof datum.value === 'number') {
       return colors[datum.value];
     }
@@ -52,8 +109,16 @@ const HChart = () => {
           <Button onClick={handleToggle}>Toggle database</Button>
         </BorderBox>
       </RowContainer>
-      <div style={{ width: '100%', height: '460px' }}>
-        <ResponsiveHeatMapCanvas
+      <div
+        style={{
+          width: '100%',
+          height: 'auto',
+          overflowX: 'auto',
+          overflowY: 'hidden',
+        }}>
+        <HeatMapCanvas
+          width={1280}
+          height={460}
           data={showHiatus ? HeatmapDB : ArcDB}
           theme={{
             textColor: '#f8f8f8',
@@ -88,6 +153,7 @@ const HChart = () => {
           isInteractive={false}
         />
       </div>
+      <Write a={showHiatus} />
     </>
   );
 };

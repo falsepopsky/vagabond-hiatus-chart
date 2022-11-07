@@ -9,7 +9,7 @@ const Footer = () => (
       <Titlef>General</Titlef>
       <Textf>The website of Vagabond Hiatus Chart.</Textf>
       <Textf>Some of the images belongs to Takehiko Inoue &amp; Kōdansha.</Textf>
-      <Textf>For a better experience use firefox and visit the site on desktop mode.</Textf>
+      <Textf>For a better experience visit the site on desktop mode.</Textf>
       <Science />
     </Boxf>
     <Boxf>
