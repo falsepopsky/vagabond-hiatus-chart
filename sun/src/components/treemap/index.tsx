@@ -1,9 +1,7 @@
 import { TreemapDB } from '@db/index';
-import dynamic from 'next/dynamic';
+import { ChartWrapper } from '../apexchart';
 import { ColumnContainer, HeaderTwo, IconContainer, RowContainer } from '../styled';
 import { TreeSVG } from './svg';
-
-const ChartWrapper = dynamic(() => import('../apexchart'), { ssr: false });
 
 const Treemap = () => {
   return (

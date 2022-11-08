@@ -4,8 +4,7 @@ import { DatabaseSVG, Katana, Legend, Monte, Shuffle } from './../svg/Svgs';
 import { arcsDatabase, publicationsDatabase } from './db';
 import Heatmap from './Heatmap';
 import { configHeatmap } from './hiatusHeatmapConfig';
-import HiatusLegendArc from './HiatusLegendArc';
-import HiatusLegendChapter from './HiatusLegendChapter';
+import { HiatusLegendArc, HiatusLegendChapter } from './Legend';
 import {
   ButtonSC,
   HeatNav,

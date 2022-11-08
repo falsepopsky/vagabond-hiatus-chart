@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     color: #111;
     background: #d9d9d9;
   }
-  
+
   html {
     scrollbar-color: #d6d6d6 #0b0b0b;
     scrollbar-width: thin;
@@ -20,17 +20,18 @@ export const GlobalStyle = createGlobalStyle`
 
   ::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
   }
-  
+
   ::-webkit-scrollbar-track {
     background: #0b0b0b;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background: #d6d6d6;
     border-radius: 0;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     background: #e4e4e4;
   }
@@ -41,7 +42,9 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(to top,#0b0b0b 0%,#000 100%);
+    background-color: #0b0b0b;
     color: #d6d6d6;
     font-family: 'IBM Plex Sans', sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
-    overflow: hidden auto;
+    overflow-x: hidden;
+    overflow-y: auto;
   }`;

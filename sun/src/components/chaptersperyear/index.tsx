@@ -1,9 +1,7 @@
 import { AreaDB } from '@db/index';
-import dynamic from 'next/dynamic';
+import { ChartWrapper } from '../apexchart';
 import { ColumnContainer, HeaderTwo, IconContainer, RowContainer, StyledText } from '../styled';
 import { ChartSVG } from './svg';
-
-const ChartWrapper = dynamic(() => import('../apexchart'), { ssr: false });
 
 const LineChart = () => {
   return (

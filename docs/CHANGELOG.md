@@ -1,12 +1,28 @@
 # :clock12: Changelog
 
-## :date: v1.0.0
+## :date: v1.0.2
 
-<details><summary>Jun 16, 2022</summary>
+<details><summary>Sep 30, 2022</summary>
 
 **project**
 
-- CRA in [moon](moon) codebase deprecated, starting on NEXT JS [sun](sun) codebase [`e0e417a`](https://github.com/falsepopsky/vagabond-hiatus-chart/commit/e0e417a73a2cc0aeeddab368b1cc28ab047e2d81)
+- add Sun and Moon docs.
+- add .editorconfig.
+- remove node ci
+- update README.
+
+**moon**
+
+- add redirect to vercel site
+
+**sun**
+
+- Remove ApexChart Heatmap.
+- Add pnpm as package manager.
+- Add @nivo/heatmap.
+- Add heatmap legends.
+- Update db.
+
 </details>
 
 ## :date: v1.0.1
@@ -37,4 +53,13 @@
 
 - fix and use my own apexchart wrapper.
 - add gradients in svg vectors.
+</details>
+
+## :date: v1.0.0
+
+<details><summary>Jun 16, 2022</summary>
+
+**project**
+
+- CRA in [moon](moon) codebase deprecated, starting on NEXT JS [sun](sun) codebase [`e0e417a`](https://github.com/falsepopsky/vagabond-hiatus-chart/commit/e0e417a73a2cc0aeeddab368b1cc28ab047e2d81)
 </details>
