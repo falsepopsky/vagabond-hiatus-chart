@@ -31,4 +31,4 @@ A simple way to visualize the actual state of Vagabond by Inoue Takehiko with ch
 
 ## :scroll: Changelog
 
-[Last update: 31/08/22](./docs/CHANGELOG.md)
+[Last update: 30/09/22](./docs/CHANGELOG.md)
