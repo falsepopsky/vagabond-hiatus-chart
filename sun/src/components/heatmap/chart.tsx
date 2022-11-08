@@ -2,7 +2,7 @@ import { ArcDB, HeatmapDB } from '@db/index';
 import { HeatMapCanvas } from '@nivo/heatmap';
 import { useState } from 'react';
 import { RowContainer } from '../styled';
-import { BorderBox, Button } from './styles';
+import { BorderBox, Button, ListStyled, OlStyled } from './styles';
 import { DBSVG, ShareSVG } from './svg';
 
 type DatumProps = {
@@ -28,6 +28,7 @@ const colors = [
 const legends = [
   'Hiatus',
   'Double weekly issue',
+  'Published',
   'Takezō',
   'First Yoshioka',
   'Hōzōin',
@@ -41,44 +42,38 @@ const legends = [
   'Hosokawa',
 ];
 
-const legend = ['Hiatus', 'Double weekly issue', 'Published'];
+const filtered = legends.filter(function (letter) {
+  return letter !== 'Published';
+});
 
 function createObj(a?: boolean): { name: string; color: string }[] {
   const newObj = [];
 
   if (a) {
     for (let start = 0; start < 3; start++) {
-      newObj.push({ name: legend[start], color: colors[start] });
+      newObj.push({ name: legends[start], color: colors[start] });
     }
     return newObj;
   }
   for (let start = 0; start < colors.length; start++) {
-    newObj.push({ name: legends[start], color: colors[start] });
+    newObj.push({ name: filtered[start], color: colors[start] });
   }
   return newObj;
 }
 
-function Write({ a }: { a: boolean }) {
+function OrderedList({ a }: { a: boolean }) {
   const Legends = a ? createObj(a) : createObj();
 
   return (
-    <ol
-      style={{
-        width: '100%',
-        display: 'flex',
-        flexFlow: 'row wrap',
-        justifyContent: 'center',
-        gap: '2em',
-        listStyleType: 'disc',
-      }}>
+    <OlStyled>
       {Legends.map((legend, index) => {
         return (
-          <li style={{ fontSize: '0.8rem', color: `${legend.color}` }} key={index}>
+          <ListStyled color={legend.color} key={index}>
             {legend.name}
-          </li>
+          </ListStyled>
         );
       })}
-    </ol>
+    </OlStyled>
   );
 }
 
@@ -153,7 +148,7 @@ const HChart = () => {
           isInteractive={false}
         />
       </div>
-      <Write a={showHiatus} />
+      <OrderedList a={showHiatus} />
     </>
   );
 };
