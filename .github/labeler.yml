@@ -1,12 +1,13 @@
-'new morning issue':
-  - 'moon/src/components/**/db.js'
+"new morning issue":
+  - "moon/src/components/**/db.js"
+  - "sun/src/db/*.ts"
 documentation:
-  - 'docs/**/*'
+  - "docs/**/*"
 enhancement:
   - any:
       [
-        '**/src/components/**/*.{jsx,tsx}',
-        '!**/src/components/**/styles.{jsx,tsx}',
+        "**/src/components/**/*.{jsx,tsx}",
+        "!**/src/components/**/styles.{jsx,tsx}",
       ]
 styles:
-  - '**/src/components/**/styles.{jsx,tsx}'
+  - "**/src/components/**/styles.{jsx,tsx}"
