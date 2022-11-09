@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface LiProps {
-  color?: string;
+  col?: string;
 }
 
 export const BorderBox = styled.div`
@@ -61,6 +61,6 @@ export const ListStyled = styled.li<LiProps>`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: ${(props) => props.color && props.color};
+    background-color: ${({ col }) => col && col};
   }
 `;
