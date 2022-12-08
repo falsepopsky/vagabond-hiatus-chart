@@ -1,14 +1,15 @@
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
-	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.organizeImports": true
-	},
-	"editor.wordWrap": "on",
-	"editor.guides.bracketPairs": true,
-	"editor.tabSize": 2,
-	"npm.scriptExplorerAction": "open",
-	"npm.autoDetect": "on",
-	"eslint.workingDirectories": ["./sun"]
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
+  "editor.wordWrap": "on",
+  "editor.guides.bracketPairs": true,
+  "editor.tabSize": 2,
+  "npm.scriptExplorerAction": "open",
+  "npm.autoDetect": "on",
+  "npm.packageManager": "pnpm",
+  "eslint.workingDirectories": ["./sun"]
 }
