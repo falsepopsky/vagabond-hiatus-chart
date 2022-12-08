@@ -101,7 +101,9 @@ const HChart = () => {
         </BorderBox>
         <BorderBox>
           <ShareSVG />
-          <Button onClick={handleToggle}>Toggle database</Button>
+          <Button onClick={handleToggle} aria-pressed={showHiatus}>
+            Toggle database
+          </Button>
         </BorderBox>
       </RowContainer>
       <div
