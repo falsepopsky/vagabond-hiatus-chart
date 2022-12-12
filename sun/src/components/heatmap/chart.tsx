@@ -68,7 +68,7 @@ function OrderedList({ a }: { a: boolean }) {
     <OlStyled>
       {Legends.map((legend, index) => {
         return (
-          <ListStyled color={legend.color} key={index}>
+          <ListStyled col={legend.color} key={index}>
             {legend.name}
           </ListStyled>
         );
@@ -101,7 +101,9 @@ const HChart = () => {
         </BorderBox>
         <BorderBox>
           <ShareSVG />
-          <Button onClick={handleToggle}>Toggle database</Button>
+          <Button onClick={handleToggle} aria-pressed={showHiatus}>
+            Toggle database
+          </Button>
         </BorderBox>
       </RowContainer>
       <div

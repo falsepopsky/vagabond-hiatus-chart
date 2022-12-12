@@ -56,8 +56,8 @@ export const HeaderTwo = styled.h2`
 
 const TitleAbout = styled.h3`
   margin: 2em 0 1em;
-  color: #141414;
-  background: #a4fff4;
+  color: #00c2d7;
+  background: #07303b;
   letter-spacing: 0.126em;
   font-size: 1.4rem;
   font-weight: 500;

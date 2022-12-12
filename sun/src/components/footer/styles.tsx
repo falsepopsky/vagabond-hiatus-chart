@@ -23,7 +23,7 @@ const Containerf = styled.footer`
 `;
 
 const FooterLine = styled.div`
-  border-top: 1px solid rgb(240, 240, 243, 0.9);
+  border-top: 1px solid #202020;
   flex: 1 1 100%;
 `;
 

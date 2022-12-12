@@ -6,8 +6,8 @@
 ### 🔧 Setup
 
 ```
-1. npm ci
-2. npm run start
+1. pnpm i
+2. pnpm start
 ```
 
 ### :pushpin: Built with
