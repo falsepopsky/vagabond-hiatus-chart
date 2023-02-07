@@ -32,7 +32,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "prettier-format": "prettier --cache -w ."
+    "format": "prettier --cache -w ."
   },
   "eslintConfig": {
     "extends": [
