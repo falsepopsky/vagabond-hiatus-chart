@@ -9,7 +9,8 @@ interface TextProps {
 }
 
 const Containerf = styled.footer`
-  margin: auto 0 0;
+  margin: auto auto 0;
+  max-width: 1400px;
   padding: 3vh 3vw 2vh;
   display: flex;
   flex-flow: column nowrap;

@@ -17,6 +17,8 @@ const Main = styled.main`
 const Wrapper = styled.div<WrapperProps>`
   padding: ${({ isAbout }) => (isAbout ? '0 3vw 4vh' : '0 3vw')};
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
