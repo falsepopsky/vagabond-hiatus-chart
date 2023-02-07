@@ -10,20 +10,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier-format": "prettier --cache -w ."
+    "format": "prettier --cache -w ."
   },
   "keywords": [
     "react",
     "next",
     "apexcharts",
     "chart",
-    "twitter",
     "vagabond",
     "manga"
   ],
   "dependencies": {
-    "apexcharts": "^3.36.3",
-    "next": "^13.0.6",
+    "apexcharts": "^3.37.0",
+    "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6"
@@ -31,14 +30,14 @@
   "devDependencies": {
     "@nivo/core": "^0.80.0",
     "@nivo/heatmap": "^0.80.0",
-    "@types/node": "^18.11.13",
-    "@types/react": "^18.0.26",
+    "@types/node": "^18.11.19",
+    "@types/react": "^18.0.27",
     "@types/styled-components": "^5.1.26",
-    "eslint": "^8.29.0",
-    "eslint-config-next": "^13.0.6",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.8.1",
-    "typescript": "^4.9.4"
+    "eslint": "^8.33.0",
+    "eslint-config-next": "^13.1.6",
+    "eslint-config-prettier": "^8.6.0",
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.5"
   },
   "engines": {
     "node": ">=16",

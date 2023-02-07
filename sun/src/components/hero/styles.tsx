@@ -9,12 +9,18 @@ interface SVGBoxProps {
   left: string;
 }
 
+export const ExtendedC = styled.div`
+  background: #f2f2f2;
+  width: 100%;
+`;
+
 export const Container = styled.header`
   width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
   display: flex;
   flex-flow: column nowrap;
   color: #0b0b0b;
-  background: #f2f2f2;
   align-items: center;
 
   .logo {
