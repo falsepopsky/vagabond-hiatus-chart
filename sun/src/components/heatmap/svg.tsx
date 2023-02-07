@@ -1,12 +1,12 @@
 export const HeatSVG: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
   <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' aria-hidden='true'>
     <defs>
-      <linearGradient id='deepBlue' gradientTransform='rotate(45 0.5 0.5)'>
+      <linearGradient id='heatmap' gradientTransform='rotate(45 0.5 0.5)'>
         <stop offset='0%' stopColor='#6a11cb' />
         <stop offset='100%' stopColor='#2575fc' />
       </linearGradient>
     </defs>
-    <g fill='url(#deepBlue)'>
+    <g fill='url(#heatmap)'>
       <rect x='20' y='18' width='2' height='2' />
       <rect x='28' y='16' width='2' height='2' />
       <rect x='14' y='6' width='2' height='2' />
