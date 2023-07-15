@@ -19,7 +19,6 @@
     "@nivo/heatmap": "^0.83.0",
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.15",
-    "@types/styled-components": "^5.1.26",
     "eslint": "^8.45.0",
     "eslint-config-next": "^13.4.10",
     "eslint-config-prettier": "^8.8.0",

@@ -1,6 +1,8 @@
+import dynamic from 'next/dynamic';
 import { ColumnContainer, HeaderTwo, IconContainer, RowContainer } from '../styled';
-import Chart from './chart';
 import { HeatSVG } from './svg';
+
+export const ChartWrapper = dynamic(() => import('./chart'), { ssr: false });
 
 const Heatmap = () => {
   return (
@@ -11,7 +13,7 @@ const Heatmap = () => {
         </IconContainer>
         <HeaderTwo>Hiatus Heatmap</HeaderTwo>
       </RowContainer>
-      <Chart />
+      <ChartWrapper />
     </ColumnContainer>
   );
 };
