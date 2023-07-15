@@ -68,7 +68,7 @@ function OrderedList({ a }: { a: boolean }) {
     <OlStyled>
       {Legends.map((legend, index) => {
         return (
-          <ListStyled col={legend.color} key={index}>
+          <ListStyled $col={legend.color} key={index}>
             {legend.name}
           </ListStyled>
         );

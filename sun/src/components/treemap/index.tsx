@@ -5,7 +5,7 @@ import { TreeSVG } from './svg';
 
 const Treemap = () => {
   return (
-    <ColumnContainer isHomeSection>
+    <ColumnContainer $isHomeSection>
       <RowContainer>
         <IconContainer>
           <TreeSVG />

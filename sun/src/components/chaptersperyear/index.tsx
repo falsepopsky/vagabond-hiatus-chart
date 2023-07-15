@@ -5,7 +5,7 @@ import { ChartSVG } from './svg';
 
 const LineChart = () => {
   return (
-    <ColumnContainer isHomeSection>
+    <ColumnContainer $isHomeSection>
       <RowContainer>
         <IconContainer>
           <ChartSVG />

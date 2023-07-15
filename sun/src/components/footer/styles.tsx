@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-interface BoxProps {
-  general?: boolean;
-}
-
-interface TextProps {
-  copyright?: boolean;
-}
-
 const Containerf = styled.footer`
   margin: auto auto 0;
   max-width: 1400px;
@@ -28,10 +20,10 @@ const FooterLine = styled.div`
   flex: 1 1 100%;
 `;
 
-const Boxf = styled.div<BoxProps>`
+const Boxf = styled.div<{ $general?: boolean }>`
   display: flex;
   flex-flow: column nowrap;
-  flex-grow: ${({ general }) => (general ? '2' : '1')};
+  flex-grow: ${({ $general }) => ($general ? '2' : '1')};
 `;
 
 const Titlef = styled.h4`
@@ -47,13 +39,13 @@ const Titlef = styled.h4`
   }
 `;
 
-const Textf = styled.p<TextProps>`
-  margin: ${({ copyright }) => (copyright ? '0' : '0 0 0.6em')};
+const Textf = styled.p<{ $copyright?: boolean }>`
+  margin: ${({ $copyright }) => ($copyright ? '0' : '0 0 0.6em')};
   width: 100%;
   max-width: 100%;
   font-weight: 300;
   font-size: 0.9rem;
-  text-align: ${({ copyright }) => copyright && 'center'};
+  text-align: ${({ $copyright }) => $copyright && 'center'};
 `;
 
-export { Containerf, FooterLine, Boxf, Titlef, Textf };
+export { Boxf, Containerf, FooterLine, Textf, Titlef };

@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-interface LiProps {
-  col?: string;
-}
-
 export const BorderBox = styled.div`
   padding: 0.5em 1em;
   display: flex;
@@ -48,12 +44,12 @@ export const OlStyled = styled.ol`
   list-style-type: none;
 `;
 
-export const ListStyled = styled.li<LiProps>`
+export const ListStyled = styled.li<{ $col?: string }>`
   font-size: 0.9rem;
   font-weight: 400;
   position: relative;
 
-  ::after {
+  &::after {
     content: '';
     position: absolute;
     left: -18px;
@@ -61,6 +57,6 @@ export const ListStyled = styled.li<LiProps>`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: ${({ col }) => col && col};
+    background-color: ${({ $col }) => $col && $col};
   }
 `;

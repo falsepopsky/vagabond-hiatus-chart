@@ -5,7 +5,7 @@ import { Info } from './svg';
 
 const Information = () => {
   return (
-    <ColumnContainer isHomeSection>
+    <ColumnContainer $isHomeSection>
       <RowContainer>
         <IconContainer>
           <Info />

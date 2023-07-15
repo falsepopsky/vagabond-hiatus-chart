@@ -6,7 +6,7 @@ export const ChartWrapper = dynamic(() => import('./chart'), { ssr: false });
 
 const Heatmap = () => {
   return (
-    <ColumnContainer isHomeSection>
+    <ColumnContainer $isHomeSection>
       <RowContainer>
         <IconContainer>
           <HeatSVG />

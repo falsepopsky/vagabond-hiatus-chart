@@ -11,9 +11,9 @@ export default function About() {
     <>
       <Head title='About' description='Everything about the vagabond hiatus chart project.' />
       <Main>
-        <Wrapper isAbout>
+        <Wrapper $isAbout>
           <History />
-         <Thanks /> 
+          <Thanks />
           <Contact />
         </Wrapper>
       </Main>
