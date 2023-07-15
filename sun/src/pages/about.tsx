@@ -1,10 +1,10 @@
-import Head from '@comp/head';
-import History from '@comp/history';
-import { Main, Wrapper } from '@comp/styled';
+import Head from '@/comp/head';
+import History from '@/comp/history';
+import { Main, Wrapper } from '@/comp/styled';
 import dynamic from 'next/dynamic';
 
-const Contact = dynamic(() => import('@comp/contact'));
-const Thanks = dynamic(() => import('@comp/thanks'));
+const Contact = dynamic(() => import('@/comp/contact'));
+const Thanks = dynamic(() => import('@/comp/thanks'));
 
 export default function About() {
   return (
@@ -13,7 +13,7 @@ export default function About() {
       <Main>
         <Wrapper isAbout>
           <History />
-          <Thanks />
+         <Thanks /> 
           <Contact />
         </Wrapper>
       </Main>

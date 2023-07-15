@@ -1,4 +1,4 @@
-import { ArcDB, HeatmapDB } from '@db/index';
+import { ArcDB, HeatmapDB } from '@/db/index';
 import { HeatMapCanvas } from '@nivo/heatmap';
 import { useState } from 'react';
 import { RowContainer } from '../styled';

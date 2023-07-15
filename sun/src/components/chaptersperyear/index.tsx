@@ -1,4 +1,4 @@
-import { AreaDB } from '@db/index';
+import { AreaDB } from '@/db/index';
 import { ChartWrapper } from '../apexchart';
 import { ColumnContainer, HeaderTwo, IconContainer, RowContainer, StyledText } from '../styled';
 import { ChartSVG } from './svg';
