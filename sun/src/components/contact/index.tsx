@@ -9,7 +9,7 @@ const Contact = () => (
     </StyledText>
     <StyledText>
       Everything related to sugestions, feedback, or any other question, please complete this{' '}
-      <StyledLink text href='https://forms.gle/QjtffknkRddEy4TaA' rel='noopener noreferrer' target='_blank'>
+      <StyledLink $text href='https://forms.gle/QjtffknkRddEy4TaA' rel='noopener noreferrer' target='_blank'>
         form
       </StyledLink>
       .

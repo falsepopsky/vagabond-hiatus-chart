@@ -6,8 +6,9 @@
     "source.organizeImports": true
   },
   "editor.wordWrap": "on",
-  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairs": "active",
   "editor.tabSize": 2,
+  "editor.linkedEditing": true,
   "npm.scriptExplorerAction": "open",
   "npm.autoDetect": "on",
   "npm.packageManager": "pnpm",

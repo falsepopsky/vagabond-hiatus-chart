@@ -1,14 +1,5 @@
 import styled, { css } from 'styled-components';
 
-interface PHeroProps {
-  story?: string;
-}
-
-interface SVGBoxProps {
-  top: string;
-  left: string;
-}
-
 export const ExtendedC = styled.div`
   background: #f2f2f2;
   width: 100%;
@@ -42,9 +33,9 @@ export const SectionHero = styled.div`
   font-weight: 500;
 `;
 
-export const HeroP = styled.p<PHeroProps>`
-  ${({ story }) => {
-    switch (story) {
+export const HeroP = styled.p<{ $story?: string }>`
+  ${({ $story }) => {
+    switch ($story) {
       case 'first':
         return css`
           font-size: 1.4rem;
@@ -91,8 +82,8 @@ export const SVGContainer = styled.div`
   }
 `;
 
-export const SVGBox = styled.div<SVGBoxProps>`
+export const SVGBox = styled.div<{ $top: string; $left: string }>`
   position: absolute;
-  top: ${(props) => props.top && props.top};
-  left: ${(props) => props.left && props.left};
+  top: ${({ $top }) => $top && $top};
+  left: ${({ $left }) => $left && $left};
 `;

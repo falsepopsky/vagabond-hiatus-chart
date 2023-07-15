@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "removeComments": true,
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -17,8 +16,8 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@comp/*": ["src/components/*"],
-      "@db/*": ["src/db/*"]
+      "@/comp/*": ["src/components/*"],
+      "@/db/*": ["src/db/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     scrollbar-width: thin;
   }
 
-  *, ::after, ::before {
+  *, &::after, &::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

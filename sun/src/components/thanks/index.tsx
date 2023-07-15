@@ -7,7 +7,7 @@ const Thanks = () => (
     <StyledText>
       <b>Kawasaki#3316</b> for providing almost the whole&#160;
       <StyledLink
-        text
+        $text
         href='https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/'
         rel='noopener noreferrer'
         target='_blank'>
@@ -17,7 +17,7 @@ const Thanks = () => (
     </StyledText>
     <StyledText>
       <b>rentzhx3</b> for the inspiration with his project based on{' '}
-      <StyledLink text href='https://hiatus-hiatus.github.io/' rel='noopener noreferrer' target='_blank'>
+      <StyledLink $text href='https://hiatus-hiatus.github.io/' rel='noopener noreferrer' target='_blank'>
         Hunter X Hunter
       </StyledLink>
       .

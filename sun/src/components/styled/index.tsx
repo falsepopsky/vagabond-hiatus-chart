@@ -1,21 +1,13 @@
 import styled from 'styled-components';
 
-interface WrapperProps {
-  isAbout?: boolean;
-}
-
-interface ColProps {
-  isHomeSection?: boolean;
-}
-
 const Main = styled.main`
   position: relative;
   display: flex;
   flex-flow: column nowrap;
 `;
 
-const Wrapper = styled.div<WrapperProps>`
-  padding: ${({ isAbout }) => (isAbout ? '0 3vw 4vh' : '0 3vw')};
+const Wrapper = styled.div<{ $isAbout?: boolean }>`
+  padding: ${({ $isAbout }) => ($isAbout ? '0 3vw 4vh' : '0 3vw')};
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -25,10 +17,10 @@ const Wrapper = styled.div<WrapperProps>`
   gap: 4em 0;
 `;
 
-const ColumnContainer = styled.div<ColProps>`
+const ColumnContainer = styled.div<{ $isHomeSection?: boolean }>`
   display: flex;
   flex-flow: column nowrap;
-  gap: ${({ isHomeSection }) => (isHomeSection ? '4em 0' : '2em')};
+  gap: ${({ $isHomeSection }) => ($isHomeSection ? '4em 0' : '2em')};
 `;
 
 const RowContainer = styled.div`
@@ -70,4 +62,4 @@ const StyledText = styled.p`
   font-weight: 300;
 `;
 
-export { TitleAbout, StyledText, Main, Wrapper, ColumnContainer, IconContainer, RowContainer };
+export { ColumnContainer, IconContainer, Main, RowContainer, StyledText, TitleAbout, Wrapper };

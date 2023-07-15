@@ -1,5 +1,30 @@
 # :clock12: Changelog
 
+## :date: v1.0.3
+
+<details><summary>Jul 15, 2023</summary>
+
+**project**
+
+- update: README.
+- update(.vscode): `bracketPairs` change **true**, enable `linkedEditing`.
+
+**moon**
+
+- remove keys `keywords`, `author` and `license` from package.json.
+
+**sun**
+
+- add: new prefix `$` for styled-components `props`.
+- update: db `new morning issue` at `#34`.
+- update: engine `node` v18 and `pnpm` v8.
+- update(deps): to latest.
+- remove: keys `name`,`author`, `description`, `keywords`, `author` and `license` from package.json.
+- remove: don't commit `next-env.d.ts` file.
+- remove: `.eslintignore` file, instead use `ignorePatterns` in **.eslintrc.json** file.
+
+</details>
+
 ## :date: v1.0.2
 
 <details><summary>Sep 30, 2022</summary>

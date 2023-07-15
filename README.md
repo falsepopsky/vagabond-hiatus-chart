@@ -27,7 +27,7 @@ A simple way to visualize the actual state of Vagabond by Inoue Takehiko with ch
 
 ## :page_with_curl: License
 
-[GPL-3.0 License](https://github.com/falsepopsky/vagabond-hiatus-chart/blob/main/LICENSE)
+[GPL-3.0 License](LICENSE)
 
 ## :scroll: Changelog
 

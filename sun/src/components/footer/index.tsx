@@ -1,11 +1,11 @@
-import { NavLink, StyledLink } from '@comp/link';
+import { NavLink, StyledLink } from '@/comp/link';
 import { Science } from './science';
 import { Boxf, Containerf, FooterLine, Textf, Titlef } from './styles';
 
 const Footer = () => (
   <Containerf>
     <FooterLine />
-    <Boxf general>
+    <Boxf $general>
       <Titlef>General</Titlef>
       <Textf>The website of Vagabond Hiatus Chart.</Textf>
       <Textf>Some of the images belongs to Takehiko Inoue &amp; Kōdansha.</Textf>
@@ -29,7 +29,7 @@ const Footer = () => (
         Reddit Vagabond
       </StyledLink>
     </Boxf>
-    <Textf copyright>Vagabond Hiatus Chart © 2021 - 2022.</Textf>
+    <Textf $copyright>Vagabond Hiatus Chart © 2021 - 2022.</Textf>
   </Containerf>
 );
 

@@ -1,4 +1,4 @@
-import { ArcDB, HeatmapDB } from '@db/index';
+import { ArcDB, HeatmapDB } from '@/db/index';
 import { HeatMapCanvas } from '@nivo/heatmap';
 import { useState } from 'react';
 import { RowContainer } from '../styled';
@@ -68,7 +68,7 @@ function OrderedList({ a }: { a: boolean }) {
     <OlStyled>
       {Legends.map((legend, index) => {
         return (
-          <ListStyled col={legend.color} key={index}>
+          <ListStyled $col={legend.color} key={index}>
             {legend.name}
           </ListStyled>
         );

@@ -5,3 +5,5 @@
 */build
 */out
 */.next
+
+next-env.d.ts
