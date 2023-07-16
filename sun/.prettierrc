@@ -8,6 +8,5 @@
   "proseWrap": "preserve",
   "trailingComma": "es5",
   "tabWidth": 2,
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "pluginSearchDirs": false
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
