@@ -9,8 +9,20 @@
   "editor.guides.bracketPairs": "active",
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
   "npm.scriptExplorerAction": "open",
   "npm.autoDetect": "on",
   "npm.packageManager": "pnpm",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "eslint.workingDirectories": ["./sun"]
 }
