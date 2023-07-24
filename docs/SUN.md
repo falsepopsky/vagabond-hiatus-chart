@@ -1,6 +1,6 @@
 ## :computer: System Requirements
 
-- Node.js 16.0 or later
+- Node.js 18.0 or later
 - MacOS, Windows (including WSL), and Linux are supported
 - pnpm
 
@@ -13,8 +13,7 @@
 
 ### :pushpin: Built with
 
-- next.js
+- Next.js
 - @nivo
-- apexcharts
-- styled-components
-- etc.
+- ApexCharts
+- Tailwind CSS
