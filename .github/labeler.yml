@@ -2,7 +2,8 @@
   - "moon/src/components/**/db.js"
   - "sun/src/db/*.ts"
 documentation:
-  - "docs/**/*"
+  - "docs/*.md"
+  - "README.md"
 enhancement:
   - any:
       [
