@@ -11,5 +11,5 @@
       }
     }
   ],
-  "ignorePatterns": ["/*", "!src"]
+  "ignorePatterns": ["/*", "!app"]
 }
