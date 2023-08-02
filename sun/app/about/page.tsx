@@ -1,10 +1,16 @@
+import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 const Title = ({ title }: { title: string }) => (
-  <h2 className='mb-5 mt-12 w-max bg-cyan-950 text-2xl text-cyan-500'>{title}</h2>
+  <h2 className='mb-5 mt-12 w-max bg-cyan-950 text-2xl text-teal-500'>{title}</h2>
 );
 
 const PStyled = (props: { children: ReactNode }) => <p className='mb-4 leading-relaxed'>{props.children}</p>;
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'Everything about the vagabond hiatus chart project.',
+};
 
 export default function About() {
   return (
