@@ -1,6 +1,9 @@
-import { GreenBlob, Information, RedBlob, VagabondLogo, WhiteBlob } from '@/comp/svg';
+import { Heatmap } from '@/comp/Heatmap';
+import { ChartSVG, GreenBlob, HeatmapSVG, Information, RedBlob, Treemap, VagabondLogo, WhiteBlob } from '@/comp/Svg';
 import Image from 'next/image';
-import { TitleSection } from './components/titles';
+import { ChaptersPerArc } from './components/Chapterpa';
+import { ChaptersPerYear } from './components/Chapterpy';
+import { TitleSection } from './components/Titles';
 
 export default function Home() {
   return (
@@ -23,7 +26,7 @@ export default function Home() {
         </div>
       </header>
       <main className='mx-auto flex w-full max-w-screen-xl flex-col flex-nowrap gap-4 px-4 xl:px-2'>
-        <TitleSection title='Information'>
+        <TitleSection title='Information' bgTailwind='bg-emerald-900'>
           <Information />
         </TitleSection>
         <div className='mb-6 mt-4 grid grid-cols-1 lg:grid-cols-2'>
@@ -66,6 +69,24 @@ export default function Home() {
           <div className='hidden self-center justify-self-center lg:block'>
             <Image src='/musashi.jpeg' alt='Miyamoto Musashi by Takehiko Inoue' width={360} height={514} />
           </div>
+        </div>
+        <TitleSection title='Hiatus Heatmap' bgTailwind='bg-violet-900'>
+          <HeatmapSVG />
+        </TitleSection>
+        <div className='mb-6 mt-4 grid grid-cols-1 gap-6'>
+          <Heatmap />
+        </div>
+        <TitleSection title='Chapters per year' bgTailwind='bg-yellow-300'>
+          <ChartSVG />
+        </TitleSection>
+        <div className='mb-6 mt-4 grid grid-cols-1 gap-6'>
+          <ChaptersPerYear />
+        </div>
+        <TitleSection title='Chapters per arc' bgTailwind='bg-red-600'>
+          <Treemap />
+        </TitleSection>
+        <div className='mb-6 mt-4 grid grid-cols-1 gap-6'>
+          <ChaptersPerArc />
         </div>
       </main>
     </>

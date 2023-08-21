@@ -10,3 +10,8 @@ html {
   width: 4px;
   height: 4px;
 }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  border: 3px solid white;
+}

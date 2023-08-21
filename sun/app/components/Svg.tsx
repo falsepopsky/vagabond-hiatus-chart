@@ -405,4 +405,48 @@ const VagabondLogo = () => (
   </svg>
 );
 
-export { GreenBlob, Information, RedBlob, VagabondLogo, WhiteBlob };
+const HeatmapSVG = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='32'
+    height='32'
+    viewBox='0 0 32 32'
+    aria-hidden='true'
+    fill='currentColor'>
+    <g>
+      <rect x='20' y='18' width='2' height='2' />
+      <rect x='28' y='16' width='2' height='2' />
+      <rect x='14' y='6' width='2' height='2' />
+      <path d='M16,22H12V16a2.0023,2.0023,0,0,0-2-2H4a2.0023,2.0023,0,0,0-2,2v6a2.0023,2.0023,0,0,0,2,2h6v4a2.0023,2.0023,0,0,0,2,2h4a2.0023,2.0023,0,0,0,2-2V24A2.0023,2.0023,0,0,0,16,22ZM4,22V16h6v6Zm8,6V24h4v4Z' />
+      <path d='M28,30H24a2.0021,2.0021,0,0,1-2-2V24a2.0021,2.0021,0,0,1,2-2h4a2.0021,2.0021,0,0,1,2,2v4A2.0021,2.0021,0,0,1,28,30Zm-4-6v4h4V24Z' />
+      <path d='M28,2H22a2.0023,2.0023,0,0,0-2,2v6H18a2.0023,2.0023,0,0,0-2,2v2a2.0023,2.0023,0,0,0,2,2h2a2.0023,2.0023,0,0,0,2-2V12h6a2.0023,2.0023,0,0,0,2-2V4A2.0023,2.0023,0,0,0,28,2ZM18,14V12h2v2Zm4-4V4h6v6Z' />
+      <path d='M8,10H4A2.0021,2.0021,0,0,1,2,8V4A2.0021,2.0021,0,0,1,4,2H8a2.0021,2.0021,0,0,1,2,2V8A2.0021,2.0021,0,0,1,8,10ZM4,4V8H8V4Z' />
+    </g>
+  </svg>
+);
+
+const ChartSVG = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='32'
+    height='32'
+    viewBox='0 0 32 32'
+    aria-hidden='true'
+    fill='currentColor'>
+    <path d='M13,15c1.4854,0,2.5544,1.4966,3.6863,3.0811C17.9983,19.918,19.4854,22,22,22c5.6709,0,7.78-10.79,8-12l-1.9678-.3584C27.55,12.2827,25.3938,20,22,20c-1.4854,0-2.5544-1.4966-3.6863-3.0811C17.0017,15.082,15.5146,13,13,13c-4.186,0-7.4448,7.4043-9,11.7617V2H2V28a2.0025,2.0025,0,0,0,2,2H30V28H5.0439C6.5544,22.8574,9.9634,15,13,15Z' />
+  </svg>
+);
+
+const Treemap = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='32'
+    height='32'
+    viewBox='0 0 32 32'
+    aria-hidden='true'
+    fill='currentColor'>
+    <path d='M28,2H4A2.0023,2.0023,0,0,0,2,4V28a2.0023,2.0023,0,0,0,2,2H28a2.0023,2.0023,0,0,0,2-2V4A2.0023,2.0023,0,0,0,28,2Zm0,12H23V4h5ZM16,4h5V14H16ZM14,4V20H4V4ZM4,22H14v6H4Zm12,6V16H28V28Z' />
+  </svg>
+);
+
+export { ChartSVG, GreenBlob, HeatmapSVG, Information, RedBlob, Treemap, VagabondLogo, WhiteBlob };

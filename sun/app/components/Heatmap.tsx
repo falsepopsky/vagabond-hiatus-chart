@@ -1,261 +1,35 @@
-import { ApexOptions } from 'apexcharts';
+'use client';
 
-type HeatDB = {
+import { HeatMapCanvas } from '@nivo/heatmap';
+import { useState } from 'react';
+import { ListLegends } from './ListLegends';
+
+interface HeatmapDb {
   id: string;
   data: { x: string; y: number | null }[];
-}[];
+}
 
-const TreemapDB: ApexOptions = {
-  chart: {
-    type: 'treemap',
-    background: 'transparent',
-    height: 400,
-    toolbar: {
-      show: false,
-    },
-    zoom: {
-      enabled: false,
-    },
-  },
-  legend: {
-    show: true,
-    itemMargin: {
-      vertical: 20,
-    },
-  },
-  series: [
-    {
-      name: 'Takezō',
-      data: [
-        {
-          x: 'Year 1998',
-          y: 13,
-        },
-        {
-          x: 'Year 1999',
-          y: 8,
-        },
-      ],
-    },
-    {
-      name: 'First Yoshioka',
-      data: [
-        {
-          x: 'Year 1999',
-          y: 14,
-        },
-      ],
-    },
-    {
-      name: 'Hōzōin',
-      data: [
-        {
-          x: 'Year 1999',
-          y: 18,
-        },
-        {
-          x: 'Year 2000',
-          y: 25,
-        },
-      ],
-    },
-    {
-      name: 'Yagyū',
-      data: [
-        {
-          x: 'Year 2000',
-          y: 11,
-        },
-        {
-          x: 'Year 2001',
-          y: 16,
-        },
-      ],
-    },
-    {
-      name: 'Baiken',
-      data: [
-        {
-          x: 'Year 2001',
-          y: 18,
-        },
-        {
-          x: 'Year 2002',
-          y: 4,
-        },
-      ],
-    },
-    {
-      name: 'Kojirō',
-      data: [
-        {
-          x: 'Year 2002',
-          y: 22,
-        },
-        {
-          x: 'Year 2003',
-          y: 19,
-        },
-        {
-          x: 'Year 2004',
-          y: 11,
-        },
-      ],
-    },
-    {
-      name: 'Second Yoshioka',
-      data: [
-        {
-          x: 'Year 2005',
-          y: 18,
-        },
-        {
-          x: 'Year 2006',
-          y: 24,
-        },
-        {
-          x: 'Year 2007',
-          y: 21,
-        },
-      ],
-    },
-    {
-      name: "Ichijōji's aftermath",
-      data: [
-        {
-          x: 'Year 2007',
-          y: 1,
-        },
-        {
-          x: 'Year 2008',
-          y: 17,
-        },
-        {
-          x: 'Year 2009',
-          y: 9,
-        },
-      ],
-    },
-    {
-      name: 'Wandering',
-      data: [
-        {
-          x: 'Year 2009',
-          y: 18,
-        },
-        {
-          x: 'Year 2010',
-          y: 13,
-        },
-        {
-          x: 'Year 2012',
-          y: 1,
-        },
-      ],
-    },
-    {
-      name: 'Farming',
-      data: [
-        {
-          x: 'Year 2012',
-          y: 8,
-        },
-        {
-          x: 'Year 2013',
-          y: 11,
-        },
-        {
-          x: 'Year 2014',
-          y: 2,
-        },
-      ],
-    },
-    {
-      name: 'Hosokawa',
-      data: [
-        {
-          x: 'Year 2014',
-          y: 4,
-        },
-        {
-          x: 'Year 2015',
-          y: 1,
-        },
-      ],
-    },
-  ],
-  theme: {
-    mode: 'dark',
-    palette: 'palette7',
-  },
-};
+interface DatumProps {
+  value: number | null;
+}
 
-const AreaDB: ApexOptions = {
-  series: [
-    {
-      name: 'Published chapters',
-      data: [13, 40, 36, 34, 26, 19, 11, 18, 24, 22, 17, 27, 13, 0, 9, 11, 6, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-    },
-    {
-      name: 'Hiatus chapters',
-      data: [0, 8, 13, 14, 22, 29, 37, 30, 25, 26, 31, 21, 35, 48, 40, 37, 42, 47, 48, 49, 48, 48, 48, 48, 48, 31],
-    },
-  ],
-  dataLabels: {
-    enabled: false,
-  },
-  chart: {
-    height: 380,
-    type: 'area',
-    background: 'transparent',
-    toolbar: {
-      show: false,
-    },
-    zoom: {
-      enabled: false,
-    },
-  },
-  xaxis: {
-    type: 'category',
-    categories: [
-      '1998',
-      '1999',
-      '2000',
-      '2001',
-      '2002',
-      '2003',
-      '2004',
-      '2005',
-      '2006',
-      '2007',
-      '2008',
-      '2009',
-      '2010',
-      '2011',
-      '2012',
-      '2013',
-      '2014',
-      '2015',
-      '2016',
-      '2017',
-      '2018',
-      '2019',
-      '2020',
-      '2021',
-      '2022',
-      '2023',
-    ],
-    tooltip: {
-      enabled: false,
-    },
-  },
-  colors: ['#1ee979', '#e91e63'],
-  theme: {
-    mode: 'dark',
-  },
-};
+const colors = [
+  '#fd514e',
+  '#f4f7f3',
+  '#70DDC6',
+  '#fff875',
+  '#06ba63',
+  '#3777ff',
+  '#7d80da',
+  '#95e784',
+  '#ffe156',
+  '#c94bff',
+  '#4059ad',
+  '#03c887',
+  '#2426a5',
+];
 
-const HeatmapDB: HeatDB = [
+const HeatmapDB: HeatmapDb[] = [
   {
     id: '1998',
     data: [
@@ -5900,7 +5674,7 @@ const HeatmapDB: HeatDB = [
   },
 ];
 
-const ArcDB: HeatDB = [
+const ArcDB: HeatmapDb[] = [
   {
     id: '1998',
     data: [
@@ -11545,4 +11319,89 @@ const ArcDB: HeatDB = [
   },
 ];
 
-export { ArcDB, AreaDB, HeatmapDB, TreemapDB };
+export const Heatmap = () => {
+  const [showHiatus, SetShowHiatus] = useState(true);
+
+  const handleToggle = () => {
+    SetShowHiatus((prevshowHiatus) => !prevshowHiatus);
+  };
+
+  function select(datum: DatumProps): string {
+    if (typeof datum.value === 'number') {
+      return colors[datum.value];
+    }
+
+    return '#00ffff0';
+  }
+
+  return (
+    <>
+      <div className='flex gap-4'>
+        <div className='flex max-w-max items-center gap-2 border px-4 py-2'>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='28' height='28' fill='#d9d9d9'>
+            <circle cx='22' cy='24' r='2' />
+            <path d='M29.7769,23.4785A8.64,8.64,0,0,0,22,18a8.64,8.64,0,0,0-7.7769,5.4785L14,24l.2231.5215A8.64,8.64,0,0,0,22,30a8.64,8.64,0,0,0,7.7769-5.4785L30,24ZM22,28a4,4,0,1,1,4-4A4.0045,4.0045,0,0,1,22,28Z' />
+            <circle cx='8' cy='8' r='1' />
+            <circle cx='8' cy='16' r='1' />
+            <circle cx='8' cy='24' r='1' />
+            <path d='M5,21h7V19H5V13H21v3h2V5a2,2,0,0,0-2-2H5A2,2,0,0,0,3,5V27a2,2,0,0,0,2,2h7V27H5ZM5,5H21v6H5Z' />
+          </svg>
+          <p>{showHiatus ? 'Hiatus' : 'Arc'}</p>
+        </div>
+        <div className='flex max-w-max items-center gap-2 border px-4 py-2'>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='24' height='24' fill='#d9d9d9'>
+            <path d='M5,25V15.8281l-3.5859,3.586L0,18l6-6,6,6-1.4141,1.4141L7,15.8281V25H19v2H7A2.0024,2.0024,0,0,1,5,25Z' />
+            <path d='M24,22h4a2.002,2.002,0,0,1,2,2v4a2.002,2.002,0,0,1-2,2H24a2.002,2.002,0,0,1-2-2V24A2.002,2.002,0,0,1,24,22Zm4,6V24H23.9985L24,28Z' />
+            <path d='M27,6v9.1719l3.5859-3.586L32,13l-6,6-6-6,1.4141-1.4141L25,15.1719V6H13V4H25A2.0024,2.0024,0,0,1,27,6Z' />
+            <rect x='2' y='6' width='6' height='2' />
+            <rect x='2' y='2' width='8' height='2' />
+          </svg>
+          <button
+            type='button'
+            className='rounded bg-slate-100 p-1 text-zinc-950'
+            onClick={handleToggle}
+            aria-pressed={showHiatus}>
+            Toggle database
+          </button>
+        </div>
+      </div>
+      <div className='overflow-x-auto'>
+        <HeatMapCanvas
+          width={1280}
+          height={460}
+          data={showHiatus ? HeatmapDB : ArcDB}
+          theme={{
+            textColor: '#f8f8f8',
+            fontSize: 9,
+          }}
+          margin={{ top: 0, right: 0, bottom: 40, left: 50 }}
+          axisBottom={{
+            tickSize: 2,
+            tickPadding: 4,
+            tickRotation: 0,
+            legend: 'Weekly Issue',
+            legendPosition: 'middle',
+            legendOffset: 30,
+          }}
+          axisTop={null}
+          axisRight={null}
+          axisLeft={{
+            tickSize: 2,
+            tickPadding: 4,
+            tickRotation: 0,
+            legend: 'Year',
+            legendPosition: 'middle',
+            legendOffset: -40,
+          }}
+          colors={select}
+          emptyColor='#00ffff0'
+          borderWidth={1}
+          borderColor='#0A0A0A'
+          enableLabels={false}
+          isInteractive={false}
+        />
+      </div>
+      <ListLegends isHiatus={showHiatus} />
+    </>
+  );
+};

@@ -1,3 +1,5 @@
+'use client';
+
 import ApexCharts, { ApexOptions } from 'apexcharts';
 import { useEffect, useRef } from 'react';
 
@@ -17,6 +19,7 @@ const ApexChart = (props: PropsApex) => {
     // (typeof config && chartRef.current) !== null || undefined
     if (typeof config && chartRef.current !== null) {
       const Chart = new ApexCharts(chartRef.current, config);
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       Chart.render();
       return () => {
         Chart.destroy();
