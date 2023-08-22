@@ -63,6 +63,11 @@ const AreaDB: ApexOptions = {
     tooltip: {
       enabled: false,
     },
+    labels: {
+      style: {
+        cssClass: 'text-violet-800',
+      },
+    },
   },
   colors: ['#1ee979', '#e91e63'],
   theme: {

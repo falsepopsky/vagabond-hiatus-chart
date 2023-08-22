@@ -27,7 +27,7 @@ const ApexChart = (props: PropsApex) => {
     }
   }, [config]);
 
-  return <div ref={chartRef} />;
+  return <div className='bg-neutral-900/60 dark:bg-neutral-950' ref={chartRef} />;
 };
 
 export default ApexChart;

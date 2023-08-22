@@ -11338,7 +11338,7 @@ export const Heatmap = () => {
     <>
       <div className='flex gap-4'>
         <div className='flex max-w-max items-center gap-2 border px-4 py-2'>
-          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='28' height='28' fill='#d9d9d9'>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='28' height='28' fill='currentColor'>
             <circle cx='22' cy='24' r='2' />
             <path d='M29.7769,23.4785A8.64,8.64,0,0,0,22,18a8.64,8.64,0,0,0-7.7769,5.4785L14,24l.2231.5215A8.64,8.64,0,0,0,22,30a8.64,8.64,0,0,0,7.7769-5.4785L30,24ZM22,28a4,4,0,1,1,4-4A4.0045,4.0045,0,0,1,22,28Z' />
             <circle cx='8' cy='8' r='1' />
@@ -11349,7 +11349,7 @@ export const Heatmap = () => {
           <p>{showHiatus ? 'Hiatus' : 'Arc'}</p>
         </div>
         <div className='flex max-w-max items-center gap-2 border px-4 py-2'>
-          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='24' height='24' fill='#d9d9d9'>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='24' height='24' fill='currentColor'>
             <path d='M5,25V15.8281l-3.5859,3.586L0,18l6-6,6,6-1.4141,1.4141L7,15.8281V25H19v2H7A2.0024,2.0024,0,0,1,5,25Z' />
             <path d='M24,22h4a2.002,2.002,0,0,1,2,2v4a2.002,2.002,0,0,1-2,2H24a2.002,2.002,0,0,1-2-2V24A2.002,2.002,0,0,1,24,22Zm4,6V24H23.9985L24,28Z' />
             <path d='M27,6v9.1719l3.5859-3.586L32,13l-6,6-6-6,1.4141-1.4141L25,15.1719V6H13V4H25A2.0024,2.0024,0,0,1,27,6Z' />
@@ -11358,14 +11358,14 @@ export const Heatmap = () => {
           </svg>
           <button
             type='button'
-            className='rounded bg-slate-100 p-1 text-zinc-950'
+            className='rounded bg-neutral-800 p-1 text-slate-200 dark:bg-slate-100 dark:text-zinc-950'
             onClick={handleToggle}
             aria-pressed={showHiatus}>
             Toggle database
           </button>
         </div>
       </div>
-      <div className='overflow-x-auto'>
+      <div className='overflow-x-auto bg-neutral-900/60 dark:bg-neutral-950'>
         <HeatMapCanvas
           width={1280}
           height={460}
