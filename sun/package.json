@@ -16,8 +16,8 @@
   "devDependencies": {
     "@nivo/core": "^0.83.0",
     "@nivo/heatmap": "^0.83.0",
-    "@types/node": "^20.5.1",
-    "@types/react": "^18.2.20",
+    "@types/node": "^20.5.3",
+    "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
@@ -25,6 +25,7 @@
     "eslint": "^8.47.0",
     "eslint-config-next": "^13.4.19",
     "eslint-config-prettier": "^9.0.0",
+    "next-themes": "^0.2.1",
     "postcss": "^8.4.28",
     "prettier": "^3.0.2",
     "prettier-plugin-tailwindcss": "^0.5.3",
