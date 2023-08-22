@@ -21,9 +21,9 @@ A simple way to visualize the actual state of Vagabond by Inoue Takehiko with ch
 
 ## :clap: Special Thanks
 
-- Kawasaki#3316 for providing the whole [data](https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/). without this project would be very inaccurate (the current data is collected from the morning weekly website).
+- Kawasaki#3316 for providing almost the entire [dataset](https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/). without their contribution, this project would be very inaccurate (the current data is collected from the morning weekly website).
 
-- [rentzhx3](https://github.com/rentzhx3/) for the inspiration with his project based on Hunter X Hunter.
+- [rentzhx3](https://github.com/rentzhx3/) for inspiring this project with their work based on Hunter X Hunter.
 
 ## :page_with_curl: License
 
@@ -31,4 +31,4 @@ A simple way to visualize the actual state of Vagabond by Inoue Takehiko with ch
 
 ## :scroll: Changelog
 
-[Last update: 30/09/22](./docs/CHANGELOG.md)
+[Last update: 22/08/23](./docs/CHANGELOG.md)

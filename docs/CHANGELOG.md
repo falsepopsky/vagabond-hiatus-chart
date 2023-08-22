@@ -1,5 +1,28 @@
 # :clock12: Changelog
 
+## :date: v1.0.4
+
+<details><summary>Aug 22, 2023</summary>
+
+**project**
+
+- add: `Tailwind CSS` extension.
+- update: README.
+- update: `actions/labeler` config.
+- remove: `styled-components` extension.
+
+**sun**
+
+- add: `Tailwind CSS`.
+- add: dark and light theme support.
+- update: use the new `app` router.
+- update: db `new morning issue` at `#39`.
+- update: `.eslintrc` config.
+- update(deps): to latest.
+- remove: `styled-components`.
+
+</details>
+
 ## :date: v1.0.3
 
 <details><summary>Jul 15, 2023</summary>
