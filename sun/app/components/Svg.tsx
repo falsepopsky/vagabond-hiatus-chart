@@ -1,5 +1,81 @@
-const VagabondLogo: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
-  <svg width={500} viewBox='0 0 744 305.1' className='logo'>
+const RedBlob = () => (
+  <svg
+    width='264'
+    height='289'
+    viewBox='0 0 1000 1000'
+    className='pointer-events-none absolute -top-24 left-16 w-48 lg:-top-16 lg:left-9 lg:w-auto'
+    aria-hidden='true'>
+    <defs>
+      <radialGradient id='redGradientId' r='100%' cx='25%' cy='125%'>
+        <stop offset='0%' stopColor='#000000' />
+        <stop offset='100%' stopColor='#eb253c' />
+      </radialGradient>
+    </defs>
+    <g fill='url(#redGradientId)'>
+      <path d='M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z' />
+    </g>
+  </svg>
+);
+
+const GreenBlob = () => (
+  <svg
+    width='408'
+    height='280'
+    viewBox='0 0 1000 1000'
+    className='pointer-events-none absolute left-32 top-28 w-48 lg:left-16 lg:top-40 lg:w-auto'
+    aria-hidden='true'>
+    <defs>
+      <linearGradient id='greenGradientId' gradientTransform='rotate(270 0.5 0.5)'>
+        <stop offset='0%' stopColor='#000000' />
+        <stop offset='100%' stopColor='#83f387' />
+      </linearGradient>
+    </defs>
+    <g fill='url(#greenGradientId)'>
+      <path d='M805,561.5Q623,623,561.5,807.5Q500,992,401,845Q302,698,285,599Q268,500,324.5,440.5Q381,381,440.5,199Q500,17,620,138.5Q740,260,863.5,380Q987,500,805,561.5Z' />
+    </g>
+  </svg>
+);
+
+const WhiteBlob = () => (
+  <svg
+    width='420'
+    height='420'
+    viewBox='0 0 200 200'
+    className='pointer-events-none absolute -left-20 -top-10 w-64 rotate-180 lg:-left-40 lg:top-8 lg:w-auto'
+    aria-hidden='true'>
+    <defs>
+      <linearGradient id='whiteGradientId' gradientTransform='rotate(180 0.5 0.5)'>
+        <stop offset='0%' stopColor='#000000' />
+        <stop offset='100%' stopColor='#858e9b' />
+      </linearGradient>
+    </defs>
+    <g fill='url(#whiteGradientId)'>
+      <path
+        d='M39.2,21C29.4,39.6,-14.7,36.7,-26.9,16.7C-39.2,-3.3,-19.6,-40.5,2.4,-39.1C24.5,-37.7,48.9,2.3,39.2,21Z'
+        transform='translate(100 100)'
+      />
+    </g>
+  </svg>
+);
+
+const Information = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='32'
+    height='32'
+    viewBox='0 0 32 32'
+    aria-hidden='true'
+    fill='currentColor'>
+    <g>
+      <polygon points='17 22 17 14 13 14 13 16 15 16 15 22 12 22 12 24 20 24 20 22 17 22' />
+      <path d='M16,8a1.5,1.5,0,1,0,1.5,1.5A1.5,1.5,0,0,0,16,8Z' />
+      <path d='M16,30A14,14,0,1,1,30,16,14,14,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12,12,0,0,0,16,4Z' />
+    </g>
+  </svg>
+);
+
+const VagabondLogo = () => (
+  <svg width={384} viewBox='0 0 744 305.1' fill='currentColor' className='w-60 md:w-96'>
     <title>Vagabond logo written in Japanese</title>
     <g stroke='#000000' strokeMiterlimit='10'>
       <path d='M744,80.1c0,0.5,0,1,0,1.5c-3.7,1.2-7.5,2.5-11.2,3.7c0.1,0.3,0.2,0.6,0.3,0.9 c2.6-0.5,5.2-1,7.8-1.5c-1.7,1.6-3.3,3.2-4.6,4.4c0.3,1,0.7,2,1,2.9c-0.2,0-0.5,0-0.7,0c-1.7-0.7-3.5-1.3-5.1-2.1 c-2.2-1.1-4-0.9-5.3,1.3c-1.5,0.3-3,0.6-4.5,0.8c-0.6-1.1,0.4-3.3-2.2-2.8c0-0.6,0-1.1-0.1-1.7c3.7,0.5,7.6,2.1,11.1-1.8 c-1.6-0.5-2.5-0.8-3.4-1.1c0.7-0.5,1.4-1,2.1-1.5l0,0c0.9-0.3,1.9-0.7,2.8-1c0.2-0.4,0.5-0.9,0.7-1.3c3.2-1.1,6.5-2.2,10.4-3.4 c-0.8,1.3-1.2,1.8-1.8,2.7C742.4,80.1,743.2,80.1,744,80.1z' />
@@ -329,46 +405,48 @@ const VagabondLogo: React.FunctionComponent<React.SVGAttributes<SVGElement>> = (
   </svg>
 );
 
-const RedBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
-  <svg width='264' height='289' viewBox='0 0 1000 1000' aria-hidden='true'>
-    <defs>
-      <radialGradient id='redGradientId' r='100%' cx='25%' cy='125%'>
-        <stop offset='0%' stopColor='#000000' />
-        <stop offset='100%' stopColor='#eb253c' />
-      </radialGradient>
-    </defs>
-    <g fill='url(#redGradientId)'>
-      <path d='M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z' />
+const HeatmapSVG = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='32'
+    height='32'
+    viewBox='0 0 32 32'
+    aria-hidden='true'
+    fill='currentColor'>
+    <g>
+      <rect x='20' y='18' width='2' height='2' />
+      <rect x='28' y='16' width='2' height='2' />
+      <rect x='14' y='6' width='2' height='2' />
+      <path d='M16,22H12V16a2.0023,2.0023,0,0,0-2-2H4a2.0023,2.0023,0,0,0-2,2v6a2.0023,2.0023,0,0,0,2,2h6v4a2.0023,2.0023,0,0,0,2,2h4a2.0023,2.0023,0,0,0,2-2V24A2.0023,2.0023,0,0,0,16,22ZM4,22V16h6v6Zm8,6V24h4v4Z' />
+      <path d='M28,30H24a2.0021,2.0021,0,0,1-2-2V24a2.0021,2.0021,0,0,1,2-2h4a2.0021,2.0021,0,0,1,2,2v4A2.0021,2.0021,0,0,1,28,30Zm-4-6v4h4V24Z' />
+      <path d='M28,2H22a2.0023,2.0023,0,0,0-2,2v6H18a2.0023,2.0023,0,0,0-2,2v2a2.0023,2.0023,0,0,0,2,2h2a2.0023,2.0023,0,0,0,2-2V12h6a2.0023,2.0023,0,0,0,2-2V4A2.0023,2.0023,0,0,0,28,2ZM18,14V12h2v2Zm4-4V4h6v6Z' />
+      <path d='M8,10H4A2.0021,2.0021,0,0,1,2,8V4A2.0021,2.0021,0,0,1,4,2H8a2.0021,2.0021,0,0,1,2,2V8A2.0021,2.0021,0,0,1,8,10ZM4,4V8H8V4Z' />
     </g>
   </svg>
 );
 
-const GreenBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
-  <svg width='408' height='280' viewBox='0 0 1000 1000' aria-hidden='true'>
-    <defs>
-      <linearGradient id='greenGradientId' gradientTransform='rotate(270 0.5 0.5)'>
-        <stop offset='0%' stopColor='#000000' />
-        <stop offset='100%' stopColor='#83f387' />
-      </linearGradient>
-    </defs>
-    <g fill='url(#greenGradientId)'>
-      <path d='M805,561.5Q623,623,561.5,807.5Q500,992,401,845Q302,698,285,599Q268,500,324.5,440.5Q381,381,440.5,199Q500,17,620,138.5Q740,260,863.5,380Q987,500,805,561.5Z' />
-    </g>
+const ChartSVG = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='32'
+    height='32'
+    viewBox='0 0 32 32'
+    aria-hidden='true'
+    fill='currentColor'>
+    <path d='M13,15c1.4854,0,2.5544,1.4966,3.6863,3.0811C17.9983,19.918,19.4854,22,22,22c5.6709,0,7.78-10.79,8-12l-1.9678-.3584C27.55,12.2827,25.3938,20,22,20c-1.4854,0-2.5544-1.4966-3.6863-3.0811C17.0017,15.082,15.5146,13,13,13c-4.186,0-7.4448,7.4043-9,11.7617V2H2V28a2.0025,2.0025,0,0,0,2,2H30V28H5.0439C6.5544,22.8574,9.9634,15,13,15Z' />
   </svg>
 );
 
-const WhiteBlob: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
-  <svg width='420' height='420' viewBox='0 0 1000 1000' transform='rotate(208)' aria-hidden='true'>
-    <defs>
-      <linearGradient id='whiteGradientId' gradientTransform='rotate(180 0.5 0.5)'>
-        <stop offset='0%' stopColor='#000000' />
-        <stop offset='100%' stopColor='#858e9b' />
-      </linearGradient>
-    </defs>
-    <g fill='url(#whiteGradientId)'>
-      <path d='M612,697.5Q272,895,285,522.5Q298,150,625,325Q952,500,612,697.5Z' />
-    </g>
+const Treemap = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='32'
+    height='32'
+    viewBox='0 0 32 32'
+    aria-hidden='true'
+    fill='currentColor'>
+    <path d='M28,2H4A2.0023,2.0023,0,0,0,2,4V28a2.0023,2.0023,0,0,0,2,2H28a2.0023,2.0023,0,0,0,2-2V4A2.0023,2.0023,0,0,0,28,2Zm0,12H23V4h5ZM16,4h5V14H16ZM14,4V20H4V4ZM4,22H14v6H4Zm12,6V16H28V28Z' />
   </svg>
 );
 
-export { VagabondLogo, RedBlob, WhiteBlob, GreenBlob };
+export { ChartSVG, GreenBlob, HeatmapSVG, Information, RedBlob, Treemap, VagabondLogo, WhiteBlob };

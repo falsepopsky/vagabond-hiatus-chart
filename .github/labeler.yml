@@ -2,12 +2,9 @@
   - "moon/src/components/**/db.js"
   - "sun/src/db/*.ts"
 documentation:
-  - "docs/**/*"
+  - "docs/**"
+  - "README.md"
 enhancement:
-  - any:
-      [
-        "**/src/components/**/*.{jsx,tsx}",
-        "!**/src/components/**/styles.{jsx,tsx}",
-      ]
+  - "sun/app/components/**"
 styles:
-  - "**/src/components/**/styles.{jsx,tsx}"
+  - "sun/app/globals.css"
