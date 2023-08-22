@@ -13,7 +13,7 @@ const AreaDB: ApexOptions = {
     },
     {
       name: 'Hiatus chapters',
-      data: [0, 8, 13, 14, 22, 29, 37, 30, 25, 26, 31, 21, 35, 48, 40, 37, 42, 47, 48, 49, 48, 48, 48, 48, 48, 31],
+      data: [0, 8, 13, 14, 22, 29, 37, 30, 25, 26, 31, 21, 35, 48, 40, 37, 42, 47, 48, 49, 48, 48, 48, 48, 48, 35],
     },
   ],
   dataLabels: {
@@ -62,11 +62,6 @@ const AreaDB: ApexOptions = {
     ],
     tooltip: {
       enabled: false,
-    },
-    labels: {
-      style: {
-        cssClass: 'text-violet-800',
-      },
     },
   },
   colors: ['#1ee979', '#e91e63'],
