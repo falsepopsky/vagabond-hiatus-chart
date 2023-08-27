@@ -63,6 +63,23 @@ const AreaDB: ApexOptions = {
     tooltip: {
       enabled: false,
     },
+    labels: {
+      style: {
+        colors: 'currentcolor',
+      },
+    },
+  },
+  yaxis: {
+    labels: {
+      style: {
+        colors: 'currentcolor',
+      },
+    },
+  },
+  legend: {
+    labels: {
+      colors: 'inherit',
+    },
   },
   colors: ['#1ee979', '#e91e63'],
   theme: {

@@ -22,6 +22,9 @@ const TreemapDB: ApexOptions = {
     itemMargin: {
       vertical: 20,
     },
+    labels: {
+      colors: 'inherit',
+    },
   },
   series: [
     {
