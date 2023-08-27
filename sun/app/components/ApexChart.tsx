@@ -1,6 +1,6 @@
 'use client';
 
-import ApexCharts, { ApexOptions } from 'apexcharts';
+import ApexCharts, { type ApexOptions } from 'apexcharts';
 import { useEffect, useRef } from 'react';
 
 interface PropsApex {
@@ -27,7 +27,7 @@ const ApexChart = (props: PropsApex) => {
     }
   }, [config]);
 
-  return <div className='bg-neutral-900/60 dark:bg-neutral-950' ref={chartRef} />;
+  return <div ref={chartRef} />;
 };
 
 export default ApexChart;
