@@ -1,5 +1,21 @@
 # :clock12: Changelog
 
+## :date: v1.0.5
+
+<details><summary>Oct 03, 2023</summary>
+
+**project**
+
+- add: `.devcontainer`.
+- update: labeler.
+
+**sun**
+
+- update: db `new morning issue` at `#45`.
+- update(deps): to latest.
+
+</details>
+
 ## :date: v1.0.4
 
 <details><summary>Aug 22, 2023</summary>
