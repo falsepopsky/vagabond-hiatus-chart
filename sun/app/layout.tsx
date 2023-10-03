@@ -6,7 +6,7 @@ import Link from 'next/link';
 import './globals.css';
 
 const ibm_plex_sans = IBM_Plex_Sans({
-  weight: ['300', '400', '500', '600'],
+  weight: ['300', '400', '500'],
   style: 'normal',
   preload: false,
   display: 'swap',

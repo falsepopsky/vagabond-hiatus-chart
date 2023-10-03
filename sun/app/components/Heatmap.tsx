@@ -5616,27 +5616,27 @@ const HeatmapDB: HeatmapDb[] = [
       },
       {
         x: '#40',
-        y: null,
+        y: 0,
       },
       {
         x: '#41',
-        y: null,
+        y: 0,
       },
       {
         x: '#42',
-        y: null,
+        y: 0,
       },
       {
         x: '#43',
-        y: null,
+        y: 0,
       },
       {
         x: '#44',
-        y: null,
+        y: 0,
       },
       {
         x: '#45',
-        y: null,
+        y: 0,
       },
       {
         x: '#46',
@@ -11261,27 +11261,27 @@ const ArcDB: HeatmapDb[] = [
       },
       {
         x: '#40',
-        y: null,
+        y: 0,
       },
       {
         x: '#41',
-        y: null,
+        y: 0,
       },
       {
         x: '#42',
-        y: null,
+        y: 0,
       },
       {
         x: '#43',
-        y: null,
+        y: 0,
       },
       {
         x: '#44',
-        y: null,
+        y: 0,
       },
       {
         x: '#45',
-        y: null,
+        y: 0,
       },
       {
         x: '#46',
