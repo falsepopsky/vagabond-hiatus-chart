@@ -1,6 +1,6 @@
 import { Navbar } from '@/comp/NavBar';
 import Theme from '@/comp/ThemeProvider';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { IBM_Plex_Sans } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: 'Vagabond Hiatus Chart',
   description: 'A simple way to visualize the actual state of Vagabond with charts.',
   keywords: 'Vagabond, Hiatus, Takehiko Inoue, Kodansha, Musashi Miyamoto, Manga, Status, Charts, Morning, バガボンド',
+};
+
+export const viewport: Viewport = {
   colorScheme: 'dark light',
 };
 
