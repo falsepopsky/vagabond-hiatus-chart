@@ -5640,35 +5640,35 @@ const HeatmapDB: HeatmapDb[] = [
       },
       {
         x: '#46',
-        y: null,
+        y: 0,
       },
       {
         x: '#47',
-        y: null,
+        y: 0,
       },
       {
         x: '#48',
-        y: null,
+        y: 0,
       },
       {
         x: '#49',
-        y: null,
+        y: 0,
       },
       {
         x: '#50',
-        y: null,
+        y: 0,
       },
       {
         x: '#51',
-        y: null,
+        y: 0,
       },
       {
         x: '#52',
-        y: null,
+        y: 0,
       },
       {
         x: '#53',
-        y: null,
+        y: 0,
       },
     ],
   },
@@ -11285,35 +11285,35 @@ const ArcDB: HeatmapDb[] = [
       },
       {
         x: '#46',
-        y: null,
+        y: 0,
       },
       {
         x: '#47',
-        y: null,
+        y: 0,
       },
       {
         x: '#48',
-        y: null,
+        y: 0,
       },
       {
         x: '#49',
-        y: null,
+        y: 0,
       },
       {
         x: '#50',
-        y: null,
+        y: 0,
       },
       {
         x: '#51',
-        y: null,
+        y: 0,
       },
       {
         x: '#52',
-        y: null,
+        y: 0,
       },
       {
         x: '#53',
-        y: null,
+        y: 0,
       },
     ],
   },
@@ -11371,8 +11371,10 @@ export const Heatmap = () => {
           height={460}
           data={showHiatus ? HeatmapDB : ArcDB}
           theme={{
-            textColor: '#f8f8f8',
-            fontSize: 9,
+            text: {
+              fill: '#f8f8f8',
+              fontSize: 9,
+            },
           }}
           margin={{ top: 0, right: 0, bottom: 40, left: 50 }}
           axisBottom={{

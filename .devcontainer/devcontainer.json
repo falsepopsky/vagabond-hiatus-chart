@@ -1,22 +1,23 @@
 {
-	"name": "Ubuntu",
-	"image": "mcr.microsoft.com/devcontainers/base:jammy",
-	"features": {
-		"ghcr.io/devcontainers/features/node:1": {
-			"nodeGypDependencies": true,
-			"version": "18",
-			"nvmVersion": "latest"
-		}
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"EditorConfig.EditorConfig",
-				"bradlc.vscode-tailwindcss",
-				"esbenp.prettier-vscode",
-				"dbaeumer.vscode-eslint",
-				"github.vscode-github-actions"
-			]
-		}
-	}
+  "name": "vagabond container",
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "nodeGypDependencies": true,
+      "version": "20.10.0",
+      "nvmVersion": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "editorconfig.editorconfig",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+  "postCreateCommand": "corepack enable && pnpm install"
 }

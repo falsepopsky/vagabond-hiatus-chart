@@ -1,0 +1,13 @@
+{
+  "bracketSameLine": true,
+  "embeddedLanguageFormatting": "auto",
+  "htmlWhitespaceSensitivity": "css",
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "printWidth": 120,
+  "proseWrap": "preserve",
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "overrides": [{ "files": "*.yaml", "options": { "singleQuote": false, "printWidth": 100, "proseWrap": "never" } }]
+}

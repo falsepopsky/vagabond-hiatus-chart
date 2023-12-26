@@ -1,2 +1,5 @@
+.next
+public
 build
+dist
 pnpm-lock.yaml

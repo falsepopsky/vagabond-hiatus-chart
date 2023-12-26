@@ -9,8 +9,7 @@ import {
   TitleAbout,
 } from './../components/styled/globalUI';
 
-const DataDrive =
-  'https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/';
+const DataDrive = 'https://docs.google.com/spreadsheets/d/1fw7G9I2zPtAfSh0NUl-4m7G5wsXe5PIcMFRtd03jVz0/';
 const HiatusGH = 'https://hiatus-hiatus.github.io/';
 const Form = 'https://forms.gle/QjtffknkRddEy4TaA';
 
@@ -25,13 +24,12 @@ const About = () => {
           <TitleAbout>ABOUT</TitleAbout>
 
           <StyledText>
-            As a kid I always liked Slam Dunk, then some of my friends told me about this manga. I
-            could not believe it that the mangaka of this masterpiece it's the same who made SD!
+            As a kid I always liked Slam Dunk, then some of my friends told me about this manga. I could not believe it
+            that the mangaka of this masterpiece it's the same who made SD!
           </StyledText>
           <StyledText>
-            So this is my little contribution, i'm planning to build the same project with more
-            titles, when the project it's ready i will make an announcement in the home site, so
-            stay stuned, and hope you guys like it !
+            So this is my little contribution, i'm planning to build the same project with more titles, when the project
+            it's ready i will make an announcement in the home site, so stay stuned, and hope you guys like it !
           </StyledText>
         </SectionContainer>
         <SectionContainer pad={'20px 3vw'}>
@@ -56,9 +54,8 @@ const About = () => {
         <SectionContainer pad={'20px 3vw'}>
           <TitleAbout>CONTACT</TitleAbout>
           <StyledText>
-            For business inquires only at <b className='reverse'>moc.liamnotorp@ykspopeslaf</b> with
-            the subject <b className='reverse'>ved ssenisub</b>, any other message without the
-            subject will be deleted.
+            For business inquires only at <b className='reverse'>moc.liamnotorp@ykspopeslaf</b> with the subject{' '}
+            <b className='reverse'>ved ssenisub</b>, any other message without the subject will be deleted.
           </StyledText>
 
           <StyledText>

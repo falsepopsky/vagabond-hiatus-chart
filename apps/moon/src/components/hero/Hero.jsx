@@ -18,9 +18,7 @@ const HeroSection = () => {
               <HeroP>HIATUS</HeroP>
               <HeroP>CHART</HeroP>
             </StyledH1>
-            <HeroP story={'second'}>
-              A simple way to visualize the actual state of Vagabond with charts.
-            </HeroP>
+            <HeroP story={'second'}>A simple way to visualize the actual state of Vagabond with charts.</HeroP>
           </MiniBox>
           <MiniBox blob>
             <div className='box redbox'>

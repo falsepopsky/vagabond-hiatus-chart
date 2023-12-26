@@ -74,13 +74,7 @@ export const configHeatmap = {
     legendOffset: 0,
   },
   margin: { top: 20, right: 0, bottom: 60, left: 40 },
-  colorsPublications: [
-    'hsl(0, 2%, 100%, 0)',
-    '#f4f7f3',
-    '#70DDC6',
-    '#F95D5A',
-    'hsl(0, 0%, 100%, 0)',
-  ],
+  colorsPublications: ['hsl(0, 2%, 100%, 0)', '#f4f7f3', '#70DDC6', '#F95D5A', 'hsl(0, 0%, 100%, 0)'],
   colorsArcs: [
     'hsl(0, 2%, 100%, 0)',
     '#f4f7f3',

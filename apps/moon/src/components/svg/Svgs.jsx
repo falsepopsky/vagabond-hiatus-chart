@@ -680,26 +680,8 @@ const Legend = () => (
         d='M269.1,49.4h-25.7c-1.7,0-3.1-1.4-3.1-3.1V20.5c0-1.7,1.4-3.1,3.1-3.1h25.7c1.7,0,3.1,1.4,3.1,3.1v25.7 C272.3,48,270.9,49.4,269.1,49.4z'
       />
     </g>
-    <line
-      fill='none'
-      stroke='#22577A'
-      strokeWidth='4'
-      strokeMiterlimit='10'
-      x1='26.3'
-      y1='10.8'
-      x2='26.3'
-      y2='124.8'
-    />
-    <line
-      fill='none'
-      stroke='#22577A'
-      strokeWidth='4'
-      strokeMiterlimit='10'
-      x1='25.3'
-      y1='124'
-      x2='145.8'
-      y2='124'
-    />
+    <line fill='none' stroke='#22577A' strokeWidth='4' strokeMiterlimit='10' x1='26.3' y1='10.8' x2='26.3' y2='124.8' />
+    <line fill='none' stroke='#22577A' strokeWidth='4' strokeMiterlimit='10' x1='25.3' y1='124' x2='145.8' y2='124' />
     <g>
       <path
         fill='#C7F9CC'
@@ -760,15 +742,9 @@ const Legend = () => (
 		c1.2,0,2.1,0.4,2.9,1.2c0.7,0.8,1.1,2,1.4,3.3V107.8z M323.7,106.8h4.5c0-0.7-0.3-1.3-0.6-1.6c-0.4-0.4-0.9-0.6-1.5-0.6
 		s-1.2,0.2-1.6,0.6C324.1,105.5,323.8,106.1,323.7,106.8z'
       />
-      <path
-        fill='#C7F9CC'
-        d='M331.3,98.8h2v14h-2V98.8z M337.7,102.8h2.1l-3.8,4.4l4.6,4.6h-2.4l-4.5-4.6L337.7,102.8z'
-      />
+      <path fill='#C7F9CC' d='M331.3,98.8h2v14h-2V98.8z M337.7,102.8h2.1l-3.8,4.4l4.6,4.6h-2.4l-4.5-4.6L337.7,102.8z' />
       <path fill='#C7F9CC' d='M341.3,98.8h2v14h-2V98.8z' />
-      <path
-        fill='#C7F9CC'
-        d='M351.3,102.8h2.1l-6.6,14h-2l3.1-6.7l-3.6-7.3h2.1l2.5,5.2L351.3,102.8z'
-      />
+      <path fill='#C7F9CC' d='M351.3,102.8h2.1l-6.6,14h-2l3.1-6.7l-3.6-7.3h2.1l2.5,5.2L351.3,102.8z' />
       <path fill='#C7F9CC' d='M360.3,98.8h2v14h-2V98.8z' />
       <path
         fill='#C7F9CC'
@@ -813,16 +789,11 @@ const RedBlob = () => (
         <stop offset='100%' stopColor='#eb253c' />
       </radialGradient>
       <clipPath id='shape'>
-        <path
-          fill='currentColor'
-          d='M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z'></path>
+        <path fill='currentColor' d='M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z'></path>
       </clipPath>
     </defs>
     <g clipPath='url(#shape)'>
-      <path
-        fill='url(#redGradientId)'
-        d='M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z'
-      />
+      <path fill='url(#redGradientId)' d='M600,706Q262,912,261,498Q260,84,599,292Q938,500,600,706Z' />
     </g>
   </svg>
 );
@@ -857,16 +828,11 @@ const WhiteBlob = () => (
         <stop offset='100%' stopColor='#858e9b' />
       </linearGradient>
       <clipPath id='whiteShape'>
-        <path
-          fill='currentColor'
-          d='M612,697.5Q272,895,285,522.5Q298,150,625,325Q952,500,612,697.5Z'></path>
+        <path fill='currentColor' d='M612,697.5Q272,895,285,522.5Q298,150,625,325Q952,500,612,697.5Z'></path>
       </clipPath>
     </defs>
     <g clipPath='url(#whiteShape)'>
-      <path
-        fill='url(#whiteGradientId)'
-        d='M612,697.5Q272,895,285,522.5Q298,150,625,325Q952,500,612,697.5Z'
-      />
+      <path fill='url(#whiteGradientId)' d='M612,697.5Q272,895,285,522.5Q298,150,625,325Q952,500,612,697.5Z' />
     </g>
   </svg>
 );

@@ -1,0 +1,19 @@
+{
+  "name": "vagabond",
+  "private": true,
+  "type": "module",
+  "license": "GPL-3.0",
+  "scripts": {
+    "format": "prettier --cache -w .",
+    "build": "pnpm --filter vagabond-n build",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9"
+  },
+  "engines": {
+    "node": "^20"
+  },
+  "packageManager": "pnpm@8.13.1"
+}
