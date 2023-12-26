@@ -10,9 +10,7 @@ const Footer = () => {
         <FooterTitle>GENERAL</FooterTitle>
         <TextFooter>The website of Vagabond Hiatus Chart.</TextFooter>
         <TextFooter>Some of the images belongs to Takehiko Inoue &amp; Kōdansha.</TextFooter>
-        <TextFooter>
-          For a better experience use firefox and visit the site on desktop mode.
-        </TextFooter>
+        <TextFooter>For a better experience use firefox and visit the site on desktop mode.</TextFooter>
       </FooterSection>
 
       <FooterSection className='section-two'>
@@ -27,12 +25,7 @@ const Footer = () => {
 
       <FooterSection className='section-three'>
         <FooterTitle>EXTRA LINKS</FooterTitle>
-        <StyledLink
-          href='https://itplanning.co.jp/'
-          rel='noopener noreferrer'
-          target='_blank'
-          footerMar
-          footerLink>
+        <StyledLink href='https://itplanning.co.jp/' rel='noopener noreferrer' target='_blank' footerMar footerLink>
           Takehiko Inoue
         </StyledLink>
         <StyledLink
