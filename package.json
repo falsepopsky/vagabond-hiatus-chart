@@ -5,6 +5,7 @@
   "license": "GPL-3.0",
   "scripts": {
     "format": "prettier --cache -w .",
+    "build": "pnpm --filter vagabond-n build",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
