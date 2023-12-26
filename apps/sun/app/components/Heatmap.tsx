@@ -11371,8 +11371,10 @@ export const Heatmap = () => {
           height={460}
           data={showHiatus ? HeatmapDB : ArcDB}
           theme={{
-            textColor: '#f8f8f8',
-            fontSize: 9,
+            text: {
+              fill: '#f8f8f8',
+              fontSize: 9,
+            },
           }}
           margin={{ top: 0, right: 0, bottom: 40, left: 50 }}
           axisBottom={{
