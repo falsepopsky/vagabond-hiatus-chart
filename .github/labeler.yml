@@ -1,11 +1,11 @@
 "new morning issue":
-  - "moon/src/components/**/db.js"
-  - "sun/app/components/Chapterpy.tsx"
-  - "sun/app/components/Heatmap.tsx"
+  - "apps/moon/src/components/**/db.js"
+  - "apps/sun/app/components/Chapterpy.tsx"
+  - "apps/sun/app/components/Heatmap.tsx"
 documentation:
   - "docs/**"
   - "README.md"
 enhancement:
-  - "sun/app/components/**"
+  - "apps/sun/app/components/**"
 styles:
-  - "sun/app/globals.css"
+  - "apps/sun/app/globals.css"
