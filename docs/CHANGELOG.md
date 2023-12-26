@@ -1,5 +1,30 @@
 # :clock12: Changelog
 
+## :date: v1.0.6
+
+<details><summary>Dec 26, 2023</summary>
+
+**project**
+
+- add: use workspace from pnpm
+- update: `.devcontainer`.
+- update: labeler.
+- update: pnpm version.
+- update: Node.js version development.
+
+**moon**
+
+- fix: format files.
+- remove(deps): prettier.
+
+**sun**
+
+- update: db `new morning issue` at `#53`.
+- update(deps): to latest.
+- remove(deps): prettier.
+
+</details>
+
 ## :date: v1.0.5
 
 <details><summary>Oct 03, 2023</summary>
